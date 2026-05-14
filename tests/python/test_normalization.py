@@ -12,7 +12,9 @@ ASCII_LABELS = st.text(
     alphabet="abcdefghijklmnopqrstuvwxyz0123456789-",
     min_size=3,
     max_size=20,
-).filter(lambda label: label[0] != "-" and label[-1] != "-" and not label.startswith("xn--"))
+).filter(
+    lambda label: label[0] != "-" and label[-1] != "-" and not label.startswith("xn--")
+)
 
 
 def test_uppercase_is_normalized(registry) -> None:

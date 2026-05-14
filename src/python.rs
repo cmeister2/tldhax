@@ -8,7 +8,7 @@ use pyo3::types::PyDict;
 use crate::registry::Registry as RustRegistry;
 use crate::types::{CheckResult, RegistryStats, TldRuleSummary};
 
-#[pyclass(name = "CheckResult")]
+#[pyclass(name = "CheckResult", skip_from_py_object)]
 #[derive(Clone)]
 pub struct PyCheckResult {
     #[pyo3(get)]
@@ -20,7 +20,10 @@ pub struct PyCheckResult {
 #[pymethods]
 impl PyCheckResult {
     fn __repr__(&self) -> String {
-        format!("CheckResult(status='{}', reasons={:?})", self.status, self.reasons)
+        format!(
+            "CheckResult(status='{}', reasons={:?})",
+            self.status, self.reasons
+        )
     }
 
     fn __str__(&self) -> String {
@@ -37,7 +40,7 @@ impl From<CheckResult> for PyCheckResult {
     }
 }
 
-#[pyclass(name = "TldInfo")]
+#[pyclass(name = "TldInfo", skip_from_py_object)]
 #[derive(Clone)]
 pub struct PyTldInfo {
     #[pyo3(get)]
@@ -71,13 +74,17 @@ impl PyTldInfo {
     fn sources<'py>(&self, py: Python<'py>) -> Bound<'py, PyDict> {
         let dict = PyDict::new(py);
         for (field, source) in &self.sources {
-            dict.set_item(field, source).expect("failed to set source item");
+            dict.set_item(field, source)
+                .expect("failed to set source item");
         }
         dict
     }
 
     fn __repr__(&self) -> String {
-        format!("TldInfo(tld='{}', registerable='{}')", self.tld, self.registerable)
+        format!(
+            "TldInfo(tld='{}', registerable='{}')",
+            self.tld, self.registerable
+        )
     }
 }
 
@@ -119,7 +126,10 @@ impl PyRegistry {
     }
 
     fn tld_info(&self, tld: &str) -> Option<PyTldInfo> {
-        self.inner.tld_info(tld).map(TldRuleSummary::from).map(Into::into)
+        self.inner
+            .tld_info(tld)
+            .map(TldRuleSummary::from)
+            .map(Into::into)
     }
 
     fn rule_count(&self) -> usize {
@@ -133,13 +143,16 @@ impl PyRegistry {
 
 fn registry_stats_to_dict<'py>(py: Python<'py>, stats: RegistryStats) -> Bound<'py, PyDict> {
     let dict = PyDict::new(py);
-    dict.set_item("compiled_rules", stats.compiled_rules).expect("set compiled_rules");
+    dict.set_item("compiled_rules", stats.compiled_rules)
+        .expect("set compiled_rules");
     dict.set_item("total_known_suffixes", stats.total_known_suffixes)
         .expect("set total_known_suffixes");
-    dict.set_item("registerable", stats.registerable).expect("set registerable");
+    dict.set_item("registerable", stats.registerable)
+        .expect("set registerable");
     dict.set_item("not_registerable", stats.not_registerable)
         .expect("set not_registerable");
-    dict.set_item("restricted", stats.restricted).expect("set restricted");
+    dict.set_item("restricted", stats.restricted)
+        .expect("set restricted");
     dict.set_item("coverage_percent", stats.coverage_percent)
         .expect("set coverage_percent");
     dict
