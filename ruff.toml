@@ -11,6 +11,7 @@ indent-width = 4
 
 # Assume Python 3.10
 target-version = "py310"
+src = ["python", "tests"]
 
 [lint]
 extend-select = [

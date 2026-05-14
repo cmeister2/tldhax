@@ -36,7 +36,16 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "check":
         result = registry.check(args.domain)
         if args.as_json:
-            print(json.dumps({"domain": args.domain, "status": result.status, "reasons": result.reasons}, indent=2))
+            print(
+                json.dumps(
+                    {
+                        "domain": args.domain,
+                        "status": result.status,
+                        "reasons": result.reasons,
+                    },
+                    indent=2,
+                )
+            )
         elif args.quiet:
             print(result.status.upper())
         else:
@@ -79,7 +88,9 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Length basis: {info.length_basis}")
         print(f"Banned labels: {', '.join(info.banned) if info.banned else '(none)'}")
         print(f"Charset: {info.charset}")
-        print(f"Restrictions: {', '.join(info.restrictions) if info.restrictions else '(none)'}")
+        print(
+            f"Restrictions: {', '.join(info.restrictions) if info.restrictions else '(none)'}"
+        )
         print("Sources:")
         for field, source in dict(info.sources).items():
             print(f"  {field}: {source}")

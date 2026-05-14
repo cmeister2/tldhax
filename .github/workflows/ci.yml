@@ -18,13 +18,18 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - uses: Swatinem/rust-cache@v2
       - name: Install Python tooling
         run: python -m pip install .[dev]
       - name: Rust build and tests
         run: cargo test --all-targets
       - name: Python tests
         run: pytest
+      - name: Mypy check
+        run: mypy
       - name: Ruff check
         run: ruff check .
 
@@ -46,6 +51,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "lts/*"
+          cache: npm
+          cache-dependency-path: package-lock.json
       - name: Install release tooling
         run: npm ci
       - name: Release
@@ -90,6 +97,7 @@ jobs:
         with:
           target: ${{ matrix.platform.target }}
           args: --release --out dist --find-interpreter
+          sccache: true
           manylinux: auto
       - name: Upload wheels
         uses: actions/upload-artifact@v4
@@ -123,6 +131,7 @@ jobs:
         with:
           target: ${{ matrix.platform.target }}
           args: --release --out dist --find-interpreter
+          sccache: true
           manylinux: musllinux_1_2
       - name: Upload wheels
         uses: actions/upload-artifact@v4
@@ -153,6 +162,7 @@ jobs:
         with:
           target: ${{ matrix.platform.target }}
           args: --release --out dist --find-interpreter
+          sccache: true
       - name: Upload wheels
         uses: actions/upload-artifact@v4
         with:
@@ -181,6 +191,7 @@ jobs:
         with:
           target: ${{ matrix.platform.target }}
           args: --release --out dist --find-interpreter
+          sccache: true
       - name: Upload wheels
         uses: actions/upload-artifact@v4
         with:
@@ -209,11 +220,14 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     needs: [check-release, linux, musllinux, windows, macos, sdist]
+    environment:
+      name: pypi
     permissions:
       id-token: write
       contents: write
       attestations: write
     steps:
+      - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
       - name: Generate artifact attestation
         if: needs.check-release.outputs.new-release == 'true'
@@ -222,8 +236,11 @@ jobs:
           subject-path: 'wheels-*/*'
       - uses: astral-sh/setup-uv@v6
       - name: Publish to PyPI
-        run: uv publish --trusted-publishing always ${{ needs.check-release.outputs.new-release != 'true' && '--dry-run' || '' }} 'wheels-*/*'
-      - uses: actions/checkout@v4
+        if: needs.check-release.outputs.new-release == 'true'
+        run: uv publish --trusted-publishing always 'wheels-*/*'
+      - name: Dry-run PyPI publish
+        if: needs.check-release.outputs.new-release != 'true'
+        run: uv publish --dry-run 'wheels-*/*'
       - uses: dtolnay/rust-toolchain@stable
       - uses: actions/setup-python@v5
         with:

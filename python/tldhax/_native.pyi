@@ -6,7 +6,6 @@ class CheckResult:
     status: Literal["yes", "no", "restricted", "unknown"]
     reasons: list[str]
 
-
 class TldInfo:
     tld: str
     registerable: Literal["yes", "no", "restricted"]
@@ -20,7 +19,6 @@ class TldInfo:
     charset: Literal["ascii", "idn"]
     idn_chars: str
     sources: dict[str, str]
-
 
 class Registry:
     def __init__(self) -> None: ...
