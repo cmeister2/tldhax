@@ -1,0 +1,71 @@
+[[domains]]
+tld = "aaa.pro"
+registerable = "yes"
+[domains.sources]
+registerable = "http://registry.pro/get-pro"
+
+[[domains]]
+tld = "aca.pro"
+registerable = "yes"
+[domains.sources]
+registerable = "http://registry.pro/get-pro"
+
+[[domains]]
+tld = "acct.pro"
+registerable = "yes"
+[domains.sources]
+registerable = "http://registry.pro/get-pro"
+
+[[domains]]
+tld = "avocat.pro"
+registerable = "yes"
+[domains.sources]
+registerable = "http://registry.pro/get-pro"
+
+[[domains]]
+tld = "bar.pro"
+registerable = "yes"
+[domains.sources]
+registerable = "http://registry.pro/get-pro"
+
+[[domains]]
+tld = "cpa.pro"
+registerable = "yes"
+[domains.sources]
+registerable = "http://registry.pro/get-pro"
+
+[[domains]]
+tld = "eng.pro"
+registerable = "yes"
+[domains.sources]
+registerable = "http://registry.pro/get-pro"
+
+[[domains]]
+tld = "jur.pro"
+registerable = "yes"
+[domains.sources]
+registerable = "http://registry.pro/get-pro"
+
+[[domains]]
+tld = "law.pro"
+registerable = "yes"
+[domains.sources]
+registerable = "http://registry.pro/get-pro"
+
+[[domains]]
+tld = "med.pro"
+registerable = "yes"
+[domains.sources]
+registerable = "http://registry.pro/get-pro"
+
+[[domains]]
+tld = "pro"
+registerable = "yes"
+[domains.sources]
+registerable = "http://registry.pro/get-pro"
+
+[[domains]]
+tld = "recht.pro"
+registerable = "yes"
+[domains.sources]
+registerable = "http://registry.pro/get-pro"

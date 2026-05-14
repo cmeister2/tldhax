@@ -1,0 +1,95 @@
+[[domains]]
+tld = "ac.pk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://pk5.pknic.net.pk/pk5/msgNamepk.PK"
+
+[[domains]]
+tld = "biz.pk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://pk5.pknic.net.pk/pk5/msgNamepk.PK"
+
+[[domains]]
+tld = "com.pk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://pk5.pknic.net.pk/pk5/msgNamepk.PK"
+
+[[domains]]
+tld = "edu.pk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://pk5.pknic.net.pk/pk5/msgNamepk.PK"
+
+[[domains]]
+tld = "fam.pk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://pk5.pknic.net.pk/pk5/msgNamepk.PK"
+
+[[domains]]
+tld = "gkp.pk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://pk5.pknic.net.pk/pk5/msgNamepk.PK"
+
+[[domains]]
+tld = "gob.pk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://pk5.pknic.net.pk/pk5/msgNamepk.PK"
+
+[[domains]]
+tld = "gog.pk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://pk5.pknic.net.pk/pk5/msgNamepk.PK"
+
+[[domains]]
+tld = "gok.pk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://pk5.pknic.net.pk/pk5/msgNamepk.PK"
+
+[[domains]]
+tld = "gop.pk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://pk5.pknic.net.pk/pk5/msgNamepk.PK"
+
+[[domains]]
+tld = "gos.pk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://pk5.pknic.net.pk/pk5/msgNamepk.PK"
+
+[[domains]]
+tld = "gov.pk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://pk5.pknic.net.pk/pk5/msgNamepk.PK"
+
+[[domains]]
+tld = "net.pk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://pk5.pknic.net.pk/pk5/msgNamepk.PK"
+
+[[domains]]
+tld = "org.pk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://pk5.pknic.net.pk/pk5/msgNamepk.PK"
+
+[[domains]]
+tld = "pk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://pk5.pknic.net.pk/pk5/msgNamepk.PK"
+
+[[domains]]
+tld = "web.pk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://pk5.pknic.net.pk/pk5/msgNamepk.PK"

@@ -1,0 +1,23 @@
+[[domains]]
+tld = "com.pf"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.gobin.info/domainname/formulaire-pf.pdf"
+
+[[domains]]
+tld = "edu.pf"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.gobin.info/domainname/formulaire-pf.pdf"
+
+[[domains]]
+tld = "org.pf"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.gobin.info/domainname/formulaire-pf.pdf"
+
+[[domains]]
+tld = "pf"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.gobin.info/domainname/formulaire-pf.pdf"

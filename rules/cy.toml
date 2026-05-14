@@ -1,0 +1,77 @@
+[[domains]]
+tld = "ac.cy"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.cy/wp-content/uploads/2024/01/Create-Request-for-domain-name-registration-1.pdf"
+
+[[domains]]
+tld = "biz.cy"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.cy/wp-content/uploads/2024/01/Create-Request-for-domain-name-registration-1.pdf"
+
+[[domains]]
+tld = "com.cy"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.cy/wp-content/uploads/2024/01/Create-Request-for-domain-name-registration-1.pdf"
+
+[[domains]]
+tld = "cy"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.cy/wp-content/uploads/2024/01/Create-Request-for-domain-name-registration-1.pdf"
+
+[[domains]]
+tld = "ekloges.cy"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.cy/wp-content/uploads/2024/01/Create-Request-for-domain-name-registration-1.pdf"
+
+[[domains]]
+tld = "gov.cy"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.cy/wp-content/uploads/2024/01/Create-Request-for-domain-name-registration-1.pdf"
+
+[[domains]]
+tld = "ltd.cy"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.cy/wp-content/uploads/2024/01/Create-Request-for-domain-name-registration-1.pdf"
+
+[[domains]]
+tld = "mil.cy"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.cy/wp-content/uploads/2024/01/Create-Request-for-domain-name-registration-1.pdf"
+
+[[domains]]
+tld = "net.cy"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.cy/wp-content/uploads/2024/01/Create-Request-for-domain-name-registration-1.pdf"
+
+[[domains]]
+tld = "org.cy"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.cy/wp-content/uploads/2024/01/Create-Request-for-domain-name-registration-1.pdf"
+
+[[domains]]
+tld = "press.cy"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.cy/wp-content/uploads/2024/01/Create-Request-for-domain-name-registration-1.pdf"
+
+[[domains]]
+tld = "pro.cy"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.cy/wp-content/uploads/2024/01/Create-Request-for-domain-name-registration-1.pdf"
+
+[[domains]]
+tld = "tm.cy"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.cy/wp-content/uploads/2024/01/Create-Request-for-domain-name-registration-1.pdf"

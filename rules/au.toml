@@ -1,0 +1,191 @@
+[[domains]]
+tld = "act.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+
+[[domains]]
+tld = "act.edu.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+
+[[domains]]
+tld = "asn.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/"
+
+[[domains]]
+tld = "au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/"
+
+[[domains]]
+tld = "catholic.edu.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+
+[[domains]]
+tld = "com.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/"
+
+[[domains]]
+tld = "conf.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/"
+
+[[domains]]
+tld = "edu.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/"
+
+[[domains]]
+tld = "gov.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/"
+
+[[domains]]
+tld = "id.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/"
+
+[[domains]]
+tld = "net.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/"
+
+[[domains]]
+tld = "nsw.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+
+[[domains]]
+tld = "nsw.edu.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+
+[[domains]]
+tld = "nt.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+
+[[domains]]
+tld = "nt.edu.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+
+[[domains]]
+tld = "org.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/"
+
+[[domains]]
+tld = "oz.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/"
+
+[[domains]]
+tld = "qld.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+
+[[domains]]
+tld = "qld.edu.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+
+[[domains]]
+tld = "qld.gov.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+
+[[domains]]
+tld = "sa.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+
+[[domains]]
+tld = "sa.edu.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+
+[[domains]]
+tld = "sa.gov.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+
+[[domains]]
+tld = "tas.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+
+[[domains]]
+tld = "tas.edu.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+
+[[domains]]
+tld = "tas.gov.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+
+[[domains]]
+tld = "vic.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+
+[[domains]]
+tld = "vic.edu.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+
+[[domains]]
+tld = "vic.gov.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+
+[[domains]]
+tld = "wa.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+
+[[domains]]
+tld = "wa.edu.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+
+[[domains]]
+tld = "wa.gov.au"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"

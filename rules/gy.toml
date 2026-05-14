@@ -1,0 +1,41 @@
+[[domains]]
+tld = "co.gy"
+registerable = "yes"
+[domains.sources]
+registerable = "http://registry.gy/"
+
+[[domains]]
+tld = "com.gy"
+registerable = "yes"
+[domains.sources]
+registerable = "http://registry.gy/"
+
+[[domains]]
+tld = "edu.gy"
+registerable = "yes"
+[domains.sources]
+registerable = "http://registry.gy/"
+
+[[domains]]
+tld = "gov.gy"
+registerable = "yes"
+[domains.sources]
+registerable = "http://registry.gy/"
+
+[[domains]]
+tld = "gy"
+registerable = "yes"
+[domains.sources]
+registerable = "http://registry.gy/"
+
+[[domains]]
+tld = "net.gy"
+registerable = "yes"
+[domains.sources]
+registerable = "http://registry.gy/"
+
+[[domains]]
+tld = "org.gy"
+registerable = "yes"
+[domains.sources]
+registerable = "http://registry.gy/"

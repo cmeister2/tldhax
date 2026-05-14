@@ -1,0 +1,65 @@
+[[domains]]
+tld = "aip.ee"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.internet.ee/domains/general-domains-and-procedure-for-registration-of-sub-domains-under-general-domains"
+
+[[domains]]
+tld = "com.ee"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.internet.ee/domains/general-domains-and-procedure-for-registration-of-sub-domains-under-general-domains"
+
+[[domains]]
+tld = "edu.ee"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.internet.ee/domains/general-domains-and-procedure-for-registration-of-sub-domains-under-general-domains"
+
+[[domains]]
+tld = "ee"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.internet.ee/domains/general-domains-and-procedure-for-registration-of-sub-domains-under-general-domains"
+
+[[domains]]
+tld = "fie.ee"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.internet.ee/domains/general-domains-and-procedure-for-registration-of-sub-domains-under-general-domains"
+
+[[domains]]
+tld = "gov.ee"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.internet.ee/domains/general-domains-and-procedure-for-registration-of-sub-domains-under-general-domains"
+
+[[domains]]
+tld = "lib.ee"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.internet.ee/domains/general-domains-and-procedure-for-registration-of-sub-domains-under-general-domains"
+
+[[domains]]
+tld = "med.ee"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.internet.ee/domains/general-domains-and-procedure-for-registration-of-sub-domains-under-general-domains"
+
+[[domains]]
+tld = "org.ee"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.internet.ee/domains/general-domains-and-procedure-for-registration-of-sub-domains-under-general-domains"
+
+[[domains]]
+tld = "pri.ee"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.internet.ee/domains/general-domains-and-procedure-for-registration-of-sub-domains-under-general-domains"
+
+[[domains]]
+tld = "riik.ee"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.internet.ee/domains/general-domains-and-procedure-for-registration-of-sub-domains-under-general-domains"

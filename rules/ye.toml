@@ -1,0 +1,41 @@
+[[domains]]
+tld = "com.ye"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.y.net.ye/services/domain_name.htm"
+
+[[domains]]
+tld = "edu.ye"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.y.net.ye/services/domain_name.htm"
+
+[[domains]]
+tld = "gov.ye"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.y.net.ye/services/domain_name.htm"
+
+[[domains]]
+tld = "mil.ye"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.y.net.ye/services/domain_name.htm"
+
+[[domains]]
+tld = "net.ye"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.y.net.ye/services/domain_name.htm"
+
+[[domains]]
+tld = "org.ye"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.y.net.ye/services/domain_name.htm"
+
+[[domains]]
+tld = "ye"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.y.net.ye/services/domain_name.htm"

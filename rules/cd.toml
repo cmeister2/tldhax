@@ -1,0 +1,11 @@
+[[domains]]
+tld = "cd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.cd"
+
+[[domains]]
+tld = "gov.cd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.cd"

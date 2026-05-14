@@ -1,0 +1,41 @@
+[[domains]]
+tld = "art.sn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/sn.html"
+
+[[domains]]
+tld = "com.sn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/sn.html"
+
+[[domains]]
+tld = "edu.sn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/sn.html"
+
+[[domains]]
+tld = "gouv.sn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/sn.html"
+
+[[domains]]
+tld = "org.sn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/sn.html"
+
+[[domains]]
+tld = "sn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/sn.html"
+
+[[domains]]
+tld = "univ.sn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/sn.html"

@@ -1,0 +1,5 @@
+[[domains]]
+tld = "موريتانيا"
+registerable = "yes"
+[domains.sources]
+registerable = "https://eurid.eu"

@@ -1,0 +1,5 @@
+[[domains]]
+tld = "娱乐"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/xn--fjq720a.html"

@@ -1,0 +1,29 @@
+[[domains]]
+tld = "by"
+registerable = "yes"
+[domains.sources]
+registerable = "http://tld.by/rules_2006_en.html"
+
+[[domains]]
+tld = "com.by"
+registerable = "yes"
+[domains.sources]
+registerable = "http://tld.by/rules_2006_en.html"
+
+[[domains]]
+tld = "gov.by"
+registerable = "yes"
+[domains.sources]
+registerable = "http://tld.by/rules_2006_en.html"
+
+[[domains]]
+tld = "mil.by"
+registerable = "yes"
+[domains.sources]
+registerable = "http://tld.by/rules_2006_en.html"
+
+[[domains]]
+tld = "of.by"
+registerable = "yes"
+[domains.sources]
+registerable = "http://hoster.by/"

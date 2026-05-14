@@ -1,0 +1,5 @@
+[[domains]]
+tld = "ファッション"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/xn--bck1b9a5dre4c.html"

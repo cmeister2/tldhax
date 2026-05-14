@@ -1,0 +1,47 @@
+[[domains]]
+tld = "com.ge"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.ge/en/administrator/the-ge-domain-regulations"
+
+[[domains]]
+tld = "edu.ge"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.ge/en/administrator/the-ge-domain-regulations"
+
+[[domains]]
+tld = "ge"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.ge/en/administrator/the-ge-domain-regulations"
+
+[[domains]]
+tld = "gov.ge"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.ge/en/administrator/the-ge-domain-regulations"
+
+[[domains]]
+tld = "net.ge"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.ge/en/administrator/the-ge-domain-regulations"
+
+[[domains]]
+tld = "org.ge"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.ge/en/administrator/the-ge-domain-regulations"
+
+[[domains]]
+tld = "pvt.ge"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.ge/en/administrator/the-ge-domain-regulations"
+
+[[domains]]
+tld = "school.ge"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.ge/en/administrator/the-ge-domain-regulations"

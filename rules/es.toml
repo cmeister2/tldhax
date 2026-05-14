@@ -1,0 +1,35 @@
+[[domains]]
+tld = "com.es"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dominios.es/en"
+
+[[domains]]
+tld = "edu.es"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dominios.es/en"
+
+[[domains]]
+tld = "es"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dominios.es/en"
+
+[[domains]]
+tld = "gob.es"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dominios.es/en"
+
+[[domains]]
+tld = "nom.es"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dominios.es/en"
+
+[[domains]]
+tld = "org.es"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dominios.es/en"

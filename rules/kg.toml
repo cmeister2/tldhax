@@ -1,0 +1,41 @@
+[[domains]]
+tld = "com.kg"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.domain.kg/dmn_n.html"
+
+[[domains]]
+tld = "edu.kg"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.domain.kg/dmn_n.html"
+
+[[domains]]
+tld = "gov.kg"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.domain.kg/dmn_n.html"
+
+[[domains]]
+tld = "kg"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.domain.kg/dmn_n.html"
+
+[[domains]]
+tld = "mil.kg"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.domain.kg/dmn_n.html"
+
+[[domains]]
+tld = "net.kg"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.domain.kg/dmn_n.html"
+
+[[domains]]
+tld = "org.kg"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.domain.kg/dmn_n.html"

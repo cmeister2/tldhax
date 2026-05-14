@@ -1,0 +1,35 @@
+[[domains]]
+tld = "ac.bw"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.net.bw/bw-name-structure"
+
+[[domains]]
+tld = "bw"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.net.bw/bw-name-structure"
+
+[[domains]]
+tld = "co.bw"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.net.bw/bw-name-structure"
+
+[[domains]]
+tld = "gov.bw"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.net.bw/bw-name-structure"
+
+[[domains]]
+tld = "net.bw"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.net.bw/bw-name-structure"
+
+[[domains]]
+tld = "org.bw"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.net.bw/bw-name-structure"

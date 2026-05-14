@@ -1,0 +1,29 @@
+[[domains]]
+tld = "com.ky"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.icta.ky/da_ky_reg_dom.php"
+
+[[domains]]
+tld = "edu.ky"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.icta.ky/da_ky_reg_dom.php"
+
+[[domains]]
+tld = "ky"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.icta.ky/da_ky_reg_dom.php"
+
+[[domains]]
+tld = "net.ky"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.icta.ky/da_ky_reg_dom.php"
+
+[[domains]]
+tld = "org.ky"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.icta.ky/da_ky_reg_dom.php"

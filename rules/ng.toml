@@ -1,0 +1,65 @@
+[[domains]]
+tld = "com.ng"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nira.org.ng/index.php/join-us/register-ng-domain/189-nira-slds"
+
+[[domains]]
+tld = "edu.ng"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nira.org.ng/index.php/join-us/register-ng-domain/189-nira-slds"
+
+[[domains]]
+tld = "gov.ng"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nira.org.ng/index.php/join-us/register-ng-domain/189-nira-slds"
+
+[[domains]]
+tld = "i.ng"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nira.org.ng/index.php/join-us/register-ng-domain/189-nira-slds"
+
+[[domains]]
+tld = "mil.ng"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nira.org.ng/index.php/join-us/register-ng-domain/189-nira-slds"
+
+[[domains]]
+tld = "mobi.ng"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nira.org.ng/index.php/join-us/register-ng-domain/189-nira-slds"
+
+[[domains]]
+tld = "name.ng"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nira.org.ng/index.php/join-us/register-ng-domain/189-nira-slds"
+
+[[domains]]
+tld = "net.ng"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nira.org.ng/index.php/join-us/register-ng-domain/189-nira-slds"
+
+[[domains]]
+tld = "ng"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nira.org.ng/index.php/join-us/register-ng-domain/189-nira-slds"
+
+[[domains]]
+tld = "org.ng"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nira.org.ng/index.php/join-us/register-ng-domain/189-nira-slds"
+
+[[domains]]
+tld = "sch.ng"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nira.org.ng/index.php/join-us/register-ng-domain/189-nira-slds"

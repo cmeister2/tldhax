@@ -1,0 +1,17 @@
+[[domains]]
+tld = "asso.mc"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.mc/"
+
+[[domains]]
+tld = "mc"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.mc/"
+
+[[domains]]
+tld = "tm.mc"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.mc/"

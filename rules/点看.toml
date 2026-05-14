@@ -1,0 +1,5 @@
+[[domains]]
+tld = "点看"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/xn--3pxu8k.html"

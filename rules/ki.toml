@@ -1,0 +1,47 @@
+[[domains]]
+tld = "biz.ki"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ki.html"
+
+[[domains]]
+tld = "com.ki"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ki.html"
+
+[[domains]]
+tld = "edu.ki"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ki.html"
+
+[[domains]]
+tld = "gov.ki"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ki.html"
+
+[[domains]]
+tld = "info.ki"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ki.html"
+
+[[domains]]
+tld = "ki"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ki.html"
+
+[[domains]]
+tld = "net.ki"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ki.html"
+
+[[domains]]
+tld = "org.ki"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ki.html"

@@ -1,0 +1,95 @@
+[[domains]]
+tld = "ab.ca"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ca.html"
+
+[[domains]]
+tld = "bc.ca"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ca.html"
+
+[[domains]]
+tld = "ca"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ca.html"
+
+[[domains]]
+tld = "gc.ca"
+registerable = "yes"
+[domains.sources]
+registerable = "http://registry.gc.ca/en/SubdomainFAQ"
+
+[[domains]]
+tld = "mb.ca"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ca.html"
+
+[[domains]]
+tld = "nb.ca"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ca.html"
+
+[[domains]]
+tld = "nf.ca"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ca.html"
+
+[[domains]]
+tld = "nl.ca"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ca.html"
+
+[[domains]]
+tld = "ns.ca"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ca.html"
+
+[[domains]]
+tld = "nt.ca"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ca.html"
+
+[[domains]]
+tld = "nu.ca"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ca.html"
+
+[[domains]]
+tld = "on.ca"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ca.html"
+
+[[domains]]
+tld = "pe.ca"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ca.html"
+
+[[domains]]
+tld = "qc.ca"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ca.html"
+
+[[domains]]
+tld = "sk.ca"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ca.html"
+
+[[domains]]
+tld = "yk.ca"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ca.html"

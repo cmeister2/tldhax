@@ -1,0 +1,5 @@
+[[domains]]
+tld = "creditcard"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/creditcard.html"

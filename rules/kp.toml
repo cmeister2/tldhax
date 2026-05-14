@@ -1,0 +1,41 @@
+[[domains]]
+tld = "com.kp"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.kcce.kp/en_index.php"
+
+[[domains]]
+tld = "edu.kp"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.kcce.kp/en_index.php"
+
+[[domains]]
+tld = "gov.kp"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.kcce.kp/en_index.php"
+
+[[domains]]
+tld = "kp"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.kcce.kp/en_index.php"
+
+[[domains]]
+tld = "org.kp"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.kcce.kp/en_index.php"
+
+[[domains]]
+tld = "rep.kp"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.kcce.kp/en_index.php"
+
+[[domains]]
+tld = "tra.kp"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.kcce.kp/en_index.php"

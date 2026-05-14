@@ -1,0 +1,83 @@
+[[domains]]
+tld = "com.tn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.ati.tn/"
+
+[[domains]]
+tld = "ens.tn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.ati.tn/"
+
+[[domains]]
+tld = "fin.tn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.ati.tn/"
+
+[[domains]]
+tld = "gov.tn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.ati.tn/"
+
+[[domains]]
+tld = "ind.tn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.ati.tn/"
+
+[[domains]]
+tld = "info.tn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.ati.tn/"
+
+[[domains]]
+tld = "intl.tn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.ati.tn/"
+
+[[domains]]
+tld = "mincom.tn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.ati.tn/"
+
+[[domains]]
+tld = "nat.tn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.ati.tn/"
+
+[[domains]]
+tld = "net.tn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.ati.tn/"
+
+[[domains]]
+tld = "org.tn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.ati.tn/"
+
+[[domains]]
+tld = "perso.tn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.ati.tn/"
+
+[[domains]]
+tld = "tn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.ati.tn/"
+
+[[domains]]
+tld = "tourism.tn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.ati.tn/"

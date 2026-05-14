@@ -1,0 +1,77 @@
+[[domains]]
+tld = "ac.fj"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/fj.html"
+
+[[domains]]
+tld = "biz.fj"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/fj.html"
+
+[[domains]]
+tld = "com.fj"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/fj.html"
+
+[[domains]]
+tld = "edu.fj"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/fj.html"
+
+[[domains]]
+tld = "fj"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/fj.html"
+
+[[domains]]
+tld = "gov.fj"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/fj.html"
+
+[[domains]]
+tld = "id.fj"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/fj.html"
+
+[[domains]]
+tld = "info.fj"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/fj.html"
+
+[[domains]]
+tld = "mil.fj"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/fj.html"
+
+[[domains]]
+tld = "name.fj"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/fj.html"
+
+[[domains]]
+tld = "net.fj"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/fj.html"
+
+[[domains]]
+tld = "org.fj"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/fj.html"
+
+[[domains]]
+tld = "pro.fj"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/fj.html"

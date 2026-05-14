@@ -1,0 +1,5 @@
+[[domains]]
+tld = "lu"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.dns.lu/en/"

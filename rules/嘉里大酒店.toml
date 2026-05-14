@@ -1,0 +1,5 @@
+[[domains]]
+tld = "嘉里大酒店"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/xn--w4r85el8fhu5dnra.html"

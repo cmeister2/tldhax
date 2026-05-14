@@ -1,0 +1,5 @@
+[[domains]]
+tld = "name"
+registerable = "yes"
+[domains.sources]
+registerable = "https://github.com/publicsuffix/list/issues/2306"

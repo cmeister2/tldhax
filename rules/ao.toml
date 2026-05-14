@@ -1,0 +1,59 @@
+[[domains]]
+tld = "ao"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.ao/ao/"
+
+[[domains]]
+tld = "co.ao"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.ao/ao/"
+
+[[domains]]
+tld = "ed.ao"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.ao/ao/"
+
+[[domains]]
+tld = "edu.ao"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.ao/ao/"
+
+[[domains]]
+tld = "gov.ao"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.ao/ao/"
+
+[[domains]]
+tld = "gv.ao"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.ao/ao/"
+
+[[domains]]
+tld = "it.ao"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.ao/ao/"
+
+[[domains]]
+tld = "og.ao"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.ao/ao/"
+
+[[domains]]
+tld = "org.ao"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.ao/ao/"
+
+[[domains]]
+tld = "pb.ao"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.ao/ao/"

@@ -1,0 +1,53 @@
+[[domains]]
+tld = "com.qa"
+registerable = "yes"
+[domains.sources]
+registerable = "http://domains.qa/en/"
+
+[[domains]]
+tld = "edu.qa"
+registerable = "yes"
+[domains.sources]
+registerable = "http://domains.qa/en/"
+
+[[domains]]
+tld = "gov.qa"
+registerable = "yes"
+[domains.sources]
+registerable = "http://domains.qa/en/"
+
+[[domains]]
+tld = "mil.qa"
+registerable = "yes"
+[domains.sources]
+registerable = "http://domains.qa/en/"
+
+[[domains]]
+tld = "name.qa"
+registerable = "yes"
+[domains.sources]
+registerable = "http://domains.qa/en/"
+
+[[domains]]
+tld = "net.qa"
+registerable = "yes"
+[domains.sources]
+registerable = "http://domains.qa/en/"
+
+[[domains]]
+tld = "org.qa"
+registerable = "yes"
+[domains.sources]
+registerable = "http://domains.qa/en/"
+
+[[domains]]
+tld = "qa"
+registerable = "yes"
+[domains.sources]
+registerable = "http://domains.qa/en/"
+
+[[domains]]
+tld = "sch.qa"
+registerable = "yes"
+[domains.sources]
+registerable = "http://domains.qa/en/"

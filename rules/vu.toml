@@ -1,0 +1,29 @@
+[[domains]]
+tld = "com.vu"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.vunic.vu/"
+
+[[domains]]
+tld = "edu.vu"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.vunic.vu/"
+
+[[domains]]
+tld = "net.vu"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.vunic.vu/"
+
+[[domains]]
+tld = "org.vu"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.vunic.vu/"
+
+[[domains]]
+tld = "vu"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.vunic.vu/"

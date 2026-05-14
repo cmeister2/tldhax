@@ -1,0 +1,41 @@
+[[domains]]
+tld = "ac.gn"
+registerable = "yes"
+[domains.sources]
+registerable = "http://psg.com/dns/gn/gn.txt"
+
+[[domains]]
+tld = "com.gn"
+registerable = "yes"
+[domains.sources]
+registerable = "http://psg.com/dns/gn/gn.txt"
+
+[[domains]]
+tld = "edu.gn"
+registerable = "yes"
+[domains.sources]
+registerable = "http://psg.com/dns/gn/gn.txt"
+
+[[domains]]
+tld = "gn"
+registerable = "yes"
+[domains.sources]
+registerable = "http://psg.com/dns/gn/gn.txt"
+
+[[domains]]
+tld = "gov.gn"
+registerable = "yes"
+[domains.sources]
+registerable = "http://psg.com/dns/gn/gn.txt"
+
+[[domains]]
+tld = "net.gn"
+registerable = "yes"
+[domains.sources]
+registerable = "http://psg.com/dns/gn/gn.txt"
+
+[[domains]]
+tld = "org.gn"
+registerable = "yes"
+[domains.sources]
+registerable = "http://psg.com/dns/gn/gn.txt"

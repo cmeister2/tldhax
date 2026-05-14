@@ -1,0 +1,5 @@
+[[domains]]
+tld = "yt"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.afnic.fr/wp-media/uploads/2022/12/afnic-naming-policy-2023-01-01.pdf"

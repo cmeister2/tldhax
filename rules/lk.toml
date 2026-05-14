@@ -1,0 +1,95 @@
+[[domains]]
+tld = "ac.lk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/lk.html"
+
+[[domains]]
+tld = "assn.lk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/lk.html"
+
+[[domains]]
+tld = "com.lk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/lk.html"
+
+[[domains]]
+tld = "edu.lk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/lk.html"
+
+[[domains]]
+tld = "gov.lk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/lk.html"
+
+[[domains]]
+tld = "grp.lk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/lk.html"
+
+[[domains]]
+tld = "hotel.lk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/lk.html"
+
+[[domains]]
+tld = "int.lk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/lk.html"
+
+[[domains]]
+tld = "lk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/lk.html"
+
+[[domains]]
+tld = "ltd.lk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/lk.html"
+
+[[domains]]
+tld = "net.lk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/lk.html"
+
+[[domains]]
+tld = "ngo.lk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/lk.html"
+
+[[domains]]
+tld = "org.lk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/lk.html"
+
+[[domains]]
+tld = "sch.lk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/lk.html"
+
+[[domains]]
+tld = "soc.lk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/lk.html"
+
+[[domains]]
+tld = "web.lk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/lk.html"

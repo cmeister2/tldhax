@@ -1,0 +1,35 @@
+[[domains]]
+tld = "bh"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bh.html"
+
+[[domains]]
+tld = "com.bh"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bh.html"
+
+[[domains]]
+tld = "edu.bh"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bh.html"
+
+[[domains]]
+tld = "gov.bh"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bh.html"
+
+[[domains]]
+tld = "net.bh"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bh.html"
+
+[[domains]]
+tld = "org.bh"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bh.html"

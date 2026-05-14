@@ -1,0 +1,53 @@
+[[domains]]
+tld = "biz.et"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/et.html"
+
+[[domains]]
+tld = "com.et"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/et.html"
+
+[[domains]]
+tld = "edu.et"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/et.html"
+
+[[domains]]
+tld = "et"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/et.html"
+
+[[domains]]
+tld = "gov.et"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/et.html"
+
+[[domains]]
+tld = "info.et"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/et.html"
+
+[[domains]]
+tld = "name.et"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/et.html"
+
+[[domains]]
+tld = "net.et"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/et.html"
+
+[[domains]]
+tld = "org.et"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/et.html"

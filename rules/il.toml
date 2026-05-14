@@ -1,0 +1,53 @@
+[[domains]]
+tld = "ac.il"
+registerable = "yes"
+[domains.sources]
+registerable = "https://en.isoc.org.il/il-cctld/registration-rules"
+
+[[domains]]
+tld = "co.il"
+registerable = "yes"
+[domains.sources]
+registerable = "https://en.isoc.org.il/il-cctld/registration-rules"
+
+[[domains]]
+tld = "gov.il"
+registerable = "yes"
+[domains.sources]
+registerable = "https://en.isoc.org.il/il-cctld/registration-rules"
+
+[[domains]]
+tld = "idf.il"
+registerable = "yes"
+[domains.sources]
+registerable = "https://en.isoc.org.il/il-cctld/registration-rules"
+
+[[domains]]
+tld = "il"
+registerable = "yes"
+[domains.sources]
+registerable = "https://en.isoc.org.il/il-cctld/registration-rules"
+
+[[domains]]
+tld = "k12.il"
+registerable = "yes"
+[domains.sources]
+registerable = "https://en.isoc.org.il/il-cctld/registration-rules"
+
+[[domains]]
+tld = "muni.il"
+registerable = "yes"
+[domains.sources]
+registerable = "https://en.isoc.org.il/il-cctld/registration-rules"
+
+[[domains]]
+tld = "net.il"
+registerable = "yes"
+[domains.sources]
+registerable = "https://en.isoc.org.il/il-cctld/registration-rules"
+
+[[domains]]
+tld = "org.il"
+registerable = "yes"
+[domains.sources]
+registerable = "https://en.isoc.org.il/il-cctld/registration-rules"

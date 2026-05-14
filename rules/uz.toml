@@ -1,0 +1,29 @@
+[[domains]]
+tld = "co.uz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.reg.uz/"
+
+[[domains]]
+tld = "com.uz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.reg.uz/"
+
+[[domains]]
+tld = "net.uz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.reg.uz/"
+
+[[domains]]
+tld = "org.uz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.reg.uz/"
+
+[[domains]]
+tld = "uz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.reg.uz/"

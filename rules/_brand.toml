@@ -1,0 +1,3689 @@
+[[domains]]
+tld = "aaa"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "aarp"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "abb"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "abbott"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "abbvie"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "abc"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "accenture"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "aco"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "aeg"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "aetna"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "afl"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "aig"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "airbus"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "airtel"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "alibaba"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "alipay"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "allstate"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "ally"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "alstom"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "amazon"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "americanexpress"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "americanfamily"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "amex"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "amfam"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "amica"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "android"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "anz"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "aol"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "apple"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "aquarelle"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "arte"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "asda"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "athleta"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "audi"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "audible"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "auspost"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "aws"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "axa"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "azure"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "banamex"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "barclaycard"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "barclays"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "barefoot"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "bauhaus"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "bbc"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "bbt"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "bbva"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "bcg"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "beats"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "bestbuy"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "bharti"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "bing"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "blockbuster"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "bloomberg"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "bms"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "bmw"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "bnpparibas"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "boehringer"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "bofa"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "bosch"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "bostik"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "bradesco"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "bridgestone"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "brother"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "calvinklein"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "canon"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "capitalone"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "caravan"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "case"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "cba"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "cbn"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "cbre"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "cern"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "cfa"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "chanel"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "chase"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "chintai"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "chrome"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "cipriani"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "cisco"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "citadel"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "citi"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "citic"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "clinique"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "clubmed"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "commbank"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "crown"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "cuisinella"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "datsun"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "dell"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "deloitte"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "delta"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "dhl"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "discover"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "dish"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "diy"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "dnp"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "dupont"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "dvag"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "edeka"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "emerck"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "epson"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "ericsson"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "eurovision"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "extraspace"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "fage"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "fairwinds"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "farmers"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "fedex"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "ferrari"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "ferrero"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "fidelity"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "fido"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "fire"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "firestone"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "flickr"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "flir"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "food"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "ford"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "fox"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "fresenius"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "frogans"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "frontier"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "fujitsu"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "gallo"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "gallup"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "gap"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "gea"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "genting"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "george"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "gmail"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "gmo"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "gmx"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "godaddy"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "goldpoint"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "goo"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "goodyear"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "google"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "grainger"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "gucci"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "hbo"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "hdfc"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "hdfcbank"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "hermes"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "hisamitsu"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "hitachi"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "hkt"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "homedepot"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "homegoods"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "homesense"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "honda"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "hotmail"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "hsbc"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "hughes"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "hyatt"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "hyundai"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "ibm"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "icbc"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "ice"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "ieee"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "ifm"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "ikano"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "imdb"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "infiniti"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "intuit"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "ipiranga"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "itau"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "itv"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "jaguar"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "java"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "jcb"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "jeep"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "jio"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "jll"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "jmp"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "jnj"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "jpmorgan"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "juniper"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "kddi"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "kia"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "kindle"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "komatsu"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "kpmg"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "kpn"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "lamborghini"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "lamer"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "landrover"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "lanxess"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "latrobe"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "lds"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "leclerc"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "lefrak"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "lego"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "lexus"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "lidl"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "lilly"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "lincoln"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "locus"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "lotte"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "lpl"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "lplfinancial"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "lundbeck"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "maif"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "man"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "marriott"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "marshalls"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "mattel"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "mckinsey"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "microsoft"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "mini"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "mint"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "mit"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "mitsubishi"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "mlb"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "monash"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "monster"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "mormon"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "moto"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "msd"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "mtn"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "mtr"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "nab"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "nba"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "nec"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "netbank"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "netflix"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "neustar"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "next"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "nextdirect"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "nexus"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "nfl"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "nhk"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "nico"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "nike"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "nikon"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "nissan"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "nissay"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "nokia"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "norton"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "nowtv"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "nra"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "ntt"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "obi"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "omega"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "open"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "oracle"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "orange"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "origins"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "otsuka"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "panasonic"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "pccw"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "pfizer"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "philips"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "pictet"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "ping"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "pioneer"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "playstation"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "pnc"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "praxi"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "prime"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "progressive"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "pru"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "prudential"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "pwc"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "redstone"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "reliance"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "rexroth"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "ricoh"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "ril"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "rogers"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "rwe"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "samsclub"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "sandvik"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "sandvikcoromant"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "sanofi"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "sap"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "sas"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "saxo"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "sbi"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "sbs"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "scb"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "schaeffler"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "schmidt"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "schwarz"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "seat"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "seek"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "sener"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "seven"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "sew"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "sfr"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "shangrila"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "sharp"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "shell"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "silk"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "sina"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "sky"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "skype"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "sling"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "smart"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "sncf"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "softbank"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "sony"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "stada"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "staples"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "statebank"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "statefarm"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "suzuki"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "swatch"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "tab"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "taobao"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "target"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "tatamotors"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "tdk"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "temasek"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "teva"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "tiaa"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "tjmaxx"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "tjx"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "tkmaxx"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "tmall"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "toray"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "toshiba"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "total"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "toyota"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "travelers"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "tui"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "ubank"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "ubs"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "unicom"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "uol"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "ups"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "vanguard"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "verisign"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "vig"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "viking"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "virgin"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "visa"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "vivo"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "volvo"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "walmart"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "walter"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "weatherchannel"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "weber"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "weir"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "williamhill"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "windows"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "winners"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "wme"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "woodside"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "wtc"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "xbox"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "xerox"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "xn--5su34j936bgsg"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "xn--8y0a063a"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "xn--9krt00a"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "xn--b4w605ferd"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "xn--cckwcxetd"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "xn--fiq64b"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "xn--flw351e"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "xn--fzys8d69uvgm"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "xn--jlq480n2rg"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "xn--kcrx77d1x4a"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "xn--w4rs40l"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "yahoo"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "yandex"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "yodobashi"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "youtube"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "zappos"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+
+[[domains]]
+tld = "zara"
+registerable = "no"
+reason = "brand_tld"
+note = "ICANN Spec 13 brand TLD; not open for public registration"
+[domains.sources]
+registerable = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+reason = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+note = "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"

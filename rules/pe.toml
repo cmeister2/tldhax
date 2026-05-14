@@ -1,0 +1,47 @@
+[[domains]]
+tld = "com.pe"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.pe/InformeFinalComision.pdf"
+
+[[domains]]
+tld = "edu.pe"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.pe/InformeFinalComision.pdf"
+
+[[domains]]
+tld = "gob.pe"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.pe/InformeFinalComision.pdf"
+
+[[domains]]
+tld = "mil.pe"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.pe/InformeFinalComision.pdf"
+
+[[domains]]
+tld = "net.pe"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.pe/InformeFinalComision.pdf"
+
+[[domains]]
+tld = "nom.pe"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.pe/InformeFinalComision.pdf"
+
+[[domains]]
+tld = "org.pe"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.pe/InformeFinalComision.pdf"
+
+[[domains]]
+tld = "pe"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.pe/InformeFinalComision.pdf"

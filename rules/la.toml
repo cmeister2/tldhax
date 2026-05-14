@@ -1,0 +1,53 @@
+[[domains]]
+tld = "com.la"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/la.html"
+
+[[domains]]
+tld = "edu.la"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/la.html"
+
+[[domains]]
+tld = "gov.la"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/la.html"
+
+[[domains]]
+tld = "info.la"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/la.html"
+
+[[domains]]
+tld = "int.la"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/la.html"
+
+[[domains]]
+tld = "la"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/la.html"
+
+[[domains]]
+tld = "net.la"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/la.html"
+
+[[domains]]
+tld = "org.la"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/la.html"
+
+[[domains]]
+tld = "per.la"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/la.html"

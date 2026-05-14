@@ -1,0 +1,53 @@
+[[domains]]
+tld = "co.io"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.io/rules.htm"
+
+[[domains]]
+tld = "com.io"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.io/rules.htm"
+
+[[domains]]
+tld = "edu.io"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.io/rules.htm"
+
+[[domains]]
+tld = "gov.io"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.io/rules.htm"
+
+[[domains]]
+tld = "io"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.io/rules.htm"
+
+[[domains]]
+tld = "mil.io"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.io/rules.htm"
+
+[[domains]]
+tld = "net.io"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.io/rules.htm"
+
+[[domains]]
+tld = "nom.io"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.io/rules.htm"
+
+[[domains]]
+tld = "org.io"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.io/rules.htm"

@@ -1,0 +1,35 @@
+[package]
+name = "tldhax"
+version = "0.0.0"
+edition = "2021"
+description = "TLD registration rule checker"
+license = "MIT"
+repository = "https://github.com/cmeister2/tldhax"
+readme = "README.md"
+keywords = ["tld", "domain", "dns", "idn", "registry"]
+categories = ["command-line-utilities", "web-programming"]
+include = ["src/**", "build.rs", "rules/**", "LICENSE", "README.md"]
+
+[lib]
+name = "tldhax"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+idna = "1"
+phf = "0.11"
+psl = "2"
+pyo3 = { version = "0.23", features = ["extension-module"] }
+serde_json = "1"
+
+[build-dependencies]
+phf_codegen = "0.11"
+serde = { version = "1", features = ["derive"] }
+toml = "0.8"
+
+[lints.rust]
+missing_docs = "deny"
+
+[lints.clippy]
+missing_docs_in_private_items = "deny"
+missing_errors_doc = "deny"
+missing_panics_doc = "deny"

@@ -1,0 +1,191 @@
+[[domains]]
+tld = "2000.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "agrar.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "bolt.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "casino.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "city.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "co.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "erotica.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "erotika.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "film.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "forum.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "games.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "hotel.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "info.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "ingatlan.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "jogasz.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "konyvelo.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "lakas.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "media.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "news.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "org.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "priv.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "reklam.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "sex.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "shop.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "sport.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "suli.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "szex.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "tm.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "tozsde.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "utazas.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"
+
+[[domains]]
+tld = "video.hu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/hu.html"

@@ -1,0 +1,29 @@
+[[domains]]
+tld = "com.mt"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.org.mt/go/policy"
+
+[[domains]]
+tld = "edu.mt"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.org.mt/go/policy"
+
+[[domains]]
+tld = "mt"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.org.mt/go/policy"
+
+[[domains]]
+tld = "net.mt"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.org.mt/go/policy"
+
+[[domains]]
+tld = "org.mt"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.org.mt/go/policy"

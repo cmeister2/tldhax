@@ -1,0 +1,59 @@
+[[domains]]
+tld = "co.om"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/om.html"
+
+[[domains]]
+tld = "com.om"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/om.html"
+
+[[domains]]
+tld = "edu.om"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/om.html"
+
+[[domains]]
+tld = "gov.om"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/om.html"
+
+[[domains]]
+tld = "med.om"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/om.html"
+
+[[domains]]
+tld = "museum.om"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/om.html"
+
+[[domains]]
+tld = "net.om"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/om.html"
+
+[[domains]]
+tld = "om"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/om.html"
+
+[[domains]]
+tld = "org.om"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/om.html"
+
+[[domains]]
+tld = "pro.om"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/om.html"

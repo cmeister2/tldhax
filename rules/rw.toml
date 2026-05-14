@@ -1,0 +1,47 @@
+[[domains]]
+tld = "ac.rw"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/rw.html"
+
+[[domains]]
+tld = "co.rw"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/rw.html"
+
+[[domains]]
+tld = "coop.rw"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/rw.html"
+
+[[domains]]
+tld = "gov.rw"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/rw.html"
+
+[[domains]]
+tld = "mil.rw"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/rw.html"
+
+[[domains]]
+tld = "net.rw"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/rw.html"
+
+[[domains]]
+tld = "org.rw"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/rw.html"
+
+[[domains]]
+tld = "rw"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/rw.html"

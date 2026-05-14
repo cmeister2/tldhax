@@ -1,0 +1,41 @@
+[[domains]]
+tld = "co.dm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.dm/policies/pdf/DMRulesandGuidelines2024v1.pdf"
+
+[[domains]]
+tld = "com.dm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.dm/policies/pdf/DMRulesandGuidelines2024v1.pdf"
+
+[[domains]]
+tld = "dm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.dm/policies/pdf/DMRulesandGuidelines2024v1.pdf"
+
+[[domains]]
+tld = "edu.dm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.dm/policies/pdf/DMRulesandGuidelines2024v1.pdf"
+
+[[domains]]
+tld = "gov.dm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.dm/policies/pdf/DMRulesandGuidelines2024v1.pdf"
+
+[[domains]]
+tld = "net.dm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.dm/policies/pdf/DMRulesandGuidelines2024v1.pdf"
+
+[[domains]]
+tld = "org.dm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.dm/policies/pdf/DMRulesandGuidelines2024v1.pdf"

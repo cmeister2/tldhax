@@ -1,0 +1,5 @@
+[[domains]]
+tld = "pars"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/pars.html"

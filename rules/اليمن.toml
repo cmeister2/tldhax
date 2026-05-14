@@ -1,0 +1,5 @@
+[[domains]]
+tld = "اليمن"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.twnic.net/english/dn/dn_07a.htm"

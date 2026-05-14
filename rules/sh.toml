@@ -1,0 +1,35 @@
+[[domains]]
+tld = "com.sh"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.sh/rules.htm"
+
+[[domains]]
+tld = "gov.sh"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.sh/rules.htm"
+
+[[domains]]
+tld = "mil.sh"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.sh/rules.htm"
+
+[[domains]]
+tld = "net.sh"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.sh/rules.htm"
+
+[[domains]]
+tld = "org.sh"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.sh/rules.htm"
+
+[[domains]]
+tld = "sh"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.sh/rules.htm"

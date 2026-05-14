@@ -1,0 +1,5 @@
+[[domains]]
+tld = "*.jm"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.com.jm/register.html"

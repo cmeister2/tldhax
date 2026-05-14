@@ -1,0 +1,89 @@
+[[domains]]
+tld = "ac.ni"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ni/"
+
+[[domains]]
+tld = "biz.ni"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ni/"
+
+[[domains]]
+tld = "co.ni"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ni/"
+
+[[domains]]
+tld = "com.ni"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ni/"
+
+[[domains]]
+tld = "edu.ni"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ni/"
+
+[[domains]]
+tld = "gob.ni"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ni/"
+
+[[domains]]
+tld = "in.ni"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ni/"
+
+[[domains]]
+tld = "info.ni"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ni/"
+
+[[domains]]
+tld = "int.ni"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ni/"
+
+[[domains]]
+tld = "mil.ni"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ni/"
+
+[[domains]]
+tld = "net.ni"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ni/"
+
+[[domains]]
+tld = "ni"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ni/"
+
+[[domains]]
+tld = "nom.ni"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ni/"
+
+[[domains]]
+tld = "org.ni"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ni/"
+
+[[domains]]
+tld = "web.ni"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ni/"

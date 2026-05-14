@@ -1,0 +1,47 @@
+[[domains]]
+tld = "ac.cr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.cr/capitulo-1-registro-de-un-nombre-de-dominio/"
+
+[[domains]]
+tld = "co.cr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.cr/capitulo-1-registro-de-un-nombre-de-dominio/"
+
+[[domains]]
+tld = "cr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.cr/capitulo-1-registro-de-un-nombre-de-dominio/"
+
+[[domains]]
+tld = "ed.cr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.cr/capitulo-1-registro-de-un-nombre-de-dominio/"
+
+[[domains]]
+tld = "fi.cr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.cr/capitulo-1-registro-de-un-nombre-de-dominio/"
+
+[[domains]]
+tld = "go.cr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.cr/capitulo-1-registro-de-un-nombre-de-dominio/"
+
+[[domains]]
+tld = "or.cr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.cr/capitulo-1-registro-de-un-nombre-de-dominio/"
+
+[[domains]]
+tld = "sa.cr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.cr/capitulo-1-registro-de-un-nombre-de-dominio/"

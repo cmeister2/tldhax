@@ -1,0 +1,59 @@
+[[domains]]
+tld = "ac.im"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.im/"
+
+[[domains]]
+tld = "co.im"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.im/"
+
+[[domains]]
+tld = "com.im"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.im/"
+
+[[domains]]
+tld = "im"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.im/"
+
+[[domains]]
+tld = "ltd.co.im"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.im/"
+
+[[domains]]
+tld = "net.im"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.im/"
+
+[[domains]]
+tld = "org.im"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.im/"
+
+[[domains]]
+tld = "plc.co.im"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.im/"
+
+[[domains]]
+tld = "tt.im"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.im/"
+
+[[domains]]
+tld = "tv.im"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.im/"

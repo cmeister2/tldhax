@@ -1,0 +1,47 @@
+[[domains]]
+tld = "biz.gh"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.gh/"
+
+[[domains]]
+tld = "com.gh"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.gh/"
+
+[[domains]]
+tld = "edu.gh"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.gh/"
+
+[[domains]]
+tld = "gh"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.gh/"
+
+[[domains]]
+tld = "gov.gh"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.gh/"
+
+[[domains]]
+tld = "mil.gh"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.gh/"
+
+[[domains]]
+tld = "net.gh"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.gh/"
+
+[[domains]]
+tld = "org.gh"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.gh/"

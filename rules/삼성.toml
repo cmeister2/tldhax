@@ -1,0 +1,5 @@
+[[domains]]
+tld = "삼성"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/xn--cg4bki.html"

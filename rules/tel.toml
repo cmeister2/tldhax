@@ -1,0 +1,5 @@
+[[domains]]
+tld = "tel"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.telnic.org/"

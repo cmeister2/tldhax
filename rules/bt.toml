@@ -1,0 +1,35 @@
+[[domains]]
+tld = "bt"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bt.html"
+
+[[domains]]
+tld = "com.bt"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bt.html"
+
+[[domains]]
+tld = "edu.bt"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bt.html"
+
+[[domains]]
+tld = "gov.bt"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bt.html"
+
+[[domains]]
+tld = "net.bt"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bt.html"
+
+[[domains]]
+tld = "org.bt"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bt.html"

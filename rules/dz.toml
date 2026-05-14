@@ -1,0 +1,65 @@
+[[domains]]
+tld = "art.dz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.dz/images/pdf_nic/charte.pdf"
+
+[[domains]]
+tld = "asso.dz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.dz/images/pdf_nic/charte.pdf"
+
+[[domains]]
+tld = "com.dz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.dz/images/pdf_nic/charte.pdf"
+
+[[domains]]
+tld = "dz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.dz/images/pdf_nic/charte.pdf"
+
+[[domains]]
+tld = "edu.dz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.dz/images/pdf_nic/charte.pdf"
+
+[[domains]]
+tld = "gov.dz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.dz/images/pdf_nic/charte.pdf"
+
+[[domains]]
+tld = "net.dz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.dz/images/pdf_nic/charte.pdf"
+
+[[domains]]
+tld = "org.dz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.dz/images/pdf_nic/charte.pdf"
+
+[[domains]]
+tld = "pol.dz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.dz/images/pdf_nic/charte.pdf"
+
+[[domains]]
+tld = "soc.dz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.dz/images/pdf_nic/charte.pdf"
+
+[[domains]]
+tld = "tm.dz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.dz/images/pdf_nic/charte.pdf"

@@ -1,0 +1,5 @@
+[[domains]]
+tld = "台灣"
+registerable = "yes"
+[domains.sources]
+registerable = "https://twnic.tw/dnservice_catag.php"

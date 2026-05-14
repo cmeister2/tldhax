@@ -1,0 +1,35 @@
+[[domains]]
+tld = "bm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.bermudanic.bm/domain-registration/index.php"
+
+[[domains]]
+tld = "com.bm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.bermudanic.bm/domain-registration/index.php"
+
+[[domains]]
+tld = "edu.bm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.bermudanic.bm/domain-registration/index.php"
+
+[[domains]]
+tld = "gov.bm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.bermudanic.bm/domain-registration/index.php"
+
+[[domains]]
+tld = "net.bm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.bermudanic.bm/domain-registration/index.php"
+
+[[domains]]
+tld = "org.bm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.bermudanic.bm/domain-registration/index.php"

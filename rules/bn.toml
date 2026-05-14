@@ -1,0 +1,35 @@
+[[domains]]
+tld = "bn"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.bnnic.bn/faqs"
+
+[[domains]]
+tld = "com.bn"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.bnnic.bn/faqs"
+
+[[domains]]
+tld = "edu.bn"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.bnnic.bn/faqs"
+
+[[domains]]
+tld = "gov.bn"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.bnnic.bn/faqs"
+
+[[domains]]
+tld = "net.bn"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.bnnic.bn/faqs"
+
+[[domains]]
+tld = "org.bn"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.bnnic.bn/faqs"

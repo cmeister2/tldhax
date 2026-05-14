@@ -1,0 +1,5 @@
+[[domains]]
+tld = "家電"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/xn--fct429k.html"

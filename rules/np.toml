@@ -1,0 +1,5 @@
+[[domains]]
+tld = "*.np"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.mos.com.np/register.html"

@@ -1,0 +1,35 @@
+[[domains]]
+tld = "com.kh"
+registerable = "yes"
+[domains.sources]
+registerable = "https://trc.gov.kh"
+
+[[domains]]
+tld = "edu.kh"
+registerable = "yes"
+[domains.sources]
+registerable = "https://trc.gov.kh"
+
+[[domains]]
+tld = "gov.kh"
+registerable = "yes"
+[domains.sources]
+registerable = "https://trc.gov.kh"
+
+[[domains]]
+tld = "kh"
+registerable = "yes"
+[domains.sources]
+registerable = "https://trc.gov.kh"
+
+[[domains]]
+tld = "net.kh"
+registerable = "yes"
+[domains.sources]
+registerable = "https://trc.gov.kh"
+
+[[domains]]
+tld = "org.kh"
+registerable = "yes"
+[domains.sources]
+registerable = "https://trc.gov.kh"

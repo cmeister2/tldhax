@@ -1,0 +1,89 @@
+[[domains]]
+tld = "ac.bd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bd.html"
+
+[[domains]]
+tld = "ai.bd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bd.html"
+
+[[domains]]
+tld = "bd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bd.html"
+
+[[domains]]
+tld = "co.bd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bd.html"
+
+[[domains]]
+tld = "com.bd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bd.html"
+
+[[domains]]
+tld = "edu.bd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bd.html"
+
+[[domains]]
+tld = "gov.bd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bd.html"
+
+[[domains]]
+tld = "id.bd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bd.html"
+
+[[domains]]
+tld = "info.bd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bd.html"
+
+[[domains]]
+tld = "it.bd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bd.html"
+
+[[domains]]
+tld = "mil.bd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bd.html"
+
+[[domains]]
+tld = "net.bd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bd.html"
+
+[[domains]]
+tld = "org.bd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bd.html"
+
+[[domains]]
+tld = "sch.bd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bd.html"
+
+[[domains]]
+tld = "tv.bd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/bd.html"

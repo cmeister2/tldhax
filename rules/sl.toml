@@ -1,0 +1,35 @@
+[[domains]]
+tld = "com.sl"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.sl"
+
+[[domains]]
+tld = "edu.sl"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.sl"
+
+[[domains]]
+tld = "gov.sl"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.sl"
+
+[[domains]]
+tld = "net.sl"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.sl"
+
+[[domains]]
+tld = "org.sl"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.sl"
+
+[[domains]]
+tld = "sl"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.sl"

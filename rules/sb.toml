@@ -1,0 +1,35 @@
+[[domains]]
+tld = "com.sb"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.sbnic.net.sb/"
+
+[[domains]]
+tld = "edu.sb"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.sbnic.net.sb/"
+
+[[domains]]
+tld = "gov.sb"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.sbnic.net.sb/"
+
+[[domains]]
+tld = "net.sb"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.sbnic.net.sb/"
+
+[[domains]]
+tld = "org.sb"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.sbnic.net.sb/"
+
+[[domains]]
+tld = "sb"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.sbnic.net.sb/"

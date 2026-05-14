@@ -1,0 +1,29 @@
+[[domains]]
+tld = "cm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/cm.html"
+
+[[domains]]
+tld = "co.cm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/cm.html"
+
+[[domains]]
+tld = "com.cm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/cm.html"
+
+[[domains]]
+tld = "gov.cm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/cm.html"
+
+[[domains]]
+tld = "net.cm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/cm.html"

@@ -1,0 +1,29 @@
+[[domains]]
+tld = "com.fm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/fm.html"
+
+[[domains]]
+tld = "edu.fm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/fm.html"
+
+[[domains]]
+tld = "fm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/fm.html"
+
+[[domains]]
+tld = "net.fm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/fm.html"
+
+[[domains]]
+tld = "org.fm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/fm.html"

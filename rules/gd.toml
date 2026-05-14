@@ -1,0 +1,17 @@
+[[domains]]
+tld = "edu.gd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/gd.html"
+
+[[domains]]
+tld = "gd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/gd.html"
+
+[[domains]]
+tld = "gov.gd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/gd.html"

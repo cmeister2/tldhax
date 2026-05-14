@@ -1,0 +1,5 @@
+[[domains]]
+tld = "购物"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/xn--g2xx48c.html"
