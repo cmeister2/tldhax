@@ -1,0 +1,11 @@
+[[domains]]
+tld = "*.ck"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ck.html"
+
+[[domains]]
+tld = "www.ck"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ck.html"

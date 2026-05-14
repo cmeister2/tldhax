@@ -1,0 +1,203 @@
+[[domains]]
+tld = "ac.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "ai.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "busan.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "chungbuk.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "chungnam.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "co.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "daegu.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "daejeon.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "es.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "gangwon.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "go.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "gwangju.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "gyeongbuk.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "gyeonggi.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "gyeongnam.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "hs.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "incheon.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "io.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "it.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "jeju.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "jeonbuk.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "jeonnam.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "kg.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "me.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "mil.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "ms.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "ne.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "or.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "pe.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "re.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "sc.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "seoul.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"
+
+[[domains]]
+tld = "ulsan.kr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://krnic.kisa.or.kr/jsp/infoboard/law/domBylawsReg.jsp"

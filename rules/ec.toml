@@ -1,0 +1,311 @@
+[[domains]]
+tld = "abg.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "adm.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "agron.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "arqt.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "art.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "bar.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "chef.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "com.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "cont.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "cpa.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "cue.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "dent.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "dgn.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "disco.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "doc.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "edu.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "eng.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "esm.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "fin.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "fot.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "gal.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "gob.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "gov.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "gye.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "ibr.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "info.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "k12.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "lat.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "loj.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "med.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "mil.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "mktg.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "mon.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "net.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "ntr.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "odont.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "org.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "pro.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "prof.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "psic.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "psiq.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "pub.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "rio.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "rrpp.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "sal.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "tech.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "tul.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "tur.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "uio.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "vet.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"
+
+[[domains]]
+tld = "xxx.ec"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.ec/"

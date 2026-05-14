@@ -1,0 +1,5 @@
+[[domains]]
+tld = "భారత్"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk/content.jsp?id=30#!/34"

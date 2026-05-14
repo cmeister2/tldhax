@@ -1,0 +1,41 @@
+[[domains]]
+tld = "com.vc"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/vc.html"
+
+[[domains]]
+tld = "edu.vc"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/vc.html"
+
+[[domains]]
+tld = "gov.vc"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/vc.html"
+
+[[domains]]
+tld = "mil.vc"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/vc.html"
+
+[[domains]]
+tld = "net.vc"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/vc.html"
+
+[[domains]]
+tld = "org.vc"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/vc.html"
+
+[[domains]]
+tld = "vc"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/vc.html"

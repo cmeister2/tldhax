@@ -1,0 +1,71 @@
+[[domains]]
+tld = "ac.zm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://zicta.zm/"
+
+[[domains]]
+tld = "biz.zm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://zicta.zm/"
+
+[[domains]]
+tld = "co.zm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://zicta.zm/"
+
+[[domains]]
+tld = "com.zm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://zicta.zm/"
+
+[[domains]]
+tld = "edu.zm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://zicta.zm/"
+
+[[domains]]
+tld = "gov.zm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://zicta.zm/"
+
+[[domains]]
+tld = "info.zm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://zicta.zm/"
+
+[[domains]]
+tld = "mil.zm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://zicta.zm/"
+
+[[domains]]
+tld = "net.zm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://zicta.zm/"
+
+[[domains]]
+tld = "org.zm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://zicta.zm/"
+
+[[domains]]
+tld = "sch.zm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://zicta.zm/"
+
+[[domains]]
+tld = "zm"
+registerable = "yes"
+[domains.sources]
+registerable = "https://zicta.zm/"

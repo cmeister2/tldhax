@@ -1,0 +1,35 @@
+[[domains]]
+tld = "bs"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.bs/rules.html"
+
+[[domains]]
+tld = "com.bs"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.bs/rules.html"
+
+[[domains]]
+tld = "edu.bs"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.bs/rules.html"
+
+[[domains]]
+tld = "gov.bs"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.bs/rules.html"
+
+[[domains]]
+tld = "net.bs"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.bs/rules.html"
+
+[[domains]]
+tld = "org.bs"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.bs/rules.html"

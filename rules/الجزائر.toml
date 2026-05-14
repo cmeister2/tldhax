@@ -1,0 +1,5 @@
+[[domains]]
+tld = "الجزائر"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.cnnic.com.cn/AU/MediaC/Announcement/201609/t20160905_54470.htm"

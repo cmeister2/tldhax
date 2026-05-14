@@ -1,0 +1,41 @@
+[[domains]]
+tld = "ac.rs"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.rnids.rs/en/domains/national-domains"
+
+[[domains]]
+tld = "co.rs"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.rnids.rs/en/domains/national-domains"
+
+[[domains]]
+tld = "edu.rs"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.rnids.rs/en/domains/national-domains"
+
+[[domains]]
+tld = "gov.rs"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.rnids.rs/en/domains/national-domains"
+
+[[domains]]
+tld = "in.rs"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.rnids.rs/en/domains/national-domains"
+
+[[domains]]
+tld = "org.rs"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.rnids.rs/en/domains/national-domains"
+
+[[domains]]
+tld = "rs"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.rnids.rs/en/domains/national-domains"

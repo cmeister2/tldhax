@@ -1,0 +1,95 @@
+[[domains]]
+tld = "ac.tj"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.tj/policy.html"
+
+[[domains]]
+tld = "biz.tj"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.tj/policy.html"
+
+[[domains]]
+tld = "co.tj"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.tj/policy.html"
+
+[[domains]]
+tld = "com.tj"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.tj/policy.html"
+
+[[domains]]
+tld = "edu.tj"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.tj/policy.html"
+
+[[domains]]
+tld = "go.tj"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.tj/policy.html"
+
+[[domains]]
+tld = "gov.tj"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.tj/policy.html"
+
+[[domains]]
+tld = "int.tj"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.tj/policy.html"
+
+[[domains]]
+tld = "mil.tj"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.tj/policy.html"
+
+[[domains]]
+tld = "name.tj"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.tj/policy.html"
+
+[[domains]]
+tld = "net.tj"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.tj/policy.html"
+
+[[domains]]
+tld = "nic.tj"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.tj/policy.html"
+
+[[domains]]
+tld = "org.tj"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.tj/policy.html"
+
+[[domains]]
+tld = "test.tj"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.tj/policy.html"
+
+[[domains]]
+tld = "tj"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.tj/policy.html"
+
+[[domains]]
+tld = "web.tj"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.tj/policy.html"

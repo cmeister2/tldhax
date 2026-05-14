@@ -1,0 +1,5 @@
+[[domains]]
+tld = "健康"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/xn--nyqy26a.html"

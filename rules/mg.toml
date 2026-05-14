@@ -1,0 +1,53 @@
+[[domains]]
+tld = "co.mg"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.mg"
+
+[[domains]]
+tld = "com.mg"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.mg"
+
+[[domains]]
+tld = "edu.mg"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.mg"
+
+[[domains]]
+tld = "gov.mg"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.mg"
+
+[[domains]]
+tld = "mg"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.mg"
+
+[[domains]]
+tld = "mil.mg"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.mg"
+
+[[domains]]
+tld = "nom.mg"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.mg"
+
+[[domains]]
+tld = "org.mg"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.mg"
+
+[[domains]]
+tld = "prd.mg"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.mg"

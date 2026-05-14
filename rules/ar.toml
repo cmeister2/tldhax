@@ -1,0 +1,95 @@
+[[domains]]
+tld = "ar"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.ar/es/nic-argentina/normativa"
+
+[[domains]]
+tld = "bet.ar"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.ar/es/nic-argentina/normativa"
+
+[[domains]]
+tld = "com.ar"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.ar/es/nic-argentina/normativa"
+
+[[domains]]
+tld = "coop.ar"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.ar/es/nic-argentina/normativa"
+
+[[domains]]
+tld = "edu.ar"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.ar/es/nic-argentina/normativa"
+
+[[domains]]
+tld = "gob.ar"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.ar/es/nic-argentina/normativa"
+
+[[domains]]
+tld = "gov.ar"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.ar/es/nic-argentina/normativa"
+
+[[domains]]
+tld = "int.ar"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.ar/es/nic-argentina/normativa"
+
+[[domains]]
+tld = "mil.ar"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.ar/es/nic-argentina/normativa"
+
+[[domains]]
+tld = "musica.ar"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.ar/es/nic-argentina/normativa"
+
+[[domains]]
+tld = "mutual.ar"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.ar/es/nic-argentina/normativa"
+
+[[domains]]
+tld = "net.ar"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.ar/es/nic-argentina/normativa"
+
+[[domains]]
+tld = "org.ar"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.ar/es/nic-argentina/normativa"
+
+[[domains]]
+tld = "seg.ar"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.ar/es/nic-argentina/normativa"
+
+[[domains]]
+tld = "senasa.ar"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.ar/es/nic-argentina/normativa"
+
+[[domains]]
+tld = "tur.ar"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.ar/es/nic-argentina/normativa"

@@ -1,0 +1,5 @@
+[[domains]]
+tld = "gm"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.gm/htmlpages%5Cgm-policy.htm"

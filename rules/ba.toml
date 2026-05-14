@@ -1,0 +1,41 @@
+[[domains]]
+tld = "ba"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ba.html"
+
+[[domains]]
+tld = "com.ba"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ba.html"
+
+[[domains]]
+tld = "edu.ba"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ba.html"
+
+[[domains]]
+tld = "gov.ba"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ba.html"
+
+[[domains]]
+tld = "mil.ba"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ba.html"
+
+[[domains]]
+tld = "net.ba"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ba.html"
+
+[[domains]]
+tld = "org.ba"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ba.html"

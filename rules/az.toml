@@ -1,0 +1,83 @@
+[[domains]]
+tld = "az"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.az/?page_id=10"
+
+[[domains]]
+tld = "biz.az"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.az/?page_id=10"
+
+[[domains]]
+tld = "co.az"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.az/?page_id=10"
+
+[[domains]]
+tld = "com.az"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.az/?page_id=10"
+
+[[domains]]
+tld = "edu.az"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.az/?page_id=10"
+
+[[domains]]
+tld = "gov.az"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.az/?page_id=10"
+
+[[domains]]
+tld = "info.az"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.az/?page_id=10"
+
+[[domains]]
+tld = "int.az"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.az/?page_id=10"
+
+[[domains]]
+tld = "mil.az"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.az/?page_id=10"
+
+[[domains]]
+tld = "name.az"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.az/?page_id=10"
+
+[[domains]]
+tld = "net.az"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.az/?page_id=10"
+
+[[domains]]
+tld = "org.az"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.az/?page_id=10"
+
+[[domains]]
+tld = "pp.az"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.az/?page_id=10"
+
+[[domains]]
+tld = "pro.az"
+registerable = "yes"
+[domains.sources]
+registerable = "https://whois.az/?page_id=783"

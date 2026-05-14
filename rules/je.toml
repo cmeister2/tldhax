@@ -1,0 +1,23 @@
+[[domains]]
+tld = "co.je"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/je.html"
+
+[[domains]]
+tld = "je"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/je.html"
+
+[[domains]]
+tld = "net.je"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/je.html"
+
+[[domains]]
+tld = "org.je"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/je.html"

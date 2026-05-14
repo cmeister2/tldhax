@@ -1,0 +1,5 @@
+[[domains]]
+tld = "تونس"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.tn"

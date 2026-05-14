@@ -1,0 +1,59 @@
+[[domains]]
+tld = "biz.ss"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.nic.ss/"
+
+[[domains]]
+tld = "co.ss"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.nic.ss/"
+
+[[domains]]
+tld = "com.ss"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.nic.ss/"
+
+[[domains]]
+tld = "edu.ss"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.nic.ss/"
+
+[[domains]]
+tld = "gov.ss"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.nic.ss/"
+
+[[domains]]
+tld = "me.ss"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.nic.ss/"
+
+[[domains]]
+tld = "net.ss"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.nic.ss/"
+
+[[domains]]
+tld = "org.ss"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.nic.ss/"
+
+[[domains]]
+tld = "sch.ss"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.nic.ss/"
+
+[[domains]]
+tld = "ss"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.nic.ss/"

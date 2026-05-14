@@ -1,0 +1,41 @@
+[[domains]]
+tld = "com.iq"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.cmc.iq/english/iq/iqregister1.htm"
+
+[[domains]]
+tld = "edu.iq"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.cmc.iq/english/iq/iqregister1.htm"
+
+[[domains]]
+tld = "gov.iq"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.cmc.iq/english/iq/iqregister1.htm"
+
+[[domains]]
+tld = "iq"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.cmc.iq/english/iq/iqregister1.htm"
+
+[[domains]]
+tld = "mil.iq"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.cmc.iq/english/iq/iqregister1.htm"
+
+[[domains]]
+tld = "net.iq"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.cmc.iq/english/iq/iqregister1.htm"
+
+[[domains]]
+tld = "org.iq"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.cmc.iq/english/iq/iqregister1.htm"

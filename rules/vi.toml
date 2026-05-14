@@ -1,0 +1,35 @@
+[[domains]]
+tld = "co.vi"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/vi.html"
+
+[[domains]]
+tld = "com.vi"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/vi.html"
+
+[[domains]]
+tld = "k12.vi"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/vi.html"
+
+[[domains]]
+tld = "net.vi"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/vi.html"
+
+[[domains]]
+tld = "org.vi"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/vi.html"
+
+[[domains]]
+tld = "vi"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/vi.html"

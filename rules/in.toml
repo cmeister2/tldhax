@@ -1,0 +1,263 @@
+[[domains]]
+tld = "5g.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "6g.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "ac.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "ai.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "am.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "bank.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "bihar.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "biz.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "business.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "ca.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "cn.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "co.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "com.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "coop.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "cs.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "delhi.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "dr.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "edu.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "er.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "fin.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "firm.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "gen.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "gov.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "gujarat.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "ind.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "info.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "int.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "internet.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "io.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "me.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "mil.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "net.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "nic.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "org.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "pg.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "post.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "pro.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "res.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "travel.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "tv.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "uk.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "up.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"
+
+[[domains]]
+tld = "us.in"
+registerable = "yes"
+[domains.sources]
+registerable = "https://registry.in/policies"

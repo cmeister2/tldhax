@@ -1,0 +1,53 @@
+[[domains]]
+tld = "com.sd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/sd.html"
+
+[[domains]]
+tld = "edu.sd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/sd.html"
+
+[[domains]]
+tld = "gov.sd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/sd.html"
+
+[[domains]]
+tld = "info.sd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/sd.html"
+
+[[domains]]
+tld = "med.sd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/sd.html"
+
+[[domains]]
+tld = "net.sd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/sd.html"
+
+[[domains]]
+tld = "org.sd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/sd.html"
+
+[[domains]]
+tld = "sd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/sd.html"
+
+[[domains]]
+tld = "tv.sd"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/sd.html"

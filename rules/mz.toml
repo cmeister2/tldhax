@@ -1,0 +1,53 @@
+[[domains]]
+tld = "ac.mz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.uem.mz/"
+
+[[domains]]
+tld = "adv.mz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.uem.mz/"
+
+[[domains]]
+tld = "co.mz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.uem.mz/"
+
+[[domains]]
+tld = "edu.mz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.uem.mz/"
+
+[[domains]]
+tld = "gov.mz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.uem.mz/"
+
+[[domains]]
+tld = "mil.mz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.uem.mz/"
+
+[[domains]]
+tld = "mz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.uem.mz/"
+
+[[domains]]
+tld = "net.mz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.uem.mz/"
+
+[[domains]]
+tld = "org.mz"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.uem.mz/"

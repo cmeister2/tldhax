@@ -1,0 +1,41 @@
+[[domains]]
+tld = "ac.ma"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.anrt.ma/fr/admin/download/upload/file_fr782.pdf"
+
+[[domains]]
+tld = "co.ma"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.anrt.ma/fr/admin/download/upload/file_fr782.pdf"
+
+[[domains]]
+tld = "gov.ma"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.anrt.ma/fr/admin/download/upload/file_fr782.pdf"
+
+[[domains]]
+tld = "ma"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.anrt.ma/fr/admin/download/upload/file_fr782.pdf"
+
+[[domains]]
+tld = "net.ma"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.anrt.ma/fr/admin/download/upload/file_fr782.pdf"
+
+[[domains]]
+tld = "org.ma"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.anrt.ma/fr/admin/download/upload/file_fr782.pdf"
+
+[[domains]]
+tld = "press.ma"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.anrt.ma/fr/admin/download/upload/file_fr782.pdf"

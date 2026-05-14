@@ -1,0 +1,29 @@
+[[domains]]
+tld = "ai"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.com.ai/"
+
+[[domains]]
+tld = "com.ai"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.com.ai/"
+
+[[domains]]
+tld = "net.ai"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.com.ai/"
+
+[[domains]]
+tld = "off.ai"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.com.ai/"
+
+[[domains]]
+tld = "org.ai"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.com.ai/"

@@ -1,0 +1,11 @@
+[[domains]]
+tld = "gov.sx"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/sx.html"
+
+[[domains]]
+tld = "sx"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/sx.html"

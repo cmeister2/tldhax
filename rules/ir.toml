@@ -1,0 +1,59 @@
+[[domains]]
+tld = "ac.ir"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ir/Internationalized_Domain_Names"
+
+[[domains]]
+tld = "co.ir"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ir/Internationalized_Domain_Names"
+
+[[domains]]
+tld = "gov.ir"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ir/Internationalized_Domain_Names"
+
+[[domains]]
+tld = "id.ir"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ir/Internationalized_Domain_Names"
+
+[[domains]]
+tld = "ir"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ir/Internationalized_Domain_Names"
+
+[[domains]]
+tld = "net.ir"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ir/Internationalized_Domain_Names"
+
+[[domains]]
+tld = "org.ir"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ir/Internationalized_Domain_Names"
+
+[[domains]]
+tld = "sch.ir"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ir/Internationalized_Domain_Names"
+
+[[domains]]
+tld = "ايران.ir"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ir/Internationalized_Domain_Names"
+
+[[domains]]
+tld = "ایران.ir"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.ir/Internationalized_Domain_Names"

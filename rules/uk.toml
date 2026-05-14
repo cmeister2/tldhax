@@ -1,0 +1,73 @@
+[[domains]]
+tld = "co.uk"
+registerable = "yes"
+min_length = 3
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/uk.html"
+min_length = "https://www.nominet.uk/go/terms"
+
+[[domains]]
+tld = "*.sch.uk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/uk.html"
+
+[[domains]]
+tld = "ac.uk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/uk.html"
+
+[[domains]]
+tld = "gov.uk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/uk.html"
+
+[[domains]]
+tld = "ltd.uk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/uk.html"
+
+[[domains]]
+tld = "me.uk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/uk.html"
+
+[[domains]]
+tld = "net.uk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/uk.html"
+
+[[domains]]
+tld = "nhs.uk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/uk.html"
+
+[[domains]]
+tld = "org.uk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/uk.html"
+
+[[domains]]
+tld = "plc.uk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/uk.html"
+
+[[domains]]
+tld = "police.uk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/uk.html"
+
+[[domains]]
+tld = "uk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/uk.html"

@@ -1,0 +1,83 @@
+[[domains]]
+tld = "ac.pr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/pr.html"
+
+[[domains]]
+tld = "biz.pr"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.pr/index.asp?f=1"
+
+[[domains]]
+tld = "com.pr"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.pr/index.asp?f=1"
+
+[[domains]]
+tld = "edu.pr"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.pr/index.asp?f=1"
+
+[[domains]]
+tld = "est.pr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/pr.html"
+
+[[domains]]
+tld = "gov.pr"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.pr/index.asp?f=1"
+
+[[domains]]
+tld = "info.pr"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.pr/index.asp?f=1"
+
+[[domains]]
+tld = "isla.pr"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.pr/index.asp?f=1"
+
+[[domains]]
+tld = "name.pr"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.pr/index.asp?f=1"
+
+[[domains]]
+tld = "net.pr"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.pr/index.asp?f=1"
+
+[[domains]]
+tld = "org.pr"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.pr/index.asp?f=1"
+
+[[domains]]
+tld = "pr"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.pr/index.asp?f=1"
+
+[[domains]]
+tld = "pro.pr"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.pr/index.asp?f=1"
+
+[[domains]]
+tld = "prof.pr"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/pr.html"

@@ -1,0 +1,41 @@
+[[domains]]
+tld = "個人.香港"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk/content.jsp?id=30#!/34"
+
+[[domains]]
+tld = "公司.香港"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk/content.jsp?id=30#!/34"
+
+[[domains]]
+tld = "政府.香港"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk/content.jsp?id=30#!/34"
+
+[[domains]]
+tld = "教育.香港"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk/content.jsp?id=30#!/34"
+
+[[domains]]
+tld = "組織.香港"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk/content.jsp?id=30#!/34"
+
+[[domains]]
+tld = "網絡.香港"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk/content.jsp?id=30#!/34"
+
+[[domains]]
+tld = "香港"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk/content.jsp?id=30#!/34"

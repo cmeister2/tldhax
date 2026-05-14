@@ -1,0 +1,29 @@
+[[domains]]
+tld = "com.cw"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.uoc.cw/cw-registry"
+
+[[domains]]
+tld = "cw"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.uoc.cw/cw-registry"
+
+[[domains]]
+tld = "edu.cw"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.uoc.cw/cw-registry"
+
+[[domains]]
+tld = "net.cw"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.uoc.cw/cw-registry"
+
+[[domains]]
+tld = "org.cw"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.uoc.cw/cw-registry"

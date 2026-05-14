@@ -1,0 +1,89 @@
+[[domains]]
+tld = "agri.jo"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.jo/JoFamily.aspx"
+
+[[domains]]
+tld = "ai.jo"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.jo/JoFamily.aspx"
+
+[[domains]]
+tld = "com.jo"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.jo/JoFamily.aspx"
+
+[[domains]]
+tld = "edu.jo"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.jo/JoFamily.aspx"
+
+[[domains]]
+tld = "eng.jo"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.jo/JoFamily.aspx"
+
+[[domains]]
+tld = "fm.jo"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.jo/JoFamily.aspx"
+
+[[domains]]
+tld = "gov.jo"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.jo/JoFamily.aspx"
+
+[[domains]]
+tld = "jo"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.jo/JoFamily.aspx"
+
+[[domains]]
+tld = "mil.jo"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.jo/JoFamily.aspx"
+
+[[domains]]
+tld = "net.jo"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.jo/JoFamily.aspx"
+
+[[domains]]
+tld = "org.jo"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.jo/JoFamily.aspx"
+
+[[domains]]
+tld = "per.jo"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.jo/JoFamily.aspx"
+
+[[domains]]
+tld = "phd.jo"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.jo/JoFamily.aspx"
+
+[[domains]]
+tld = "sch.jo"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.jo/JoFamily.aspx"
+
+[[domains]]
+tld = "tv.jo"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.jo/JoFamily.aspx"

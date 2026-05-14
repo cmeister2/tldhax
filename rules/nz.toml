@@ -1,0 +1,101 @@
+[[domains]]
+tld = "ac.nz"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/nz.html"
+
+[[domains]]
+tld = "co.nz"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/nz.html"
+
+[[domains]]
+tld = "cri.nz"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/nz.html"
+
+[[domains]]
+tld = "geek.nz"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/nz.html"
+
+[[domains]]
+tld = "gen.nz"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/nz.html"
+
+[[domains]]
+tld = "govt.nz"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/nz.html"
+
+[[domains]]
+tld = "health.nz"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/nz.html"
+
+[[domains]]
+tld = "iwi.nz"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/nz.html"
+
+[[domains]]
+tld = "kiwi.nz"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/nz.html"
+
+[[domains]]
+tld = "maori.nz"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/nz.html"
+
+[[domains]]
+tld = "mil.nz"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/nz.html"
+
+[[domains]]
+tld = "māori.nz"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/nz.html"
+
+[[domains]]
+tld = "net.nz"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/nz.html"
+
+[[domains]]
+tld = "nz"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/nz.html"
+
+[[domains]]
+tld = "org.nz"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/nz.html"
+
+[[domains]]
+tld = "parliament.nz"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/nz.html"
+
+[[domains]]
+tld = "school.nz"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/nz.html"

@@ -1,0 +1,47 @@
+[[domains]]
+tld = "ac.th"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/th.html"
+
+[[domains]]
+tld = "co.th"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/th.html"
+
+[[domains]]
+tld = "go.th"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/th.html"
+
+[[domains]]
+tld = "in.th"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/th.html"
+
+[[domains]]
+tld = "mi.th"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/th.html"
+
+[[domains]]
+tld = "net.th"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/th.html"
+
+[[domains]]
+tld = "or.th"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/th.html"
+
+[[domains]]
+tld = "th"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/th.html"

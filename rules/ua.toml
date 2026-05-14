@@ -1,0 +1,479 @@
+[[domains]]
+tld = "cherkassy.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "cherkasy.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "chernigov.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "chernihiv.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "chernivtsi.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "chernovtsy.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "ck.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "cn.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "com.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/policy/?ua"
+
+[[domains]]
+tld = "cr.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "crimea.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "cv.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "dn.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "dnepropetrovsk.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "dnipropetrovsk.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "donetsk.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "dp.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "edu.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/policy/?ua"
+
+[[domains]]
+tld = "gov.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/policy/?ua"
+
+[[domains]]
+tld = "if.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "in.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/policy/?ua"
+
+[[domains]]
+tld = "ivano-frankivsk.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "kh.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "kharkiv.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "kharkov.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "kherson.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "khmelnitskiy.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "khmelnytskyi.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "kiev.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "kirovograd.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "km.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "kr.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "kropyvnytskyi.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "krym.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "ks.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "kv.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "kyiv.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "lg.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "lt.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "lugansk.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "luhansk.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "lutsk.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "lv.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "lviv.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "mk.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "mykolaiv.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "net.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/policy/?ua"
+
+[[domains]]
+tld = "nikolaev.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "od.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "odesa.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "odessa.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "org.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/policy/?ua"
+
+[[domains]]
+tld = "pl.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "poltava.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "rivne.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "rovno.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "rv.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "sb.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "sebastopol.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "sevastopol.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "sm.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "sumy.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "te.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "ternopil.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/policy/?ua"
+
+[[domains]]
+tld = "uz.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "uzhgorod.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "uzhhorod.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "vinnica.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "vinnytsia.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "vn.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "volyn.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "yalta.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "zakarpattia.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "zaporizhzhe.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "zaporizhzhia.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "zhitomir.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "zhytomyr.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "zp.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"
+
+[[domains]]
+tld = "zt.ua"
+registerable = "yes"
+[domains.sources]
+registerable = "https://hostmaster.ua/2ld/"

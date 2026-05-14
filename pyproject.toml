@@ -1,0 +1,26 @@
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "tldhax"
+requires-python = ">=3.10"
+dynamic = ["version", "description", "readme", "license", "keywords"]
+
+[project.urls]
+Homepage = "https://github.com/cmeister2/tldhax"
+Repository = "https://github.com/cmeister2/tldhax"
+
+[project.scripts]
+tldhax = "tldhax.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "pytest",
+    "hypothesis",
+]
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+module-name = "tldhax._native"

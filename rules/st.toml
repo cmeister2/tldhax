@@ -1,0 +1,71 @@
+[[domains]]
+tld = "co.st"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.st/html/policyrules/"
+
+[[domains]]
+tld = "com.st"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.st/html/policyrules/"
+
+[[domains]]
+tld = "consulado.st"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.st/html/policyrules/"
+
+[[domains]]
+tld = "edu.st"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.st/html/policyrules/"
+
+[[domains]]
+tld = "embaixada.st"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.st/html/policyrules/"
+
+[[domains]]
+tld = "mil.st"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.st/html/policyrules/"
+
+[[domains]]
+tld = "net.st"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.st/html/policyrules/"
+
+[[domains]]
+tld = "org.st"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.st/html/policyrules/"
+
+[[domains]]
+tld = "principe.st"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.st/html/policyrules/"
+
+[[domains]]
+tld = "saotome.st"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.st/html/policyrules/"
+
+[[domains]]
+tld = "st"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.st/html/policyrules/"
+
+[[domains]]
+tld = "store.st"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.nic.st/html/policyrules/"

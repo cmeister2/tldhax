@@ -1,0 +1,47 @@
+[[domains]]
+tld = "ac.mu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/mu.html"
+
+[[domains]]
+tld = "co.mu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/mu.html"
+
+[[domains]]
+tld = "com.mu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/mu.html"
+
+[[domains]]
+tld = "gov.mu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/mu.html"
+
+[[domains]]
+tld = "mu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/mu.html"
+
+[[domains]]
+tld = "net.mu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/mu.html"
+
+[[domains]]
+tld = "or.mu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/mu.html"
+
+[[domains]]
+tld = "org.mu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/mu.html"

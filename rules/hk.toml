@@ -1,0 +1,131 @@
+[[domains]]
+tld = "com.hk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk"
+
+[[domains]]
+tld = "edu.hk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk"
+
+[[domains]]
+tld = "gov.hk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk"
+
+[[domains]]
+tld = "hk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk"
+
+[[domains]]
+tld = "idv.hk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk"
+
+[[domains]]
+tld = "net.hk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk"
+
+[[domains]]
+tld = "org.hk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk"
+
+[[domains]]
+tld = "个人.hk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk"
+
+[[domains]]
+tld = "個人.hk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk"
+
+[[domains]]
+tld = "公司.hk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk"
+
+[[domains]]
+tld = "政府.hk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk"
+
+[[domains]]
+tld = "敎育.hk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk"
+
+[[domains]]
+tld = "教育.hk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk"
+
+[[domains]]
+tld = "箇人.hk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk"
+
+[[domains]]
+tld = "組織.hk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk"
+
+[[domains]]
+tld = "組织.hk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk"
+
+[[domains]]
+tld = "網絡.hk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk"
+
+[[domains]]
+tld = "網络.hk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk"
+
+[[domains]]
+tld = "组織.hk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk"
+
+[[domains]]
+tld = "组织.hk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk"
+
+[[domains]]
+tld = "网絡.hk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk"
+
+[[domains]]
+tld = "网络.hk"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.hkirc.hk"

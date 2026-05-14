@@ -1,0 +1,47 @@
+[[domains]]
+tld = "co"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.cointernet.com.co/como-funciona-un-dominio-restringido"
+
+[[domains]]
+tld = "com.co"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.cointernet.com.co/como-funciona-un-dominio-restringido"
+
+[[domains]]
+tld = "edu.co"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.cointernet.com.co/como-funciona-un-dominio-restringido"
+
+[[domains]]
+tld = "gov.co"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.cointernet.com.co/como-funciona-un-dominio-restringido"
+
+[[domains]]
+tld = "mil.co"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.cointernet.com.co/como-funciona-un-dominio-restringido"
+
+[[domains]]
+tld = "net.co"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.cointernet.com.co/como-funciona-un-dominio-restringido"
+
+[[domains]]
+tld = "nom.co"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.cointernet.com.co/como-funciona-un-dominio-restringido"
+
+[[domains]]
+tld = "org.co"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.cointernet.com.co/como-funciona-un-dominio-restringido"

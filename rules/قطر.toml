@@ -1,0 +1,5 @@
+[[domains]]
+tld = "قطر"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.ict.gov.qa/"

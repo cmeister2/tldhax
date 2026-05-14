@@ -1,0 +1,9 @@
+[[domains]]
+tld = "test"
+registerable = "no"
+reason = "infrastructure"
+note = ".test is reserved for testing and not open for public registration"
+[domains.sources]
+registerable = "https://www.iana.org/domains/reserved"
+reason = "https://www.iana.org/domains/reserved"
+note = "https://www.iana.org/domains/reserved"

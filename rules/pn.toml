@@ -1,0 +1,35 @@
+[[domains]]
+tld = "co.pn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/pn.html"
+
+[[domains]]
+tld = "edu.pn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/pn.html"
+
+[[domains]]
+tld = "gov.pn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/pn.html"
+
+[[domains]]
+tld = "net.pn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/pn.html"
+
+[[domains]]
+tld = "org.pn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/pn.html"
+
+[[domains]]
+tld = "pn"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/pn.html"

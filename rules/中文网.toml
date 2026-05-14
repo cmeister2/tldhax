@@ -1,0 +1,5 @@
+[[domains]]
+tld = "中文网"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/xn--fiq228c5hs.html"

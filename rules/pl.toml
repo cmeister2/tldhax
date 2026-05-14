@@ -1,0 +1,1253 @@
+[[domains]]
+tld = "agro.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "aid.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "ap.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "atm.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "augustow.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "auto.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "babia-gora.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "bedzin.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "beskidy.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "bialowieza.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "bialystok.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "bielawa.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "bieszczady.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "biz.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "boleslawiec.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "bydgoszcz.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "bytom.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "cieszyn.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "com.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/"
+
+[[domains]]
+tld = "czeladz.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "czest.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "dlugoleka.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "edu.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "elblag.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "elk.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "glogow.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "gmina.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "gniezno.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "gorlice.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "grajewo.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "griw.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "gsm.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "ic.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "ilawa.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "info.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "is.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "jaworzno.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "jelenia-gora.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "jgora.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "kalisz.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "karpacz.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "kartuzy.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "kaszuby.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "katowice.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "kazimierz-dolny.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "kepno.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "ketrzyn.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "klodzko.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "kmpsp.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "kobierzyce.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "kolobrzeg.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "konin.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "konskowola.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "konsulat.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "kppsp.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "kutno.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "kwp.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "kwpsp.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "lapy.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "lebork.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "legnica.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "lezajsk.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "limanowa.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "lomza.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "lowicz.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "lubin.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "lukow.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "mail.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "malbork.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "malopolska.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "mazowsze.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "mazury.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "media.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "miasta.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "mielec.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "mielno.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "mil.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "mragowo.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "mup.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "mw.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "naklo.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "net.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/"
+
+[[domains]]
+tld = "nieruchomosci.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "nom.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "nowaruda.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "nysa.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "oia.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "oirm.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "oke.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "olawa.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "olecko.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "olkusz.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "olsztyn.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "oow.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "opoczno.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "opole.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "org.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/"
+
+[[domains]]
+tld = "oschr.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "ostroda.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "ostroleka.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "ostrowiec.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "ostrowwlkp.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "oum.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "pa.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "pc.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "pila.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "pinb.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "pisz.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "piw.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/"
+
+[[domains]]
+tld = "po.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "podhale.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "podlasie.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "polkowice.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "pomorskie.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "pomorze.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "powiat.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "pr.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "priv.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "prochowice.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "pruszkow.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "przeworsk.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "psp.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "psse.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "pulawy.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "pup.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "radom.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "rawa-maz.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "realestate.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "rel.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "rybnik.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "rzeszow.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "rzgw.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "sa.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "sanok.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "sdn.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "sejny.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "sex.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "shop.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "sklep.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "sko.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "skoczow.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "slask.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "slupsk.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "so.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "sos.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "sosnowiec.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "sr.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "stalowa-wola.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "starachowice.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "stargard.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "starostwo.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "suwalki.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "swidnica.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "swiebodzin.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "swinoujscie.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "szczecin.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "szczytno.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "szkola.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "targi.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "tarnobrzeg.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "tgory.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "tm.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "tourism.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "travel.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "turek.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "turystyka.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_functional_domain_names"
+
+[[domains]]
+tld = "tychy.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "ug.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "ugim.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "um.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "umig.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "upow.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "uppo.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "us.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "ustka.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "uw.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "uzs.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "walbrzych.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "warmia.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "warszawa.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "waw.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "wegrow.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "wielun.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "wif.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "wiih.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "winb.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "wios.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "witd.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "wiw.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "wkz.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "wlocl.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "wloclawek.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "wodzislaw.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "wolomin.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "wroclaw.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "wsa.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "wskr.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "wsse.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "wuoz.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "wzmiuw.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "zachpomor.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "zagan.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "zarow.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "zgora.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "zgorzelec.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/en/list_of_regional_domain_names"
+
+[[domains]]
+tld = "zp.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"
+
+[[domains]]
+tld = "zpisdn.gov.pl"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.dns.pl/regulamin_gov_pl"

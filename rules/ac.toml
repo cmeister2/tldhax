@@ -1,0 +1,41 @@
+[[domains]]
+tld = "ac"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.ac/rules.htm"
+
+[[domains]]
+tld = "com.ac"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.ac/rules.htm"
+
+[[domains]]
+tld = "edu.ac"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.ac/rules.htm"
+
+[[domains]]
+tld = "gov.ac"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.ac/rules.htm"
+
+[[domains]]
+tld = "mil.ac"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.ac/rules.htm"
+
+[[domains]]
+tld = "net.ac"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.ac/rules.htm"
+
+[[domains]]
+tld = "org.ac"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.ac/rules.htm"

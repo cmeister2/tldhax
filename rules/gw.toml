@@ -1,0 +1,5 @@
+[[domains]]
+tld = "gw"
+registerable = "yes"
+[domains.sources]
+registerable = "https://nic.gw/regras/"

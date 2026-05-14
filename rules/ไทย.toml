@@ -1,0 +1,41 @@
+[[domains]]
+tld = "ทหาร.ไทย"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.thnic.co.th"
+
+[[domains]]
+tld = "ธุรกิจ.ไทย"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.thnic.co.th"
+
+[[domains]]
+tld = "รัฐบาล.ไทย"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.thnic.co.th"
+
+[[domains]]
+tld = "ศึกษา.ไทย"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.thnic.co.th"
+
+[[domains]]
+tld = "องค์กร.ไทย"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.thnic.co.th"
+
+[[domains]]
+tld = "เน็ต.ไทย"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.thnic.co.th"
+
+[[domains]]
+tld = "ไทย"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.thnic.co.th"

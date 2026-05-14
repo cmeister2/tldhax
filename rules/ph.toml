@@ -1,0 +1,53 @@
+[[domains]]
+tld = "com.ph"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ph.html"
+
+[[domains]]
+tld = "edu.ph"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ph.html"
+
+[[domains]]
+tld = "gov.ph"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ph.html"
+
+[[domains]]
+tld = "i.ph"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ph.html"
+
+[[domains]]
+tld = "mil.ph"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ph.html"
+
+[[domains]]
+tld = "net.ph"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ph.html"
+
+[[domains]]
+tld = "ngo.ph"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ph.html"
+
+[[domains]]
+tld = "org.ph"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ph.html"
+
+[[domains]]
+tld = "ph"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/ph.html"

@@ -1,0 +1,35 @@
+[[domains]]
+tld = "co.gl"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.gl"
+
+[[domains]]
+tld = "com.gl"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.gl"
+
+[[domains]]
+tld = "edu.gl"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.gl"
+
+[[domains]]
+tld = "gl"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.gl"
+
+[[domains]]
+tld = "net.gl"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.gl"
+
+[[domains]]
+tld = "org.gl"
+registerable = "yes"
+[domains.sources]
+registerable = "http://nic.gl"

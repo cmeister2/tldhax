@@ -1,0 +1,10 @@
+[[domains]]
+tld = "de"
+registerable = "restricted"
+note = ".de requires eligibility (resident)"
+restrictions = ["resident"]
+
+[domains.sources]
+registerable = "https://www.icann.org/resources/pages/registry-agreements-specification-13-2013-11-07-en"
+restrictions = "https://www.icann.org/resources/pages/registry-agreements-specification-13-2013-11-07-en"
+note = "https://www.icann.org/resources/pages/registry-agreements-specification-13-2013-11-07-en"

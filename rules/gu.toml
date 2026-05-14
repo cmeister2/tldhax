@@ -1,0 +1,53 @@
+[[domains]]
+tld = "com.gu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.uog.edu"
+
+[[domains]]
+tld = "edu.gu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.uog.edu"
+
+[[domains]]
+tld = "gov.gu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.uog.edu"
+
+[[domains]]
+tld = "gu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.uog.edu"
+
+[[domains]]
+tld = "guam.gu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.uog.edu"
+
+[[domains]]
+tld = "info.gu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.uog.edu"
+
+[[domains]]
+tld = "net.gu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.uog.edu"
+
+[[domains]]
+tld = "org.gu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.uog.edu"
+
+[[domains]]
+tld = "web.gu"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.uog.edu"

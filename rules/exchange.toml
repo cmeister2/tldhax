@@ -1,0 +1,5 @@
+[[domains]]
+tld = "exchange"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/exchange.html"

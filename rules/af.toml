@@ -1,0 +1,35 @@
+[[domains]]
+tld = "af"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.af/domain-price"
+
+[[domains]]
+tld = "com.af"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.af/domain-price"
+
+[[domains]]
+tld = "edu.af"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.af/domain-price"
+
+[[domains]]
+tld = "gov.af"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.af/domain-price"
+
+[[domains]]
+tld = "net.af"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.af/domain-price"
+
+[[domains]]
+tld = "org.af"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.nic.af/domain-price"

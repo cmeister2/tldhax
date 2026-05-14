@@ -1,0 +1,59 @@
+[[domains]]
+tld = "ac.ke"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.kenic.or.ke/index.php/en/ke-domains/ke-domains"
+
+[[domains]]
+tld = "co.ke"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.kenic.or.ke/index.php/en/ke-domains/ke-domains"
+
+[[domains]]
+tld = "go.ke"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.kenic.or.ke/index.php/en/ke-domains/ke-domains"
+
+[[domains]]
+tld = "info.ke"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.kenic.or.ke/index.php/en/ke-domains/ke-domains"
+
+[[domains]]
+tld = "ke"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.kenic.or.ke/index.php/en/ke-domains/ke-domains"
+
+[[domains]]
+tld = "me.ke"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.kenic.or.ke/index.php/en/ke-domains/ke-domains"
+
+[[domains]]
+tld = "mobi.ke"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.kenic.or.ke/index.php/en/ke-domains/ke-domains"
+
+[[domains]]
+tld = "ne.ke"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.kenic.or.ke/index.php/en/ke-domains/ke-domains"
+
+[[domains]]
+tld = "or.ke"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.kenic.or.ke/index.php/en/ke-domains/ke-domains"
+
+[[domains]]
+tld = "sc.ke"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.kenic.or.ke/index.php/en/ke-domains/ke-domains"

@@ -1,0 +1,35 @@
+[[domains]]
+tld = "com.sv"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/sv.html"
+
+[[domains]]
+tld = "edu.sv"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/sv.html"
+
+[[domains]]
+tld = "gob.sv"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/sv.html"
+
+[[domains]]
+tld = "org.sv"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/sv.html"
+
+[[domains]]
+tld = "red.sv"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/sv.html"
+
+[[domains]]
+tld = "sv"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/sv.html"

@@ -1,0 +1,5 @@
+[[domains]]
+tld = "vermögensberater"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/xn--vermgensberater-ctb.html"

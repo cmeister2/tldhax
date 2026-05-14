@@ -1,0 +1,11 @@
+[[domains]]
+tld = "eu.int"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/int.html"
+
+[[domains]]
+tld = "int"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/int.html"

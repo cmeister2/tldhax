@@ -1,0 +1,53 @@
+[[domains]]
+tld = "ac.me"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/me.html"
+
+[[domains]]
+tld = "co.me"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/me.html"
+
+[[domains]]
+tld = "edu.me"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/me.html"
+
+[[domains]]
+tld = "gov.me"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/me.html"
+
+[[domains]]
+tld = "its.me"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/me.html"
+
+[[domains]]
+tld = "me"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/me.html"
+
+[[domains]]
+tld = "net.me"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/me.html"
+
+[[domains]]
+tld = "org.me"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/me.html"
+
+[[domains]]
+tld = "priv.me"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/me.html"

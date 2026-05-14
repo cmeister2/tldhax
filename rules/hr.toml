@@ -1,0 +1,29 @@
+[[domains]]
+tld = "com.hr"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.dns.hr/documents/pdf/HRTLD-regulations.pdf"
+
+[[domains]]
+tld = "from.hr"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.dns.hr/documents/pdf/HRTLD-regulations.pdf"
+
+[[domains]]
+tld = "hr"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.dns.hr/documents/pdf/HRTLD-regulations.pdf"
+
+[[domains]]
+tld = "iz.hr"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.dns.hr/documents/pdf/HRTLD-regulations.pdf"
+
+[[domains]]
+tld = "name.hr"
+registerable = "yes"
+[domains.sources]
+registerable = "http://www.dns.hr/documents/pdf/HRTLD-regulations.pdf"

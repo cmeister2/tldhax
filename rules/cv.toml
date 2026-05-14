@@ -1,0 +1,53 @@
+[[domains]]
+tld = "com.cv"
+registerable = "yes"
+[domains.sources]
+registerable = "https://ola.cv/domain-extensions-under-cv/"
+
+[[domains]]
+tld = "cv"
+registerable = "yes"
+[domains.sources]
+registerable = "https://ola.cv/domain-extensions-under-cv/"
+
+[[domains]]
+tld = "edu.cv"
+registerable = "yes"
+[domains.sources]
+registerable = "https://ola.cv/domain-extensions-under-cv/"
+
+[[domains]]
+tld = "id.cv"
+registerable = "yes"
+[domains.sources]
+registerable = "https://ola.cv/domain-extensions-under-cv/"
+
+[[domains]]
+tld = "int.cv"
+registerable = "yes"
+[domains.sources]
+registerable = "https://ola.cv/domain-extensions-under-cv/"
+
+[[domains]]
+tld = "net.cv"
+registerable = "yes"
+[domains.sources]
+registerable = "https://ola.cv/domain-extensions-under-cv/"
+
+[[domains]]
+tld = "nome.cv"
+registerable = "yes"
+[domains.sources]
+registerable = "https://ola.cv/domain-extensions-under-cv/"
+
+[[domains]]
+tld = "org.cv"
+registerable = "yes"
+[domains.sources]
+registerable = "https://ola.cv/domain-extensions-under-cv/"
+
+[[domains]]
+tld = "publ.cv"
+registerable = "yes"
+[domains.sources]
+registerable = "https://ola.cv/domain-extensions-under-cv/"

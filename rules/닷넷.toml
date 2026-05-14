@@ -1,0 +1,5 @@
+[[domains]]
+tld = "닷넷"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/xn--t60b56a.html"

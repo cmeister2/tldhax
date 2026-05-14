@@ -1,0 +1,107 @@
+[[domains]]
+tld = "ac.za"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/za.html"
+
+[[domains]]
+tld = "agric.za"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/za.html"
+
+[[domains]]
+tld = "alt.za"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/za.html"
+
+[[domains]]
+tld = "co.za"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/za.html"
+
+[[domains]]
+tld = "edu.za"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/za.html"
+
+[[domains]]
+tld = "gov.za"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/za.html"
+
+[[domains]]
+tld = "grondar.za"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/za.html"
+
+[[domains]]
+tld = "law.za"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/za.html"
+
+[[domains]]
+tld = "mil.za"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/za.html"
+
+[[domains]]
+tld = "net.za"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/za.html"
+
+[[domains]]
+tld = "ngo.za"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/za.html"
+
+[[domains]]
+tld = "nic.za"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/za.html"
+
+[[domains]]
+tld = "nis.za"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/za.html"
+
+[[domains]]
+tld = "nom.za"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/za.html"
+
+[[domains]]
+tld = "org.za"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/za.html"
+
+[[domains]]
+tld = "school.za"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/za.html"
+
+[[domains]]
+tld = "tm.za"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/za.html"
+
+[[domains]]
+tld = "web.za"
+registerable = "yes"
+[domains.sources]
+registerable = "https://www.iana.org/domains/root/db/za.html"
