@@ -14,7 +14,7 @@ jobs:
     name: Tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
       - uses: dtolnay/rust-toolchain@stable
       - uses: actions/setup-python@v5
         with:
@@ -45,7 +45,7 @@ jobs:
       new-release: ${{ steps.release.outputs.new_release }}
       version: ${{ steps.build-version.outputs.version }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
         with:
           fetch-depth: 0
       - uses: actions/setup-node@v4
@@ -86,7 +86,7 @@ jobs:
           - runner: ubuntu-22.04
             target: ppc64le
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
       - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
@@ -120,7 +120,7 @@ jobs:
           - runner: ubuntu-22.04
             target: armv7
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
       - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
@@ -150,7 +150,7 @@ jobs:
           - runner: windows-latest
             target: x86
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
       - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
@@ -180,7 +180,7 @@ jobs:
           - runner: macos-14
             target: aarch64
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
       - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
@@ -202,7 +202,7 @@ jobs:
     needs: [check-release]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
       - name: Set version
         run: python3 prepare.py "${{ needs.check-release.outputs.version }}"
       - name: Build sdist
@@ -227,7 +227,7 @@ jobs:
       contents: write
       attestations: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
       - uses: actions/download-artifact@v4
       - name: Generate artifact attestation
         if: needs.check-release.outputs.new-release == 'true'
