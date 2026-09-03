@@ -41,6 +41,12 @@ pub fn validate_ascii_label(label: &str) -> Result<(), String> {
         return Err("DNS syntax: label cannot start or end with a hyphen".to_string());
     }
 
+    if label.as_bytes().get(2..4) == Some(b"--") && !label.starts_with("xn--") {
+        return Err(
+            "IDNA syntax: hyphens in positions three and four require an A-label".to_string(),
+        );
+    }
+
     if !label
         .bytes()
         .all(|byte| byte.is_ascii_lowercase() || byte.is_ascii_digit() || byte == b'-')
@@ -64,5 +70,11 @@ mod tests {
     fn rejects_invalid_label_character() {
         let error = validate_ascii_label("foo_bar").unwrap_err();
         assert!(error.contains("invalid characters"));
+    }
+
+    #[test]
+    fn rejects_reserved_r_ldh_labels() {
+        let error = validate_ascii_label("ab--cd").unwrap_err();
+        assert!(error.contains("positions three and four"));
     }
 }

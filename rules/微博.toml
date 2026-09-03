@@ -1,5 +1,0 @@
-[[domains]]
-tld = "微博"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.iana.org/domains/root/db/xn--9krt00a.html"

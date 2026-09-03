@@ -1,5 +1,0 @@
-[[domains]]
-tld = "cf"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.iana.org/domains/root/db/cf.html"

@@ -1,0 +1,191 @@
+schema_version = 2
+
+# Sources describe documents. Evidence below points at a precise part of a
+# document and limits the products and predicates for which it may be used.
+
+[[sources]]
+id = "rfc-3172"
+kind = "standards_document"
+publisher_role = "standards_body"
+publisher = "IETF"
+url = "https://www.rfc-editor.org/rfc/rfc3172.txt"
+retrieved_at = "2026-09-02T00:00:00Z"
+sha256 = "28b99f06460065f623adffb6bfd42e712eefb9e5ace7dcac9296fea208156405"
+review_after = "2028-09-02"
+
+[[sources]]
+id = "rfc-6761"
+kind = "standards_document"
+publisher_role = "standards_body"
+publisher = "IETF"
+url = "https://www.rfc-editor.org/rfc/rfc6761.txt"
+retrieved_at = "2026-09-02T00:00:00Z"
+sha256 = "549f6635f34eb0da627568657401f0115e8e33c2ba1ba7e37bf14ab27651339e"
+review_after = "2028-09-02"
+
+[[sources]]
+id = "rfc-7686"
+kind = "standards_document"
+publisher_role = "standards_body"
+publisher = "IETF"
+url = "https://www.rfc-editor.org/rfc/rfc7686.txt"
+retrieved_at = "2026-09-02T00:00:00Z"
+sha256 = "71fc05a7876af6adec9dd2351c44b40828c3fe4654d91223e6f470aa08e5abaa"
+review_after = "2028-09-02"
+
+[[sources]]
+id = "denic-registration-2026-09-02"
+kind = "registry_policy"
+publisher_role = "registry_operator"
+publisher = "DENIC eG"
+url = "https://www.denic.de/en/products/de-domains/registration/"
+retrieved_at = "2026-09-02T00:00:00Z"
+sha256 = "04c5e267a90fc1b44b02976c28dfb84540427fe12859623fdef65113ee0d8a3b"
+review_after = "2027-03-02"
+
+[[sources]]
+id = "get-gov-eligibility-2026-09-02"
+kind = "government_policy"
+publisher_role = "registry_operator"
+publisher = "Cybersecurity and Infrastructure Security Agency"
+url = "https://get.gov/domains/eligibility/"
+retrieved_at = "2026-09-02T00:00:00Z"
+sha256 = "aa169c11873382978113e1f05984015311e2f29e792459e2ec3d39c6b7a35006"
+review_after = "2027-03-02"
+
+[[sources]]
+id = "ftld-bank-eligibility-2024-02-28"
+kind = "registry_policy"
+publisher_role = "registry_operator"
+publisher = "fTLD Registry Services"
+url = "https://register.bank/wp-content/uploads/2024/07/fTLD-Registrant-Eligibility-Policy-Bank-FINAL-20240228.docx.pdf"
+retrieved_at = "2026-09-03T00:49:11+01:00"
+sha256 = "785efa63be3f90a5c82f4a3339eedd8c2292ba6b0f56ac3de6f9954bb94354b2"
+review_after = "2027-03-03"
+
+[[sources]]
+id = "govuk-application-policy-2026-09-02"
+kind = "government_policy"
+publisher_role = "namespace_manager"
+publisher = "Government Digital Service"
+url = "https://www.gov.uk/guidance/apply-for-your-govuk-domain-name"
+retrieved_at = "2026-09-02T00:00:00Z"
+sha256 = "c39905afcfea44e594dd37a0d97b7fbe0c2263cdbe6bbebc3c753d5bf1dd860e"
+review_after = "2027-03-02"
+
+[[sources]]
+id = "govuk-organisation-eligibility-2026-09-03"
+kind = "government_policy"
+publisher_role = "namespace_manager"
+publisher = "Protecting Public Sector Domains Team"
+url = "https://www.gov.uk/guidance/check-if-your-organisation-can-get-a-govuk-domain-name"
+retrieved_at = "2026-09-03T00:48:54+01:00"
+sha256 = "ae9cb94636026dc506b71bfe34e9e2b506b7c0ac8c370024e33a33d7ce9c1af6"
+review_after = "2027-03-03"
+
+[[sources]]
+id = "nhsuk-namespace-policy-2026-09-03"
+kind = "government_policy"
+publisher_role = "namespace_manager"
+publisher = "NHS England"
+url = "https://digital.nhs.uk/services/networking-addressing/namespace-policy"
+retrieved_at = "2026-09-03T00:38:05+01:00"
+sha256 = "6e1864fdff7522c70afcab551d3043b7ce388edb683879f8feb53afbf7f1d3f2"
+review_after = "2027-03-03"
+
+[[sources]]
+id = "nhsuk-application-2026-09-03"
+kind = "government_policy"
+publisher_role = "namespace_manager"
+publisher = "NHS England"
+url = "https://digital.nhs.uk/services/networking-addressing/apply-for-a-new-nhs.uk-domain"
+retrieved_at = "2026-09-03T00:38:05+01:00"
+sha256 = "fdb67cf98a5424eb7d9054ecf2be1ce2a5d61b07bdda79b8dcfcba5ca90539e1"
+review_after = "2027-03-03"
+
+[[sources]]
+id = "college-policeuk-policy-2023-01-03"
+kind = "government_policy"
+publisher_role = "namespace_manager"
+publisher = "College of Policing"
+url = "https://assets.college.police.uk/s3fs-public/2023-05/FOIA-2022-128.pdf"
+retrieved_at = "2026-09-02T00:00:00Z"
+sha256 = "936fc09ce97ff21583837ec0dd07bc3cdff7a8df20ff15bde3fb815292cc3911"
+review_after = "2027-03-02"
+
+[[evidence]]
+id = "arpa-is-infrastructure"
+source = "rfc-3172"
+locator = "Sections 2 and 3: operational infrastructure domain and permitted subdomains"
+predicates = ["public_access"]
+scope = { products = ["arpa-infrastructure"] }
+
+[[evidence]]
+id = "rfc6761-reserved-names"
+source = "rfc-6761"
+locator = "Sections 6.2 through 6.5: .test, .localhost, .invalid, and .example"
+predicates = ["public_access"]
+scope = { products = ["test-special", "localhost-special", "invalid-special", "example-special"] }
+
+[[evidence]]
+id = "rfc7686-onion-special-use"
+source = "rfc-7686"
+locator = "Section 2: .onion is a special-use domain name"
+predicates = ["public_access"]
+scope = { products = ["onion-special"] }
+
+[[evidence]]
+id = "denic-public-applicants"
+source = "denic-registration-2026-09-02"
+locator = "How it works and Why having your own .de domain benefits you"
+predicates = ["offering_state", "public_access"]
+scope = { products = ["de-direct"] }
+
+[[evidence]]
+id = "dotgov-eligible-organizations"
+source = "get-gov-eligibility-2026-09-02"
+locator = "Eligibility section and domain request process"
+predicates = ["offering_state", "public_access", "application_channel", "eligibility"]
+scope = { products = ["us-government"] }
+
+[[evidence]]
+id = "ftld-eligible-banks"
+source = "ftld-bank-eligibility-2024-02-28"
+locator = "Registrant Eligibility Policy sections 2 and 3"
+predicates = ["public_access", "eligibility"]
+scope = { products = ["bank-regulated"] }
+
+[[evidence]]
+id = "govuk-eligible-public-sector"
+source = "govuk-organisation-eligibility-2026-09-03"
+locator = "Organisations eligible for a .gov.uk domain name and required-domain alternatives"
+predicates = ["public_access", "eligibility"]
+scope = { products = ["govuk-public-sector"] }
+
+[[evidence]]
+id = "govuk-application-process"
+source = "govuk-application-policy-2026-09-02"
+locator = "Steps 1 through 3: eligibility check, Approved Registrar submission, and Domains Team decision"
+predicates = ["offering_state", "application_channel", "eligibility"]
+scope = { products = ["govuk-public-sector"] }
+
+[[evidence]]
+id = "nhsuk-managed-namespace"
+source = "nhsuk-namespace-policy-2026-09-03"
+locator = "Website policy: namespace control, permitted organisations, and final grant decision"
+predicates = ["public_access", "eligibility"]
+scope = { products = ["nhsuk-health"] }
+
+[[evidence]]
+id = "nhsuk-current-application"
+source = "nhsuk-application-2026-09-03"
+locator = "Before you start, application form, and Processing time sections"
+predicates = ["offering_state", "application_channel"]
+scope = { products = ["nhsuk-health"] }
+
+[[evidence]]
+id = "policeuk-approval-process"
+source = "college-policeuk-policy-2023-01-03"
+locator = "Response: approval by force executive or NPCC portfolio lead"
+predicates = ["public_access"]
+scope = { products = ["policeuk-policing"] }

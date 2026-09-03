@@ -1,0 +1,88 @@
+schema_version = 2
+
+[[products]]
+id = "arpa-infrastructure"
+operator = "iana"
+profile = "arpa-infrastructure-v1"
+selectors = [
+    { kind = "exact", suffix = "arpa" },
+    { kind = "exact", suffix = "e164.arpa" },
+    { kind = "exact", suffix = "home.arpa" },
+    { kind = "exact", suffix = "in-addr.arpa" },
+    { kind = "exact", suffix = "ip6.arpa" },
+    { kind = "exact", suffix = "iris.arpa" },
+    { kind = "exact", suffix = "uri.arpa" },
+    { kind = "exact", suffix = "urn.arpa" },
+]
+
+[[products]]
+id = "test-special"
+operator = "iana"
+profile = "rfc6761-special-use-v1"
+selectors = [{ kind = "exact", suffix = "test" }]
+
+[[products]]
+id = "localhost-special"
+operator = "iana"
+profile = "rfc6761-special-use-v1"
+selectors = [{ kind = "exact", suffix = "localhost" }]
+
+[[products]]
+id = "invalid-special"
+operator = "iana"
+profile = "rfc6761-special-use-v1"
+selectors = [{ kind = "exact", suffix = "invalid" }]
+
+[[products]]
+id = "example-special"
+operator = "iana"
+profile = "rfc6761-special-use-v1"
+selectors = [{ kind = "exact", suffix = "example" }]
+
+[[products]]
+id = "onion-special"
+operator = "tor-project"
+profile = "onion-special-use-v1"
+selectors = [{ kind = "exact", suffix = "onion" }]
+
+[[products]]
+id = "de-direct"
+operator = "denic"
+profile = "denic-open-v1"
+selectors = [{ kind = "exact", suffix = "de" }]
+
+[[products]]
+id = "us-government"
+operator = "cisa"
+profile = "dotgov-conditional-v1"
+selectors = [{ kind = "exact", suffix = "gov" }]
+
+[[products]]
+id = "edu-institutions"
+operator = "educause"
+profile = "edu-unknown-v1"
+selectors = [{ kind = "exact", suffix = "edu" }]
+
+[[products]]
+id = "bank-regulated"
+operator = "ftld"
+profile = "bank-conditional-v1"
+selectors = [{ kind = "exact", suffix = "bank" }]
+
+[[products]]
+id = "govuk-public-sector"
+operator = "cabinet-office"
+profile = "govuk-conditional-v1"
+selectors = [{ kind = "exact", suffix = "gov.uk" }]
+
+[[products]]
+id = "nhsuk-health"
+operator = "nhs-england"
+profile = "nhsuk-conditional-v1"
+selectors = [{ kind = "exact", suffix = "nhs.uk" }]
+
+[[products]]
+id = "policeuk-policing"
+operator = "college-of-policing"
+profile = "policeuk-conditional-v1"
+selectors = [{ kind = "exact", suffix = "police.uk" }]

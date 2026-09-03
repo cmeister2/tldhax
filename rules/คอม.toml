@@ -1,5 +1,0 @@
-[[domains]]
-tld = "คอม"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.iana.org/domains/root/db/xn--42c2d9a.html"

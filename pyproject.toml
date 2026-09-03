@@ -1,11 +1,17 @@
 [build-system]
-requires = ["maturin>=1.0,<2.0"]
+requires = ["maturin>=1.9.3,<2.0"]
 build-backend = "maturin"
 
 [project]
 name = "tldhax"
 requires-python = ">=3.10"
-dynamic = ["version", "description", "readme", "license", "keywords"]
+dynamic = ["version", "description", "readme", "keywords"]
+license = "MIT"
+license-files = [
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "data/snapshots/LICENSE.publicsuffix",
+]
 
 [project.urls]
 Homepage = "https://github.com/cmeister2/tldhax"
@@ -23,7 +29,8 @@ dev = [
 ]
 
 [tool.maturin]
-features = ["pyo3/extension-module"]
+features = ["pyo3/extension-module", "pyo3/abi3-py310"]
+locked = true
 module-name = "tldhax._native"
 python-source = "python"
 

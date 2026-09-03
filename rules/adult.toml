@@ -1,5 +1,0 @@
-[[domains]]
-tld = "adult"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.iana.org/domains/root/db/adult.html"

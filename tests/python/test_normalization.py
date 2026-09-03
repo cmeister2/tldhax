@@ -1,4 +1,4 @@
-"""Normalization and structure invariants for registry checks."""
+"""Normalization and Public Suffix List topology invariants."""
 
 from __future__ import annotations
 
@@ -7,7 +7,7 @@ from hypothesis import strategies as st
 
 from tldhax import Registry
 
-REGISTERABLE_SUFFIXES = ("ai", "com", "co.uk", "com.ai", "net.ai", "off.ai", "org.ai")
+SUFFIXES = ("de", "com", "co.uk", "gov.uk", "中国", "xn--fiqs8s")
 ASCII_LABELS = st.text(
     alphabet="abcdefghijklmnopqrstuvwxyz0123456789-",
     min_size=3,
@@ -17,69 +17,108 @@ ASCII_LABELS = st.text(
 )
 
 
-def test_uppercase_is_normalized(registry) -> None:
-    """Uppercase input should normalize to the same result as lowercase input."""
-    assert registry.check("FOO.CO.UK").status == registry.check("foo.co.uk").status
+def comparable_assessment(result) -> tuple[object, ...]:
+    """Return fields that must be stable across spelling normalization."""
+    return (
+        result.ascii_domain,
+        result.registrable_domain,
+        result.candidate_status,
+        result.public_suffix,
+        result.suffix_rule,
+        result.suffix_rule_kind,
+        result.suffix_evidence,
+        result.root_state,
+        result.namespace_state,
+        result.product_id,
+        result.product_suffix,
+        result.verdict,
+        [(finding.code, finding.message) for finding in result.findings],
+        result.evidence,
+    )
 
 
-def test_trailing_dot_is_ignored(registry) -> None:
-    """A trailing dot should not affect the computed registerability result."""
-    assert registry.check("example.com.").status == registry.check("example.com").status
+def test_unicode_domain_is_normalized_to_an_a_label(registry) -> None:
+    """Unicode and A-label spellings resolve to the same policy record."""
+    unicode_result = registry.assess("例子.中国")
+    ascii_result = registry.assess("xn--fsqu00a.xn--fiqs8s")
+
+    assert unicode_result.ascii_domain == "xn--fsqu00a.xn--fiqs8s"
+    assert comparable_assessment(unicode_result) == comparable_assessment(ascii_result)
 
 
-def test_bare_tld_is_rejected(registry) -> None:
-    """A bare suffix should be rejected because it has no registrable label."""
-    result = registry.check("co.uk")
-    assert result.status == "no"
-    assert "TLD" in result.reasons[0]
+def test_unicode_terminal_dot_is_normalized_after_idna(registry) -> None:
+    """An IDNA dot-equivalent at the end is treated as an absolute-name dot."""
+    absolute = registry.assess("例子.中国。")
+    relative = registry.assess("例子.中国")
+
+    assert absolute.ascii_domain == "xn--fsqu00a.xn--fiqs8s"
+    assert comparable_assessment(absolute) == comparable_assessment(relative)
 
 
-def test_subdomain_is_rejected(registry) -> None:
-    """Subdomains should be rejected in favor of the registrable domain."""
-    result = registry.check("foo.bar.co.uk")
-    assert result.status == "no"
-    assert "subdomain" in result.reasons[0]
+def test_bare_suffix_is_impossible(registry) -> None:
+    """A suffix alone has no candidate registration label."""
+    result = registry.assess("co.uk")
+
+    assert result.candidate_status == "bare_suffix"
+    assert result.verdict == "impossible"
+    assert any(finding.code == "bare_suffix" for finding in result.findings)
 
 
-@given(label=ASCII_LABELS, suffix=st.sampled_from(REGISTERABLE_SUFFIXES))
-def test_uppercase_normalization_property(label: str, suffix: str) -> None:
-    """Uppercasing a valid domain should preserve the full check result."""
+def test_subdomain_is_impossible(registry) -> None:
+    """The assessor distinguishes an existing registrable name's child."""
+    result = registry.assess("foo.example.co.uk")
+
+    assert result.candidate_status == "subdomain"
+    assert result.registrable_domain == "example.co.uk"
+    assert result.verdict == "impossible"
+    assert any(finding.code == "subdomain" for finding in result.findings)
+
+
+def test_reserved_r_ldh_label_is_invalid(registry) -> None:
+    """Non-A-label double hyphens in positions three and four are reserved."""
+    result = registry.assess("ab--cd.de")
+
+    assert result.syntax == "invalid"
+    assert result.verdict == "impossible"
+
+
+def test_psl_wildcard_rule_is_preserved(registry) -> None:
+    """A wildcard match retains both its effective suffix and source syntax."""
+    result = registry.assess("name.foo.ck")
+
+    assert result.public_suffix == "foo.ck"
+    assert result.suffix_rule == "*.ck"
+    assert result.suffix_rule_kind == "wildcard"
+    assert result.suffix_section == "icann"
+    assert result.suffix_role == "registry_boundary"
+    assert result.suffix_evidence is not None
+    evidence = registry.evidence(result.suffix_evidence)
+    assert evidence is not None
+    assert evidence.kind == "public_suffix_list"
+    assert result.candidate_status == "registrable_domain"
+
+
+def test_psl_exception_rule_is_preserved(registry) -> None:
+    """An exception shortens the effective suffix without losing provenance."""
+    result = registry.assess("www.ck")
+
+    assert result.public_suffix == "ck"
+    assert result.suffix_rule == "!www.ck"
+    assert result.suffix_rule_kind == "exception"
+    assert result.suffix_section == "icann"
+    assert result.candidate_status == "registrable_domain"
+
+
+@given(label=ASCII_LABELS, suffix=st.sampled_from(SUFFIXES))
+def test_case_and_trailing_dot_normalization(label: str, suffix: str) -> None:
+    """Case and an absolute-name dot do not change an assessment."""
     registry = Registry()
     domain = f"{label}.{suffix}"
-    normalized = registry.check(domain)
-    uppercased = registry.check(domain.upper())
+    normalized = registry.assess(domain)
 
-    assert uppercased.status == normalized.status
-    assert uppercased.reasons == normalized.reasons
-
-
-@given(label=ASCII_LABELS, suffix=st.sampled_from(REGISTERABLE_SUFFIXES))
-def test_trailing_dot_normalization_property(label: str, suffix: str) -> None:
-    """Appending a trailing dot should preserve the full check result."""
-    registry = Registry()
-    domain = f"{label}.{suffix}"
-    normalized = registry.check(domain)
-    with_trailing_dot = registry.check(f"{domain}.")
-
-    assert with_trailing_dot.status == normalized.status
-    assert with_trailing_dot.reasons == normalized.reasons
-
-
-@given(suffix=st.sampled_from(REGISTERABLE_SUFFIXES))
-def test_bare_tld_rejection_property(suffix: str) -> None:
-    """Known registrable suffixes alone should still be rejected as bare TLDs."""
-    registry = Registry()
-    result = registry.check(suffix)
-
-    assert result.status == "no"
-    assert "TLD" in result.reasons[0]
-
-
-@given(label=ASCII_LABELS, suffix=st.sampled_from(REGISTERABLE_SUFFIXES))
-def test_subdomain_rejection_property(label: str, suffix: str) -> None:
-    """Adding one more label should turn a registrable domain into a subdomain."""
-    registry = Registry()
-    result = registry.check(f"sub.{label}.{suffix}")
-
-    assert result.status == "no"
-    assert "subdomain" in result.reasons[0]
+    assert comparable_assessment(
+        registry.assess(domain.upper())
+    ) == comparable_assessment(normalized)
+    assert comparable_assessment(
+        registry.assess(f"{domain}.")
+    ) == comparable_assessment(normalized)
