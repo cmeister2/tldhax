@@ -1,0 +1,67 @@
+schema_version = 2
+
+# A label_policy must cite completeness_evidence for its overall audit status
+# and reserved_set_evidence for the reserved-name set, including a verified
+# empty set. Individual length, IDN-profile, and reserved-label rules must also
+# carry evidence.
+
+[[profiles]]
+id = "arpa-infrastructure-v1"
+public_access = { value = "unavailable", evidence = ["arpa-is-infrastructure"] }
+
+[[profiles]]
+id = "rfc6761-special-use-v1"
+public_access = { value = "unavailable", evidence = ["rfc6761-reserved-names"] }
+
+[[profiles]]
+id = "onion-special-use-v1"
+public_access = { value = "unavailable", evidence = ["rfc7686-onion-special-use"] }
+
+[[profiles]]
+id = "denic-open-v1"
+offering_state = { value = "accepting", evidence = ["denic-public-applicants"] }
+public_access = { value = "open", evidence = ["denic-public-applicants"] }
+
+[[profiles]]
+id = "dotgov-conditional-v1"
+offering_state = { value = "accepting", evidence = ["dotgov-eligible-organizations"] }
+public_access = { value = "conditional", evidence = ["dotgov-eligible-organizations"] }
+application_channel = { value = "registry_direct", evidence = ["dotgov-eligible-organizations"] }
+eligibility = { mode = "all", requirements = [
+    { id = "us-government-organization", kind = "entity_type", value = "us-government-organization", explanation = "Registrant is an eligible US-based government organization", evidence = ["dotgov-eligible-organizations"] },
+    { id = "dotgov-senior-official-approval", kind = "authority_approval", value = "organization-senior-official", explanation = "A senior official within the applicant organization authorizes the domain request", evidence = ["dotgov-eligible-organizations"] },
+] }
+
+[[profiles]]
+id = "edu-unknown-v1"
+
+[[profiles]]
+id = "bank-conditional-v1"
+public_access = { value = "conditional", evidence = ["ftld-eligible-banks"] }
+eligibility = { mode = "all", requirements = [
+    { id = "bank-regulated-entity", kind = "entity_type", value = "ftld-bank-eligible", explanation = "Registrant is a regulated bank or another organization expressly eligible under the fTLD policy", evidence = ["ftld-eligible-banks"] },
+] }
+
+[[profiles]]
+id = "govuk-conditional-v1"
+offering_state = { value = "accepting", evidence = ["govuk-application-process"] }
+public_access = { value = "conditional", evidence = ["govuk-eligible-public-sector"] }
+application_channel = { value = "registrar", evidence = ["govuk-application-process"] }
+eligibility = { mode = "all", requirements = [
+    { id = "govuk-public-sector", kind = "entity_type", value = "eligible-uk-public-sector-organization", explanation = "Registrant is an eligible UK public-sector organization", evidence = ["govuk-eligible-public-sector"] },
+    { id = "govuk-name-approval", kind = "authority_approval", value = "govuk-registry", explanation = "The requested name passes the GOV.UK approval workflow", evidence = ["govuk-application-process"] },
+] }
+
+[[profiles]]
+id = "nhsuk-conditional-v1"
+offering_state = { value = "accepting", evidence = ["nhsuk-current-application"] }
+public_access = { value = "conditional", evidence = ["nhsuk-managed-namespace"] }
+application_channel = { value = "registry_direct", evidence = ["nhsuk-current-application"] }
+eligibility = { mode = "all", requirements = [
+    { id = "nhsuk-health-organization", kind = "community_membership", value = "nhs-or-approved-health-service", explanation = "Registrant is an eligible NHS or health-service organization", evidence = ["nhsuk-managed-namespace"] },
+    { id = "nhsuk-name-approval", kind = "authority_approval", value = "nhs-england-dns-team", explanation = "The NHS England DNS team approves the namespace request", evidence = ["nhsuk-managed-namespace"] },
+] }
+
+[[profiles]]
+id = "policeuk-conditional-v1"
+public_access = { status = "stale", value = "conditional", evidence = ["policeuk-approval-process"] }

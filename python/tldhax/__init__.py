@@ -1,5 +1,19 @@
-"""Public Python bindings for the tldhax registry checker."""
+"""Evidence-aware domain registration assessments."""
 
-from ._native import CheckResult, Registry, TldInfo
+from ._native import (
+    Assessment,
+    EligibilityRequirement,
+    Evidence,
+    Finding,
+    Registry,
+    SuffixInfo,
+)
 
-__all__ = ["CheckResult", "Registry", "TldInfo"]
+__all__ = [
+    "Assessment",
+    "EligibilityRequirement",
+    "Evidence",
+    "Finding",
+    "Registry",
+    "SuffixInfo",
+]

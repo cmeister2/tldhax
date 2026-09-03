@@ -9,41 +9,65 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   tests:
-    name: Tests
+    name: Tests (Python ${{ matrix.python-version }})
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.12"]
     steps:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: ${{ matrix.python-version }}
           cache: pip
           cache-dependency-path: pyproject.toml
       - uses: Swatinem/rust-cache@v2
+      - name: Verify pinned data snapshots
+        if: matrix.python-version == '3.12'
+        run: python tools/update_snapshots.py --check
       - name: Install Python tooling
         run: python -m pip install .[dev]
+      - name: Rust formatting
+        if: matrix.python-version == '3.12'
+        run: cargo fmt --all -- --check
+      - name: Rust lints
+        if: matrix.python-version == '3.12'
+        run: cargo clippy --locked --all-targets -- -D warnings
       - name: Rust build and tests
-        run: cargo test --all-targets
+        if: matrix.python-version == '3.12'
+        run: cargo test --locked --all-targets
       - name: Python tests
         run: pytest
       - name: Mypy check
+        if: matrix.python-version == '3.12'
         run: mypy
       - name: Ruff check
+        if: matrix.python-version == '3.12'
         run: ruff check .
+      - name: Ruff formatting
+        if: matrix.python-version == '3.12'
+        run: ruff format --check .
 
-  check-release:
-    name: Check release
+  release-plan:
+    name: Plan release
     needs: [tests]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      issues: write
-      pull-requests: write
     outputs:
       new-release: ${{ steps.release.outputs.new_release }}
-      version: ${{ steps.build-version.outputs.version }}
+      version: ${{ steps.release.outputs.version }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -55,17 +79,32 @@ jobs:
           cache-dependency-path: package-lock.json
       - name: Install release tooling
         run: npm ci
-      - name: Release
+      - name: Determine release without publishing
         id: release
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
+        run: npx semantic-release --dry-run
+
+  check-release:
+    name: Select build version
+    needs: [tests, release-plan]
+    if: >-
+      always() &&
+      needs.tests.result == 'success' &&
+      (needs.release-plan.result == 'success' || needs.release-plan.result == 'skipped')
+    runs-on: ubuntu-latest
+    outputs:
+      new-release: ${{ steps.build-version.outputs.new_release }}
+      version: ${{ steps.build-version.outputs.version }}
+    steps:
       - name: Build version
         id: build-version
-        run: echo "version=${BUILD_VERSION}" >> "$GITHUB_OUTPUT"
+        run: |
+          echo "new_release=${NEW_RELEASE}" >> "$GITHUB_OUTPUT"
+          echo "version=${BUILD_VERSION}" >> "$GITHUB_OUTPUT"
         env:
-          BUILD_VERSION: ${{ steps.release.outputs.new_release == 'true' && steps.release.outputs.version || format('0.0.{0}', github.run_id) }}
+          NEW_RELEASE: ${{ needs.release-plan.outputs.new-release }}
+          BUILD_VERSION: ${{ needs.release-plan.outputs.new-release == 'true' && needs.release-plan.outputs.version || format('0.0.{0}', github.run_id) }}
 
   linux:
     needs: [check-release]
@@ -89,21 +128,23 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: "3.10"
       - name: Set version
         run: python3 prepare.py "${{ needs.check-release.outputs.version }}"
       - name: Build wheels
         uses: PyO3/maturin-action@v1
         with:
+          maturin-version: v1.11.5
           target: ${{ matrix.platform.target }}
-          args: --release --out dist --find-interpreter
+          args: --release --locked --compatibility pypi --out dist
           sccache: true
           manylinux: auto
       - name: Upload wheels
         uses: actions/upload-artifact@v4
         with:
           name: wheels-linux-${{ matrix.platform.target }}
-          path: dist
+          path: dist/*.whl
+          if-no-files-found: error
 
   musllinux:
     needs: [check-release]
@@ -123,21 +164,23 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: "3.10"
       - name: Set version
         run: python3 prepare.py "${{ needs.check-release.outputs.version }}"
       - name: Build wheels
         uses: PyO3/maturin-action@v1
         with:
+          maturin-version: v1.11.5
           target: ${{ matrix.platform.target }}
-          args: --release --out dist --find-interpreter
+          args: --release --locked --compatibility pypi --out dist
           sccache: true
           manylinux: musllinux_1_2
       - name: Upload wheels
         uses: actions/upload-artifact@v4
         with:
           name: wheels-musllinux-${{ matrix.platform.target }}
-          path: dist
+          path: dist/*.whl
+          if-no-files-found: error
 
   windows:
     needs: [check-release]
@@ -153,21 +196,23 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: "3.10"
           architecture: ${{ matrix.platform.target }}
       - name: Set version
         run: python prepare.py "${{ needs.check-release.outputs.version }}"
       - name: Build wheels
         uses: PyO3/maturin-action@v1
         with:
+          maturin-version: v1.11.5
           target: ${{ matrix.platform.target }}
-          args: --release --out dist --find-interpreter
+          args: --release --locked --compatibility pypi --out dist
           sccache: true
       - name: Upload wheels
         uses: actions/upload-artifact@v4
         with:
           name: wheels-windows-${{ matrix.platform.target }}
-          path: dist
+          path: dist/*.whl
+          if-no-files-found: error
 
   macos:
     needs: [check-release]
@@ -175,7 +220,7 @@ jobs:
     strategy:
       matrix:
         platform:
-          - runner: macos-15
+          - runner: macos-15-intel
             target: x86_64
           - runner: macos-14
             target: aarch64
@@ -183,20 +228,22 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: "3.10"
       - name: Set version
         run: python3 prepare.py "${{ needs.check-release.outputs.version }}"
       - name: Build wheels
         uses: PyO3/maturin-action@v1
         with:
+          maturin-version: v1.11.5
           target: ${{ matrix.platform.target }}
-          args: --release --out dist --find-interpreter
+          args: --release --locked --compatibility pypi --out dist
           sccache: true
       - name: Upload wheels
         uses: actions/upload-artifact@v4
         with:
           name: wheels-macos-${{ matrix.platform.target }}
-          path: dist
+          path: dist/*.whl
+          if-no-files-found: error
 
   sdist:
     needs: [check-release]
@@ -209,58 +256,131 @@ jobs:
         uses: PyO3/maturin-action@v1
         with:
           command: sdist
+          maturin-version: v1.11.5
           args: --out dist
       - name: Upload sdist
         uses: actions/upload-artifact@v4
         with:
           name: wheels-sdist
-          path: dist
+          path: dist/*.tar.gz
+          if-no-files-found: error
+
+  validate-artifacts:
+    name: Validate distribution artifacts
+    runs-on: ubuntu-latest
+    needs: [check-release, linux, musllinux, windows, macos, sdist]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+      - name: Verify distribution versions
+        env:
+          EXPECTED_VERSION: ${{ needs.check-release.outputs.version }}
+        run: |
+          for distribution in wheels-*/*; do
+            case "${distribution##*/}" in
+              "tldhax-${EXPECTED_VERSION}.tar.gz" | "tldhax-${EXPECTED_VERSION}-"*.whl) ;;
+              *) echo "unexpected distribution version: $distribution" >&2; exit 1 ;;
+            esac
+          done
+      - name: Verify wheel license files
+        run: python3 tools/check_wheel_licenses.py wheels-*/*.whl
+      - name: Verify stable-ABI wheel tags
+        run: |
+          for wheel in wheels-*/*.whl; do
+            case "${wheel##*/}" in
+              *-cp310-abi3-*.whl) ;;
+              *) echo "unexpected wheel tag: $wheel" >&2; exit 1 ;;
+            esac
+          done
+      - uses: astral-sh/setup-uv@v6
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Smoke-test built wheel on minimum Python
+        run: |
+          uv venv --python 3.10 .release-wheel-venv
+          uv pip install --python .release-wheel-venv/bin/python wheels-linux-x86_64/*.whl
+          .release-wheel-venv/bin/tldhax stats --json
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Smoke-test source distribution
+        run: |
+          uv venv --python 3.10 .release-sdist-venv
+          uv pip install --python .release-sdist-venv/bin/python wheels-sdist/*.tar.gz
+          .release-sdist-venv/bin/python -c "from tldhax import Registry; assert Registry().assess('example.com').verdict == 'impossible'"
+      - name: Validate PyPI publication
+        run: uv publish --dry-run --trusted-publishing never 'wheels-*/*'
+      - name: Set version
+        run: python3 prepare.py "${{ needs.check-release.outputs.version }}"
+      - name: Validate crates.io publication
+        run: cargo publish --locked --dry-run --allow-dirty
+      - uses: actions/setup-python@v5
+        if: needs.check-release.outputs.new-release == 'true'
+        with:
+          python-version: "3.11"
+      - name: Check release redistribution rights before entering the protected environment
+        if: needs.check-release.outputs.new-release == 'true'
+        run: python3 tools/check_distribution_rights.py
 
   release:
     name: Release
+    if: needs.check-release.outputs.new-release == 'true'
     runs-on: ubuntu-latest
-    needs: [check-release, linux, musllinux, windows, macos, sdist]
+    needs: [check-release, validate-artifacts]
     environment:
       name: pypi
     permissions:
       id-token: write
       contents: write
+      issues: write
+      pull-requests: write
       attestations: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/download-artifact@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Require resolved snapshot redistribution rights
+        run: python3 tools/check_distribution_rights.py
       - name: Generate artifact attestation
-        if: needs.check-release.outputs.new-release == 'true'
         uses: actions/attest-build-provenance@v2
         with:
           subject-path: 'wheels-*/*'
       - uses: astral-sh/setup-uv@v6
       - name: Publish to PyPI
-        if: needs.check-release.outputs.new-release == 'true'
         run: uv publish --trusted-publishing always 'wheels-*/*'
-      - name: Dry-run PyPI publish
-        if: needs.check-release.outputs.new-release != 'true'
-        run: uv publish --dry-run 'wheels-*/*'
       - uses: dtolnay/rust-toolchain@stable
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
       - name: Set version
         run: python3 prepare.py "${{ needs.check-release.outputs.version }}"
       - name: Publish to crates.io
         env:
           CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
-        run: |
-          if [ "${{ needs.check-release.outputs.new-release }}" != "true" ]; then
-            cargo publish --dry-run --allow-dirty
-          else
-            cargo publish --allow-dirty --token "$CARGO_REGISTRY_TOKEN"
-          fi
+        run: cargo publish --locked --allow-dirty --token "$CARGO_REGISTRY_TOKEN"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - name: Install release tooling
+        run: npm ci
+      - name: Create tag and GitHub release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release
 
   success:
     name: Success
     runs-on: ubuntu-latest
-    needs: [release]
+    if: always()
+    needs: [validate-artifacts, release]
     steps:
       - name: Success
-        run: echo "CI completed successfully!"
+        env:
+          VALIDATION_RESULT: ${{ needs.validate-artifacts.result }}
+          RELEASE_RESULT: ${{ needs.release.result }}
+        run: |
+          [[ "$VALIDATION_RESULT" == success ]]
+          [[ "$RELEASE_RESULT" == success || "$RELEASE_RESULT" == skipped ]]
+          echo "CI completed successfully!"

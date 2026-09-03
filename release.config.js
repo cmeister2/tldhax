@@ -7,7 +7,7 @@ module.exports = {
       {
         preset: "conventionalcommits",
         releaseRules: [
-          { type: "breaking", release: "patch" },
+          { breaking: true, release: "patch" },
           { type: "feat", release: "patch" },
           { type: "fix", release: "patch" }
         ]
@@ -23,7 +23,7 @@ module.exports = {
     [
       "@semantic-release/exec",
       {
-        publishCmd: "./publish.sh ${nextRelease.version}"
+        verifyReleaseCmd: "./publish.sh ${nextRelease.version}"
       }
     ]
   ]

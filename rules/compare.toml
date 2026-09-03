@@ -1,5 +1,0 @@
-[[domains]]
-tld = "compare"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.iana.org/domains/root/db/compare.html"

@@ -1,5 +1,0 @@
-[[domains]]
-tld = "澳门"
-registerable = "yes"
-[domains.sources]
-registerable = "https://nic.lk"

@@ -1,5 +1,0 @@
-[[domains]]
-tld = "museum"
-registerable = "yes"
-[domains.sources]
-registerable = "https://welcome.museum/wp-content/uploads/2018/05/20180525-Registration-Policy-MUSEUM-EN_VF-2.pdf"

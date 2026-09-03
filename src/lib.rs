@@ -1,20 +1,26 @@
-//! TLD registration rule checks backed by compiled rule data.
+//! Evidence-aware domain registration assessment over pinned namespace data.
+//!
+//! Public Suffix List membership and root delegation are topology facts, not
+//! proof that a registration product is open. This crate keeps those facts
+//! separate and returns [`Verdict::Indeterminate`] whenever decision-critical
+//! registry policy has not been verified.
 
-pub mod checker;
-#[allow(missing_docs, clippy::missing_docs_in_private_items, clippy::missing_errors_doc)]
+mod checker;
+pub mod evaluator;
+#[allow(
+    missing_docs,
+    clippy::missing_docs_in_private_items,
+    clippy::missing_errors_doc
+)]
 pub mod python;
 pub mod registry;
+mod topology;
 pub mod types;
 
 #[allow(missing_docs, clippy::missing_docs_in_private_items)]
 mod generated {
-    include!(concat!(env!("OUT_DIR"), "/generated_rules.rs"));
+    include!(concat!(env!("OUT_DIR"), "/generated_catalog.rs"));
 }
 
-pub use generated::{KNOWN_SUFFIXES, TLD_RULES, TOTAL_KNOWN_SUFFIXES};
-
 pub use registry::Registry;
-pub use types::{
-    Charset, CheckResult, CheckStatus, LengthBasis, Reason, Registerable, RegistryStats, TldRule,
-    TldRuleSummary,
-};
+pub use types::*;

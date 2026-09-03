@@ -1,5 +1,0 @@
-[[domains]]
-tld = "ευ"
-registerable = "yes"
-[domains.sources]
-registerable = "https://eurid.eu"

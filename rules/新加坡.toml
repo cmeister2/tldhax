@@ -1,5 +1,0 @@
-[[domains]]
-tld = "新加坡"
-registerable = "yes"
-[domains.sources]
-registerable = "http://www.nic.net.sa/"

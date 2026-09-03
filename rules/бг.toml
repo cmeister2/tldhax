@@ -1,5 +1,0 @@
-[[domains]]
-tld = "бг"
-registerable = "yes"
-[domains.sources]
-registerable = "http://nic.ae/english/arabicdomain/rules.jsp"
