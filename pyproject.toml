@@ -17,7 +17,7 @@ tldhax = "tldhax.cli:main"
 [project.optional-dependencies]
 dev = [
     "mypy",
-    "ruff==0.15.13",
+    "ruff==0.16.7",
     "pytest",
     "hypothesis",
 ]
