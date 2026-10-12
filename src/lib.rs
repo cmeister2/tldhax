@@ -9,6 +9,10 @@ pub mod python;
 pub mod registry;
 pub mod types;
 
+#[cfg(test)]
+#[path = "../build_support/stages.rs"]
+mod compiler_stages;
+
 #[allow(missing_docs, clippy::missing_docs_in_private_items)]
 mod generated {
     include!(concat!(env!("OUT_DIR"), "/generated_rules.rs"));
