@@ -151,3 +151,5 @@ mod tests_schema;
 
 #[cfg(test)]
 mod tests_compile;
+#[cfg(test)]
+mod tests_assets;

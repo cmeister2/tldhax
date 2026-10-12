@@ -1,5 +1,10 @@
 //! Synthetic evidence helpers; these assert no real registry policy.
 
+/// Compile a deliberately synthetic policy without a publisher snapshot.
+pub(super) fn run(document: super::schema::Document) -> Result<super::Compilation, String> {
+    super::compile_document(document, "2026-10-12", None, "fixture-release")
+}
+
 use super::predicates::{Basis, Predicate};
 use super::schema::{
     Assertion, Class, Coverage, Document, Effect, Family, Knowledge, Namespace, Source,
