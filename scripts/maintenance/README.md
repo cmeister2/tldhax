@@ -71,3 +71,21 @@ the Python source directory rather than the project root.
 Generated tables belong in Cargo's `OUT_DIR` and compile into the extension; they
 are not additional runtime parsing inputs. Missing build tools/dependency caches
 are setup errors, not permission to fetch during an ordinary offline build.
+
+To compare outcomes across releases, save compact assessments as UTF-8 JSONL under
+both installed versions. Each row contains only `request_id` (a stable fixture ID)
+and `assessment` (the result of `Assessment.to_dict()`). IDs must identify the same
+candidate and registrant scenario; profiles remain with the fixture generator.
+
+```sh
+python -m scripts.maintenance.outcomes before.jsonl after.jsonl \
+  --report outcome-review.json
+```
+
+The comparator retains both release identities and reports changed status, name
+validity, eligibility, coverage, gap scopes/evidence and failed rule IDs. It ignores
+record ordering and formatting/prose, and emits no profile facts or finding params.
+Inputs are limited to 10,000 rows, 64 KiB per row and 64 MiB per file. Mismatched
+request sets/canonical identities, mixed releases and truncated diagnostics fail
+validation; they cannot establish unchanged outcomes. Outcome reports support
+human review and never alter policy approvals or advance the evaluation date.
