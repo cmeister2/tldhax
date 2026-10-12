@@ -20,6 +20,8 @@ dev = [
     "ruff==0.15.13",
     "pytest",
     "hypothesis",
+    "idna>=3.6,<4",
+    "tomli>=2; python_version < '3.11'",
 ]
 
 [tool.maturin]
@@ -30,3 +32,6 @@ python-source = "python"
 [tool.mypy]
 files = ["python", "tests/python"]
 mypy_path = ["python"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
