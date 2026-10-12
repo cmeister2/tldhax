@@ -2,12 +2,11 @@
 
 pub mod checker;
 mod compiled;
-// Connected to finite predicate evaluation in the following slice.
-#[allow(dead_code)]
 mod idn_eval;
 pub mod inventory_types;
 pub mod normalization;
 pub mod policy_types;
+pub mod predicate_eval;
 pub mod predicate_types;
 pub mod profile;
 #[allow(
