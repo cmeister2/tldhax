@@ -349,3 +349,6 @@ fn detailed_owned_and_pinned_date_results_preserve_the_same_decision() {
     assert_eq!(other.assess("blocked.fixture", None).summary, Summary::No);
     assert_eq!(other.explain(owned), Err(ExplanationError::DatasetMismatch));
 }
+
+#[path = "evaluator_evidence_tests.rs"]
+mod evidence;
