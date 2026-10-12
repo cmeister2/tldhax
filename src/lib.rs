@@ -7,6 +7,7 @@ mod compiled;
 mod idn_eval;
 pub mod inventory_types;
 pub mod normalization;
+pub mod namespace_info;
 pub mod policy_types;
 pub mod predicate_eval;
 pub mod predicate_types;

@@ -6,6 +6,8 @@ use crate::types::{CheckResult, CheckStatus, RegistryStats, TldRule};
 
 #[path = "registry_assessment.rs"]
 mod assessment;
+#[path = "registry_namespace.rs"]
+mod namespace;
 
 /// Cheap handle to one locally compiled and reproducible policy release.
 #[derive(Debug, Clone, Copy, Default)]
