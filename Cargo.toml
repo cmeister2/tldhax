@@ -8,11 +8,15 @@ repository = "https://github.com/cmeister2/tldhax"
 readme = "README.md"
 keywords = ["tld", "domain", "dns", "idn", "registry"]
 categories = ["command-line-utilities", "web-programming"]
-include = ["src/**", "python/**", "build.rs", "rules/**", "LICENSE", "README.md"]
+include = ["src/**", "python/**", "build.rs", "rules/**", "benches/**", "/LICENSE", "/README.md"]
 
 [lib]
 name = "tldhax"
 crate-type = ["cdylib", "rlib"]
+
+[[bench]]
+name = "lookup"
+harness = false
 
 [dependencies]
 idna = "1"
