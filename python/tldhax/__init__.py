@@ -1,5 +1,13 @@
 """Public Python bindings for the tldhax registry checker."""
 
-from ._native import CheckResult, Registry, TldInfo
+from ._native import CheckResult, TldInfo
+from .registry import Assessment, NamespaceInfo, PreparedRegistrant, Registry
 
-__all__ = ["CheckResult", "Registry", "TldInfo"]
+__all__ = [
+    "Assessment",
+    "CheckResult",
+    "NamespaceInfo",
+    "PreparedRegistrant",
+    "Registry",
+    "TldInfo",
+]
