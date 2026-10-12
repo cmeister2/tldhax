@@ -10,6 +10,7 @@ pub mod policy_types;
 )]
 pub mod python;
 pub mod registration_context;
+pub mod resolver;
 pub mod registry;
 pub mod types;
 
