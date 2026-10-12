@@ -3,6 +3,8 @@
 
 mod idn_schema;
 mod idn;
+mod check_predicates;
+mod conflicts;
 mod keys;
 mod load;
 mod predicates;
@@ -17,5 +19,7 @@ mod tests_inputs;
 mod fixtures;
 #[cfg(test)]
 mod tests_integrity;
+#[cfg(test)]
+mod tests_predicates;
 #[cfg(test)]
 mod tests_schema;
