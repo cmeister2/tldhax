@@ -12,6 +12,10 @@ use crate::assessment_support::{aggregate, empty, policy, protocol, record, rule
 pub use crate::assessment_support::{MAX_FINDINGS, MAX_RULE_TRACES};
 pub use crate::dataset::PolicyDataset;
 
+#[path = "assessment_detailed.rs"]
+mod detailed;
+pub use detailed::{DetailedAssessment, DetailedFinding, ExplanationError};
+
 /// Cheap immutable evaluator; construction performs no parsing or dynamic initialization.
 pub struct Evaluator {
     /// All decisions derive from the same pinned release.
@@ -316,3 +320,7 @@ fn route_selection(name: &str, route: RouteMatch<'_>) -> RouteSelection {
 #[cfg(test)]
 #[path = "evaluator_smoke_tests.rs"]
 mod smoke;
+
+#[cfg(test)]
+#[path = "evaluator_detail_tests.rs"]
+mod detail_tests;
