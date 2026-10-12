@@ -18,6 +18,10 @@ crate-type = ["cdylib", "rlib"]
 name = "lookup"
 harness = false
 
+[[bench]]
+name = "assessment"
+harness = false
+
 [dependencies]
 idna = "=1.1.0"
 # Bind transitive normalization and data even when downstream ignores this lockfile.
