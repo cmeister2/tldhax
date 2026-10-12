@@ -369,3 +369,317 @@ review_due = "2027-01-10"
 attests_completeness = true
 applicable_on = "2026-10-12"
 
+[[assertions]]
+id = "com.form"
+source_id = "com-2024-contract"
+locator = "Appendix 6 A–D; second-level labels"
+operation = "new_registration"
+namespaces = ["com"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The agreement explicitly governs second-level applicant labels."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2024-12-01"
+
+[[assertions]]
+id = "com.named-reservations"
+source_id = "com-2024-contract"
+locator = "Appendix 6 A, subject to its introductory authorization exception"
+operation = "new_registration"
+namespaces = ["com"]
+forms = [1]
+input_class = "any"
+family = "reserved"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Named ICANN/IANA labels require applicable written authorization."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2024-12-01"
+predicate = { kind = "all", predicates = [{ kind = "label_in_set", component = 0, set_id = "com.published-reserved" }, { kind = "not", predicate = { kind = "name_equals_field", component = 0, field = "com_icann_authorized_labels" } }] }
+
+[[assertions]]
+id = "com.operational-reservations"
+source_id = "com-2024-contract"
+locator = "Appendix 6 D and introductory authorization exception"
+operation = "new_registration"
+namespaces = ["com"]
+forms = [1]
+input_class = "any"
+family = "reserved"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "nic, whois and www are reserved for registry operations; qualifying Registry Operator use and express ICANN authorization are distinct exceptions."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2024-12-01"
+predicate = { kind = "all", predicates = [{ kind = "label_in_set", component = 0, set_id = "com.operational-reserved" }, { kind = "not", predicate = { kind = "any", predicates = [{ kind = "name_equals_field", component = 0, field = "com_icann_authorized_labels" }, { kind = "name_equals_field", component = 0, field = "com_registry_operational_labels" }] } }] }
+
+[[assertions]]
+id = "com.short-release-gap"
+source_id = "com-2024-contract"
+locator = "Appendix 6 B; release and authorization exceptions"
+operation = "new_registration"
+namespaces = ["com"]
+forms = [1]
+input_class = "any"
+family = "reserved"
+effect = "context"
+knowledge = "partial"
+interpretation = "Short-label releases and exceptional authorizations require separate evidence."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2024-12-01"
+
+[[assertions]]
+id = "com.idn-no-sharp-s"
+source_id = "verisign-idn-rules"
+locator = "5. Special Characters"
+operation = "new_registration"
+namespaces = ["com"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Verisign still rejects this code point under its stated registration policy."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "label_pattern", component = 0, pattern = "contains", value = "ß", basis = "unicode" }
+
+[[assertions]]
+id = "com.idn-no-final-sigma"
+source_id = "verisign-idn-rules"
+locator = "5. Special Characters"
+operation = "new_registration"
+namespaces = ["com"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Verisign still rejects this code point under its stated registration policy."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "label_pattern", component = 0, pattern = "contains", value = "ς", basis = "unicode" }
+
+[[assertions]]
+id = "com.idn-language-context"
+source_id = "verisign-idn-rules"
+locator = "2. Language inclusion tables; 3. Script commingling"
+operation = "new_registration"
+namespaces = ["com"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "context"
+knowledge = "partial"
+interpretation = "Language tags, inclusion tables and script mixing remain uncompiled."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "com.idn-registry-offering"
+source_id = "verisign-idn-offering"
+locator = "Partially Localized IDNs"
+operation = "new_registration"
+namespaces = ["com"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "Verisign explicitly offers second-level IDN registration in this namespace."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "com.idn-variant-context"
+source_id = "verisign-idn-adoption"
+locator = "Policy for IDN Registrations; Additional Logic; Language Tables"
+operation = "new_registration"
+namespaces = ["com"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "context"
+knowledge = "partial"
+interpretation = "Current IDN processing applies language-tag tables and conditional Chinese variant allocation."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "net.form"
+source_id = "net-2023-contract"
+locator = "Appendix 6 A–D; second-level labels"
+operation = "new_registration"
+namespaces = ["net"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The agreement explicitly governs second-level applicant labels."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2023-07-01"
+
+[[assertions]]
+id = "net.named-reservations"
+source_id = "net-2023-contract"
+locator = "Appendix 6 A, subject to its introductory authorization exception"
+operation = "new_registration"
+namespaces = ["net"]
+forms = [1]
+input_class = "any"
+family = "reserved"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Named ICANN/IANA labels require applicable written authorization."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2023-07-01"
+predicate = { kind = "all", predicates = [{ kind = "label_in_set", component = 0, set_id = "net.published-reserved" }, { kind = "not", predicate = { kind = "name_equals_field", component = 0, field = "net_icann_authorized_labels" } }] }
+
+[[assertions]]
+id = "net.operational-reservations"
+source_id = "net-2023-contract"
+locator = "Appendix 6 D and introductory authorization exception"
+operation = "new_registration"
+namespaces = ["net"]
+forms = [1]
+input_class = "any"
+family = "reserved"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "nic, whois and www are reserved for registry operations; qualifying Registry Operator use and express ICANN authorization are distinct exceptions."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2023-07-01"
+predicate = { kind = "all", predicates = [{ kind = "label_in_set", component = 0, set_id = "net.operational-reserved" }, { kind = "not", predicate = { kind = "any", predicates = [{ kind = "name_equals_field", component = 0, field = "net_icann_authorized_labels" }, { kind = "name_equals_field", component = 0, field = "net_registry_operational_labels" }] } }] }
+
+[[assertions]]
+id = "net.short-release-gap"
+source_id = "net-2023-contract"
+locator = "Appendix 6 B; release and authorization exceptions"
+operation = "new_registration"
+namespaces = ["net"]
+forms = [1]
+input_class = "any"
+family = "reserved"
+effect = "context"
+knowledge = "partial"
+interpretation = "Short-label releases and exceptional authorizations require separate evidence."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2023-07-01"
+
+[[assertions]]
+id = "net.idn-no-sharp-s"
+source_id = "verisign-idn-rules"
+locator = "5. Special Characters"
+operation = "new_registration"
+namespaces = ["net"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Verisign still rejects this code point under its stated registration policy."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "label_pattern", component = 0, pattern = "contains", value = "ß", basis = "unicode" }
+
+[[assertions]]
+id = "net.idn-no-final-sigma"
+source_id = "verisign-idn-rules"
+locator = "5. Special Characters"
+operation = "new_registration"
+namespaces = ["net"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Verisign still rejects this code point under its stated registration policy."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "label_pattern", component = 0, pattern = "contains", value = "ς", basis = "unicode" }
+
+[[assertions]]
+id = "net.idn-language-context"
+source_id = "verisign-idn-rules"
+locator = "2. Language inclusion tables; 3. Script commingling"
+operation = "new_registration"
+namespaces = ["net"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "context"
+knowledge = "partial"
+interpretation = "Language tags, inclusion tables and script mixing remain uncompiled."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "net.idn-registry-offering"
+source_id = "verisign-idn-offering"
+locator = "Partially Localized IDNs"
+operation = "new_registration"
+namespaces = ["net"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "Verisign explicitly offers second-level IDN registration in this namespace."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "net.idn-variant-context"
+source_id = "verisign-idn-adoption"
+locator = "Policy for IDN Registrations; Additional Logic; Language Tables"
+operation = "new_registration"
+namespaces = ["net"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "context"
+knowledge = "partial"
+interpretation = "Current IDN processing applies language-tag tables and conditional Chinese variant allocation."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
