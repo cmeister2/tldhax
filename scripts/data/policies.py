@@ -130,9 +130,9 @@ def special_use(text: str) -> tuple[list[dict], str]:
 def special_csv(text: str) -> tuple[list[dict], str]:
     """Validate the independent CSV representation before cross-checking XML."""
     reader = csv.DictReader(io.StringIO(text), strict=True)
-    if reader.fieldnames != ["Name", "Reference"]:
-        raise ValueError("special-use CSV schema changed")
     try:
+        if reader.fieldnames != ["Name", "Reference"]:
+            raise ValueError("special-use CSV schema changed")
         rows = list(reader)
     except csv.Error as exc:
         raise ValueError("malformed special-use CSV") from exc
