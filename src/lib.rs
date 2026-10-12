@@ -2,6 +2,7 @@
 
 pub mod checker;
 pub mod normalization;
+pub mod policy_types;
 #[allow(missing_docs, clippy::missing_docs_in_private_items, clippy::missing_errors_doc)]
 pub mod python;
 pub mod registry;
