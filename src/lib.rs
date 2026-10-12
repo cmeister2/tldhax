@@ -1,6 +1,7 @@
 //! TLD registration rule checks backed by compiled rule data.
 
 pub mod checker;
+pub mod normalization;
 #[allow(missing_docs, clippy::missing_docs_in_private_items, clippy::missing_errors_doc)]
 pub mod python;
 pub mod registry;

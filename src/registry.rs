@@ -1,6 +1,6 @@
 //! Registry lookup and registerability checks.
 
-use crate::checker::validate_ascii_domain;
+use crate::normalization::normalize;
 use crate::types::{
     Charset, CheckResult, CheckStatus, Reason, Registerable, RegistryStats, TldRule,
 };
@@ -27,38 +27,20 @@ impl Registry {
     /// rule, or an unknown result when the suffix is known but has no curated
     /// policy entry.
     pub fn check(&self, domain: &str) -> CheckResult {
-        // Normalize user input before any structural or policy checks.
-        let lowered = domain.trim().trim_end_matches('.').to_ascii_lowercase();
-        if lowered.is_empty() {
-            // Reject empty input before attempting IDNA or PSL parsing.
-            return CheckResult {
-                status: CheckStatus::No,
-                reasons: vec!["DNS syntax: empty domain".to_string()],
-            };
-        }
-
-        let ascii_domain = match idna::domain_to_ascii(&lowered) {
-            Ok(value) => value.to_ascii_lowercase(),
-            Err(_) => {
-                // Stop immediately when IDNA normalization itself is invalid.
+        let canonical = match normalize(domain) {
+            Ok(value) => value,
+            Err(error) => {
                 return CheckResult {
                     status: CheckStatus::No,
-                    reasons: vec!["DNS syntax: invalid IDNA input".to_string()],
+                    reasons: vec![error.message().to_string()],
                 };
             }
         };
-
-        if let Err(error) = validate_ascii_domain(&ascii_domain) {
-            // Surface the first ASCII DNS syntax violation from the normalized form.
-            return CheckResult {
-                status: CheckStatus::No,
-                reasons: vec![error],
-            };
-        }
+        let ascii_domain = canonical.ascii();
 
         // Use the PSL to distinguish bare TLDs, registrable domains, and deeper subdomains.
-        let Some(suffix) = psl::suffix_str(&ascii_domain) else {
-            let candidate = ascii_domain.rsplit('.').next().unwrap_or(&ascii_domain);
+        let Some(suffix) = psl::suffix_str(ascii_domain) else {
+            let candidate = ascii_domain.rsplit('.').next().unwrap_or(ascii_domain);
             // Unknown suffixes are syntactically valid but outside the compiled corpus.
             return CheckResult {
                 status: CheckStatus::Unknown,
@@ -66,7 +48,7 @@ impl Registry {
             };
         };
 
-        let Some(registrable_domain) = psl::domain_str(&ascii_domain) else {
+        let Some(registrable_domain) = psl::domain_str(ascii_domain) else {
             // Bare suffixes do not have a registrable label to validate.
             return CheckResult {
                 status: CheckStatus::No,
@@ -95,8 +77,17 @@ impl Registry {
         };
 
         // From this point onward, enforce the curated rule for the effective TLD.
-        let label_ascii = registrable_label(&ascii_domain, suffix);
-        let label_unicode = lowered.split('.').next().unwrap_or(&lowered);
+        let label_ascii = registrable_label(ascii_domain, suffix);
+        let canonical_unicode = match canonical.unicode() {
+            Ok(value) => value,
+            Err(error) => {
+                return CheckResult {
+                    status: CheckStatus::No,
+                    reasons: vec![error.message().to_string()],
+                };
+            }
+        };
+        let label_unicode = canonical_unicode.split('.').next().unwrap_or(&canonical_unicode);
         let label_len_ascii = label_ascii.len();
         let label_len_unicode = label_unicode.chars().count();
 
