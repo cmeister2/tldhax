@@ -14,7 +14,7 @@ pub mod registry;
 pub mod types;
 
 #[cfg(test)]
-#[path = "../build_support/stages.rs"]
+#[path = "../build_support/mod.rs"]
 mod compiler_stages;
 
 #[allow(missing_docs, clippy::missing_docs_in_private_items)]

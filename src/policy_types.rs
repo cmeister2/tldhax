@@ -436,6 +436,8 @@ pub struct IdnProfile {
     pub version: &'static str,
     /// Effective research status on the pinned evaluation date.
     pub knowledge: Knowledge,
+    /// Complete adopted repertoire, independently of contextual/allocation gaps.
+    pub repertoire_complete: bool,
     /// Sorted disjoint adopted Unicode repertoire intervals.
     pub ranges: &'static [CodepointRange],
     /// Supported finite positional/contextual restrictions.
