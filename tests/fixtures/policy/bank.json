@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "operation": "new_registration",
+  "evaluation_date": "2026-10-12",
+  "cases": [
+    {
+      "id": "bank.qualified-retail",
+      "domain": "vanity.bank",
+      "source_ids": [
+        "bank-eligibility"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "bank.qualified-classes",
+          "bank.no-proxy"
+        ],
+        "gap_families": [
+          "eligibility",
+          "allocation",
+          "reserved"
+        ]
+      },
+      "rationale": "§3.1 requires chartered, supervised retail banking status; §6 excludes proxy registration.",
+      "registrant": {
+        "bank_class": "retail_bank",
+        "bank_chartered": true,
+        "bank_supervised": true,
+        "proxy_registration": false
+      }
+    },
+    {
+      "id": "bank.unregulated-individual",
+      "domain": "vanity.bank",
+      "source_ids": [
+        "bank-eligibility"
+      ],
+      "expected": {
+        "failed_rule_ids": [
+          "bank.qualified-classes"
+        ]
+      },
+      "rationale": "A declared ordinary applicant fits none of the current new-registration classes and has no exceptional board approval.",
+      "registrant": {
+        "bank_class": "other",
+        "bank_board_exception_approved": false,
+        "proxy_registration": false
+      }
+    },
+    {
+      "id": "bank.unchartered-retail",
+      "domain": "vanity.bank",
+      "source_ids": [
+        "bank-eligibility"
+      ],
+      "expected": {
+        "failed_rule_ids": [
+          "bank.qualified-classes"
+        ]
+      },
+      "rationale": "The retail-bank class still requires its stated charter qualification absent exceptional approval.",
+      "registrant": {
+        "bank_class": "retail_bank",
+        "bank_chartered": false,
+        "bank_supervised": true,
+        "bank_board_exception_approved": false,
+        "proxy_registration": false
+      }
+    },
+    {
+      "id": "bank.board-approved-other",
+      "domain": "vanity.bank",
+      "source_ids": [
+        "bank-eligibility"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "bank.qualified-classes"
+        ],
+        "gap_families": [
+          "eligibility"
+        ]
+      },
+      "rationale": "The other regulated-entity class requires supervision and registry board approval rather than blanket acceptance.",
+      "registrant": {
+        "bank_class": "other_regulated_entity",
+        "bank_supervised": true,
+        "bank_board_approved": true,
+        "proxy_registration": false
+      }
+    },
+    {
+      "id": "bank.board-unapproved-other",
+      "domain": "vanity.bank",
+      "source_ids": [
+        "bank-eligibility"
+      ],
+      "expected": {
+        "failed_rule_ids": [
+          "bank.qualified-classes"
+        ]
+      },
+      "rationale": "An explicit absence of the required and exceptional board approvals fails this necessary class branch.",
+      "registrant": {
+        "bank_class": "other_regulated_entity",
+        "bank_supervised": true,
+        "bank_board_approved": false,
+        "bank_board_exception_approved": false,
+        "proxy_registration": false
+      }
+    },
+    {
+      "id": "bank.unsupervised-other",
+      "domain": "vanity.bank",
+      "source_ids": [
+        "bank-eligibility"
+      ],
+      "expected": {
+        "failed_rule_ids": [
+          "bank.qualified-classes"
+        ]
+      },
+      "rationale": "§3.7 also requires supervision; board approval of that class alone does not replace supervision.",
+      "registrant": {
+        "bank_class": "other_regulated_entity",
+        "bank_supervised": false,
+        "bank_board_approved": true,
+        "bank_board_exception_approved": false,
+        "proxy_registration": false
+      }
+    },
+    {
+      "id": "bank.exception-approved",
+      "domain": "vanity.bank",
+      "source_ids": [
+        "bank-eligibility"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "bank.qualified-classes"
+        ],
+        "gap_families": [
+          "eligibility"
+        ]
+      },
+      "rationale": "The final implementation-guidelines paragraph preserves explicit Board discretion over eligibility requests.",
+      "registrant": {
+        "bank_class": "other",
+        "bank_board_exception_approved": true,
+        "proxy_registration": false
+      }
+    },
+    {
+      "id": "bank.proxy-registration",
+      "domain": "vanity.bank",
+      "source_ids": [
+        "bank-eligibility"
+      ],
+      "expected": {
+        "failed_rule_ids": [
+          "bank.no-proxy"
+        ]
+      },
+      "rationale": "§6 forbids proxy/private registration independently of the eligible banking class.",
+      "registrant": {
+        "bank_class": "retail_bank",
+        "bank_chartered": true,
+        "bank_supervised": true,
+        "proxy_registration": true
+      }
+    },
+    {
+      "id": "bank.correspondence-variant",
+      "domain": "my-vanity.bank",
+      "source_ids": [
+        "bank-name-selection"
+      ],
+      "expected": {
+        "gap_families": [
+          "allocation"
+        ]
+      },
+      "rationale": "The 2022 implementation guidelines allow prefixes and other correspondence; exact equality is not imposed as a universal rule."
+    },
+    {
+      "id": "bank.unpublished-reservation-gap",
+      "domain": "mortgage.bank",
+      "source_ids": [
+        "bank-name-selection",
+        "bank-allocation"
+      ],
+      "expected": {
+        "gap_families": [
+          "reserved",
+          "allocation"
+        ]
+      },
+      "rationale": "§3.2–3.3 reservation lists are not exhaustive here; allocation §6.1–6.2 permits specific common-name releases."
+    }
+  ]
+}

@@ -1693,3 +1693,107 @@ review_due = "2027-01-10"
 applicable_on = "2026-10-12"
 predicate = { kind = "field_in", field = "uk_school_class", values = ["uk_school", "school_consortium"] }
 
+[[assertions]]
+id = "bank.form"
+source_id = "bank-name-selection"
+locator = "3.1; implementation examples, pages 3–4"
+operation = "new_registration"
+namespaces = ["bank"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The published ordinary-name examples identify second-level applicant labels."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2015-09-12"
+
+[[assertions]]
+id = "bank.qualified-classes"
+source_id = "bank-eligibility"
+locator = "3.1–3.8; 2024-02-28 implementation guidelines, final paragraph"
+operation = "new_registration"
+namespaces = ["bank"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "Declared organizational classes need their charter, supervision, membership or board qualifications; explicit exceptional board approval remains an alternative."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "any", predicates = [{ kind = "all", predicates = [{ kind = "field_in", field = "bank_class", values = ["retail_bank", "savings_association"] }, { kind = "field_equals", field = "bank_chartered", value = true }, { kind = "field_equals", field = "bank_supervised", value = true }] }, { kind = "all", predicates = [{ kind = "field_in", field = "bank_class", values = ["bank_association", "association_group"] }, { kind = "field_equals", field = "bank_members_qualify", value = true }] }, { kind = "all", predicates = [{ kind = "field_equals", field = "bank_class", value = "bank_regulator" }, { kind = "field_equals", field = "bank_board_approved", value = true }] }, { kind = "all", predicates = [{ kind = "field_equals", field = "bank_class", value = "other_regulated_entity" }, { kind = "field_equals", field = "bank_supervised", value = true }, { kind = "field_equals", field = "bank_board_approved", value = true }] }, { kind = "all", predicates = [{ kind = "field_equals", field = "bank_class", value = "holding_or_parent" }, { kind = "field_equals", field = "bank_supervised", value = true }] }, { kind = "field_equals", field = "bank_board_exception_approved", value = true }] }
+
+[[assertions]]
+id = "bank.no-proxy"
+source_id = "bank-eligibility"
+locator = "6.0; pages 2–3"
+operation = "new_registration"
+namespaces = ["bank"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "Proxy/private registration cannot replace the true registrant."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2020-01-03"
+predicate = { kind = "field_equals", field = "proxy_registration", value = false }
+
+[[assertions]]
+id = "bank.correspondence-context"
+source_id = "bank-name-selection"
+locator = "3.1(a); 2022-04-01 implementation guidelines"
+operation = "new_registration"
+namespaces = ["bank"]
+forms = [1]
+input_class = "any"
+family = "allocation"
+effect = "context"
+knowledge = "partial"
+interpretation = "Correspondence includes broad listed transformations; exact equality is not the universal rule."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2015-09-12"
+
+[[assertions]]
+id = "bank.unpublished-reservations"
+source_id = "bank-name-selection"
+locator = "3.2–3.3"
+operation = "new_registration"
+namespaces = ["bank"]
+forms = [1]
+input_class = "any"
+family = "reserved"
+effect = "context"
+knowledge = "partial"
+interpretation = "Mutable reservation lists are distributed to providers, not exhaustively published here."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2015-09-12"
+
+[[assertions]]
+id = "bank.common-name-release-context"
+source_id = "bank-allocation"
+locator = "6.1–6.2"
+operation = "new_registration"
+namespaces = ["bank"]
+forms = [1]
+input_class = "any"
+family = "reserved"
+effect = "context"
+knowledge = "partial"
+interpretation = "Specified common-name allocations may use approved release processes; a generic word is not automatically forbidden."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2015-06-06"
+
