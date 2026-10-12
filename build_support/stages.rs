@@ -6,6 +6,7 @@ mod idn;
 mod check_predicates;
 mod conflicts;
 mod inheritance;
+mod resolve;
 mod keys;
 mod load;
 mod predicates;
@@ -24,5 +25,7 @@ mod tests_integrity;
 mod tests_predicates;
 #[cfg(test)]
 mod tests_inheritance;
+#[cfg(test)]
+mod tests_resolution;
 #[cfg(test)]
 mod tests_schema;
