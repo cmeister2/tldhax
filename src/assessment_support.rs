@@ -9,6 +9,8 @@ pub(crate) mod aggregate;
 pub(crate) mod policy;
 #[path = "assessment_protocol.rs"]
 pub(crate) mod protocol;
+#[path = "assessment_rules.rs"]
+pub(crate) mod rules;
 
 /// Empty result used for unknown input or an unresearched namespace.
 pub(crate) fn empty(dataset: &PolicyDataset) -> CompactAssessment<'static> {
@@ -40,3 +42,21 @@ pub(crate) fn empty(dataset: &PolicyDataset) -> CompactAssessment<'static> {
 #[cfg(test)]
 #[path = "assessment_support_tests.rs"]
 mod tests;
+
+#[cfg(test)]
+#[path = "assessment_rules_tests.rs"]
+mod rule_tests;
+
+/// Maximum diagnostic findings; evaluation continues after the retention limit.
+pub const MAX_FINDINGS: usize = 64;
+/// Maximum retained rule traces; later rules still affect the decision.
+pub const MAX_RULE_TRACES: usize = 128;
+
+/// Bound stored diagnostics independently of computed policy truth.
+pub(crate) fn record(result: &mut CompactAssessment<'_>, finding: Finding) {
+    if result.findings.len() < MAX_FINDINGS {
+        result.findings.push(finding);
+    } else {
+        result.diagnostics_truncated = true;
+    }
+}

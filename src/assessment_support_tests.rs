@@ -9,7 +9,7 @@ use crate::policy_types::{
 };
 use crate::registration_context::ContextOError;
 
-fn dataset() -> PolicyDataset {
+pub(super) fn dataset() -> PolicyDataset {
     PolicyDataset {
         version: "fixture-v1",
         evaluation_date: "2026-10-12",
