@@ -1143,3 +1143,110 @@ reviewed_on = "2026-10-12"
 review_due = "2027-01-10"
 effective_from = "2021-04-12"
 
+[[assertions]]
+id = "us.form"
+source_id = "us-faq"
+locator = "General Information and Domain Management; ordinary .US registrations"
+operation = "new_registration"
+namespaces = ["us"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "Ordinary .US names and the separate locality management scheme are distinguished."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "us.nexus"
+source_id = "us-nexus"
+locator = "Page 1, categories 1–3; pages 2–3, certification details"
+operation = "new_registration"
+namespaces = ["us"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "Individuals need citizen/resident/primary-domicile status; entities need US formation or bona fide presence, including the applicable possessions and territories."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "any", predicates = [{ kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "individual" }, { kind = "any", predicates = [{ kind = "field_in", field = "citizenships", values = ["US"] }, { kind = "field_equals", field = "us_permanent_resident", value = true }, { kind = "field_equals", field = "domicile_country", value = "US" }, { kind = "field_equals", field = "us_primary_domicile_in_possession", value = true }] }] }, { kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "organization" }, { kind = "any", predicates = [{ kind = "field_equals", field = "incorporation_country", value = "US" }, { kind = "field_equals", field = "us_incorporated_in_territory", value = true }, { kind = "field_equals", field = "us_constituted_entity", value = true }, { kind = "all", predicates = [{ kind = "field_equals", field = "us_foreign_entity", value = true }, { kind = "field_equals", field = "us_bona_fide_presence", value = true }] }] }] }] }
+
+[[assertions]]
+id = "us.nexus-categories"
+source_id = "us-nexus"
+locator = "Page 1, categories 1–3"
+operation = "new_registration"
+namespaces = ["us"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "context"
+knowledge = "partial"
+interpretation = "The stated Nexus categories are evaluated on declared facts; this does not attest complete eligibility or verification coverage."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "us.no-proxy"
+source_id = "us-faq"
+locator = "Will proxy registrations, sometimes called \"domain privacy” be allowed on my .US domain name?"
+operation = "new_registration"
+namespaces = ["us"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "Current .US policy prohibits proxy/private registration services."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "field_equals", field = "proxy_registration", value = false }
+
+[[assertions]]
+id = "us.no-idn"
+source_id = "us-faq"
+locator = "Are Internationalized Domain Names (IDNs) offered in .US?"
+operation = "new_registration"
+namespaces = ["us"]
+forms = [1]
+input_class = "any"
+family = "idn"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "The current registry explicitly does not offer IDN registrations."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+predicate = { kind = "ascii_only", component = 0 }
+
+[[assertions]]
+id = "us.no-tagged-label"
+source_id = "us-faq"
+locator = "Reserved-name categories: tagged domain names"
+operation = "new_registration"
+namespaces = ["us"]
+forms = [1]
+input_class = "any"
+family = "reserved"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Tagged labels with hyphens in positions three and four are reserved."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "label_positions", component = 0, positions = [2, 3], value = "--", basis = "unicode" }
+
