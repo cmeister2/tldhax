@@ -1,0 +1,23 @@
+schema_version = 2
+
+[[namespaces]]
+selector = "name"
+forms = [["label"], ["given", "family"]]
+form_assertion_ids = ["name.form-one"]
+rules = []
+context = ["The pinned ICANN PSL exact name entry is discovery metadata; reviewed one-label registration evidence approves that count independently.", "Neither contract form wording nor approval date proves when the third-level withdrawal is implemented."]
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["name.current-contract", "name.form-one", "name.form-two-historical", "name.third-level-removal-approved", "name.third-level-removal-timeline"]
+gap = "One-label form is current; two-label service withdrawal is approved with an unverified implementation date. Registry-operator exceptions prevent universal exclusion of all other forms."
+
+[[namespaces.coverage]]
+family = "allocation"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["name.personal-relationship-context"]
+gap = "Broad personal-name relationships, fictional-character rights and numeric differentiation are not fully compiled."
+

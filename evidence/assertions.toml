@@ -1,0 +1,104 @@
+schema_version = 2
+
+[[assertions]]
+id = "name.current-contract"
+source_id = "name-contract-index"
+locator = "Agreement Date, Agreement, Appendices"
+operation = "new_registration"
+namespaces = ["name"]
+forms = [1, 2]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The current index continues to publish the 2012 agreement and Appendix 11; approval of service removal is reviewed separately."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "name.form-one"
+source_id = "name-appendix11"
+locator = "1(a)(2)"
+operation = "new_registration"
+namespaces = ["name"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The public second-level domain form has one applicant label. The approved third-level service removal does not withdraw this form."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "name.form-two-historical"
+source_id = "name-appendix11"
+locator = "1(a)(1), subject to the subsequent RSEP2026013 removal authorization"
+operation = "new_registration"
+namespaces = ["name"]
+forms = [2]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "unknown"
+interpretation = "The agreement describes two applicant labels for third-level registrations, but current acceptance cannot be attested after approved withdrawal without an official implementation date."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "name.third-level-removal-approved"
+source_id = "name-withdrawal-approval"
+locator = "Page 1 approval paragraph; page 2 registrar notification list"
+operation = "new_registration"
+namespaces = ["name"]
+forms = [2]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "partial"
+interpretation = "ICANN approved removal on 2026-05-07 and publicly authorized it on 2026-07-28 after at least 90 days registrar notice. The reviewed primary sources do not specify the implementation date, so approval is not treated as an active name denial."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "name.third-level-removal-timeline"
+source_id = "name-withdrawal-request"
+locator = "1.2–1.3, 1.6, 5.1"
+operation = "new_registration"
+namespaces = ["name"]
+forms = [2]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "partial"
+interpretation = "Upon implementation the registry will cease new third-level registrations; references remain until termination. Current implementation timing remains unknown."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "name.personal-relationship-context"
+source_id = "name-appendix11"
+locator = "2(a)–(b)"
+operation = "new_registration"
+namespaces = ["name"]
+forms = [1, 2]
+input_class = "any"
+family = "allocation"
+effect = "context"
+knowledge = "partial"
+interpretation = "Personal identifiers include legal names, nicknames, pseudonyms, numbers and handles; fictional-character rights and additional numeric characters are permitted. No narrow exact-name equality or natural-person-only gate is substituted."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
