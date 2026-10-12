@@ -1250,3 +1250,446 @@ review_due = "2027-01-10"
 applicable_on = "2026-10-12"
 predicate = { kind = "label_positions", component = 0, positions = [2, 3], value = "--", basis = "unicode" }
 
+[[assertions]]
+id = "uk.current-policy-selection"
+source_id = "nominet-index"
+locator = "Our current Policies: Contracts & Rules; future .uk agreements and policies"
+operation = "new_registration"
+namespaces = ["uk", "co.uk", "org.uk", "me.uk", "ltd.uk", "plc.uk", "net.uk"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The current index identifies Rules of Registration separately from the revised policy commencing in February 2027."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.form"
+source_id = "nominet-current-rules"
+locator = "1.3; 2.3; Appendix A; section 7"
+operation = "new_registration"
+namespaces = ["uk", "co.uk", "org.uk", "me.uk", "ltd.uk", "plc.uk", "net.uk"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "Nominet accepts one second-level or one label within its listed managed namespace."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.ascii-only"
+source_id = "nominet-current-rules"
+locator = "5.2; 5.4"
+operation = "new_registration"
+namespaces = ["uk", "co.uk", "org.uk", "me.uk", "ltd.uk", "plc.uk", "net.uk"]
+forms = [1]
+input_class = "any"
+family = "idn"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "Current Nominet names use ASCII and cannot register an xn-- IDN."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+predicate = { kind = "ascii_only", component = 0 }
+
+[[assertions]]
+id = "uk.no-edge-hyphen"
+source_id = "nominet-current-rules"
+locator = "5.2–5.3"
+operation = "new_registration"
+namespaces = ["co.uk", "org.uk", "me.uk", "net.uk", "ltd.uk", "plc.uk"]
+forms = [1]
+input_class = "ascii"
+family = "characters"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Applicant third-level labels cannot start or end with a hyphen."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "any", predicates = [{ kind = "label_pattern", component = 0, pattern = "prefix", value = "-", basis = "unicode" }, { kind = "label_pattern", component = 0, pattern = "suffix", value = "-", basis = "unicode" }] }
+
+[[assertions]]
+id = "uk.characters-complete"
+source_id = "nominet-current-rules"
+locator = "5.2–5.4"
+operation = "new_registration"
+namespaces = ["co.uk", "org.uk", "me.uk", "net.uk", "ltd.uk", "plc.uk"]
+forms = [1]
+input_class = "ascii"
+family = "characters"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The current rules enumerate allowed ASCII characters and edge placements."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.third-reserved"
+source_id = "nominet-current-rules"
+locator = "5.5–5.6"
+operation = "new_registration"
+namespaces = ["co.uk", "org.uk", "me.uk", "net.uk"]
+forms = [1]
+input_class = "ascii"
+family = "reserved"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "The enumerated SLD labels, com and uk are barred in these four third-level namespaces."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+predicate = { kind = "label_in_set", component = 0, set_id = "nominet.third-reserved" }
+
+[[assertions]]
+id = "uk.root-reserved"
+source_id = "nominet-current-rules"
+locator = "5.6"
+operation = "new_registration"
+namespaces = ["uk"]
+forms = [1]
+input_class = "ascii"
+family = "reserved"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "com and uk cannot be newly registered directly under .uk."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "label_in_set", component = 0, set_id = "nominet.root-reserved" }
+
+[[assertions]]
+id = "uk.open-applicants"
+source_id = "nominet-current-rules"
+locator = "4.4; 7"
+operation = "new_registration"
+namespaces = ["uk", "co.uk", "org.uk"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The stated open namespaces impose no applicant-status gate."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.unenforced-charter"
+source_id = "nominet-current-rules"
+locator = "4.4; 8.2; 9.2"
+operation = "new_registration"
+namespaces = ["co.uk", "org.uk"]
+forms = [1]
+input_class = "any"
+family = "allocation"
+effect = "context"
+knowledge = "not_applicable"
+interpretation = "The commercial/nonprofit charter is expressly unenforced; it is not a name-allocation gate."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.me-natural-person"
+source_id = "nominet-current-rules"
+locator = "10.2–10.5"
+operation = "new_registration"
+namespaces = ["me.uk"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "New me.uk applicants must be natural persons rather than organizational proxies."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+predicate = { kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "individual" }, { kind = "field_equals", field = "organizational_proxy", value = false }] }
+
+[[assertions]]
+id = "uk.company-eligibility"
+source_id = "nominet-current-rules"
+locator = "11.2"
+operation = "new_registration"
+namespaces = ["ltd.uk", "plc.uk"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "Applicants must have the relevant UK incorporated company status."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "organization" }, { kind = "field_equals", field = "uk_incorporated_active", value = true }] }
+
+[[assertions]]
+id = "uk.net-isp"
+source_id = "nominet-current-rules"
+locator = "12.2.1–12.2.3"
+operation = "new_registration"
+namespaces = ["net.uk"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "net.uk is limited to qualifying ISP infrastructure; further required status remains uncompiled."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "field_equals", field = "uk_is_isp", value = true }
+
+[[assertions]]
+id = "uk.length-rules-conflict"
+source_id = "nominet-current-rules"
+locator = "5.7"
+operation = "new_registration"
+namespaces = ["uk", "co.uk", "org.uk", "me.uk", "ltd.uk", "plc.uk", "net.uk"]
+forms = [1]
+input_class = "any"
+family = "length"
+effect = "context"
+knowledge = "conflicting"
+interpretation = "The 64-character total description differs from current registry field documentation."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.length-fields-conflict"
+source_id = "nominet-fields"
+locator = "Registry field table: key"
+operation = "new_registration"
+namespaces = ["uk", "co.uk", "org.uk", "me.uk", "ltd.uk", "plc.uk", "net.uk"]
+forms = [1]
+input_class = "any"
+family = "length"
+effect = "context"
+knowledge = "conflicting"
+interpretation = "The key field states a 63-character applicant label; no dated policy-change notice has been resolved."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.future-2027-policy"
+source_id = "nominet-future-rules"
+locator = "Cover and clauses 1–3"
+operation = "new_registration"
+namespaces = ["uk", "co.uk", "org.uk", "me.uk", "ltd.uk", "plc.uk", "net.uk"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "This revised policy is not current before its stated February 2027 commencement."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2027-02-09"
+
+[[assertions]]
+id = "uk.delegated-ac"
+source_id = "nominet-current-rules"
+locator = "3.1–3.2; Appendix B"
+operation = "new_registration"
+namespaces = ["ac.uk"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "partial"
+interpretation = "A separate operator administers this suffix; its applicant policy requires independent review."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.delegated-gov"
+source_id = "nominet-current-rules"
+locator = "3.1–3.2; Appendix B"
+operation = "new_registration"
+namespaces = ["gov.uk"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "partial"
+interpretation = "A separate operator administers this suffix; its applicant policy requires independent review."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.delegated-mod"
+source_id = "nominet-current-rules"
+locator = "3.1–3.2; Appendix B"
+operation = "new_registration"
+namespaces = ["mod.uk"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "partial"
+interpretation = "A separate operator administers this suffix; its applicant policy requires independent review."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.delegated-mil"
+source_id = "nominet-current-rules"
+locator = "3.1–3.2; Appendix B"
+operation = "new_registration"
+namespaces = ["mil.uk"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "partial"
+interpretation = "A separate operator administers this suffix; its applicant policy requires independent review."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.delegated-nhs"
+source_id = "nominet-current-rules"
+locator = "3.1–3.2; Appendix B"
+operation = "new_registration"
+namespaces = ["nhs.uk"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "partial"
+interpretation = "A separate operator administers this suffix; its applicant policy requires independent review."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.delegated-police"
+source_id = "nominet-current-rules"
+locator = "3.1–3.2; Appendix B"
+operation = "new_registration"
+namespaces = ["police.uk"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "partial"
+interpretation = "A separate operator administers this suffix; its applicant policy requires independent review."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.school-form"
+source_id = "nominet-schools"
+locator = "Page 1: SCHOOLS"
+operation = "new_registration"
+namespaces = ["sch.uk"]
+forms = [2]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "School registrations use school-name.area.sch.uk."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.school-wildcard-form"
+source_id = "nominet-schools"
+locator = "Page 1: format; geographical domain-ending table"
+operation = "new_registration"
+namespaces = ["*.sch.uk"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "One school-name label occurs above an area.sch.uk suffix."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.sch-base.eligibility"
+source_id = "nominet-schools"
+locator = "Page 1: Schools; school consortium provision"
+operation = "new_registration"
+namespaces = ["sch.uk"]
+forms = [2]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "UK schools and qualifying school consortia are the stated applicant classes."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "field_in", field = "uk_school_class", values = ["uk_school", "school_consortium"] }
+
+[[assertions]]
+id = "uk.sch-wildcard.eligibility"
+source_id = "nominet-schools"
+locator = "Page 1: Schools; school consortium provision"
+operation = "new_registration"
+namespaces = ["*.sch.uk"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "UK schools and qualifying school consortia are the stated applicant classes."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "field_in", field = "uk_school_class", values = ["uk_school", "school_consortium"] }
+

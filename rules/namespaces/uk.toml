@@ -1,0 +1,12 @@
+schema_version = 2
+
+[[label_sets]]
+id = "nominet.third-reserved"
+labels = ["ac", "co", "gov", "ltd", "me", "mil", "mod", "net", "nhs", "nic", "org", "plc", "police", "sch", "com", "uk"]
+assertion_ids = ["uk.third-reserved"]
+
+[[label_sets]]
+id = "nominet.root-reserved"
+labels = ["com", "uk"]
+assertion_ids = ["uk.root-reserved"]
+
