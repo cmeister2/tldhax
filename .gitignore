@@ -7,7 +7,8 @@
 /.ruff_cache
 /__pycache__
 *.pyc
-/scripts
+/scripts/*
+!/scripts/data/
 /node_modules
 *.so
 venv*/
