@@ -5,6 +5,7 @@ mod compiled;
 pub mod inventory_types;
 pub mod normalization;
 pub mod policy_types;
+pub mod profile;
 #[allow(
     missing_docs,
     clippy::missing_docs_in_private_items,
