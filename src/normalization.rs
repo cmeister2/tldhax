@@ -4,11 +4,13 @@ use std::borrow::Cow;
 
 use idna::uts46::{AsciiDenyList, DnsLength, Hyphens, Uts46};
 
+use crate::registration_context::{self, ContextOError};
+
 /// Maximum raw UTF-8 input size before trimming or Unicode processing.
 pub const MAX_INPUT_BYTES: usize = 4096;
 
 /// The versioned normalisation contract, independent of registry policy.
-pub const NORMALIZATION_PROFILE: &str = "uts46-nontransitional-std3-hyphens-v1";
+pub const NORMALIZATION_PROFILE: &str = "uts46-nontransitional-std3-hyphens-contexto-v2";
 
 /// A failure of the input contract, DNS bounds, or strict IDNA processing.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -19,6 +21,8 @@ pub enum NormalizationError {
     Empty,
     /// IDNA, character, contextual, Bidi, or hyphen validation failed.
     InvalidIdna,
+    /// A decoded Unicode label violates a registration ContextO rule.
+    ContextO(ContextOError),
     /// The canonical name includes an empty label.
     EmptyLabel,
     /// An ASCII label exceeds the DNS wire bound.
@@ -34,6 +38,7 @@ impl NormalizationError {
             Self::InputLimit => "input_limit",
             Self::Empty => "empty_name",
             Self::InvalidIdna => "invalid_idna",
+            Self::ContextO(error) => error.code(),
             Self::EmptyLabel => "empty_label",
             Self::LabelTooLong => "label_too_long",
             Self::NameTooLong => "name_too_long",
@@ -46,6 +51,7 @@ impl NormalizationError {
             Self::InputLimit => "Input limit: domain exceeds 4096 UTF-8 bytes",
             Self::Empty => "DNS syntax: empty domain",
             Self::InvalidIdna => "DNS syntax: invalid IDNA input",
+            Self::ContextO(_) => "DNS syntax: invalid IDNA registration context",
             Self::EmptyLabel => "DNS syntax: empty label",
             Self::LabelTooLong => "DNS syntax: label exceeds 63 octets",
             Self::NameTooLong => "DNS syntax: wire name exceeds 255 octets",
@@ -116,6 +122,7 @@ pub fn normalize(input: &str) -> Result<CanonicalName<'_>, NormalizationError> {
         )
         .map_err(|_| NormalizationError::InvalidIdna)?;
     let mut wire_length = 1_usize;
+    let mut needs_context = false;
     for label in ascii.split('.') {
         if label.is_empty() {
             return Err(NormalizationError::EmptyLabel);
@@ -124,9 +131,16 @@ pub fn normalize(input: &str) -> Result<CanonicalName<'_>, NormalizationError> {
             return Err(NormalizationError::LabelTooLong);
         }
         wire_length += 1 + label.len();
+        needs_context |= label.starts_with("xn--");
     }
     if wire_length > 255 {
         return Err(NormalizationError::NameTooLong);
+    }
+    if needs_context {
+        let (unicode, status) =
+            Uts46::new().to_unicode(ascii.as_bytes(), AsciiDenyList::STD3, Hyphens::Check);
+        status.map_err(|_| NormalizationError::InvalidIdna)?;
+        registration_context::validate(&unicode).map_err(NormalizationError::ContextO)?;
     }
     Ok(CanonicalName { ascii })
 }
