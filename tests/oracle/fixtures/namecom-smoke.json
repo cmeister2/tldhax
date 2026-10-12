@@ -1,0 +1,12 @@
+{
+  "provider": "name.com",
+  "api_version": "core/v1",
+  "captured_on": "2026-10-12",
+  "context": "registration",
+  "cases": [
+    {"requested_name": "google.com", "response": {"results": [{"domainName": "google.com", "purchasable": false}]}, "expected_signal": "inconclusive"},
+    {"requested_name": "tldhax-oracle-78a44d41c342.com", "response": {"results": [{"domainName": "tldhax-oracle-78a44d41c342.com", "purchasable": true, "purchaseType": "registration"}]}, "expected_signal": "accepted"},
+    {"requested_name": "_tldhax-oracle.com", "response": {"results": [{"domainName": "tldhax-oracle.com", "purchasable": true, "purchaseType": "registration"}]}, "expected_signal": "inconclusive", "expected_finding": "provider_changed_name"},
+    {"requested_name": "com.co.uk", "response": {"results": [{"domainName": "com.co.uk", "purchasable": false}]}, "expected_signal": "inconclusive"}
+  ]
+}
