@@ -324,3 +324,7 @@ mod smoke;
 #[cfg(test)]
 #[path = "evaluator_detail_tests.rs"]
 mod detail_tests;
+
+#[cfg(test)]
+#[path = "evaluator_synthetic_tests.rs"]
+mod tests;
