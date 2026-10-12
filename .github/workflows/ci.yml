@@ -23,7 +23,7 @@ jobs:
           cache-dependency-path: pyproject.toml
       - uses: Swatinem/rust-cache@v2
       - name: Install Python tooling
-        run: python -m pip install .[dev]
+        run: python -m pip install .[dev,oracle]
       - name: Rust build and tests
         run: cargo test --all-targets
       - name: Python tests
