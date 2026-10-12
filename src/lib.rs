@@ -27,12 +27,7 @@ pub mod types;
 #[path = "../build_support/mod.rs"]
 mod compiler_stages;
 
-#[allow(missing_docs, clippy::missing_docs_in_private_items)]
-mod generated {
-    include!(concat!(env!("OUT_DIR"), "/generated_rules.rs"));
-}
-
-pub use generated::{KNOWN_SUFFIXES, TLD_RULES, TOTAL_KNOWN_SUFFIXES};
+pub use compiled::{KNOWN_SUFFIXES, TLD_RULES, TOTAL_KNOWN_SUFFIXES};
 
 pub use registry::Registry;
 pub use types::{

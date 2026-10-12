@@ -7,13 +7,19 @@ from hypothesis import strategies as st
 
 from tldhax import Registry
 
-REGISTERABLE_SUFFIXES = ("ai", "com", "co.uk", "com.ai", "net.ai", "off.ai", "org.ai")
+UNRESEARCHED_SUFFIXES = ("xyz", "ai", "com.ai", "net.ai", "off.ai", "org.ai")
+KNOWN_ROOTS = ("xyz", "ai")
 ASCII_LABELS = st.text(
     alphabet="abcdefghijklmnopqrstuvwxyz0123456789-",
     min_size=3,
     max_size=20,
 ).filter(
-    lambda label: label[0] != "-" and label[-1] != "-" and not label.startswith("xn--")
+    lambda label: (
+        label[0] != "-"
+        and label[-1] != "-"
+        and label[2:4] != "--"
+        and not label.startswith("xn--")
+    )
 )
 
 
@@ -28,20 +34,21 @@ def test_trailing_dot_is_ignored(registry) -> None:
 
 
 def test_bare_tld_is_rejected(registry) -> None:
-    """A bare suffix should be rejected because it has no registrable label."""
-    result = registry.check("co.uk")
+    """The candidate API requires an applicant beneath a known IANA root."""
+    result = registry.check("xyz")
     assert result.status == "no"
-    assert "TLD" in result.reasons[0]
+    assert "applicant label" in result.reasons[0]
 
 
-def test_subdomain_is_rejected(registry) -> None:
-    """Subdomains should be rejected in favor of the registrable domain."""
-    result = registry.check("foo.bar.co.uk")
-    assert result.status == "no"
-    assert "subdomain" in result.reasons[0]
+def test_discovered_namespace_and_deeper_candidates_need_policy_evidence(
+    registry,
+) -> None:
+    """PSL discovery alone establishes no prohibited registration shape."""
+    assert registry.check("com.ai").status == "unknown"
+    assert registry.check("foo.bar.com.ai").status == "unknown"
 
 
-@given(label=ASCII_LABELS, suffix=st.sampled_from(REGISTERABLE_SUFFIXES))
+@given(label=ASCII_LABELS, suffix=st.sampled_from(UNRESEARCHED_SUFFIXES))
 def test_uppercase_normalization_property(label: str, suffix: str) -> None:
     """Uppercasing a valid domain should preserve the full check result."""
     registry = Registry()
@@ -53,7 +60,7 @@ def test_uppercase_normalization_property(label: str, suffix: str) -> None:
     assert uppercased.reasons == normalized.reasons
 
 
-@given(label=ASCII_LABELS, suffix=st.sampled_from(REGISTERABLE_SUFFIXES))
+@given(label=ASCII_LABELS, suffix=st.sampled_from(UNRESEARCHED_SUFFIXES))
 def test_trailing_dot_normalization_property(label: str, suffix: str) -> None:
     """Appending a trailing dot should preserve the full check result."""
     registry = Registry()
@@ -65,21 +72,20 @@ def test_trailing_dot_normalization_property(label: str, suffix: str) -> None:
     assert with_trailing_dot.reasons == normalized.reasons
 
 
-@given(suffix=st.sampled_from(REGISTERABLE_SUFFIXES))
+@given(suffix=st.sampled_from(KNOWN_ROOTS))
 def test_bare_tld_rejection_property(suffix: str) -> None:
-    """Known registrable suffixes alone should still be rejected as bare TLDs."""
+    """Known roots require applicant labels independently of policy research."""
     registry = Registry()
     result = registry.check(suffix)
 
     assert result.status == "no"
-    assert "TLD" in result.reasons[0]
+    assert "applicant label" in result.reasons[0]
 
 
-@given(label=ASCII_LABELS, suffix=st.sampled_from(REGISTERABLE_SUFFIXES))
-def test_subdomain_rejection_property(label: str, suffix: str) -> None:
-    """Adding one more label should turn a registrable domain into a subdomain."""
+@given(label=ASCII_LABELS, suffix=st.sampled_from(UNRESEARCHED_SUFFIXES))
+def test_unresearched_deeper_name_property(label: str, suffix: str) -> None:
+    """Valid deeper names cannot be prohibited using discovery data alone."""
     registry = Registry()
     result = registry.check(f"sub.{label}.{suffix}")
 
-    assert result.status == "no"
-    assert "subdomain" in result.reasons[0]
+    assert result.status == "unknown"
