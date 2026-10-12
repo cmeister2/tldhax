@@ -40,6 +40,6 @@ pub use types::{
     TldRuleSummary,
 };
 
-// Foundation helpers are consumed by the evaluator in the following slices.
-#[allow(dead_code)]
+// Shared private policy assessment helpers.
 mod assessment_support;
+pub mod evaluator;

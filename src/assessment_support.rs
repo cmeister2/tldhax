@@ -60,3 +60,9 @@ pub(crate) fn record(result: &mut CompactAssessment<'_>, finding: Finding) {
         result.diagnostics_truncated = true;
     }
 }
+
+#[cfg(test)]
+/// Minimal dataset shared by independently declared synthetic runtime fixtures.
+pub(crate) fn fixture_dataset() -> PolicyDataset {
+    tests::dataset()
+}
