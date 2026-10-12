@@ -510,8 +510,12 @@ dependencies = [
 name = "tldhax"
 version = "0.0.0"
 dependencies = [
+ "icu_normalizer",
+ "icu_normalizer_data",
  "icu_properties",
+ "icu_properties_data",
  "idna",
+ "idna_adapter",
  "phf",
  "phf_codegen",
  "psl",
