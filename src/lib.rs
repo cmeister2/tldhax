@@ -1,6 +1,7 @@
 //! TLD registration rule checks backed by compiled rule data.
 
 pub mod checker;
+mod compiled;
 pub mod inventory_types;
 pub mod normalization;
 pub mod policy_types;

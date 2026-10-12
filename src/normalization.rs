@@ -10,7 +10,8 @@ use crate::registration_context::{self, ContextOError};
 pub const MAX_INPUT_BYTES: usize = 4096;
 
 /// The versioned normalisation contract, independent of registry policy.
-pub const NORMALIZATION_PROFILE: &str = "uts46-nontransitional-std3-hyphens-contexto-v2";
+pub const NORMALIZATION_PROFILE: &str =
+    "uts46-nontransitional-std3-hyphens-contexto-v2/idna-1.1.0/icu-2.2.0";
 
 /// A failure of the input contract, DNS bounds, or strict IDNA processing.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]

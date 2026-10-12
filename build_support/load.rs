@@ -151,12 +151,12 @@ pub fn load(root: &Path) -> Result<Loaded, String> {
         let text = read(root, &relative, &mut inputs)?;
         let value: toml::Value =
             toml::from_str(&text).map_err(|e| format!("invalid {relative}: {e}"))?;
-        if let Some(version) = value.get("schema_version") {
-            if version.as_integer() != Some(2) {
-                return Err("unsupported policy authoring schema".into());
-            }
+        if value.get("schema_version").is_some() {
             let parsed: AuthoringFile =
                 toml::from_str(&text).map_err(|e| format!("invalid {relative}: {e}"))?;
+            if parsed.schema_version != 2 {
+                return Err("unsupported policy authoring schema".into());
+            }
             document.namespaces.extend(parsed.namespaces);
             document.profiles.extend(parsed.profiles);
             document.label_sets.extend(parsed.label_sets);
