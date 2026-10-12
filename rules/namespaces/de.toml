@@ -1,0 +1,62 @@
+schema_version = 2
+
+[[namespaces]]
+selector = "de"
+forms = [["label"]]
+form_assertion_ids = ["de.form"]
+rules = ["de.label-minimum", "de.label-maximum", "de.no-leading-hyphen", "de.no-trailing-hyphen", "de.no-tagged-ulabel", "de.idn-repertoire", "de.contract-capacity"]
+context = ["Only German DENIC wording is controlling; English versions are translations.", "No German residence requirement is inferred from a conditional service-recipient duty."]
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["de.form"]
+
+[[namespaces.coverage]]
+family = "length"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["de.length-complete"]
+
+[[namespaces.coverage]]
+family = "characters"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["de.characters-complete"]
+
+[[namespaces.coverage]]
+family = "idn"
+ascii = "not_applicable"
+idn = "reviewed"
+assertion_ids = ["de.idn-annex", "de.ascii-idn-not-applicable"]
+gap = "ASCII names do not require an IDN repertoire check."
+
+[[namespaces.coverage]]
+family = "reserved"
+ascii = "unknown"
+idn = "unknown"
+assertion_ids = []
+gap = "No explicit exhaustive reservation declaration has been attested."
+
+[[namespaces.coverage]]
+family = "allocation"
+ascii = "unknown"
+idn = "unknown"
+assertion_ids = []
+gap = "Legality and rights context are outside this initial corpus."
+
+[[namespaces.coverage]]
+family = "access"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["de.requested-recipient"]
+gap = "The conditional recipient obligation is retained as context."
+
+[[namespaces.coverage]]
+family = "eligibility"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["de.nonresident-accepted", "de.contract-capacity"]
+gap = "Contract capacity is checked as declared facts; the underlying legal capacity and representation are not verified."
+

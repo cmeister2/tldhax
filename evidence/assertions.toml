@@ -102,3 +102,270 @@ reviewed_on = "2026-10-12"
 review_due = "2027-01-10"
 applicable_on = "2026-10-12"
 
+[[assertions]]
+id = "de.form"
+source_id = "denic-guidelines-de"
+locator = "V(1), excluding the .de suffix"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "One applicant label under .de; the defined alphabet excludes an additional dot."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "de.label-minimum"
+source_id = "denic-guidelines-de"
+locator = "V(2)"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "any"
+family = "length"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "An applicant label contains at least one Unicode character."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "label_minimum", component = 0, min = 1, basis = "unicode" }
+
+[[assertions]]
+id = "de.label-maximum"
+source_id = "denic-guidelines-de"
+locator = "V(2)"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "any"
+family = "length"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "The maximum of 63 characters is measured in the ACE form for IDNs."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "label_maximum", component = 0, max = 63, basis = "ascii" }
+
+[[assertions]]
+id = "de.length-complete"
+source_id = "denic-guidelines-de"
+locator = "V(2)"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "any"
+family = "length"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "V(2) supplies the complete stated label-length bounds."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "de.no-leading-hyphen"
+source_id = "denic-guidelines-de"
+locator = "V(1)"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "any"
+family = "characters"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Hyphen placement is checked on the applicant Unicode label, not the ACE prefix."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "label_pattern", component = 0, pattern = "prefix", value = "-", basis = "unicode" }
+
+[[assertions]]
+id = "de.no-trailing-hyphen"
+source_id = "denic-guidelines-de"
+locator = "V(1)"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "any"
+family = "characters"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Hyphen placement is checked on the applicant Unicode label, not the ACE prefix."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "label_pattern", component = 0, pattern = "suffix", value = "-", basis = "unicode" }
+
+[[assertions]]
+id = "de.no-tagged-ulabel"
+source_id = "denic-guidelines-de"
+locator = "V(1)"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "any"
+family = "characters"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Hyphen placement is checked on the applicant Unicode label, not the ACE prefix."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "label_positions", component = 0, positions = [2, 3], value = "--", basis = "unicode" }
+
+[[assertions]]
+id = "de.characters-complete"
+source_id = "denic-guidelines-de"
+locator = "V(1) and Annex"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "any"
+family = "characters"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "V(1) and its Annex define the permitted alphabet and hyphen placements."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "de.idn-adoption"
+source_id = "denic-guidelines-de"
+locator = "V(1)–(2)"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "DENIC adopts the Annex repertoire and ACE measurement for internationalised labels."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "de.idn-annex"
+source_id = "denic-guidelines-de"
+locator = "Annex: decimal and hexadecimal Unicode columns"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The finite Annex code points supplement lowercase ASCII letters, digits and hyphen."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "de.idn-repertoire"
+source_id = "denic-guidelines-de"
+locator = "V(1), V(2), Annex"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "An IDN must use the adopted Annex repertoire."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "idn", component = 0, profile_id = "denic.annex.current" }
+
+[[assertions]]
+id = "de.nonresident-accepted"
+source_id = "denic-nonresident-faq"
+locator = "Can persons or institutions not resident in Germany also register a .de domain?"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "Persons or institutions with legal capacity may register despite having no registered office in Germany."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "de.contract-capacity"
+source_id = "denic-nonresident-faq"
+locator = "What requirements must I fulfill in order to register a .de domain?"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "The prospective applicant needs capacity to conclude the registration contract or effective representation."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "any", predicates = [{ kind = "field_equals", field = "de_contract_capacity", value = true }, { kind = "field_equals", field = "de_effectively_represented", value = true }] }
+
+[[assertions]]
+id = "de.requested-recipient"
+source_id = "denic-terms-de"
+locator = "§3(4)"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "any"
+family = "access"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "A nonresident recipient appointment follows a DENIC request; it is not an initial residence gate."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "de.ascii-idn-not-applicable"
+source_id = "denic-guidelines-de"
+locator = "V(1)"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "ascii"
+family = "idn"
+effect = "context"
+knowledge = "not_applicable"
+interpretation = "ASCII labels do not require the Annex extension repertoire."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+
