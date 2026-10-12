@@ -39,3 +39,7 @@ pub use types::{
     Charset, CheckResult, CheckStatus, LengthBasis, Reason, Registerable, RegistryStats, TldRule,
     TldRuleSummary,
 };
+
+// Foundation helpers are consumed by the evaluator in the following slices.
+#[allow(dead_code)]
+mod assessment_support;
