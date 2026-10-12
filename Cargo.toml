@@ -33,6 +33,7 @@ toml = "0.8"
 
 [dev-dependencies]
 serde = { version = "1", features = ["derive"] }
+sha2 = "0.10"
 toml = "0.8"
 
 [lints.rust]
