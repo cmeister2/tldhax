@@ -98,6 +98,13 @@ pub enum FactKind {
     StringSet,
 }
 
+/// Explicit structural validation for scalar or set-valued string facts.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum FactStringFormat {
+    /// Exactly two ASCII uppercase letters; country membership is policy-specific.
+    UppercaseAlpha2,
+}
+
 /// Scalar comparison value; set-valued facts support membership/intersection.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum FactValue {
@@ -116,6 +123,8 @@ pub struct FactSchema {
     pub kind: FactKind,
     /// Optional finite permitted string values.
     pub allowed_values: &'static [&'static str],
+    /// Optional structural validation applied to each declared string value.
+    pub string_format: Option<FactStringFormat>,
 }
 
 /// Finite typed predicates compiled into static data, without runtime parsing.

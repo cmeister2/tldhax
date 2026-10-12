@@ -85,6 +85,7 @@ fn unknown_form_inventory_preserves_an_independent_eligibility_failure() {
         field: "qualifies",
         kind: FactKind::Boolean,
         allowed_values: &[],
+        string_format: None,
     }];
     let negative = RegistrantProfile::from_json(r#"{"qualifies":false}"#, schema).unwrap();
     let result = evaluator.assess("vanity.com", Some(&negative));

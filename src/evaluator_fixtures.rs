@@ -147,16 +147,19 @@ pub const FACTS: &[FactSchema] = &[
         field: "authorized_labels",
         kind: FactKind::StringSet,
         allowed_values: &[],
+        string_format: None,
     },
     FactSchema {
         field: "citizenships",
         kind: FactKind::StringSet,
         allowed_values: &[],
+        string_format: None,
     },
     FactSchema {
         field: "resident",
         kind: FactKind::Boolean,
         allowed_values: &[],
+        string_format: None,
     },
 ];
 

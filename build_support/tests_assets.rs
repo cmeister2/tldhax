@@ -35,6 +35,7 @@ fn string_set_membership_and_name_relationships_are_typed() {
         field: "citizenships".into(),
         kind: FactKind::StringSet,
         allowed_values: vec!["US".into(), "GB".into()],
+        string_format: None,
     });
     document.assertions[1].predicate = Some(Predicate::FieldIn {
         field: "citizenships".into(),
@@ -49,6 +50,7 @@ fn string_set_membership_and_name_relationships_are_typed() {
         field: "rights".into(),
         kind: FactKind::Boolean,
         allowed_values: vec![],
+        string_format: None,
     });
     document.assertions[1].predicate = Some(Predicate::NameEqualsField {
         component: 0,

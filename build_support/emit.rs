@@ -79,10 +79,11 @@ pub fn emit(
             .iter()
             .map(|f| {
                 format!(
-                    "FactSchema{{field:{:?},kind:FactKind::{:?},allowed_values:{}}}",
+                    "FactSchema{{field:{:?},kind:FactKind::{:?},allowed_values:{},string_format:{}}}",
                     f.field,
                     f.kind,
-                    strings(&f.allowed_values)
+                    strings(&f.allowed_values),
+                    f.string_format.map_or("None".into(), |format| format!("Some(FactStringFormat::{format:?})"))
                 )
             })
             .collect(),

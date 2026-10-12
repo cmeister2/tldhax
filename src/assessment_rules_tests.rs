@@ -74,6 +74,7 @@ fn conditional_failure_never_becomes_a_universal_name_prohibition() {
         field: "authorized",
         kind: FactKind::StringSet,
         allowed_values: &[],
+        string_format: None,
     }];
     let permitted = RegistrantProfile::from_json(r#"{"authorized":["nic"]}"#, schemas).unwrap();
     let denied = RegistrantProfile::from_json(r#"{"authorized":[]}"#, schemas).unwrap();
