@@ -14,6 +14,7 @@ pub mod load;
 pub mod predicates;
 mod render_predicates;
 mod resolve;
+pub mod resolver;
 pub mod schema;
 pub mod validate;
 
