@@ -1,0 +1,337 @@
+{
+  "schema_version": 1,
+  "operation": "new_registration",
+  "evaluation_date": "2026-10-12",
+  "cases": [
+    {
+      "id": "uk.com-reserved-co-uk",
+      "domain": "com.co.uk",
+      "source_ids": [
+        "nominet-current-rules"
+      ],
+      "expected": {
+        "name_validity": "invalid",
+        "failed_rule_ids": [
+          "uk.third-reserved"
+        ]
+      },
+      "rationale": "§5.6 applies the com prohibition to this expressly named third-level namespace."
+    },
+    {
+      "id": "uk.com-reserved-org-uk",
+      "domain": "com.org.uk",
+      "source_ids": [
+        "nominet-current-rules"
+      ],
+      "expected": {
+        "name_validity": "invalid",
+        "failed_rule_ids": [
+          "uk.third-reserved"
+        ]
+      },
+      "rationale": "§5.6 applies the com prohibition to this expressly named third-level namespace."
+    },
+    {
+      "id": "uk.com-reserved-me-uk",
+      "domain": "com.me.uk",
+      "source_ids": [
+        "nominet-current-rules"
+      ],
+      "expected": {
+        "name_validity": "invalid",
+        "failed_rule_ids": [
+          "uk.third-reserved"
+        ]
+      },
+      "rationale": "§5.6 applies the com prohibition to this expressly named third-level namespace."
+    },
+    {
+      "id": "uk.com-reserved-net-uk",
+      "domain": "com.net.uk",
+      "source_ids": [
+        "nominet-current-rules"
+      ],
+      "expected": {
+        "name_validity": "invalid",
+        "failed_rule_ids": [
+          "uk.third-reserved"
+        ]
+      },
+      "rationale": "§5.6 applies the com prohibition to this expressly named third-level namespace."
+    },
+    {
+      "id": "uk.existing-sld-reserved",
+      "domain": "ac.co.uk",
+      "source_ids": [
+        "nominet-current-rules"
+      ],
+      "expected": {
+        "name_validity": "invalid",
+        "failed_rule_ids": [
+          "uk.third-reserved"
+        ]
+      },
+      "rationale": "§5.5 expressly reserves ac within co.uk."
+    },
+    {
+      "id": "uk.root-com-reserved",
+      "domain": "com.uk",
+      "source_ids": [
+        "nominet-current-rules"
+      ],
+      "expected": {
+        "name_validity": "invalid",
+        "failed_rule_ids": [
+          "uk.root-reserved"
+        ]
+      },
+      "rationale": "§5.6 also bars com as a new second-level label."
+    },
+    {
+      "id": "uk.com-ltd-scope",
+      "domain": "com.ltd.uk",
+      "source_ids": [
+        "nominet-current-rules"
+      ],
+      "expected": {
+        "absent_rule_ids": [
+          "uk.third-reserved"
+        ],
+        "passed_rule_ids": [
+          "uk.company-eligibility"
+        ],
+        "gap_families": [
+          "allocation",
+          "eligibility"
+        ]
+      },
+      "rationale": "The §5.5–5.6 third-level list names co/me/org/net, so it is not transplanted onto ltd.uk.",
+      "registrant": {
+        "entity_kind": "organization",
+        "uk_incorporated_active": true
+      }
+    },
+    {
+      "id": "uk.two-character-co",
+      "domain": "ab.co.uk",
+      "source_ids": [
+        "nominet-current-rules"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "uk.ascii-only",
+          "uk.third-reserved"
+        ],
+        "gap_families": [
+          "length"
+        ]
+      },
+      "rationale": "Current rules do not establish a three-character minimum for co.uk; length wording has an unresolved technical-document conflict."
+    },
+    {
+      "id": "uk.total-length-conflict",
+      "domain": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.co.uk",
+      "source_ids": [
+        "nominet-current-rules",
+        "nominet-fields"
+      ],
+      "expected": {
+        "gap_families": [
+          "length"
+        ]
+      },
+      "rationale": "This 65-character full name exceeds the §5.7 total limit but fits the current technical field limit; the unresolved source conflict must remain explicit."
+    },
+    {
+      "id": "uk.current-not-future",
+      "domain": "vanity.co.uk",
+      "source_ids": [
+        "nominet-current-rules",
+        "nominet-future-rules"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "uk.ascii-only"
+        ],
+        "absent_rule_ids": [
+          "uk.future-2027-policy"
+        ]
+      },
+      "rationale": "The revised policy explicitly commences on 2027-02-09, after the fixture evaluation date."
+    },
+    {
+      "id": "uk.organization-co-open",
+      "domain": "vanity.co.uk",
+      "source_ids": [
+        "nominet-current-rules"
+      ],
+      "expected": {
+        "eligibility": "not_required"
+      },
+      "rationale": "§4.4 says the Open SLD charter is not enforced as an applicant restriction.",
+      "registrant": {
+        "entity_kind": "organization"
+      }
+    },
+    {
+      "id": "uk.for-profit-org-open",
+      "domain": "vanity.org.uk",
+      "source_ids": [
+        "nominet-current-rules"
+      ],
+      "expected": {
+        "eligibility": "not_required"
+      },
+      "rationale": "The nonprofit charter is expressly unenforced for registration.",
+      "registrant": {
+        "entity_kind": "organization"
+      }
+    },
+    {
+      "id": "uk.me-person",
+      "domain": "vanity.me.uk",
+      "source_ids": [
+        "nominet-current-rules"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "uk.me-natural-person"
+        ],
+        "eligibility": "declared_match"
+      },
+      "rationale": "§10.2 accepts natural-person applicants who are not organizational proxies.",
+      "registrant": {
+        "entity_kind": "individual",
+        "organizational_proxy": false
+      }
+    },
+    {
+      "id": "uk.me-organization",
+      "domain": "vanity.me.uk",
+      "source_ids": [
+        "nominet-current-rules"
+      ],
+      "expected": {
+        "failed_rule_ids": [
+          "uk.me-natural-person"
+        ],
+        "eligibility": "does_not_match"
+      },
+      "rationale": "A new organizational applicant fails §10.2.",
+      "registrant": {
+        "entity_kind": "organization",
+        "organizational_proxy": false
+      }
+    },
+    {
+      "id": "uk.me-organizational-proxy",
+      "domain": "vanity.me.uk",
+      "source_ids": [
+        "nominet-current-rules"
+      ],
+      "expected": {
+        "failed_rule_ids": [
+          "uk.me-natural-person"
+        ],
+        "eligibility": "does_not_match"
+      },
+      "rationale": "§10.2 also bars a natural person acting as an organizational proxy.",
+      "registrant": {
+        "entity_kind": "individual",
+        "organizational_proxy": true
+      }
+    },
+    {
+      "id": "uk.me-needs-profile",
+      "domain": "vanity.me.uk",
+      "source_ids": [
+        "nominet-current-rules"
+      ],
+      "expected": {
+        "eligibility": "needs_profile"
+      },
+      "rationale": "An omitted profile cannot establish either required applicant fact."
+    },
+    {
+      "id": "uk.idn-ulabel",
+      "domain": "bücher.co.uk",
+      "source_ids": [
+        "nominet-current-rules"
+      ],
+      "expected": {
+        "name_validity": "invalid",
+        "failed_rule_ids": [
+          "uk.ascii-only"
+        ]
+      },
+      "rationale": "§5.2 and §5.4 bar IDNs; A-label and U-label representations are equivalent."
+    },
+    {
+      "id": "uk.idn-alabel",
+      "domain": "xn--bcher-kva.co.uk",
+      "source_ids": [
+        "nominet-current-rules"
+      ],
+      "expected": {
+        "name_validity": "invalid",
+        "failed_rule_ids": [
+          "uk.ascii-only"
+        ]
+      },
+      "rationale": "§5.2 and §5.4 bar IDNs; A-label and U-label representations are equivalent."
+    },
+    {
+      "id": "uk.delegated-gov",
+      "domain": "vanity.gov.uk",
+      "source_ids": [
+        "nominet-current-rules"
+      ],
+      "expected": {
+        "absent_rule_ids": [
+          "uk.ascii-only",
+          "uk.open-applicants"
+        ],
+        "gap_families": [
+          "namespace"
+        ]
+      },
+      "rationale": "Appendix B identifies a separate administrator; Nominet open-namespace assertions cannot substitute for its policy."
+    },
+    {
+      "id": "uk.school-geographic-form",
+      "domain": "st-marys.oxon.sch.uk",
+      "source_ids": [
+        "nominet-schools"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "uk.sch-wildcard.eligibility"
+        ],
+        "gap_families": [
+          "allocation",
+          "eligibility"
+        ]
+      },
+      "rationale": "The current Schools rules explicitly use school-name.area.sch.uk; the area/name allocation is still partial.",
+      "registrant": {
+        "uk_school_class": "uk_school"
+      }
+    },
+    {
+      "id": "uk.school-ineligible-class",
+      "domain": "vanity.oxon.sch.uk",
+      "source_ids": [
+        "nominet-schools"
+      ],
+      "expected": {
+        "failed_rule_ids": [
+          "uk.sch-wildcard.eligibility"
+        ]
+      },
+      "rationale": "A profile explicitly outside the UK school/consortium classes fails the published necessary class requirement.",
+      "registrant": {
+        "uk_school_class": "none"
+      }
+    }
+  ]
+}
