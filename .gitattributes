@@ -1,0 +1,5 @@
+# Fingerprints bind source bytes, including upstream line endings.
+# Checkout must preserve pinned data and every policy/evidence input exactly.
+/data/** -text
+/rules/** -text
+/evidence/** -text

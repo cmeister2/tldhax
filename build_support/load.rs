@@ -53,6 +53,22 @@ fn files(directory: &Path) -> Result<Vec<PathBuf>, String> {
     Ok(result)
 }
 
+/// Serialize discovered paths with the same separators on every build platform.
+fn relative_key(root: &Path, path: &Path) -> Result<String, String> {
+    let relative = path.strip_prefix(root).map_err(|e| e.to_string())?;
+    let parts = relative
+        .components()
+        .map(|component| match component {
+            Component::Normal(name) => name.to_str().ok_or("non-UTF8 source path"),
+            _ => Err("unsafe relative source path"),
+        })
+        .collect::<Result<Vec<_>, _>>()?;
+    if parts.is_empty() {
+        return Err("empty relative source path".into());
+    }
+    Ok(parts.join("/"))
+}
+
 /// Read packaged bytes and retain legacy claims only as research leads.
 ///
 /// # Errors
@@ -131,12 +147,8 @@ pub fn load(root: &Path) -> Result<Loaded, String> {
         if path.extension().and_then(|p| p.to_str()) != Some("toml") {
             continue;
         }
-        let relative = path
-            .strip_prefix(root)
-            .map_err(|e| e.to_string())?
-            .to_str()
-            .ok_or("non-UTF8 source path")?;
-        let text = read(root, relative, &mut inputs)?;
+        let relative = relative_key(root, &path)?;
+        let text = read(root, &relative, &mut inputs)?;
         let value: toml::Value =
             toml::from_str(&text).map_err(|e| format!("invalid {relative}: {e}"))?;
         if let Some(version) = value.get("schema_version") {
@@ -187,15 +199,9 @@ pub fn load(root: &Path) -> Result<Loaded, String> {
         }
     }
     for path in files(&root.join("data/idn"))? {
-        let relative = path
-            .strip_prefix(root)
-            .map_err(|e| e.to_string())?
-            .to_str()
-            .ok_or("non-UTF8 IDN path")?;
-        inputs.insert(
-            relative.to_owned(),
-            std::fs::read(safe_path(root, relative)?).map_err(|e| e.to_string())?,
-        );
+        let relative = relative_key(root, &path)?;
+        let bytes = std::fs::read(safe_path(root, &relative)?).map_err(|e| e.to_string())?;
+        inputs.insert(relative, bytes);
     }
     document
         .legacy
@@ -219,4 +225,26 @@ pub fn fingerprint(evaluation_date: &str, inputs: &BTreeMap<String, Vec<u8>>) ->
         hash.update(bytes);
     }
     format!("{evaluation_date}+{:x}", hash.finalize())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn discovered_input_keys_use_portable_separators_and_reject_escapes() {
+        let root = std::env::temp_dir().join("portable-release-key");
+        for components in [
+            vec!["rules", "namespaces", "de.toml"],
+            vec!["data", "idn", "table.txt"],
+        ] {
+            let path = components
+                .iter()
+                .fold(root.clone(), |path, part| path.join(part));
+            assert_eq!(relative_key(&root, &path).unwrap(), components.join("/"));
+        }
+        assert!(relative_key(&root, &root).is_err());
+        assert!(relative_key(&root, &root.join("../outside.toml")).is_err());
+        assert!(relative_key(&root, &root.with_file_name("other").join("rule.toml")).is_err());
+    }
 }
