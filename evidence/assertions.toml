@@ -1797,3 +1797,106 @@ reviewed_on = "2026-10-12"
 review_due = "2027-01-10"
 effective_from = "2015-06-06"
 
+[[assertions]]
+id = "google.current-spec13"
+source_id = "spec13-amendment-2023"
+locator = "Opening applicability paragraph; Schedule A: google"
+operation = "new_registration"
+namespaces = ["google"]
+forms = [1]
+input_class = "any"
+family = "access"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The effective global amendment expressly identifies google among agreements containing Specification 13."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "google.current-contract-index"
+source_id = "google-contract-index"
+locator = "Agreement Type; Agreement Date; Operator"
+operation = "new_registration"
+namespaces = ["google"]
+forms = [1]
+input_class = "any"
+family = "access"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The current contract index identifies the continuing Charleston Road Registry agreement as Brand (Spec 13)."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "google.brand-access"
+source_id = "global-amendment-2017"
+locator = "§32: Specification 13 §9.3(ii), §9.5"
+operation = "new_registration"
+namespaces = ["google"]
+forms = [1]
+input_class = "any"
+family = "access"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "Only the Registry Operator, qualifying Affiliates or qualifying organizational Trademark Licensees may be registrants. The license concerns the google Brand trademark, not authorization of an individual applicant label."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "any", predicates = [{ kind = "field_equals", field = "google_registry_operator", value = true }, { kind = "field_equals", field = "google_qualifying_affiliate", value = true }, { kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "organization" }, { kind = "field_equals", field = "google_qualifying_trademark_licensee", value = true }] }] }
+
+[[assertions]]
+id = "google.affiliate-definition"
+source_id = "google-contract-word"
+locator = "§2.9(c), definition of Affiliate"
+operation = "new_registration"
+namespaces = ["google"]
+forms = [1]
+input_class = "any"
+family = "access"
+effect = "context"
+knowledge = "partial"
+interpretation = "Affiliate declarations refer to the controlling agreement definition of control, including direct or indirect common control."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "google.dns-control-context"
+source_id = "global-amendment-2017"
+locator = "§32: Specification 13 §9.3(ii)"
+operation = "new_registration"
+namespaces = ["google"]
+forms = [1]
+input_class = "any"
+family = "access"
+effect = "context"
+knowledge = "partial"
+interpretation = "DNS control must remain within the stated qualifying classes during operation; present DNS setup is not a prerequisite for this prospective-name filter."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "google.licensee-use-context"
+source_id = "global-amendment-2017"
+locator = "§32: Specification 13 §9.5(iv)"
+operation = "new_registration"
+namespaces = ["google"]
+forms = [1]
+input_class = "any"
+family = "allocation"
+effect = "context"
+knowledge = "partial"
+interpretation = "Registered licensee domains must serve purposes reasonably related to the trademark goods or services. No literal applicant-label grant or present operating use is substituted."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
