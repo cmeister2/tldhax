@@ -683,3 +683,55 @@ reviewed_on = "2026-10-12"
 review_due = "2027-01-10"
 applicable_on = "2026-10-12"
 
+[[assertions]]
+id = "org.form"
+source_id = "org-2019-contract"
+locator = "Specification 5, second-level reservations"
+operation = "new_registration"
+namespaces = ["org"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "Second-level labels are explicitly within the registration scheme."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2019-06-30"
+
+[[assertions]]
+id = "org.applicants-open"
+source_id = "pir-faq"
+locator = "Can I register a .ORG domain name if I am not a 501(c)?"
+operation = "new_registration"
+namespaces = ["org"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "PIR explicitly permits individuals and organizations without nonprofit status."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "org.short-label-gap"
+source_id = "org-2019-contract"
+locator = "Exhibit A §5; single/two-character phased allocation"
+operation = "new_registration"
+namespaces = ["org"]
+forms = [1]
+input_class = "any"
+family = "reserved"
+effect = "context"
+knowledge = "partial"
+interpretation = "The phased program can release fewer than all short labels; current selections are unresolved."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2019-06-30"
+
