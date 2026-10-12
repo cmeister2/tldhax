@@ -20,6 +20,7 @@ pub mod python;
 pub mod registration_context;
 pub mod resolver;
 pub mod registry;
+pub mod registry_stats;
 pub mod types;
 
 #[cfg(test)]

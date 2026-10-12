@@ -166,6 +166,8 @@ fn compile_reviewed_tables(out_dir: &Path) {
         println!("cargo:rerun-if-changed={}", path.display());
     }
     policy_compiler::write(&policy, out_dir).expect("failed to write compiled policy");
+    policy_compiler::compatibility::generate(root, out_dir, &policy.fingerprint)
+        .expect("invalid compatibility and coverage inputs");
     policy_compiler::inventory::generate(root, out_dir).expect("invalid factual inventory");
     let evidence = policy.supplements.iter().map(|s| {
         s.evidence_ids.iter().map(String::as_str).collect::<Vec<_>>()
