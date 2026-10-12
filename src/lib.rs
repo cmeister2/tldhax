@@ -3,9 +3,13 @@
 pub mod checker;
 pub mod normalization;
 pub mod policy_types;
-pub mod registration_context;
-#[allow(missing_docs, clippy::missing_docs_in_private_items, clippy::missing_errors_doc)]
+#[allow(
+    missing_docs,
+    clippy::missing_docs_in_private_items,
+    clippy::missing_errors_doc
+)]
 pub mod python;
+pub mod registration_context;
 pub mod registry;
 pub mod types;
 
