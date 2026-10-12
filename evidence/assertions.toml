@@ -735,3 +735,411 @@ reviewed_on = "2026-10-12"
 review_due = "2027-01-10"
 effective_from = "2019-06-30"
 
+[[assertions]]
+id = "au.form"
+source_id = "auda-licensing"
+locator = "1.4 Designated Namespace; 2.4.3–2.4.4; 2.7.1"
+operation = "new_registration"
+namespaces = ["au"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "One applicant label is licensed within the specified namespace."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+effective_from = "2022-03-24"
+
+[[assertions]]
+id = "au.minimum-two"
+source_id = "auda-licensing"
+locator = "2.7.1(1)"
+operation = "new_registration"
+namespaces = ["au"]
+forms = [1]
+input_class = "any"
+family = "length"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "Current labels require at least two characters."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2022-03-24"
+predicate = { kind = "label_minimum", component = 0, min = 2, basis = "ascii" }
+
+[[assertions]]
+id = "au.ascii-only-current"
+source_id = "auda-licensing"
+locator = "1.2.4; 2.7.1(2)"
+operation = "new_registration"
+namespaces = ["au"]
+forms = [1]
+input_class = "any"
+family = "idn"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "Current syntax is ASCII-only; the proposed IDN exception has no commencement."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+effective_from = "2022-03-24"
+predicate = { kind = "ascii_only", component = 0 }
+
+[[assertions]]
+id = "au.no-leading-hyphen"
+source_id = "auda-licensing"
+locator = "2.7.1(2)–(4)"
+operation = "new_registration"
+namespaces = ["au"]
+forms = [1]
+input_class = "any"
+family = "characters"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Current syntax excludes edge hyphens and tagged applicant labels."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2022-03-24"
+predicate = { kind = "label_pattern", component = 0, pattern = "prefix", value = "-", basis = "unicode" }
+
+[[assertions]]
+id = "au.no-trailing-hyphen"
+source_id = "auda-licensing"
+locator = "2.7.1(2)–(4)"
+operation = "new_registration"
+namespaces = ["au"]
+forms = [1]
+input_class = "any"
+family = "characters"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Current syntax excludes edge hyphens and tagged applicant labels."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2022-03-24"
+predicate = { kind = "label_pattern", component = 0, pattern = "suffix", value = "-", basis = "unicode" }
+
+[[assertions]]
+id = "au.no-tagged-label"
+source_id = "auda-licensing"
+locator = "2.7.1(2)–(4)"
+operation = "new_registration"
+namespaces = ["au"]
+forms = [1]
+input_class = "any"
+family = "characters"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Current syntax excludes edge hyphens and tagged applicant labels."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2022-03-24"
+predicate = { kind = "label_positions", component = 0, positions = [2, 3], value = "--", basis = "unicode" }
+
+[[assertions]]
+id = "au.ascii-characters-complete"
+source_id = "auda-licensing"
+locator = "2.7.1(2)–(4)"
+operation = "new_registration"
+namespaces = ["au"]
+forms = [1]
+input_class = "ascii"
+family = "characters"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The active clause enumerates the ASCII alphabet and placement requirements."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+effective_from = "2022-03-24"
+
+[[assertions]]
+id = "au.future-idn-uncommenced"
+source_id = "auda-licensing"
+locator = "1.2.4; 2.8"
+operation = "new_registration"
+namespaces = ["au"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "context"
+knowledge = "unknown"
+interpretation = "Proposed IDN scripts do not establish current permission without a commencement date."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+
+[[assertions]]
+id = "au.australian-presence"
+source_id = "auda-licensing"
+locator = "1.4 Australian Presence; 2.4.1–2.4.5"
+operation = "new_registration"
+namespaces = ["au"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "The relevant applicant must satisfy Australian Presence; trademark reliance is candidate-bound."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2022-03-24"
+predicate = { kind = "any", predicates = [{ kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "individual" }, { kind = "field_in", field = "citizenships", values = ["AU"] }] }, { kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "individual" }, { kind = "field_equals", field = "au_permanent_resident", value = true }] }, { kind = "field_in", field = "au_presence_basis", values = ["australian_company", "registrable_australian_body", "registered_foreign_company", "incorporated_association", "abn_entity", "indigenous_corporation", "registered_organization", "registered_cooperative", "registered_charity", "registered_political_party", "qualifying_partnership", "qualifying_association", "qualifying_trust", "regulated_education", "australian_government", "commonwealth_entity", "accredited_embassy"] }, { kind = "all", predicates = [{ kind = "field_equals", field = "au_presence_basis", value = "australian_trademark" }, { kind = "name_equals_field", component = 0, field = "au_trademark_exact_labels" }] }] }
+
+[[assertions]]
+id = "au.allocation-context"
+source_id = "auda-licensing"
+locator = "2.4.3–2.4.5; 1.4 Exact Match"
+operation = "new_registration"
+namespaces = ["au"]
+forms = [1]
+input_class = "any"
+family = "allocation"
+effect = "context"
+knowledge = "partial"
+interpretation = "Priority, related-body, acronym and synonym relationships need additional modeling."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2022-03-24"
+
+[[assertions]]
+id = "au.reservation-context"
+source_id = "auda-licensing"
+locator = "2.5.2–2.6.7"
+operation = "new_registration"
+namespaces = ["au"]
+forms = [1]
+input_class = "any"
+family = "reserved"
+effect = "context"
+knowledge = "partial"
+interpretation = "Statutory exceptions, deceptive names and reservation categories are not exhaustive literal sets."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2022-03-24"
+
+[[assertions]]
+id = "com-au.form"
+source_id = "auda-licensing"
+locator = "1.4 Designated Namespace; 2.4.3–2.4.4; 2.7.1"
+operation = "new_registration"
+namespaces = ["com.au"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "One applicant label is licensed within the specified namespace."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+effective_from = "2021-04-12"
+
+[[assertions]]
+id = "com-au.minimum-two"
+source_id = "auda-licensing"
+locator = "2.7.1(1)"
+operation = "new_registration"
+namespaces = ["com.au"]
+forms = [1]
+input_class = "any"
+family = "length"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "Current labels require at least two characters."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2021-04-12"
+predicate = { kind = "label_minimum", component = 0, min = 2, basis = "ascii" }
+
+[[assertions]]
+id = "com-au.ascii-only-current"
+source_id = "auda-licensing"
+locator = "1.2.4; 2.7.1(2)"
+operation = "new_registration"
+namespaces = ["com.au"]
+forms = [1]
+input_class = "any"
+family = "idn"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "Current syntax is ASCII-only; the proposed IDN exception has no commencement."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+effective_from = "2021-04-12"
+predicate = { kind = "ascii_only", component = 0 }
+
+[[assertions]]
+id = "com-au.no-leading-hyphen"
+source_id = "auda-licensing"
+locator = "2.7.1(2)–(4)"
+operation = "new_registration"
+namespaces = ["com.au"]
+forms = [1]
+input_class = "any"
+family = "characters"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Current syntax excludes edge hyphens and tagged applicant labels."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2021-04-12"
+predicate = { kind = "label_pattern", component = 0, pattern = "prefix", value = "-", basis = "unicode" }
+
+[[assertions]]
+id = "com-au.no-trailing-hyphen"
+source_id = "auda-licensing"
+locator = "2.7.1(2)–(4)"
+operation = "new_registration"
+namespaces = ["com.au"]
+forms = [1]
+input_class = "any"
+family = "characters"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Current syntax excludes edge hyphens and tagged applicant labels."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2021-04-12"
+predicate = { kind = "label_pattern", component = 0, pattern = "suffix", value = "-", basis = "unicode" }
+
+[[assertions]]
+id = "com-au.no-tagged-label"
+source_id = "auda-licensing"
+locator = "2.7.1(2)–(4)"
+operation = "new_registration"
+namespaces = ["com.au"]
+forms = [1]
+input_class = "any"
+family = "characters"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Current syntax excludes edge hyphens and tagged applicant labels."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2021-04-12"
+predicate = { kind = "label_positions", component = 0, positions = [2, 3], value = "--", basis = "unicode" }
+
+[[assertions]]
+id = "com-au.ascii-characters-complete"
+source_id = "auda-licensing"
+locator = "2.7.1(2)–(4)"
+operation = "new_registration"
+namespaces = ["com.au"]
+forms = [1]
+input_class = "ascii"
+family = "characters"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The active clause enumerates the ASCII alphabet and placement requirements."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+effective_from = "2021-04-12"
+
+[[assertions]]
+id = "com-au.future-idn-uncommenced"
+source_id = "auda-licensing"
+locator = "1.2.4; 2.8"
+operation = "new_registration"
+namespaces = ["com.au"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "context"
+knowledge = "unknown"
+interpretation = "Proposed IDN scripts do not establish current permission without a commencement date."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+
+[[assertions]]
+id = "com-au.australian-presence"
+source_id = "auda-licensing"
+locator = "1.4 Australian Presence; 2.4.1–2.4.5"
+operation = "new_registration"
+namespaces = ["com.au"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "The relevant applicant must satisfy Australian Presence; trademark reliance is candidate-bound."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2021-04-12"
+predicate = { kind = "any", predicates = [{ kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "individual" }, { kind = "field_in", field = "citizenships", values = ["AU"] }] }, { kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "individual" }, { kind = "field_equals", field = "au_permanent_resident", value = true }] }, { kind = "field_in", field = "au_presence_basis", values = ["australian_company", "registrable_australian_body", "registered_foreign_company", "incorporated_association", "abn_entity", "indigenous_corporation", "registered_organization", "registered_cooperative", "registered_charity", "registered_political_party", "qualifying_partnership", "qualifying_association", "qualifying_trust", "regulated_education", "australian_government", "commonwealth_entity", "accredited_embassy"] }, { kind = "all", predicates = [{ kind = "field_equals", field = "au_presence_basis", value = "australian_trademark" }, { kind = "name_equals_field", component = 0, field = "au_trademark_exact_labels" }] }] }
+
+[[assertions]]
+id = "com-au.commercial-class"
+source_id = "auda-licensing"
+locator = "1.4 Commercial Entity; 2.4.4(1)"
+operation = "new_registration"
+namespaces = ["com.au"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "A com.au applicant must fit an enumerated Commercial Entity class."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2021-04-12"
+predicate = { kind = "field_in", field = "au_commercial_basis", values = ["corporations_act_company", "commonwealth_entity", "registrable_body", "incorporated_association", "abn_entity", "statutory_trade_commerce", "abn_noncharitable_trust", "incorporated_limited_partnership", "trading_cooperative", "australian_government", "australian_trademark"] }
+
+[[assertions]]
+id = "com-au.allocation-context"
+source_id = "auda-licensing"
+locator = "2.4.3–2.4.5; 1.4 Exact Match"
+operation = "new_registration"
+namespaces = ["com.au"]
+forms = [1]
+input_class = "any"
+family = "allocation"
+effect = "context"
+knowledge = "partial"
+interpretation = "Priority, related-body, acronym and synonym relationships need additional modeling."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2021-04-12"
+
+[[assertions]]
+id = "com-au.reservation-context"
+source_id = "auda-licensing"
+locator = "2.5.2–2.6.7"
+operation = "new_registration"
+namespaces = ["com.au"]
+forms = [1]
+input_class = "any"
+family = "reserved"
+effect = "context"
+knowledge = "partial"
+interpretation = "Statutory exceptions, deceptive names and reservation categories are not exhaustive literal sets."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2021-04-12"
+
