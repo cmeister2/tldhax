@@ -15,17 +15,17 @@ fn family_completeness_requires_whole_family_scoped_attestation() {
         .collect();
     let namespace = &document.namespaces[0];
     let mut state = namespace.coverage[0].clone();
-    assert!(inheritance::coverage(&mut state, namespace, &assertions, &statuses).is_ok());
+    assert!(inheritance::coverage(&mut state, namespace, &[1], &assertions, &statuses).is_ok());
     assert_eq!(state.ascii, Knowledge::Reviewed);
     state.assertion_ids = vec!["fixture.length".into()];
     assert!(
-        inheritance::coverage(&mut state, namespace, &assertions, &statuses)
+        inheritance::coverage(&mut state, namespace, &[1], &assertions, &statuses)
             .unwrap_err()
             .contains("completeness")
     );
     let mut wrong_family = namespace.coverage[0].clone();
     wrong_family.family = Family::Reserved;
-    assert!(inheritance::coverage(&mut wrong_family, namespace, &assertions, &statuses).is_err());
+    assert!(inheritance::coverage(&mut wrong_family, namespace, &[1], &assertions, &statuses).is_err());
 }
 
 #[test]
@@ -41,7 +41,7 @@ fn expired_completeness_becomes_unknown_without_erasing_supported_rules() {
         .collect();
     let namespace = &document.namespaces[0];
     let mut state = namespace.coverage[0].clone();
-    inheritance::coverage(&mut state, namespace, &assertions, &statuses).unwrap();
+    inheritance::coverage(&mut state, namespace, &[1], &assertions, &statuses).unwrap();
     assert_eq!(state.ascii, Knowledge::Unknown);
     assert_eq!(state.gap.as_deref(), Some("IDN policy not reviewed"));
     assert!(statuses["fixture.length"].active);
