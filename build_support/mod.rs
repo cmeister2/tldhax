@@ -9,6 +9,7 @@ mod emit;
 pub mod idn;
 pub mod idn_schema;
 mod inheritance;
+pub mod inventory;
 pub mod keys;
 pub mod load;
 pub mod predicates;
