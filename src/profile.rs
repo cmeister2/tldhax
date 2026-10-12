@@ -88,7 +88,7 @@ impl RegistrantProfile {
     /// # Errors
     /// Returns a stable error for excess budgets, duplicate/unknown fields,
     /// nested objects, incorrect types or disallowed enumeration values.
-    pub fn from_json(input: &str, schemas: &[FactSchema]) -> Result<Self, ProfileError> {
+    pub(crate) fn from_json(input: &str, schemas: &[FactSchema]) -> Result<Self, ProfileError> {
         if input.len() > MAX_PROFILE_BYTES {
             return Err(ProfileError::InputLimit);
         }

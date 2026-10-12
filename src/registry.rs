@@ -6,6 +6,9 @@ use crate::types::{
 };
 use crate::{TOTAL_KNOWN_SUFFIXES, TLD_RULES};
 
+#[path = "registry_assessment.rs"]
+mod assessment;
+
 /// Checks domains against the compiled TLD rule set.
 pub struct Registry;
 
