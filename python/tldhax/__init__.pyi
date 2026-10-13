@@ -1,3 +1,8 @@
-from ._native import CheckResult, Registry, TldInfo
+"""Typed public static-registration API."""
 
-__all__ = ["CheckResult", "Registry", "TldInfo"]
+from ._native import CheckResult as CheckResult
+from ._native import TldInfo as TldInfo
+from .registry import Assessment as Assessment
+from .registry import PreparedRegistrant as PreparedRegistrant
+from .registry import Reason as Reason
+from .registry import Registry as Registry

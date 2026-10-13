@@ -3,16 +3,12 @@
 use std::collections::BTreeMap;
 
 use pyo3::prelude::*;
-use pyo3::types::{PyDict, PyString};
+use pyo3::types::{PyDict, PyList, PyString};
 
+use crate::policy_types::{FactKind, FactStringFormat};
+use crate::python_assessment::{self, NativePreparedProfile, PyAssessment, PyReason};
 use crate::registry::Registry as RustRegistry;
 use crate::types::{CheckResult, RegistryStats, TldRuleSummary};
-
-/// Read builtin Unicode length before allocating an input's UTF-8 representation.
-fn character_count(value: &Bound<'_, PyString>) -> usize {
-    // SAFETY: the typed bound guarantees an attached thread and Unicode object.
-    unsafe { pyo3::ffi::PyUnicode_GetLength(value.as_ptr()) as usize }
-}
 
 /// Compatibility decision with directly readable explanation strings.
 #[pyclass(name = "CheckResult", frozen, skip_from_py_object)]
@@ -155,7 +151,7 @@ impl PyRegistry {
 
     /// Preserve the original profile-free status/reason-strings result.
     fn check(&self, py: Python<'_>, domain: &Bound<'_, PyString>) -> PyCheckResult {
-        if character_count(domain) > crate::normalization::MAX_INPUT_BYTES {
+        if python_assessment::character_count(domain) > crate::normalization::MAX_INPUT_BYTES {
             return PyCheckResult {
                 status: "unknown".to_owned(),
                 reasons: vec!["Domain exceeds 4096 UTF-8 bytes".to_owned()],
@@ -182,6 +178,83 @@ impl PyRegistry {
     fn stats<'py>(&self, py: Python<'py>) -> PyResult<Bound<'py, PyDict>> {
         registry_stats_to_dict(py, self.inner.stats())
     }
+
+    /// Validate bounded JSON declarations for reuse across candidates.
+    ///
+    /// # Errors
+    /// Returns a stable validation code excluding supplied profile values.
+    fn prepare_registrant(
+        &self,
+        profile_json: &Bound<'_, PyString>,
+    ) -> PyResult<NativePreparedProfile> {
+        python_assessment::prepare(&self.inner, profile_json)
+    }
+
+    /// Evaluate one candidate against static policy and optional declarations.
+    ///
+    /// # Errors
+    /// Returns a stable input-limit error for an oversized domain.
+    #[pyo3(signature = (domain, registrant=None))]
+    fn assess(
+        &self,
+        py: Python<'_>,
+        domain: &Bound<'_, PyString>,
+        registrant: Option<&NativePreparedProfile>,
+    ) -> PyResult<PyAssessment> {
+        python_assessment::assess(py, &self.inner, domain, registrant)
+    }
+
+    /// Evaluate at most ten thousand candidates in order with one profile.
+    ///
+    /// # Errors
+    /// Returns a type error for non-string items or stable exceeded-budget code.
+    #[pyo3(signature = (domains, registrant=None))]
+    fn assess_many(
+        &self,
+        py: Python<'_>,
+        domains: &Bound<'_, PyList>,
+        registrant: Option<&NativePreparedProfile>,
+    ) -> PyResult<Vec<PyAssessment>> {
+        python_assessment::assess_many(py, &self.inner, domains, registrant)
+    }
+
+    /// Return the version of the packaged direct-policy dataset.
+    fn dataset_version(&self) -> &str {
+        self.inner.dataset_version()
+    }
+
+    /// Return selectors with an authored direct registration policy.
+    fn supported_namespaces(&self) -> Vec<&'static str> {
+        self.inner.supported_namespaces()
+    }
+
+    /// Describe accepted declaration fields, types and finite value constraints.
+    ///
+    /// # Errors
+    /// Returns a Python allocation or conversion error while constructing output.
+    fn profile_schema<'py>(&self, py: Python<'py>) -> PyResult<Bound<'py, PyDict>> {
+        let result = PyDict::new(py);
+        for field in self.inner.profile_schema() {
+            let value = PyDict::new(py);
+            value.set_item(
+                "type",
+                match field.kind {
+                    FactKind::String => "string",
+                    FactKind::Boolean => "boolean",
+                    FactKind::StringSet => "string_set",
+                },
+            )?;
+            value.set_item("allowed_values", field.allowed_values)?;
+            value.set_item(
+                "string_format",
+                field.string_format.map(|format| match format {
+                    FactStringFormat::UppercaseAlpha2 => "uppercase_alpha2",
+                }),
+            )?;
+            result.set_item(field.field, value)?;
+        }
+        Ok(result)
+    }
 }
 
 /// Copy the original statistics contract without inventing registration defaults.
@@ -202,13 +275,16 @@ fn registry_stats_to_dict<'py>(
     Ok(result)
 }
 
-/// Preserve the original native registry, check-result and namespace-summary API.
+/// Export the small decision API and opaque prepared-profile class.
 ///
 /// # Errors
 /// Returns a Python error if a native class cannot be registered.
 #[pymodule]
 pub fn _native(_py: Python<'_>, module: &Bound<'_, PyModule>) -> PyResult<()> {
     module.add_class::<PyRegistry>()?;
+    module.add_class::<PyAssessment>()?;
+    module.add_class::<PyReason>()?;
+    module.add_class::<NativePreparedProfile>()?;
     module.add_class::<PyCheckResult>()?;
     module.add_class::<PyTldInfo>()?;
     Ok(())

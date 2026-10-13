@@ -12,6 +12,7 @@ pub mod predicate_eval;
 pub mod predicate_types;
 pub mod profile;
 pub mod python;
+pub mod python_assessment;
 pub mod registration_context;
 pub mod registry;
 pub mod resolver;

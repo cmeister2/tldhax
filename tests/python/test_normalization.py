@@ -1,85 +1,71 @@
-"""Normalization and structure invariants for registry checks."""
+"""Canonical identity and DNS structure invariants through the public interface."""
 
 from __future__ import annotations
 
+import pytest
 from hypothesis import given
 from hypothesis import strategies as st
 
 from tldhax import Registry
 
-REGISTERABLE_SUFFIXES = ("ai", "com", "co.uk", "com.ai", "net.ai", "off.ai", "org.ai")
 ASCII_LABELS = st.text(
-    alphabet="abcdefghijklmnopqrstuvwxyz0123456789-",
-    min_size=3,
-    max_size=20,
-).filter(
-    lambda label: label[0] != "-" and label[-1] != "-" and not label.startswith("xn--")
+    alphabet="abcdefghijklmnopqrstuvwxyz0123456789", min_size=3, max_size=20
 )
 
 
-def test_uppercase_is_normalized(registry) -> None:
-    """Uppercase input should normalize to the same result as lowercase input."""
-    assert registry.check("FOO.CO.UK").status == registry.check("foo.co.uk").status
+@pytest.mark.parametrize(
+    "domain",
+    [
+        "",
+        "example.com..",
+        "example.com.。",
+        "ab--cd.com",
+        "xn--0.com",
+        "a\u200db.com",
+        "_bad.com",
+    ],
+)
+def test_malformed_input_is_rejected(registry: Registry, domain: str) -> None:
+    """IDNA and DNS failures remain useful negative registration decisions."""
+    result = registry.assess(domain)
+    assert result.decision == "no"
+    assert result.reasons and all(reason.message for reason in result.reasons)
 
 
-def test_trailing_dot_is_ignored(registry) -> None:
-    """A trailing dot should not affect the computed registerability result."""
-    assert registry.check("example.com.").status == registry.check("example.com").status
-
-
-def test_bare_tld_is_rejected(registry) -> None:
-    """A bare suffix should be rejected because it has no registrable label."""
-    result = registry.check("co.uk")
-    assert result.status == "no"
-    assert result.reasons
-
-
-def test_subdomain_is_rejected(registry) -> None:
-    """Subdomains should be rejected in favor of the registrable domain."""
-    result = registry.check("foo.bar.co.uk")
-    assert result.status == "unknown"
-    assert result.reasons
-
-
-@given(label=ASCII_LABELS, suffix=st.sampled_from(REGISTERABLE_SUFFIXES))
-def test_uppercase_normalization_property(label: str, suffix: str) -> None:
-    """Uppercasing a valid domain should preserve the full check result."""
+@given(label=ASCII_LABELS, suffix=st.sampled_from(["com", "de", "co.uk", "aaa"]))
+def test_case_and_root_dot_preserve_full_assessment(label: str, suffix: str) -> None:
+    """Canonical input transformations preserve all observable decision fields."""
     registry = Registry()
     domain = f"{label}.{suffix}"
-    normalized = registry.check(domain)
-    uppercased = registry.check(domain.upper())
-
-    assert uppercased.status == normalized.status
-    assert uppercased.reasons == normalized.reasons
+    expected = registry.assess(domain).to_dict()
+    assert registry.assess(domain.upper()).to_dict() == expected
+    assert registry.assess(domain + ".").to_dict() == expected
 
 
-@given(label=ASCII_LABELS, suffix=st.sampled_from(REGISTERABLE_SUFFIXES))
-def test_trailing_dot_normalization_property(label: str, suffix: str) -> None:
-    """Appending a trailing dot should preserve the full check result."""
-    registry = Registry()
-    domain = f"{label}.{suffix}"
-    normalized = registry.check(domain)
-    with_trailing_dot = registry.check(f"{domain}.")
-
-    assert with_trailing_dot.status == normalized.status
-    assert with_trailing_dot.reasons == normalized.reasons
-
-
-@given(suffix=st.sampled_from(REGISTERABLE_SUFFIXES))
-def test_bare_tld_rejection_property(suffix: str) -> None:
-    """Known registrable suffixes alone should still be rejected as bare TLDs."""
-    registry = Registry()
-    result = registry.check(suffix)
-
-    assert result.status == "no"
-    assert result.reasons
+def test_bare_root_and_registration_form(registry: Registry) -> None:
+    """A missing applicant label and an unimplemented registration form differ."""
+    bare = registry.assess("com")
+    assert bare.decision == "no"
+    assert any(reason.code == "missing_registration_label" for reason in bare.reasons)
+    deeper = registry.assess("foo.bar.co.uk")
+    assert deeper.decision == "unknown"
+    assert any(
+        reason.code == "unsupported_registration_form" for reason in deeper.reasons
+    )
+    assert registry.assess("sub.name.aaa").decision == "unknown"
 
 
-@given(label=ASCII_LABELS, suffix=st.sampled_from(REGISTERABLE_SUFFIXES))
-def test_subdomain_rejection_property(label: str, suffix: str) -> None:
-    """Adding one more label should turn a registrable domain into a subdomain."""
-    registry = Registry()
-    result = registry.check(f"sub.{label}.{suffix}")
+@given(length=st.integers(min_value=64, max_value=200))
+def test_dns_label_limit_is_conclusive_even_for_unknown_policy(length: int) -> None:
+    """Protocol violations cannot be mistaken for mere missing policy."""
+    assert Registry().assess("a" * length + ".aaa").decision == "no"
 
-    assert result.status == "unknown"
-    assert result.reasons
+
+def test_mapped_terminal_root_dot_and_raw_input_budget(registry: Registry) -> None:
+    """The boundary normalizes one root dot after checking raw byte limits."""
+    assert (
+        registry.assess("sunflower。com。").to_dict()
+        == registry.assess("sunflower.com").to_dict()
+    )
+    with pytest.raises(ValueError, match="^input_limit$"):
+        registry.assess(" " * 4097)
