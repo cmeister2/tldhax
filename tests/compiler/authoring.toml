@@ -1,0 +1,20 @@
+schema_version = 2
+
+# This is a mechanical fixture. It makes no real registry policy claims.
+[[namespaces]]
+selector = "fixture"
+forms = [["label"], ["given", "family"]]
+form_assertion_ids = ["fixture.form"]
+rules = ["fixture.length"]
+
+[[namespaces.coverage]]
+family = "length"
+ascii = "reviewed"
+idn = "unknown"
+assertion_ids = ["fixture.length.complete"]
+gap = "No synthetic IDN policy was approved."
+
+[[facts]]
+field = "citizenships"
+kind = "string_set"
+allowed_values = ["US", "GB"]

@@ -1,11 +1,24 @@
 //! TLD registration rule checks backed by compiled rule data.
 
 pub mod checker;
+mod compiled;
+pub mod inventory_types;
 pub mod normalization;
-#[allow(missing_docs, clippy::missing_docs_in_private_items, clippy::missing_errors_doc)]
+pub mod policy_types;
+#[allow(
+    missing_docs,
+    clippy::missing_docs_in_private_items,
+    clippy::missing_errors_doc
+)]
 pub mod python;
+pub mod registration_context;
+pub mod resolver;
 pub mod registry;
 pub mod types;
+
+#[cfg(test)]
+#[path = "../build_support/mod.rs"]
+mod compiler_stages;
 
 #[allow(missing_docs, clippy::missing_docs_in_private_items)]
 mod generated {
