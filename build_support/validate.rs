@@ -204,6 +204,12 @@ pub fn document(
             || fact.allowed_values.iter().collect::<BTreeSet<_>>().len()
                 != fact.allowed_values.len()
             || fact.kind == super::predicates::FactKind::Boolean && !fact.allowed_values.is_empty()
+            || fact.string_format.is_some() && fact.kind == super::predicates::FactKind::Boolean
+            || fact.string_format.is_some_and(|format| {
+                fact.allowed_values
+                    .iter()
+                    .any(|value| !format.matches(value))
+            })
         {
             return Err("invalid typed profile fact allowed values".into());
         }

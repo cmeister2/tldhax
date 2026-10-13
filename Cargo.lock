@@ -291,21 +291,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "psl"
-version = "2.1.209"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0c187d8a1cb043fbd20b07333314b4644293c0601d0414c0c74f67d0e65a94f4"
-dependencies = [
- "psl-types",
-]
-
-[[package]]
-name = "psl-types"
-version = "2.0.11"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "33cb294fe86a74cbcf50d4445b37da762029549ebeea341421c7c70370f86cac"
-
-[[package]]
 name = "pyo3"
 version = "0.28.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -510,11 +495,14 @@ dependencies = [
 name = "tldhax"
 version = "0.0.0"
 dependencies = [
+ "icu_normalizer",
+ "icu_normalizer_data",
  "icu_properties",
+ "icu_properties_data",
  "idna",
+ "idna_adapter",
  "phf",
  "phf_codegen",
- "psl",
  "pyo3",
  "serde",
  "serde_json",

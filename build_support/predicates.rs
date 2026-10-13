@@ -32,6 +32,22 @@ pub enum FactKind {
     StringSet,
 }
 
+#[derive(Debug, Clone, Copy, Deserialize, Serialize, PartialEq, Eq)]
+#[serde(rename_all = "snake_case")]
+pub enum FactStringFormat {
+    UppercaseAlpha2,
+}
+
+impl FactStringFormat {
+    pub fn matches(self, value: &str) -> bool {
+        match self {
+            Self::UppercaseAlpha2 => {
+                value.len() == 2 && value.bytes().all(|b| b.is_ascii_uppercase())
+            }
+        }
+    }
+}
+
 #[derive(Debug, Clone, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct Fact {
@@ -39,6 +55,8 @@ pub struct Fact {
     pub kind: FactKind,
     #[serde(default)]
     pub allowed_values: Vec<String>,
+    #[serde(default)]
+    pub string_format: Option<FactStringFormat>,
 }
 
 #[derive(Debug, Clone, Deserialize, Serialize, PartialEq, Eq)]

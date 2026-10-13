@@ -17,6 +17,7 @@ fn profile_predicates_require_declared_matching_types_and_values() {
         field: "citizenships".into(),
         kind: FactKind::StringSet,
         allowed_values: vec!["US".into(), "GB".into()],
+        string_format: None,
     });
     assert!(check_predicates::validate(&rule, &document).is_ok());
     rule.predicate = Some(Predicate::FieldEquals {
@@ -29,6 +30,99 @@ fn profile_predicates_require_declared_matching_types_and_values() {
         value: Value::String("unknown-jurisdiction".into()),
     });
     assert!(check_predicates::validate(&rule, &document).is_err());
+}
+
+#[test]
+fn formatted_country_literals_enforce_the_declared_code_shape() {
+    for kind in [FactKind::String, FactKind::StringSet] {
+        let mut document = fixtures::fixture();
+        document.facts.push(predicates::Fact {
+            field: "country".into(),
+            kind,
+            allowed_values: vec![],
+            string_format: Some(predicates::FactStringFormat::UppercaseAlpha2),
+        });
+        for value in ["US", "GB", "us", "United States", "USA", "U1", "ＵＳ"] {
+            let valid = matches!(value, "US" | "GB");
+            for membership in [false, true] {
+                let value = Value::String(value.into());
+                let predicate = if membership {
+                    Predicate::FieldIn {
+                        field: "country".into(),
+                        values: vec![value],
+                    }
+                } else {
+                    Predicate::FieldEquals {
+                        field: "country".into(),
+                        value,
+                    }
+                };
+                let rule =
+                    fixtures::assertion("fixture.country", Family::Eligibility, Some(predicate));
+                assert_eq!(check_predicates::validate(&rule, &document).is_ok(), valid);
+            }
+        }
+    }
+}
+
+#[test]
+fn country_format_is_string_only_and_validates_enumerations_and_emission() {
+    for (kind, allowed, valid) in [
+        (FactKind::String, "US", true),
+        (FactKind::StringSet, "GB", true),
+        (FactKind::String, "us", false),
+        (FactKind::StringSet, "United States", false),
+        (FactKind::Boolean, "", false),
+    ] {
+        let mut document = fixtures::fixture();
+        document.facts.push(predicates::Fact {
+            field: "country".into(),
+            kind,
+            allowed_values: if allowed.is_empty() {
+                vec![]
+            } else {
+                vec![allowed.into()]
+            },
+            string_format: Some(predicates::FactStringFormat::UppercaseAlpha2),
+        });
+        let result = fixtures::run(document);
+        assert_eq!(result.is_ok(), valid);
+        if valid {
+            assert!(result
+                .unwrap()
+                .rust
+                .contains("string_format:Some(FactStringFormat::UppercaseAlpha2)"));
+        }
+    }
+    let untagged: predicates::Fact =
+        toml::from_str("field='description'\nkind='string'\nallowed_values=['United States']")
+            .unwrap();
+    assert_eq!(untagged.string_format, None);
+    let mut document = fixtures::fixture();
+    document.facts.push(untagged);
+    let rule = fixtures::assertion(
+        "fixture.description",
+        Family::Eligibility,
+        Some(Predicate::FieldEquals {
+            field: "description".into(),
+            value: Value::String("United States".into()),
+        }),
+    );
+    assert!(check_predicates::validate(&rule, &document).is_ok());
+    assert!(fixtures::run(document)
+        .unwrap()
+        .rust
+        .contains("string_format:None"));
+    let tagged: predicates::Fact =
+        toml::from_str("field='country'\nkind='string'\nstring_format='uppercase_alpha2'").unwrap();
+    assert_eq!(
+        tagged.string_format,
+        Some(predicates::FactStringFormat::UppercaseAlpha2)
+    );
+    assert!(toml::from_str::<predicates::Fact>(
+        "field='country'\nkind='string'\nstring_format='lowercase_alpha2'"
+    )
+    .is_err());
 }
 
 #[test]

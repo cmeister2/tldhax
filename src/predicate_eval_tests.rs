@@ -32,11 +32,13 @@ fn alternative_eligibility_preserves_decisive_true_and_false() {
             field: "citizenships",
             kind: FactKind::StringSet,
             allowed_values: &[],
+            string_format: None,
         },
         FactSchema {
             field: "resident",
             kind: FactKind::Boolean,
             allowed_values: &[],
+            string_format: None,
         },
     ];
     let citizen = RegistrantProfile::from_json(r#"{"citizenships":["US"]}"#, SCHEMA).unwrap();
@@ -186,6 +188,7 @@ fn declared_rights_match_canonical_labels_without_approval_or_proof() {
         field: "rights.labels",
         kind: FactKind::StringSet,
         allowed_values: &[],
+        string_format: None,
     }];
     let profile =
         RegistrantProfile::from_json(r#"{"rights.labels":["BÜCHER","unrelated"]}"#, SCHEMA)
