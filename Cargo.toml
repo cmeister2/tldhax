@@ -8,7 +8,7 @@ repository = "https://github.com/cmeister2/tldhax"
 readme = "README.md"
 keywords = ["tld", "domain", "dns", "idn", "registry"]
 categories = ["command-line-utilities", "web-programming"]
-include = ["src/**", "python/**", "build.rs", "rules/**", "benches/**", "/LICENSE", "/README.md", "data/**", "scripts/data/**"]
+include = ["src/**", "python/**", "build.rs", "build_support/**", "rules/**", "evidence/**", "benches/**", "/LICENSE", "/README.md", "data/**", "scripts/data/**", "tests/compiler/**"]
 
 [lib]
 name = "tldhax"
@@ -19,15 +19,25 @@ name = "lookup"
 harness = false
 
 [dependencies]
-idna = "1"
+idna = "=1.1.0"
+icu_properties = "=2.2.0"
 phf = "0.11"
 psl = "2"
 pyo3 = { version = "0.28", features = ["extension-module"] }
 serde_json = "1"
 
 [build-dependencies]
+idna = "=1.1.0"
+icu_properties = "=2.2.0"
 phf_codegen = "0.11"
 serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+toml = "0.8"
+
+[dev-dependencies]
+serde = { version = "1", features = ["derive"] }
+sha2 = "0.10"
 toml = "0.8"
 
 [lints.rust]

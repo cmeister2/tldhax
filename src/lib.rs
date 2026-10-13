@@ -1,10 +1,19 @@
 //! TLD registration rule checks backed by compiled rule data.
 
 pub mod checker;
+mod compiled;
+pub mod inventory_types;
 pub mod normalization;
+pub mod policy_types;
 pub mod python;
+pub mod registration_context;
+pub mod resolver;
 pub mod registry;
 pub mod types;
+
+#[cfg(test)]
+#[path = "../build_support/mod.rs"]
+mod compiler_stages;
 
 /// Compiled legacy TLD rules and known suffixes emitted by the build script.
 mod generated {

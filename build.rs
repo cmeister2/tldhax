@@ -9,6 +9,16 @@ use std::path::{Path, PathBuf};
 
 use serde::Deserialize;
 
+// The compiler uses the runtime's exact pinned registration normalization.
+#[allow(dead_code)]
+#[path = "src/normalization.rs"]
+mod normalization;
+#[allow(dead_code)]
+#[path = "src/registration_context.rs"]
+mod registration_context;
+#[path = "build_support/mod.rs"]
+mod policy_compiler;
+
 /// Legacy authored registration-access state deserialized from a rule record.
 #[derive(Debug, Deserialize, Clone)]
 #[serde(rename_all = "snake_case")]
@@ -195,6 +205,35 @@ fn main() {
 ", suffix_set.build()).expect("failed to write KNOWN_SUFFIXES set");
     writeln!(output, "/// Number of unique suffix identities in the compiled discovery set.\npub const TOTAL_KNOWN_SUFFIXES: usize = {};", known_suffixes.len())
         .expect("failed to write suffix count");
+    compile_reviewed_tables(&out_dir);
+}
+
+/// Compile verified evidence, inventory and routing without runtime loading.
+///
+/// # Panics
+/// Panics when authoring, inventory or routing validation fails, or an output
+/// artifact cannot be written.
+fn compile_reviewed_tables(out_dir: &Path) {
+    let root = Path::new(".");
+    let policy = policy_compiler::compile(root).expect("invalid packaged policy inputs");
+    println!("cargo:rustc-env=TLDHAX_DATASET_VERSION={}", policy.fingerprint);
+    for path in &policy.input_paths {
+        println!("cargo:rerun-if-changed={}", path.display());
+    }
+    policy_compiler::write(&policy, out_dir).expect("failed to write compiled policy");
+    policy_compiler::inventory::generate(root, out_dir).expect("invalid factual inventory");
+    let evidence = policy.supplements.iter().map(|s| {
+        s.evidence_ids.iter().map(String::as_str).collect::<Vec<_>>()
+    }).collect::<Vec<_>>();
+    let supplements = policy.supplements.iter().zip(&evidence).map(|(s, ids)| {
+        policy_compiler::resolver::Supplement {
+            selector: &s.selector,
+            evidence_ids: ids,
+            applicant_label_counts: &s.applicant_label_counts,
+        }
+    }).collect::<Vec<_>>();
+    policy_compiler::resolver::generate(root, out_dir, &supplements)
+        .expect("invalid registration routing inputs");
 }
 
 /// Require each suffix root to match the rule filename unless its stem begins with an underscore.
