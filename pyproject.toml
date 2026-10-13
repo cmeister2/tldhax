@@ -5,6 +5,7 @@ build-backend = "maturin"
 [project]
 name = "tldhax"
 requires-python = ">=3.10"
+license-files = ["LICENSE", "data/psl/LICENSE", "data/NOTICES.md"]
 dynamic = ["version", "description", "readme", "license", "keywords"]
 
 [project.urls]

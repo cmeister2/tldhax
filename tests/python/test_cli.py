@@ -21,15 +21,15 @@ def test_check_json_output() -> None:
     """The check command should emit machine-readable JSON when requested."""
     result = run_cli("check", "za.sk", "--json")
     payload = json.loads(result.stdout)
-    assert result.returncode == 1
-    assert payload["status"] == "no"
+    assert result.returncode == 2
+    assert payload["status"] == "unknown"
 
 
 def test_info_output() -> None:
     """The info command should print a human-readable summary."""
     result = run_cli("info", "co.uk")
-    assert result.returncode == 0
-    assert "Registerable: yes" in result.stdout
+    assert result.returncode == 2
+    assert "No data available" in result.stdout
 
 
 def test_stats_output() -> None:

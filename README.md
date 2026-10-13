@@ -1,30 +1,12 @@
 # tldhax
 
-`tldhax` is a Rust library with Python bindings for checking whether a candidate domain could be registerable under its effective TLD.
+Offline domain registration checks. The existing Python Registry/check/info/stats API and CLI remain available.
 
-The project compiles curated TLD rule data from `rules/*.toml` into the binary at build time. Rule coverage is bootstrapped from the ICANN section of the Public Suffix List, while concrete registration policy remains explicit and source-backed.
+The Rust engine evaluates direct name and declared-profile requirements and returns yes/no/unknown with reasons. Unsupported policy remains unknown; retained legacy rule files supply inventory without automatically approving registration. The following interface PR adds public Python profile assessment and batches.
 
-## Highlights
+    from tldhax import Registry
+    registry = Registry()
+    result = registry.check("sunflower.com")
+    print(result.status, result.reasons)
 
-- Rust core with PyO3 Python bindings.
-- Build-time TOML validation and code generation.
-- CLI for `check`, `info`, and `stats`.
-- Checked-in ICANN PSL coverage plus grouped Spec 13 brand TLD rules.
-
-## Development
-
-```bash
-cargo test
-maturin develop
-pytest
-```
-
-## Bootstrap Data
-
-The repository already includes checked-in rule data under `rules/*.toml`.
-
-That data includes:
-
-- ICANN Public Suffix List coverage represented as minimal `[[domains]]` entries
-- grouped ICANN Spec 13 brand TLD rules in `rules/_brand.toml`
-- curated rule entries where registration policy is explicitly tracked and sourced
+Build and test with pip install .[dev], cargo test --all-targets and pytest.

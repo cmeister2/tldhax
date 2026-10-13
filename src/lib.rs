@@ -1,23 +1,27 @@
-//! TLD registration rule checks backed by compiled rule data.
+//! Offline domain registrability against direct policy and declared profiles.
 
-pub mod checker;
+pub mod assessment_types;
+mod compiled;
+pub mod dataset;
+mod evaluator;
+mod idn_eval;
+pub mod inventory_types;
 pub mod normalization;
 pub mod policy_types;
-pub mod registration_context;
-pub mod resolver;
+pub mod predicate_eval;
+pub mod predicate_types;
+pub mod profile;
 pub mod python;
+pub mod registration_context;
 pub mod registry;
+pub mod resolver;
 pub mod types;
 
-/// Compiled legacy TLD rules and known suffixes emitted by the build script.
-mod generated {
-    include!(concat!(env!("OUT_DIR"), "/generated_rules.rs"));
-}
+#[cfg(test)]
+#[path = "../build_support/mod.rs"]
+mod compiler;
 
-pub use generated::{KNOWN_SUFFIXES, TLD_RULES, TOTAL_KNOWN_SUFFIXES};
-
+pub use assessment_types::{Assessment, Decision, InputError, Reason};
+pub use profile::{ProfileError, RegistrantProfile};
 pub use registry::Registry;
-pub use types::{
-    Charset, CheckResult, CheckStatus, LengthBasis, Reason, Registerable, RegistryStats, TldRule,
-    TldRuleSummary,
-};
+pub use types::{CheckResult, CheckStatus, RegistryStats, TldRuleSummary};

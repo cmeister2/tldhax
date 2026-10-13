@@ -1,0 +1,168 @@
+{
+  "names": [
+    {
+      "name": "10.in-addr.arpa",
+      "descendants": true
+    },
+    {
+      "name": "16.172.in-addr.arpa",
+      "descendants": true
+    },
+    {
+      "name": "168.192.in-addr.arpa",
+      "descendants": true
+    },
+    {
+      "name": "17.172.in-addr.arpa",
+      "descendants": true
+    },
+    {
+      "name": "170.0.0.192.in-addr.arpa",
+      "descendants": true
+    },
+    {
+      "name": "171.0.0.192.in-addr.arpa",
+      "descendants": true
+    },
+    {
+      "name": "18.172.in-addr.arpa",
+      "descendants": true
+    },
+    {
+      "name": "19.172.in-addr.arpa",
+      "descendants": true
+    },
+    {
+      "name": "20.172.in-addr.arpa",
+      "descendants": true
+    },
+    {
+      "name": "21.172.in-addr.arpa",
+      "descendants": true
+    },
+    {
+      "name": "22.172.in-addr.arpa",
+      "descendants": true
+    },
+    {
+      "name": "23.172.in-addr.arpa",
+      "descendants": true
+    },
+    {
+      "name": "24.172.in-addr.arpa",
+      "descendants": true
+    },
+    {
+      "name": "25.172.in-addr.arpa",
+      "descendants": true
+    },
+    {
+      "name": "254.169.in-addr.arpa",
+      "descendants": true
+    },
+    {
+      "name": "26.172.in-addr.arpa",
+      "descendants": true
+    },
+    {
+      "name": "27.172.in-addr.arpa",
+      "descendants": true
+    },
+    {
+      "name": "28.172.in-addr.arpa",
+      "descendants": true
+    },
+    {
+      "name": "29.172.in-addr.arpa",
+      "descendants": true
+    },
+    {
+      "name": "30.172.in-addr.arpa",
+      "descendants": true
+    },
+    {
+      "name": "31.172.in-addr.arpa",
+      "descendants": true
+    },
+    {
+      "name": "6tisch.arpa",
+      "descendants": true
+    },
+    {
+      "name": "8.e.f.ip6.arpa",
+      "descendants": true
+    },
+    {
+      "name": "9.e.f.ip6.arpa",
+      "descendants": true
+    },
+    {
+      "name": "a.e.f.ip6.arpa",
+      "descendants": true
+    },
+    {
+      "name": "alt",
+      "descendants": true
+    },
+    {
+      "name": "b.e.f.ip6.arpa",
+      "descendants": true
+    },
+    {
+      "name": "eap.arpa",
+      "descendants": true
+    },
+    {
+      "name": "example",
+      "descendants": true
+    },
+    {
+      "name": "example.com",
+      "descendants": true
+    },
+    {
+      "name": "example.net",
+      "descendants": true
+    },
+    {
+      "name": "example.org",
+      "descendants": true
+    },
+    {
+      "name": "home.arpa",
+      "descendants": true
+    },
+    {
+      "name": "invalid",
+      "descendants": true
+    },
+    {
+      "name": "ipv4only.arpa",
+      "descendants": true
+    },
+    {
+      "name": "local",
+      "descendants": true
+    },
+    {
+      "name": "localhost",
+      "descendants": true
+    },
+    {
+      "name": "onion",
+      "descendants": true
+    },
+    {
+      "name": "resolver.arpa",
+      "descendants": true
+    },
+    {
+      "name": "service.arpa",
+      "descendants": true
+    },
+    {
+      "name": "test",
+      "descendants": true
+    }
+  ]
+}

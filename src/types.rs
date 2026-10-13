@@ -1,229 +1,80 @@
-//! Shared value types used by the registry and Python bindings.
+//! Small compatibility result for the original profile-free check entry point.
 
-/// Whether registrations are generally available under a TLD.
+/// Outcome of a profile-free registration check.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
-pub enum Registerable {
-    /// The TLD is open for general registration.
-    Yes,
-    /// The TLD is not open for registration.
-    No,
-    /// The TLD is registerable only for eligible registrants.
-    Restricted,
-}
-
-impl Registerable {
-    /// Returns the serialized string form used by the CLI and Python API.
-    pub fn as_str(self) -> &'static str {
-        match self {
-            Self::Yes => "yes",
-            Self::No => "no",
-            Self::Restricted => "restricted",
-        }
-    }
-}
-
-/// Why a TLD is closed or restricted.
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
-pub enum Reason {
-    /// The TLD is an ICANN Spec 13 brand TLD.
-    BrandTld,
-    /// The TLD is reserved for infrastructure use.
-    Infrastructure,
-    /// The TLD is reserved for government use.
-    Government,
-    /// The TLD has been retired.
-    Retired,
-}
-
-impl Reason {
-    /// Returns the serialized string form used by generated rules.
-    pub fn as_str(self) -> &'static str {
-        match self {
-            Self::BrandTld => "brand_tld",
-            Self::Infrastructure => "infrastructure",
-            Self::Government => "government",
-            Self::Retired => "retired",
-        }
-    }
-}
-
-/// How label length should be measured for a rule.
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
-pub enum LengthBasis {
-    /// Measure the ASCII/Punycode form of the label.
-    Ascii,
-    /// Measure the Unicode form of the label.
-    Unicode,
-}
-
-impl LengthBasis {
-    /// Returns the serialized string form used by generated rules.
-    pub fn as_str(self) -> &'static str {
-        match self {
-            Self::Ascii => "ascii",
-            Self::Unicode => "unicode",
-        }
-    }
-}
-
-/// Character repertoire allowed by a TLD rule.
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
-pub enum Charset {
-    /// Only plain ASCII labels are allowed.
-    Ascii,
-    /// Internationalized labels are allowed.
-    Idn,
-}
-
-impl Charset {
-    /// Returns the serialized string form used by generated rules.
-    pub fn as_str(self) -> &'static str {
-        match self {
-            Self::Ascii => "ascii",
-            Self::Idn => "idn",
-        }
-    }
-}
-
-/// A compiled rule describing how labels may be registered under a TLD.
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
-pub struct TldRule {
-    /// The suffix this rule applies to, without a leading dot.
-    pub tld: &'static str,
-    /// Whether the TLD is open, closed, or eligibility-gated.
-    pub registerable: Registerable,
-    /// Optional category explaining why a TLD is closed or restricted.
-    pub reason: Option<Reason>,
-    /// Optional human-readable note shown to callers.
-    pub note: Option<&'static str>,
-    /// Free-form eligibility restrictions for restricted TLDs.
-    pub restrictions: &'static [&'static str],
-    /// Minimum allowed label length.
-    pub min_length: u8,
-    /// Maximum allowed label length.
-    pub max_length: u8,
-    /// How label length is measured.
-    pub length_basis: LengthBasis,
-    /// Exact labels that may not be registered.
-    pub banned: &'static [&'static str],
-    /// Whether ASCII-only or IDN labels are allowed.
-    pub charset: Charset,
-    /// Additional non-ASCII characters allowed when `charset` is IDN.
-    pub idn_chars: &'static str,
-    /// Source URLs for each populated field.
-    pub sources: &'static [(&'static str, &'static str)],
-}
-
-/// The outcome of a registerability check.
-#[derive(Debug, Clone, PartialEq, Eq)]
 pub enum CheckStatus {
-    /// The domain passes the compiled TLD rule checks.
+    /// The applicable supported policy passes.
     Yes,
-    /// The domain fails the compiled TLD rule checks.
+    /// An established name or profile requirement fails.
     No,
-    /// The domain may be registerable, but eligibility rules apply.
-    Restricted,
-    /// The TLD is known or syntactically valid, but no curated policy exists.
+    /// Missing policy or profile information prevents a decision.
     Unknown,
 }
 
 impl CheckStatus {
-    /// Returns the lowercase status string used by the CLI and Python API.
-    pub fn as_str(&self) -> &'static str {
+    /// Lowercase status used by the compatibility API.
+    pub const fn as_str(self) -> &'static str {
         match self {
             Self::Yes => "yes",
             Self::No => "no",
-            Self::Restricted => "restricted",
             Self::Unknown => "unknown",
         }
     }
-
-    /// Returns the CLI exit code associated with this status.
-    pub fn exit_code(&self) -> i32 {
-        match self {
-            Self::Yes => 0,
-            Self::No => 1,
-            Self::Unknown => 2,
-            Self::Restricted => 3,
-        }
-    }
 }
 
-/// A detailed registerability result for a single domain.
+/// Profile-free compatibility assessment with direct explanation text.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct CheckResult {
-    /// The overall status derived from syntax and TLD rule checks.
+    /// Combined decision for this candidate.
     pub status: CheckStatus,
-    /// Human-readable reasons explaining the result.
+    /// Human-readable unmet or unresolved conditions.
     pub reasons: Vec<String>,
 }
 
-/// Aggregate counts describing the compiled registry contents.
+/// Aggregate authored-policy counts; inventory membership never approves registration.
 #[derive(Debug, Clone, PartialEq)]
 pub struct RegistryStats {
-    /// Number of curated rules compiled into the binary.
+    /// Number of unique authored direct-policy selectors.
     pub compiled_rules: usize,
-    /// Number of known suffixes loaded from the rule corpus.
+    /// Number of authored and discovered namespace identifiers.
     pub total_known_suffixes: usize,
-    /// Count of rules with `registerable = yes`.
+    /// Faithful summaries with a supported unrestricted ASCII scope.
     pub registerable: usize,
-    /// Count of rules with `registerable = no`.
+    /// Faithful summaries containing an unconditional ASCII prohibition.
     pub not_registerable: usize,
-    /// Count of rules with `registerable = restricted`.
+    /// Faithful summaries with supported ASCII scope requiring applicant declarations.
     pub restricted: usize,
-    /// Percentage of known suffixes with curated rule entries.
+    /// Percentage of inventory identifiers with authored direct-policy selectors.
     pub coverage_percent: f64,
 }
 
-/// Owned summary data for exposing a `TldRule` through Python and the CLI.
+/// Compatibility namespace metadata derived from direct authored policy.
+///
+/// Unknown or richer properties remain absent; candidate decisions use `assess`.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct TldRuleSummary {
-    /// The suffix this summary describes, without a leading dot.
+    /// Canonical namespace identity.
     pub tld: String,
-    /// String form of the registerability status.
+    /// Broad summary: yes, no, restricted or unknown; not a candidate decision.
     pub registerable: String,
-    /// Optional string form of the rule reason.
+    /// Optional category when the direct policy has a faithful scalar explanation.
     pub reason: Option<String>,
-    /// Optional human-readable note.
+    /// Limits of this compatibility summary.
     pub note: Option<String>,
-    /// Human-readable eligibility restrictions.
+    /// Applicable declared-applicant requirements described without supplied values.
     pub restrictions: Vec<String>,
-    /// Minimum allowed label length.
-    pub min_length: u8,
-    /// Maximum allowed label length.
-    pub max_length: u8,
-    /// String form of the length basis.
-    pub length_basis: String,
-    /// Exact banned labels under the suffix.
+    /// Explicit additional registry minimum when representable.
+    pub min_length: Option<u16>,
+    /// Explicit additional registry maximum when representable.
+    pub max_length: Option<u16>,
+    /// ASCII or Unicode measurement when all represented bounds agree.
+    pub length_basis: Option<String>,
+    /// Exact unconditional label reservations, without conditional exceptions.
     pub banned: Vec<String>,
-    /// String form of the allowed charset.
-    pub charset: String,
-    /// Additional non-ASCII characters allowed for IDN labels.
-    pub idn_chars: String,
-    /// Source URLs for populated fields.
+    /// Explicit ASCII-only or supported adopted IDN repertoire when representable.
+    pub charset: Option<String>,
+    /// Finite non-ASCII characters from an adopted complete repertoire when representable.
+    pub idn_chars: Option<String>,
+    /// Optional source links retained for interface compatibility; direct checks need no catalogue.
     pub sources: Vec<(String, String)>,
-}
-
-impl From<&TldRule> for TldRuleSummary {
-    /// Copies a compiled rule into an owned summary representation.
-    fn from(value: &TldRule) -> Self {
-        Self {
-            tld: value.tld.to_string(),
-            registerable: value.registerable.as_str().to_string(),
-            reason: value.reason.map(|reason| reason.as_str().to_string()),
-            note: value.note.map(ToString::to_string),
-            restrictions: value.restrictions.iter().map(|item| (*item).to_string()).collect(),
-            min_length: value.min_length,
-            max_length: value.max_length,
-            length_basis: value.length_basis.as_str().to_string(),
-            banned: value.banned.iter().map(|item| (*item).to_string()).collect(),
-            charset: value.charset.as_str().to_string(),
-            idn_chars: value.idn_chars.to_string(),
-            sources: value
-                .sources
-                .iter()
-                .map(|(field, source)| ((*field).to_string(), (*source).to_string()))
-                .collect(),
-        }
-    }
 }

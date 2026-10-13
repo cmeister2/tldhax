@@ -8,16 +8,16 @@ class CheckResult:
 
 class TldInfo:
     tld: str
-    registerable: Literal["yes", "no", "restricted"]
+    registerable: Literal["yes", "no", "restricted", "unknown"]
     reason: str | None
     note: str | None
     restrictions: list[str]
-    min_length: int
-    max_length: int
-    length_basis: Literal["ascii", "unicode"]
+    min_length: int | None
+    max_length: int | None
+    length_basis: Literal["ascii", "unicode"] | None
     banned: list[str]
-    charset: Literal["ascii", "idn"]
-    idn_chars: str
+    charset: Literal["ascii", "idn"] | None
+    idn_chars: str | None
     sources: dict[str, str]
 
 class Registry:
