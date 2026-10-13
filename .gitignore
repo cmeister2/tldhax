@@ -9,6 +9,9 @@
 *.pyc
 /scripts/*
 !/scripts/data/
+!/scripts/maintenance/
+!/scripts/package_check.py
+!/scripts/wheel_probe.py
 /node_modules
 *.so
 venv*/

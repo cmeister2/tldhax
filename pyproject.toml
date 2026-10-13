@@ -1,10 +1,11 @@
 [build-system]
-requires = ["maturin>=1.0,<2.0"]
+requires = ["maturin>=1.9.3,<2.0"]
 build-backend = "maturin"
 
 [project]
 name = "tldhax"
 requires-python = ">=3.10"
+license-files = ["LICENSE", "data/psl/LICENSE", "data/NOTICES.md"]
 dynamic = ["version", "description", "readme", "license", "keywords"]
 
 [project.urls]
