@@ -365,3 +365,240 @@ fn contradictory_minimum_and_maximum_rules_are_rejected() {
     document.namespaces[0].rules.push("fixture.maximum".into());
     assert!(run(document).unwrap_err().contains("conflict"));
 }
+
+/// Verify that separately scoped form and completeness evidence combine without invented scope.
+#[test]
+fn separately_scoped_form_and_completeness_evidence_combine_without_invented_scope() {
+    let mut document = fixture();
+    document.namespaces[0]
+        .forms
+        .push(vec!["group".into(), "name".into()]);
+    let mut form = document.assertions[0].clone();
+    form.id = "fixture.form.two".into();
+    form.forms = vec![2];
+    document.namespaces[0]
+        .form_assertion_ids
+        .push(form.id.clone());
+    document.assertions.push(form);
+    let mut complete = document.assertions[2].clone();
+    complete.id = "fixture.length.two.complete".into();
+    complete.forms = vec![2];
+    document.namespaces[0].coverage[0]
+        .assertion_ids
+        .push(complete.id.clone());
+    document.assertions.push(complete);
+    let output = run(document).unwrap();
+    assert_eq!(output.supplements[0].applicant_label_counts, vec![1, 2]);
+    assert!(output
+        .rust
+        .contains("ascii:Knowledge::Reviewed,idn:Knowledge::Unknown"));
+}
+
+/// Verify that a future form does not erase current form completeness.
+#[test]
+fn a_future_form_does_not_erase_current_form_completeness() {
+    let mut document = fixture();
+    document.namespaces[0]
+        .forms
+        .push(vec!["group".into(), "name".into()]);
+    let mut future = document.assertions[0].clone();
+    future.id = "fixture.future.form".into();
+    future.forms = vec![2];
+    future.effective_from = Some("2027-01-01".into());
+    document.namespaces[0]
+        .form_assertion_ids
+        .push(future.id.clone());
+    document.assertions.push(future);
+    let output = run(document).unwrap();
+    assert_eq!(output.supplements[0].applicant_label_counts, vec![1]);
+    assert!(output
+        .rust
+        .contains("ascii:Knowledge::Reviewed,idn:Knowledge::Unknown"));
+}
+
+/// Verify that another active form needs its own complete family scope.
+#[test]
+fn another_active_form_needs_its_own_complete_family_scope() {
+    let mut document = fixture();
+    document.namespaces[0]
+        .forms
+        .push(vec!["group".into(), "name".into()]);
+    document.assertions[0].forms = vec![1, 2];
+    assert!(run(document).unwrap_err().contains("scoped completeness"));
+}
+
+/// Verify that missing or expired form approval cannot infer a closed namespace.
+#[test]
+fn missing_or_expired_form_approval_cannot_infer_a_closed_namespace() {
+    for approval in ["missing", "expired", "empty"] {
+        let mut document = fixture();
+        let mut complete = document.assertions[0].clone();
+        complete.id = "fixture.forms.complete".into();
+        complete.attests_completeness = true;
+        document.assertions.push(complete);
+        document.namespaces[0].coverage.push(schema::Coverage {
+            family: Family::Namespace,
+            ascii: Knowledge::Reviewed,
+            idn: Knowledge::Reviewed,
+            assertion_ids: vec!["fixture.forms.complete".into()],
+            gap: None,
+        });
+        if approval == "expired" {
+            document.assertions[0].reviewed_on = "2024-01-01".into();
+            document.assertions[0].review_due = "2025-01-01".into();
+        } else {
+            document.namespaces[0].form_assertion_ids.clear();
+        }
+        if approval == "empty" {
+            document.namespaces[0].forms.clear();
+            document.namespaces[0].rules.clear();
+        }
+        let output = run(document).unwrap();
+        assert!(output.supplements.is_empty());
+        assert!(output.rust.contains(
+            "family:RuleFamily::Namespace,ascii:Knowledge::Unknown,idn:Knowledge::Unknown"
+        ));
+        assert!(output.rust.contains("registration_form_approval_missing"));
+    }
+}
+
+/// Verify that single class form evidence cannot approve universal registration forms.
+#[test]
+fn single_class_form_evidence_cannot_approve_universal_registration_forms() {
+    let mut document = fixture();
+    document.assertions[0].input_class = Class::Ascii;
+    assert!(run(document)
+        .unwrap_err()
+        .contains("form assertion scope mismatch"));
+}
+
+/// Verify that idn only table adoption cannot supply an any class predicate.
+#[test]
+fn idn_only_table_adoption_cannot_supply_an_any_class_predicate() {
+    let mut document = idn_fixture();
+    document.assertions[1].input_class = Class::Any;
+    assert!(run(document)
+        .unwrap_err()
+        .contains("explicit IDN input class"));
+}
+
+/// Add a shared length profile whose applicability is backed by the supplied evidence.
+fn shared_profile(document: &mut schema::Document, evidence: Vec<String>) {
+    document.profiles.push(schema::Profile {
+        id: "fixture.shared".into(),
+        applicability: vec!["fixture".into()],
+        applicability_assertions: evidence,
+        extends: vec![],
+        rules: std::mem::take(&mut document.namespaces[0].rules),
+        coverage: std::mem::take(&mut document.namespaces[0].coverage),
+        context: vec![],
+    });
+    document.namespaces[0]
+        .profiles
+        .push("fixture.shared".into());
+}
+
+/// Verify that future form and profile references do not block current inheritance.
+#[test]
+fn future_form_and_profile_references_do_not_block_current_inheritance() {
+    let mut document = fixture();
+    document.namespaces[0]
+        .forms
+        .push(vec!["group".into(), "name".into()]);
+    let mut future = document.assertions[0].clone();
+    future.id = "fixture.future.form".into();
+    future.forms = vec![2];
+    future.effective_from = Some("2027-01-01".into());
+    document.namespaces[0]
+        .form_assertion_ids
+        .push(future.id.clone());
+    document.assertions.push(future);
+    shared_profile(
+        &mut document,
+        vec!["fixture.form".into(), "fixture.future.form".into()],
+    );
+    let output = run(document).unwrap();
+    assert_eq!(output.supplements[0].applicant_label_counts, vec![1]);
+    assert!(output.rust.contains("CompiledRule{id:\"fixture.length\""));
+}
+
+/// Verify that distinct profile applicability proofs combine and each current form needs one.
+#[test]
+fn distinct_profile_applicability_proofs_combine_and_each_current_form_needs_one() {
+    let mut document = fixture();
+    document.namespaces[0]
+        .forms
+        .push(vec!["group".into(), "name".into()]);
+    let mut second = document.assertions[0].clone();
+    second.id = "fixture.form.two".into();
+    second.forms = vec![2];
+    document.namespaces[0]
+        .form_assertion_ids
+        .push(second.id.clone());
+    document.assertions.push(second);
+    document.namespaces[0].coverage.clear();
+    shared_profile(
+        &mut document,
+        vec!["fixture.form".into(), "fixture.form.two".into()],
+    );
+    let statuses = validate::document(&mut document, "2026-10-12", None).unwrap();
+    let output = resolve::resolve(&document, &statuses).unwrap();
+    assert_eq!(
+        output[0].forms.iter().map(Vec::len).collect::<Vec<_>>(),
+        vec![1, 2]
+    );
+    document.profiles[0].applicability_assertions.pop();
+    assert!(run(document)
+        .unwrap_err()
+        .contains("applicability evidence"));
+}
+
+/// Verify that necessary inherited rules need scope evidence without approving forms.
+#[test]
+fn necessary_inherited_rules_need_scope_evidence_without_approving_forms() {
+    let mut document = fixture();
+    document.namespaces[0].form_assertion_ids.clear();
+    document.namespaces[0].coverage.clear();
+    document.namespaces[0]
+        .forms
+        .push(vec!["group".into(), "name".into()]);
+    document.assertions[1].family = Family::Access;
+    document.assertions[1].predicate = Some(Predicate::Constant { value: false });
+    let mut future = document.assertions[1].clone();
+    future.id = "fixture.future.access".into();
+    future.forms = vec![2];
+    future.effective_from = Some("2027-01-01".into());
+    document.namespaces[0].rules.push(future.id.clone());
+    document.assertions.push(future);
+    shared_profile(&mut document, vec!["fixture.form".into()]);
+    let statuses = validate::document(&mut document, "2026-10-12", None).unwrap();
+    let output = resolve::resolve(&document, &statuses).unwrap();
+    assert!(output[0].forms.is_empty());
+    assert_eq!(output[0].rule_ids, vec!["fixture.length"]);
+    document.assertions[0].effective_from = Some("2027-01-01".into());
+    assert!(run(document)
+        .unwrap_err()
+        .contains("applicability evidence"));
+}
+
+/// Verify that shared profiles cannot gain universal scope from ascii or empty evidence.
+#[test]
+fn shared_profiles_cannot_gain_universal_scope_from_ascii_or_empty_evidence() {
+    let mut document = fixture();
+    let mut applicability = document.assertions[0].clone();
+    applicability.id = "fixture.profile.ascii".into();
+    applicability.input_class = Class::Ascii;
+    document.assertions.push(applicability);
+    shared_profile(&mut document, vec!["fixture.profile.ascii".into()]);
+    assert!(run(document)
+        .unwrap_err()
+        .contains("applicability assertion scope"));
+    let mut document = fixture();
+    document.namespaces[0].form_assertion_ids.clear();
+    document.namespaces[0].rules.clear();
+    document.namespaces[0].coverage.clear();
+    shared_profile(&mut document, vec!["fixture.form".into()]);
+    assert!(run(document)
+        .unwrap_err()
+        .contains("applicability evidence"));
+}

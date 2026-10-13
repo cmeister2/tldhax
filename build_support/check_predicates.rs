@@ -1,7 +1,7 @@
 //! Bound predicate work and validate referenced sets, tables and typed facts.
 
 use super::predicates::{Basis, Fact, FactKind, Predicate, Value};
-use super::schema::{Assertion, Document};
+use super::schema::{Assertion, Class, Document};
 use std::collections::BTreeMap;
 
 /// Check one fact literal against its declared type, syntax and finite enumeration.
@@ -61,6 +61,9 @@ pub fn validate(assertion: &Assertion, document: &Document) -> Result<(), String
                 if !document.label_sets.iter().any(|s| s.id == *set_id) =>
             {
                 return Err("missing named label set".into())
+            }
+            Predicate::Idn { .. } if assertion.input_class != Class::Idn => {
+                return Err("IDN table predicate requires explicit IDN input class".into())
             }
             Predicate::Idn { profile_id, .. }
                 if !document.idn_profiles.iter().any(|s| s.id == *profile_id) =>

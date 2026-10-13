@@ -3,6 +3,7 @@
 // they are not exposed through the library API. Runtime types are documented.
 
 mod check_predicates;
+pub mod compatibility;
 mod conflicts;
 mod emit;
 pub mod idn;

@@ -136,21 +136,25 @@ def test_invalid_release_dates_are_rejected(value) -> None:
         dataset_version(value, [])
 
 
-def test_utf8_inventory_diff_is_locale_independent(tree: Path) -> None:
-    """UTF-8 publisher names remain readable under an ASCII process locale."""
+def test_utf8_inventory_diff_is_locale_independent(tree: Path, tmp_path: Path) -> None:
+    """Real UTF-8 metadata changes remain readable under an ASCII process locale."""
+    reconcile(tree, "2026-10-12", "2026-10-12")
+    previous = tmp_path / "previous"
+    shutil.copytree(tree, previous)
     path = tree / SOURCES["iana.root-database"][0]
     path.write_text(
         path.read_text(encoding="utf-8").replace("COM registry", "München registry"),
         encoding="utf-8",
     )
-    reconcile(tree, "2026-10-12", "2026-10-12")
+    reconcile(tree, "2026-10-12", "2026-10-13")
     result = subprocess.run(
         [
             sys.executable,
-            "-c",
-            "from pathlib import Path; import sys; "
-            "from scripts.data.reconcile import changes; "
-            "assert changes(Path(sys.argv[1]), Path(sys.argv[1]))['roots_added'] == []",
+            "-m",
+            "scripts.data",
+            "--diff",
+            str(previous),
+            "--root",
             str(tree),
         ],
         cwd=Path(__file__).resolve().parents[2],
@@ -164,3 +168,8 @@ def test_utf8_inventory_diff_is_locale_independent(tree: Path) -> None:
         check=False,
     )
     assert result.returncode == 0, result.stderr
+    report = json.loads(result.stdout.decode("utf-8"))
+    assert (
+        report["root_metadata_changes"][0]["changes"]["operator"]["after"]
+        == "München registry"
+    )

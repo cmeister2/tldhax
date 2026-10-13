@@ -63,7 +63,7 @@ def main() -> int:
             if args.report:
                 args.report.write_bytes(encode(result))
             else:
-                sys.stdout.write(encode(result).decode())
+                sys.stdout.buffer.write(encode(result))
         else:
             existing_path = args.root / "data/manifest.json"
             existing = (

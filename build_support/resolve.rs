@@ -1,6 +1,6 @@
 //! Resolve shared policies and scope rules before emitting immutable tables.
 
-use super::inheritance::{conflict, coverage, expand, reference, scoped};
+use super::inheritance::{conflict, coverage, expand, profile_applicability, reference, scoped};
 use super::predicates::Predicate;
 use super::schema::{Class, Coverage, Document, Effect, Family, Knowledge, FAMILIES};
 use super::validate::Status;
@@ -105,16 +105,24 @@ pub fn resolve(
         }
         let mut forms = Vec::new();
         let mut form_evidence = BTreeSet::new();
+        for id in &namespace.form_assertion_ids {
+            let assertion = reference(id, &assertions)?;
+            if assertion.family != Family::Namespace
+                || assertion.input_class != Class::Any
+                || !assertion.namespaces.contains(&namespace.selector)
+                || !counts.iter().any(|count| assertion.forms.contains(count))
+            {
+                return Err("registration form assertion scope mismatch".into());
+            }
+        }
         for (form, count) in namespace.forms.iter().zip(&counts) {
             let mut supported = false;
             for id in &namespace.form_assertion_ids {
                 let assertion = reference(id, &assertions)?;
-                if assertion.family != Family::Namespace
-                    || !scoped(assertion, &namespace.selector, &[*count], Class::Any)
+                if statuses[id].active
+                    && assertion.knowledge == Knowledge::Reviewed
+                    && assertion.forms.contains(count)
                 {
-                    return Err("registration form assertion scope mismatch".into());
-                }
-                if statuses[id].active && assertion.knowledge == Knowledge::Reviewed {
                     supported = true;
                     form_evidence.insert(id.clone());
                 }
@@ -123,6 +131,10 @@ pub fn resolve(
                 forms.push(form.clone());
             }
         }
+        let approved_counts = forms
+            .iter()
+            .map(|form| form.len() as u8)
+            .collect::<Vec<_>>();
         let mut inherited = Vec::new();
         for id in &namespace.profiles {
             expand(id, &profiles, &mut BTreeSet::new(), &mut inherited)?;
@@ -134,14 +146,7 @@ pub fn resolve(
             if !profile.applicability.contains(&namespace.selector) {
                 return Err("profile applied outside explicit applicability list".into());
             }
-            for id in &profile.applicability_assertions {
-                let assertion = reference(id, &assertions)?;
-                if !scoped(assertion, &namespace.selector, &counts, Class::Any)
-                    || !statuses[id].active
-                {
-                    return Err("profile applicability evidence missing/inactive".into());
-                }
-            }
+            profile_applicability(profile, namespace, &approved_counts, &assertions, statuses)?;
             rules.extend(profile.rules.iter().cloned());
             for state in &profile.coverage {
                 if let Some(prior) = states.insert(state.family, state.clone()) {
@@ -351,7 +356,13 @@ pub fn resolve(
                 assertion_ids: Vec::new(),
                 gap: Some("unresearched_family".into()),
             });
-            coverage(&mut state, namespace, &assertions, statuses)?;
+            coverage(
+                &mut state,
+                namespace,
+                &approved_counts,
+                &assertions,
+                statuses,
+            )?;
             all_states.push(state);
         }
         context.sort();

@@ -1,7 +1,7 @@
 //! Shared applicability, inheritance and completeness resolution helpers.
 
 use super::predicates::{Basis, Predicate};
-use super::schema::{Assertion, Class, Coverage, Effect, Knowledge, Namespace, Profile};
+use super::schema::{Assertion, Class, Coverage, Effect, Family, Knowledge, Namespace, Profile};
 use super::validate::Status;
 use std::collections::{BTreeMap, BTreeSet};
 
@@ -9,9 +9,7 @@ use std::collections::{BTreeMap, BTreeSet};
 pub(super) fn scoped(assertion: &Assertion, selector: &str, counts: &[u8], class: Class) -> bool {
     assertion.namespaces.iter().any(|scope| scope == selector)
         && counts.iter().all(|count| assertion.forms.contains(count))
-        && (assertion.input_class == Class::Any
-            || assertion.input_class == class
-            || class == Class::Any)
+        && (assertion.input_class == Class::Any || assertion.input_class == class)
 }
 
 /// Resolve a stable assertion identity from the validated evidence index.
@@ -51,6 +49,73 @@ pub(super) fn expand<'a>(
         output.push(profile);
     }
     stack.remove(id);
+    Ok(())
+}
+
+/// Require current universal evidence for every form using a shared profile.
+///
+/// # Errors
+/// Rejects missing assertions, mismatched scope or insufficient active applicability proof.
+///
+/// # Panics
+/// Panics if the supplied status map omits a referenced assertion.
+pub(super) fn profile_applicability(
+    profile: &Profile,
+    namespace: &Namespace,
+    approved_counts: &[u8],
+    assertions: &BTreeMap<&str, &Assertion>,
+    statuses: &BTreeMap<String, Status>,
+) -> Result<(), String> {
+    let declared = namespace
+        .forms
+        .iter()
+        .map(|form| form.len() as u8)
+        .collect::<BTreeSet<_>>();
+    let mut required = approved_counts.iter().copied().collect::<BTreeSet<_>>();
+    for id in profile.rules.iter().chain(
+        profile
+            .coverage
+            .iter()
+            .flat_map(|coverage| &coverage.assertion_ids),
+    ) {
+        let assertion = reference(id, assertions)?;
+        if statuses[id].active && assertion.namespaces.contains(&namespace.selector) {
+            required.extend(
+                assertion
+                    .forms
+                    .iter()
+                    .filter(|count| declared.contains(count))
+                    .copied(),
+            );
+        }
+    }
+    let mut approved = BTreeSet::new();
+    for id in &profile.applicability_assertions {
+        let assertion = reference(id, assertions)?;
+        if assertion.input_class != Class::Any
+            || !assertion
+                .namespaces
+                .iter()
+                .any(|selector| profile.applicability.contains(selector))
+        {
+            return Err("profile applicability assertion scope mismatch".into());
+        }
+        if statuses[id].active
+            && assertion.knowledge == Knowledge::Reviewed
+            && assertion.namespaces.contains(&namespace.selector)
+        {
+            approved.extend(
+                assertion
+                    .forms
+                    .iter()
+                    .filter(|count| declared.contains(count))
+                    .copied(),
+            );
+        }
+    }
+    if required.is_empty() || !required.is_subset(&approved) {
+        return Err("profile applicability evidence missing/inactive".into());
+    }
     Ok(())
 }
 
@@ -109,20 +174,29 @@ fn bounds(predicate: Option<&Predicate>) -> Option<(u8, u16, u16, Basis)> {
 /// Rejects missing evidence, wrong-family claims and completeness without a
 /// whole-family scoped attestation covering every declared registration form.
 ///
-///
 /// # Panics
 /// Panics if the supplied status map omits a referenced assertion.
 pub(super) fn coverage(
     entry: &mut Coverage,
     namespace: &Namespace,
+    approved_counts: &[u8],
     assertions: &BTreeMap<&str, &Assertion>,
     statuses: &BTreeMap<String, Status>,
 ) -> Result<(), String> {
-    let counts = namespace
-        .forms
-        .iter()
-        .map(|f| f.len() as u8)
-        .collect::<Vec<_>>();
+    let counts = if approved_counts.is_empty() {
+        namespace
+            .forms
+            .iter()
+            .map(|f| f.len() as u8)
+            .collect::<Vec<_>>()
+    } else {
+        approved_counts.to_vec()
+    };
+    for id in &entry.assertion_ids {
+        if reference(id, assertions)?.family != entry.family {
+            return Err("coverage assertion belongs to another family".into());
+        }
+    }
     for (class, state) in [
         (Class::Ascii, &mut entry.ascii),
         (Class::Idn, &mut entry.idn),
@@ -133,20 +207,31 @@ pub(super) fn coverage(
         if entry.assertion_ids.is_empty() {
             return Err("complete/not-applicable family has no evidence".into());
         }
-        let mut approved = false;
-        let mut attested = false;
+        if counts.is_empty() || entry.family == Family::Namespace && approved_counts.is_empty() {
+            *state = Knowledge::Unknown;
+            entry
+                .gap
+                .get_or_insert_with(|| "registration_form_approval_missing".into());
+            continue;
+        }
+        let mut approved = BTreeSet::<u8>::new();
+        let mut attested = BTreeSet::<u8>::new();
         for id in &entry.assertion_ids {
             let assertion = reference(id, assertions)?;
-            if assertion.family != entry.family {
-                return Err("coverage assertion belongs to another family".into());
-            }
-            if !scoped(assertion, &namespace.selector, &counts, class) {
+            let matched = counts
+                .iter()
+                .copied()
+                .filter(|count| scoped(assertion, &namespace.selector, &[*count], class))
+                .collect::<Vec<_>>();
+            if matched.is_empty() {
                 continue;
             }
-            attested |= assertion.attests_completeness;
+            if assertion.attests_completeness {
+                attested.extend(&matched);
+            }
             let status = &statuses[id];
             if status.active && assertion.attests_completeness {
-                approved = true;
+                approved.extend(&matched);
             } else {
                 entry.gap.get_or_insert_with(|| {
                     status
@@ -156,18 +241,15 @@ pub(super) fn coverage(
                 });
             }
         }
-        if !attested {
+        if attested.len() != counts.len() {
             return Err("family completeness lacks scoped completeness attestation".into());
         }
-        if !approved {
+        if approved.len() != counts.len() {
             *state = Knowledge::Unknown;
             entry
                 .gap
                 .get_or_insert_with(|| "no_active_applicable_coverage_evidence".into());
         }
-    }
-    for id in &entry.assertion_ids {
-        reference(id, assertions)?;
     }
     Ok(())
 }
