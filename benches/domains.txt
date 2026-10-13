@@ -1,0 +1,14 @@
+ascii_open	sunflower.com
+ascii_multilabel	sunflower.co.uk
+early_invalid	_bad.com
+empty_label	sunflower..com
+reserved_legacy	za.sk
+restricted_legacy	sunflower.de
+unknown_namespace	sunflower.unknown-tldhax
+wildcard_route	sunflower.b.ck
+exception_route	www.ck
+private_route	sunflower.blogspot.com
+unicode_label	bücher.de
+alabel	xn--bcher-kva.de
+unicode_root	sunflower.中国
+ascii_root	sunflower.xn--fiqs8s
