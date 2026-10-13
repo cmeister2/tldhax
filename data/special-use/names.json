@@ -1,0 +1,384 @@
+{
+  "names": [
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "10.in-addr.arpa",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "16.172.in-addr.arpa",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "168.192.in-addr.arpa",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "17.172.in-addr.arpa",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "170.0.0.192.in-addr.arpa",
+      "references": [
+        "rfc8880"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "171.0.0.192.in-addr.arpa",
+      "references": [
+        "rfc8880"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "18.172.in-addr.arpa",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "19.172.in-addr.arpa",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "20.172.in-addr.arpa",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "21.172.in-addr.arpa",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "22.172.in-addr.arpa",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "23.172.in-addr.arpa",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "24.172.in-addr.arpa",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "25.172.in-addr.arpa",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "254.169.in-addr.arpa",
+      "references": [
+        "rfc6762"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "26.172.in-addr.arpa",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "27.172.in-addr.arpa",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "28.172.in-addr.arpa",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "29.172.in-addr.arpa",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "30.172.in-addr.arpa",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "31.172.in-addr.arpa",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "6tisch.arpa",
+      "references": [
+        "rfc9031"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "8.e.f.ip6.arpa",
+      "references": [
+        "rfc6762"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "9.e.f.ip6.arpa",
+      "references": [
+        "rfc6762"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "a.e.f.ip6.arpa",
+      "references": [
+        "rfc6762"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "alt",
+      "references": [
+        "rfc9476"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "b.e.f.ip6.arpa",
+      "references": [
+        "rfc6762"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": true,
+      "descendants": true,
+      "name": "eap-noob.arpa",
+      "references": [
+        "rfc9140",
+        "rfc9965"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "eap.arpa",
+      "references": [
+        "rfc9965"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "example",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "example.com",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "example.net",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "example.org",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "home.arpa",
+      "references": [
+        "rfc8375"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "invalid",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "ipv4only.arpa",
+      "references": [
+        "rfc8880"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "local",
+      "references": [
+        "rfc6762"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "localhost",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "onion",
+      "references": [
+        "rfc7686"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "resolver.arpa",
+      "references": [
+        "rfc9462"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "service.arpa",
+      "references": [
+        "rfc9665"
+      ],
+      "source_id": "iana.special-use.xml"
+    },
+    {
+      "deprecated": false,
+      "descendants": true,
+      "name": "test",
+      "references": [
+        "rfc6761"
+      ],
+      "source_id": "iana.special-use.xml"
+    }
+  ],
+  "schema_version": 2
+}

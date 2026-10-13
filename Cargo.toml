@@ -8,7 +8,7 @@ repository = "https://github.com/cmeister2/tldhax"
 readme = "README.md"
 keywords = ["tld", "domain", "dns", "idn", "registry"]
 categories = ["command-line-utilities", "web-programming"]
-include = ["src/**", "python/**", "build.rs", "rules/**", "benches/**", "/LICENSE", "/README.md"]
+include = ["src/**", "python/**", "build.rs", "rules/**", "benches/**", "/LICENSE", "/README.md", "data/**", "scripts/data/**"]
 
 [lib]
 name = "tldhax"

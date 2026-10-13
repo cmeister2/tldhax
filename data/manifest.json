@@ -1,0 +1,85 @@
+{
+  "dataset_version": "2026-10-12+dd60e192a682d098",
+  "evaluation_date": "2026-10-12",
+  "inputs": [
+    {
+      "path": "data/root/tlds-alpha-by-domain.txt",
+      "retrieved_on": "2026-10-12",
+      "sha256": "45d9f126c1f5af44e41a40bbf84feafd38ca16806cb094618fa0ef6371cbdd16",
+      "source_id": "iana.active-roots",
+      "upstream_version": "2026101200",
+      "url": "https://data.iana.org/TLD/tlds-alpha-by-domain.txt"
+    },
+    {
+      "path": "data/root/root-db.html",
+      "retrieved_on": "2026-10-12",
+      "sha256": "69faf42b6235a46de14e454fc23a3df2272b26954af150c0eb8586d50af103a3",
+      "source_id": "iana.root-database",
+      "upstream_version": "unversioned",
+      "url": "https://www.iana.org/domains/root/db"
+    },
+    {
+      "path": "data/special-use/special-use-domain-names.csv",
+      "retrieved_on": "2026-10-12",
+      "sha256": "74cee5aa529088b7540252e30ba4775f83202ccb3323a590789ce9dc9a53a3cd",
+      "source_id": "iana.special-use.csv",
+      "upstream_version": "unversioned",
+      "url": "https://www.iana.org/assignments/special-use-domain-names/special-use-domain.csv"
+    },
+    {
+      "path": "data/special-use/special-use-domain-names.xml",
+      "retrieved_on": "2026-10-12",
+      "sha256": "2659dec6fdb0377ba1f12d7418eb34e38b312e5f739574aeb868e00e1bcdf1e4",
+      "source_id": "iana.special-use.xml",
+      "upstream_version": "2026-05-22",
+      "url": "https://www.iana.org/assignments/special-use-domain-names/special-use-domain-names.xml"
+    },
+    {
+      "path": "data/root/gtlds.json",
+      "retrieved_on": "2026-10-12",
+      "sha256": "da9081c48ea40e1d72c70e8c16d91c62fb436285dca51e7e2a5bda6c64bbe379",
+      "source_id": "icann.gtlds",
+      "upstream_version": "2026-10-12T12:05:28.287+0000",
+      "url": "https://www.icann.org/resources/registries/gtlds/v2/gtlds.json"
+    },
+    {
+      "path": "data/reserved/ReservedNames.xml",
+      "retrieved_on": "2026-10-12",
+      "sha256": "17837e9cbe202db720206afebebf184c7d729502724442b98e9cf54239126149",
+      "source_id": "icann.reserved-names",
+      "upstream_version": "2020-02-18",
+      "url": "https://www.icann.org/sites/default/files/packages/reserved-names/ReservedNames.xml"
+    },
+    {
+      "path": "data/psl/public_suffix_list.dat",
+      "retrieved_on": "2026-10-12",
+      "sha256": "ba7d836c0ea57a8bcf9f1fcb868066a7554bed029b441ecc6204ad8494a32612",
+      "source_id": "psl.list",
+      "upstream_version": "2026-10-07_07-28-19_UTC",
+      "url": "https://publicsuffix.org/list/public_suffix_list.dat"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "data/psl/rules.json",
+      "sha256": "3c10078a7e9a7a4560dd3376c1bb0b38bc423e805c773ecfc6cc45e948c5eb62"
+    },
+    {
+      "path": "data/research-queue.json",
+      "sha256": "281bab731cce253429529817cc9c2db328846d93d2260c75290bd0ddc39ea41d"
+    },
+    {
+      "path": "data/reserved/sets.json",
+      "sha256": "3f1dcc7fba481ed8c42e17bea67a1f99b5c3fd912ca4575e57b4ed40bfcc0377"
+    },
+    {
+      "path": "data/root/inventory.json",
+      "sha256": "2bba2df6aae3a57676942f4e652cb5a8626c6da57e33578d219927daaa1161d0"
+    },
+    {
+      "path": "data/special-use/names.json",
+      "sha256": "2042a3e067728aa664d1071bdec953581be401ff780e7686a65e63c303065e21"
+    }
+  ],
+  "schema_version": 2
+}
