@@ -121,6 +121,13 @@ impl<'a> CanonicalName<'a> {
         Ok(Self { ascii })
     }
 
+    /// Own the canonical identity for returned results that outlive the input.
+    pub fn into_owned(self) -> CanonicalName<'static> {
+        CanonicalName {
+            ascii: Cow::Owned(self.ascii.into_owned()),
+        }
+    }
+
     /// Returns the canonical name without a terminal root dot.
     pub fn ascii(&self) -> &str {
         &self.ascii

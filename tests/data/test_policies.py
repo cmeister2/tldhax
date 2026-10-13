@@ -31,6 +31,7 @@ def test_reserved_categories_retain_applicability_gap() -> None:
     "adapter,text",
     [
         (special_csv, "NewName,Reference\nonion.,[RFC7686]\n"),
+        (special_csv, "\r0"),
         (special_csv, "Name,Reference\nonion.\n"),
         (special_csv, 'Name,Reference\n"onion.,[RFC7686]\n'),
         (special_use, RAW["iana.special-use.xml"].replace("subdomains", "other names")),
