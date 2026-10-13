@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "operation": "new_registration",
+  "evaluation_date": "2026-10-12",
+  "cases": [
+    {
+      "id": "org.for-profit-applicant",
+      "domain": "vanity.org",
+      "source_ids": [
+        "pir-faq"
+      ],
+      "expected": {
+        "eligibility": "not_required",
+        "gap_families": [
+          "reserved"
+        ]
+      },
+      "rationale": "The FAQ expressly permits anyone, including organizations without nonprofit status.",
+      "registrant": {
+        "entity_kind": "organization"
+      }
+    },
+    {
+      "id": "org.individual-applicant",
+      "domain": "vanity.org",
+      "source_ids": [
+        "pir-faq"
+      ],
+      "expected": {
+        "eligibility": "not_required"
+      },
+      "rationale": "The same FAQ expressly permits individuals.",
+      "registrant": {
+        "entity_kind": "individual"
+      }
+    },
+    {
+      "id": "org.short-name-gap",
+      "domain": "ab.org",
+      "source_ids": [
+        "org-2019-contract"
+      ],
+      "expected": {
+        "gap_families": [
+          "reserved",
+          "length"
+        ]
+      },
+      "rationale": "Exhibit A §5 permits phased release of short names; a blanket three-character minimum is unsupported."
+    }
+  ]
+}

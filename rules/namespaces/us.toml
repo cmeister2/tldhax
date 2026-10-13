@@ -1,0 +1,43 @@
+schema_version = 2
+
+[[namespaces]]
+selector = "us"
+forms = [["label"]]
+form_assertion_ids = ["us.form"]
+rules = ["us.nexus", "us.no-proxy", "us.no-idn", "us.no-tagged-label"]
+context = []
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["us.form"]
+gap = "The separate locality namespace is not assigned an invented generic form."
+
+[[namespaces.coverage]]
+family = "idn"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["us.no-idn"]
+
+[[namespaces.coverage]]
+family = "reserved"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["us.no-tagged-label"]
+gap = "Numeric, telephone and named reservation lists remain uncompiled."
+
+[[namespaces.coverage]]
+family = "eligibility"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["us.nexus-categories", "us.no-proxy"]
+gap = "Declared Nexus categories and proxy prohibition are checked; documentary/certification requirements remain gaps."
+
+[[namespaces.coverage]]
+family = "access"
+ascii = "partial"
+idn = "partial"
+assertion_ids = []
+gap = "Nexus certification includes location of name servers; infrastructural facts are not modeled."
+

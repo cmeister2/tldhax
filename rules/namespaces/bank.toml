@@ -1,0 +1,37 @@
+schema_version = 2
+
+[[namespaces]]
+selector = "bank"
+forms = [["label"]]
+form_assertion_ids = ["bank.form"]
+rules = ["bank.qualified-classes", "bank.no-proxy"]
+context = []
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["bank.form"]
+gap = "Ordinary second-level examples do not attest every possible allocation form."
+
+[[namespaces.coverage]]
+family = "eligibility"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["bank.qualified-classes", "bank.no-proxy"]
+gap = "Documentary checks, sanctions exemptions and discretionary approval remain gaps."
+
+[[namespaces.coverage]]
+family = "allocation"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["bank.correspondence-context"]
+gap = "No narrow exact-name requirement replaces permitted prefix, abbreviation or other correspondence."
+
+[[namespaces.coverage]]
+family = "reserved"
+ascii = "unknown"
+idn = "unknown"
+assertion_ids = ["bank.unpublished-reservations", "bank.common-name-release-context"]
+gap = "The current complete reserved-name list is not available in the controlling source."
+

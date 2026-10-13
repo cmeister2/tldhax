@@ -1,0 +1,36 @@
+schema_version = 2
+
+[[namespaces]]
+selector = "org"
+forms = [["label"]]
+form_assertion_ids = ["org.form"]
+rules = []
+context = []
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["org.form"]
+gap = "The evidenced second-level form is not a claimed exhaustive form inventory."
+
+[[namespaces.coverage]]
+family = "reserved"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["org.short-label-gap"]
+gap = "Reserved selections and approved releases need current evidence."
+
+[[namespaces.coverage]]
+family = "idn"
+ascii = "partial"
+idn = "partial"
+assertion_ids = []
+gap = "PIR supports IDNs but adopted language tables are not compiled."
+
+[[namespaces.coverage]]
+family = "eligibility"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["org.applicants-open"]
+

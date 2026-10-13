@@ -1,0 +1,345 @@
+{
+  "schema_version": 1,
+  "operation": "new_registration",
+  "evaluation_date": "2026-10-12",
+  "cases": [
+    {
+      "id": "com.sharp-s",
+      "domain": "faß.com",
+      "source_ids": [
+        "verisign-idn-rules"
+      ],
+      "expected": {
+        "name_validity": "invalid",
+        "failed_rule_ids": [
+          "com.idn-no-sharp-s"
+        ]
+      },
+      "rationale": "Verisign IDN Registration Rules §5 specifically rejects this code point, despite generic IDNA acceptance."
+    },
+    {
+      "id": "com.final-sigma",
+      "domain": "τελικός.com",
+      "source_ids": [
+        "verisign-idn-rules"
+      ],
+      "expected": {
+        "name_validity": "invalid",
+        "failed_rule_ids": [
+          "com.idn-no-final-sigma"
+        ]
+      },
+      "rationale": "Verisign IDN Registration Rules §5 specifically rejects this code point, despite generic IDNA acceptance."
+    },
+    {
+      "id": "com.ace-sharp-s",
+      "domain": "xn--fa-hia.com",
+      "source_ids": [
+        "verisign-idn-rules"
+      ],
+      "expected": {
+        "name_validity": "invalid",
+        "failed_rule_ids": [
+          "com.idn-no-sharp-s"
+        ]
+      },
+      "rationale": "The decoded A-label has the same forbidden sharp-s as the U-label."
+    },
+    {
+      "id": "com.ordinary-umlaut",
+      "domain": "bücher.com",
+      "source_ids": [
+        "verisign-idn-rules"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "com.idn-no-sharp-s",
+          "com.idn-no-final-sigma"
+        ],
+        "gap_families": [
+          "idn"
+        ]
+      },
+      "rationale": "This name contains neither specifically banned code point; language tables and variants remain unresolved."
+    },
+    {
+      "id": "com.named-reservation-no-grant",
+      "domain": "nic.com",
+      "source_ids": [
+        "com-2024-contract"
+      ],
+      "expected": {
+        "failed_rule_ids": [
+          "com.operational-reservations"
+        ]
+      },
+      "rationale": "Appendix 6 D reserves nic; the profile explicitly declares neither ICANN authorization nor qualifying Registry Operator operational use.",
+      "registrant": {
+        "com_icann_authorized_labels": [],
+        "com_registry_operational_labels": []
+      }
+    },
+    {
+      "id": "com.named-reservation-grant",
+      "domain": "nic.com",
+      "source_ids": [
+        "com-2024-contract"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "com.operational-reservations"
+        ],
+        "gap_families": [
+          "reserved"
+        ]
+      },
+      "rationale": "Appendix 6 permits express ICANN authorization; the supplied qualifying label is candidate-specific.",
+      "registrant": {
+        "com_icann_authorized_labels": [
+          "nic"
+        ],
+        "com_registry_operational_labels": []
+      }
+    },
+    {
+      "id": "com.unrelated-grant",
+      "domain": "nic.com",
+      "source_ids": [
+        "com-2024-contract"
+      ],
+      "expected": {
+        "failed_rule_ids": [
+          "com.operational-reservations"
+        ]
+      },
+      "rationale": "An authorization declaration for another label cannot exempt nic.",
+      "registrant": {
+        "com_icann_authorized_labels": [
+          "example"
+        ],
+        "com_registry_operational_labels": []
+      }
+    },
+    {
+      "id": "com.registry-operator-use",
+      "domain": "nic.com",
+      "source_ids": [
+        "com-2024-contract"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "com.operational-reservations"
+        ]
+      },
+      "rationale": "Appendix 6 D independently permits use by the Registry Operator in connection with registry operations, without a separate ICANN grant.",
+      "registrant": {
+        "com_icann_authorized_labels": [],
+        "com_registry_operational_labels": [
+          "nic"
+        ]
+      }
+    },
+    {
+      "id": "com.icann-name-no-operator-exception",
+      "domain": "iana.com",
+      "source_ids": [
+        "com-2024-contract"
+      ],
+      "expected": {
+        "failed_rule_ids": [
+          "com.named-reservations"
+        ]
+      },
+      "rationale": "The Registry Operator operational-use exception applies to D names and cannot authorize the distinct Appendix 6 A names.",
+      "registrant": {
+        "com_icann_authorized_labels": [],
+        "com_registry_operational_labels": [
+          "iana"
+        ]
+      }
+    },
+    {
+      "id": "com.two-character-release-gap",
+      "domain": "ab.com",
+      "source_ids": [
+        "com-2024-contract"
+      ],
+      "expected": {
+        "gap_families": [
+          "reserved",
+          "length"
+        ]
+      },
+      "rationale": "Appendix 6 permits later two-character releases; historical reservation does not prove a current blanket minimum."
+    },
+    {
+      "id": "net.sharp-s",
+      "domain": "faß.net",
+      "source_ids": [
+        "verisign-idn-rules"
+      ],
+      "expected": {
+        "name_validity": "invalid",
+        "failed_rule_ids": [
+          "net.idn-no-sharp-s"
+        ]
+      },
+      "rationale": "Verisign IDN Registration Rules §5 specifically rejects this code point, despite generic IDNA acceptance."
+    },
+    {
+      "id": "net.final-sigma",
+      "domain": "τελικός.net",
+      "source_ids": [
+        "verisign-idn-rules"
+      ],
+      "expected": {
+        "name_validity": "invalid",
+        "failed_rule_ids": [
+          "net.idn-no-final-sigma"
+        ]
+      },
+      "rationale": "Verisign IDN Registration Rules §5 specifically rejects this code point, despite generic IDNA acceptance."
+    },
+    {
+      "id": "net.ace-sharp-s",
+      "domain": "xn--fa-hia.net",
+      "source_ids": [
+        "verisign-idn-rules"
+      ],
+      "expected": {
+        "name_validity": "invalid",
+        "failed_rule_ids": [
+          "net.idn-no-sharp-s"
+        ]
+      },
+      "rationale": "The decoded A-label has the same forbidden sharp-s as the U-label."
+    },
+    {
+      "id": "net.ordinary-umlaut",
+      "domain": "bücher.net",
+      "source_ids": [
+        "verisign-idn-rules"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "net.idn-no-sharp-s",
+          "net.idn-no-final-sigma"
+        ],
+        "gap_families": [
+          "idn"
+        ]
+      },
+      "rationale": "This name contains neither specifically banned code point; language tables and variants remain unresolved."
+    },
+    {
+      "id": "net.named-reservation-no-grant",
+      "domain": "nic.net",
+      "source_ids": [
+        "net-2023-contract"
+      ],
+      "expected": {
+        "failed_rule_ids": [
+          "net.operational-reservations"
+        ]
+      },
+      "rationale": "Appendix 6 D reserves nic; the profile explicitly declares neither ICANN authorization nor qualifying Registry Operator operational use.",
+      "registrant": {
+        "net_icann_authorized_labels": [],
+        "net_registry_operational_labels": []
+      }
+    },
+    {
+      "id": "net.named-reservation-grant",
+      "domain": "nic.net",
+      "source_ids": [
+        "net-2023-contract"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "net.operational-reservations"
+        ],
+        "gap_families": [
+          "reserved"
+        ]
+      },
+      "rationale": "Appendix 6 permits express ICANN authorization; the supplied qualifying label is candidate-specific.",
+      "registrant": {
+        "net_icann_authorized_labels": [
+          "nic"
+        ],
+        "net_registry_operational_labels": []
+      }
+    },
+    {
+      "id": "net.unrelated-grant",
+      "domain": "nic.net",
+      "source_ids": [
+        "net-2023-contract"
+      ],
+      "expected": {
+        "failed_rule_ids": [
+          "net.operational-reservations"
+        ]
+      },
+      "rationale": "An authorization declaration for another label cannot exempt nic.",
+      "registrant": {
+        "net_icann_authorized_labels": [
+          "example"
+        ],
+        "net_registry_operational_labels": []
+      }
+    },
+    {
+      "id": "net.registry-operator-use",
+      "domain": "nic.net",
+      "source_ids": [
+        "net-2023-contract"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "net.operational-reservations"
+        ]
+      },
+      "rationale": "Appendix 6 D independently permits use by the Registry Operator in connection with registry operations, without a separate ICANN grant.",
+      "registrant": {
+        "net_icann_authorized_labels": [],
+        "net_registry_operational_labels": [
+          "nic"
+        ]
+      }
+    },
+    {
+      "id": "net.icann-name-no-operator-exception",
+      "domain": "iana.net",
+      "source_ids": [
+        "net-2023-contract"
+      ],
+      "expected": {
+        "failed_rule_ids": [
+          "net.named-reservations"
+        ]
+      },
+      "rationale": "The Registry Operator operational-use exception applies to D names and cannot authorize the distinct Appendix 6 A names.",
+      "registrant": {
+        "net_icann_authorized_labels": [],
+        "net_registry_operational_labels": [
+          "iana"
+        ]
+      }
+    },
+    {
+      "id": "net.two-character-release-gap",
+      "domain": "ab.net",
+      "source_ids": [
+        "net-2023-contract"
+      ],
+      "expected": {
+        "gap_families": [
+          "reserved",
+          "length"
+        ]
+      },
+      "rationale": "Appendix 6 permits later two-character releases; historical reservation does not prove a current blanket minimum."
+    }
+  ]
+}

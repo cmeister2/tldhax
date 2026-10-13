@@ -1,0 +1,368 @@
+{
+  "schema_version": 1,
+  "operation": "new_registration",
+  "evaluation_date": "2026-10-12",
+  "cases": [
+    {
+      "id": "au.one-character",
+      "domain": "a.au",
+      "source_ids": [
+        "auda-licensing"
+      ],
+      "expected": {
+        "name_validity": "invalid",
+        "failed_rule_ids": [
+          "au.minimum-two"
+        ]
+      },
+      "rationale": "Current §2.7.1(1) requires at least two characters."
+    },
+    {
+      "id": "au.minimum-two",
+      "domain": "ab.au",
+      "source_ids": [
+        "auda-licensing"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "au.minimum-two",
+          "au.ascii-only-current"
+        ],
+        "gap_families": [
+          "length"
+        ]
+      },
+      "rationale": "Two ASCII characters satisfy the stated minimum; maximum coverage is not fabricated from this clause."
+    },
+    {
+      "id": "au.idn-ulabel",
+      "domain": "bücher.au",
+      "source_ids": [
+        "auda-licensing"
+      ],
+      "expected": {
+        "name_validity": "invalid",
+        "failed_rule_ids": [
+          "au.ascii-only-current"
+        ],
+        "absent_rule_ids": [
+          "au.future-idn-uncommenced"
+        ]
+      },
+      "rationale": "§1.2.4 leaves IDN commencement to be advised; current §2.7.1(2) is ASCII-only."
+    },
+    {
+      "id": "au.idn-alabel",
+      "domain": "xn--bcher-kva.au",
+      "source_ids": [
+        "auda-licensing"
+      ],
+      "expected": {
+        "name_validity": "invalid",
+        "failed_rule_ids": [
+          "au.ascii-only-current"
+        ],
+        "absent_rule_ids": [
+          "au.future-idn-uncommenced"
+        ]
+      },
+      "rationale": "§1.2.4 leaves IDN commencement to be advised; current §2.7.1(2) is ASCII-only."
+    },
+    {
+      "id": "com-au.one-character",
+      "domain": "a.com.au",
+      "source_ids": [
+        "auda-licensing"
+      ],
+      "expected": {
+        "name_validity": "invalid",
+        "failed_rule_ids": [
+          "com-au.minimum-two"
+        ]
+      },
+      "rationale": "Current §2.7.1(1) requires at least two characters."
+    },
+    {
+      "id": "com-au.minimum-two",
+      "domain": "ab.com.au",
+      "source_ids": [
+        "auda-licensing"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "com-au.minimum-two",
+          "com-au.ascii-only-current"
+        ],
+        "gap_families": [
+          "length"
+        ]
+      },
+      "rationale": "Two ASCII characters satisfy the stated minimum; maximum coverage is not fabricated from this clause."
+    },
+    {
+      "id": "com-au.idn-ulabel",
+      "domain": "bücher.com.au",
+      "source_ids": [
+        "auda-licensing"
+      ],
+      "expected": {
+        "name_validity": "invalid",
+        "failed_rule_ids": [
+          "com-au.ascii-only-current"
+        ],
+        "absent_rule_ids": [
+          "com-au.future-idn-uncommenced"
+        ]
+      },
+      "rationale": "§1.2.4 leaves IDN commencement to be advised; current §2.7.1(2) is ASCII-only."
+    },
+    {
+      "id": "com-au.idn-alabel",
+      "domain": "xn--bcher-kva.com.au",
+      "source_ids": [
+        "auda-licensing"
+      ],
+      "expected": {
+        "name_validity": "invalid",
+        "failed_rule_ids": [
+          "com-au.ascii-only-current"
+        ],
+        "absent_rule_ids": [
+          "com-au.future-idn-uncommenced"
+        ]
+      },
+      "rationale": "§1.2.4 leaves IDN commencement to be advised; current §2.7.1(2) is ASCII-only."
+    },
+    {
+      "id": "au.citizen",
+      "domain": "vanity.au",
+      "source_ids": [
+        "auda-licensing"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "au.australian-presence"
+        ],
+        "gap_families": [
+          "eligibility",
+          "reserved",
+          "allocation"
+        ]
+      },
+      "rationale": "Australian citizenship is an enumerated Australian Presence basis; all other policy families remain independent.",
+      "registrant": {
+        "entity_kind": "individual",
+        "citizenships": [
+          "AU"
+        ],
+        "au_permanent_resident": false,
+        "au_presence_basis": "none"
+      }
+    },
+    {
+      "id": "au.incorporated-association",
+      "domain": "vanity.au",
+      "source_ids": [
+        "auda-licensing"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "au.australian-presence"
+        ]
+      },
+      "rationale": "§1.4 expressly includes an association incorporated under State or Territory legislation, without requiring a separate ABN.",
+      "registrant": {
+        "entity_kind": "organization",
+        "au_presence_basis": "incorporated_association"
+      }
+    },
+    {
+      "id": "au.registrable-australian-body",
+      "domain": "vanity.au",
+      "source_ids": [
+        "auda-licensing"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "au.australian-presence"
+        ]
+      },
+      "rationale": "§1.4 Registrable Body includes an Australian registrable body with ARBN, as well as qualifying foreign companies.",
+      "registrant": {
+        "entity_kind": "organization",
+        "au_presence_basis": "registrable_australian_body"
+      }
+    },
+    {
+      "id": "au.nonqualifying-association",
+      "domain": "vanity.au",
+      "source_ids": [
+        "auda-licensing"
+      ],
+      "expected": {
+        "failed_rule_ids": [
+          "au.australian-presence"
+        ]
+      },
+      "rationale": "An association outside all qualified statutory/presence alternatives cannot gain presence merely by calling itself an association.",
+      "registrant": {
+        "entity_kind": "organization",
+        "citizenships": [],
+        "au_permanent_resident": false,
+        "au_presence_basis": "none"
+      }
+    },
+    {
+      "id": "au.foreign-no-presence",
+      "domain": "vanity.au",
+      "source_ids": [
+        "auda-licensing"
+      ],
+      "expected": {
+        "failed_rule_ids": [
+          "au.australian-presence"
+        ]
+      },
+      "rationale": "The profile explicitly declares no listed Australian Presence basis.",
+      "registrant": {
+        "entity_kind": "individual",
+        "citizenships": [
+          "GB"
+        ],
+        "au_permanent_resident": false,
+        "au_presence_basis": "none"
+      }
+    },
+    {
+      "id": "au.trademark-exact-label",
+      "domain": "vanity.au",
+      "source_ids": [
+        "auda-licensing"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "au.australian-presence"
+        ]
+      },
+      "rationale": "§2.4.5 requires the candidate exact match when Australian Presence relies solely on an Australian trademark.",
+      "registrant": {
+        "entity_kind": "individual",
+        "citizenships": [
+          "GB"
+        ],
+        "au_permanent_resident": false,
+        "au_presence_basis": "australian_trademark",
+        "au_trademark_exact_labels": [
+          "vanity"
+        ]
+      }
+    },
+    {
+      "id": "au.trademark-other-label",
+      "domain": "unrelated.au",
+      "source_ids": [
+        "auda-licensing"
+      ],
+      "expected": {
+        "failed_rule_ids": [
+          "au.australian-presence"
+        ]
+      },
+      "rationale": "A qualifying exact trademark label cannot establish presence for a different candidate.",
+      "registrant": {
+        "entity_kind": "individual",
+        "citizenships": [
+          "GB"
+        ],
+        "au_permanent_resident": false,
+        "au_presence_basis": "australian_trademark",
+        "au_trademark_exact_labels": [
+          "vanity"
+        ]
+      }
+    },
+    {
+      "id": "com-au.no-commercial-class",
+      "domain": "vanity.com.au",
+      "source_ids": [
+        "auda-licensing"
+      ],
+      "expected": {
+        "failed_rule_ids": [
+          "com-au.commercial-class"
+        ]
+      },
+      "rationale": "§2.4.4(1) independently requires a Commercial Entity class.",
+      "registrant": {
+        "entity_kind": "individual",
+        "citizenships": [
+          "AU"
+        ],
+        "au_permanent_resident": false,
+        "au_presence_basis": "none",
+        "au_commercial_basis": "none"
+      }
+    },
+    {
+      "id": "com-au.commercial-company",
+      "domain": "vanity.com.au",
+      "source_ids": [
+        "auda-licensing"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "com-au.australian-presence",
+          "com-au.commercial-class"
+        ],
+        "gap_families": [
+          "allocation",
+          "eligibility"
+        ]
+      },
+      "rationale": "The company and Commercial Entity categories are enumerated; correspondence to goods/services need not equal the company name exactly.",
+      "registrant": {
+        "entity_kind": "organization",
+        "au_presence_basis": "australian_company",
+        "au_commercial_basis": "corporations_act_company"
+      }
+    },
+    {
+      "id": "com-au.incorporated-association",
+      "domain": "vanity.com.au",
+      "source_ids": [
+        "auda-licensing"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "com-au.australian-presence",
+          "com-au.commercial-class"
+        ]
+      },
+      "rationale": "§1.4 independently includes State/Territory incorporated associations in Australian Presence and Commercial Entity.",
+      "registrant": {
+        "entity_kind": "organization",
+        "au_presence_basis": "incorporated_association",
+        "au_commercial_basis": "incorporated_association"
+      }
+    },
+    {
+      "id": "com-au.registrable-australian-body",
+      "domain": "vanity.com.au",
+      "source_ids": [
+        "auda-licensing"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "com-au.australian-presence",
+          "com-au.commercial-class"
+        ]
+      },
+      "rationale": "A qualifying Australian registrable body with ARBN satisfies both §1.4 definitions, not only the Commercial Entity one.",
+      "registrant": {
+        "entity_kind": "organization",
+        "au_presence_basis": "registrable_australian_body",
+        "au_commercial_basis": "registrable_body"
+      }
+    }
+  ]
+}

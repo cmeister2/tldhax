@@ -1,0 +1,148 @@
+schema_version = 2
+
+[[namespaces]]
+selector = "com"
+forms = [["label"]]
+form_assertion_ids = ["com.form"]
+rules = ["com.named-reservations", "com.operational-reservations", "com.idn-no-sharp-s", "com.idn-no-final-sigma"]
+context = []
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["com.form"]
+gap = "One registration form is evidenced; additional forms are not declared impossible."
+
+[[namespaces.coverage]]
+family = "length"
+ascii = "unknown"
+idn = "unknown"
+assertion_ids = []
+gap = "No registry-specific bound is asserted from DNS defaults."
+
+[[namespaces.coverage]]
+family = "characters"
+ascii = "unknown"
+idn = "unknown"
+assertion_ids = []
+gap = "DNS normalization does not establish complete registry policy."
+
+[[namespaces.coverage]]
+family = "idn"
+ascii = "unknown"
+idn = "partial"
+assertion_ids = ["com.idn-language-context", "com.idn-registry-offering", "com.idn-variant-context"]
+gap = "Language-specific tables and variant allocation remain unmodeled."
+
+[[namespaces.coverage]]
+family = "reserved"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["com.named-reservations", "com.operational-reservations", "com.short-release-gap"]
+gap = "Named restrictions are reviewed; release/waiver completeness is unresolved."
+
+[[namespaces.coverage]]
+family = "allocation"
+ascii = "unknown"
+idn = "unknown"
+assertion_ids = []
+gap = "No complete allocation declaration is attested."
+
+[[namespaces.coverage]]
+family = "access"
+ascii = "unknown"
+idn = "unknown"
+assertion_ids = []
+gap = "No complete access declaration is attested."
+
+[[namespaces.coverage]]
+family = "eligibility"
+ascii = "unknown"
+idn = "unknown"
+assertion_ids = []
+gap = "No complete applicant eligibility declaration is attested."
+
+[[namespaces]]
+selector = "net"
+forms = [["label"]]
+form_assertion_ids = ["net.form"]
+rules = ["net.named-reservations", "net.operational-reservations", "net.idn-no-sharp-s", "net.idn-no-final-sigma"]
+context = []
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["net.form"]
+gap = "One registration form is evidenced; additional forms are not declared impossible."
+
+[[namespaces.coverage]]
+family = "length"
+ascii = "unknown"
+idn = "unknown"
+assertion_ids = []
+gap = "No registry-specific bound is asserted from DNS defaults."
+
+[[namespaces.coverage]]
+family = "characters"
+ascii = "unknown"
+idn = "unknown"
+assertion_ids = []
+gap = "DNS normalization does not establish complete registry policy."
+
+[[namespaces.coverage]]
+family = "idn"
+ascii = "unknown"
+idn = "partial"
+assertion_ids = ["net.idn-language-context", "net.idn-registry-offering", "net.idn-variant-context"]
+gap = "Language-specific tables and variant allocation remain unmodeled."
+
+[[namespaces.coverage]]
+family = "reserved"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["net.named-reservations", "net.operational-reservations", "net.short-release-gap"]
+gap = "Named restrictions are reviewed; release/waiver completeness is unresolved."
+
+[[namespaces.coverage]]
+family = "allocation"
+ascii = "unknown"
+idn = "unknown"
+assertion_ids = []
+gap = "No complete allocation declaration is attested."
+
+[[namespaces.coverage]]
+family = "access"
+ascii = "unknown"
+idn = "unknown"
+assertion_ids = []
+gap = "No complete access declaration is attested."
+
+[[namespaces.coverage]]
+family = "eligibility"
+ascii = "unknown"
+idn = "unknown"
+assertion_ids = []
+gap = "No complete applicant eligibility declaration is attested."
+
+[[label_sets]]
+id = "com.published-reserved"
+labels = ["aso", "gnso", "icann", "internic", "ccnso", "afrinic", "apnic", "arin", "example", "gtld-servers", "iab", "iana", "iana-servers", "iesg", "ietf", "irtf", "istf", "lacnic", "latnic", "rfc-editor", "ripe", "root-servers"]
+assertion_ids = ["com.named-reservations"]
+
+[[label_sets]]
+id = "com.operational-reserved"
+labels = ["nic", "whois", "www"]
+assertion_ids = ["com.operational-reservations"]
+
+[[label_sets]]
+id = "net.published-reserved"
+labels = ["aso", "gnso", "icann", "internic", "ccnso", "afrinic", "apnic", "arin", "example", "gtld-servers", "iab", "iana", "iana-servers", "iesg", "ietf", "irtf", "istf", "lacnic", "latnic", "rfc-editor", "ripe", "root-servers"]
+assertion_ids = ["net.named-reservations"]
+
+[[label_sets]]
+id = "net.operational-reserved"
+labels = ["nic", "whois", "www"]
+assertion_ids = ["net.operational-reservations"]
+
