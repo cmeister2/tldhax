@@ -46,6 +46,25 @@ pub enum FactKind {
     StringSet,
 }
 
+/// Optional string syntax checked independently of finite allowed values.
+#[derive(Debug, Clone, Copy, Deserialize, Serialize, PartialEq, Eq)]
+#[serde(rename_all = "snake_case")]
+pub enum FactStringFormat {
+    /// Exactly two uppercase ASCII letters, as used by country-code facts.
+    UppercaseAlpha2,
+}
+
+impl FactStringFormat {
+    /// Check the declared syntax against one string literal.
+    pub fn matches(self, value: &str) -> bool {
+        match self {
+            Self::UppercaseAlpha2 => {
+                value.len() == 2 && value.bytes().all(|b| b.is_ascii_uppercase())
+            }
+        }
+    }
+}
+
 /// Typed applicant-profile field declaration shared by its referencing predicates.
 #[derive(Debug, Clone, Deserialize)]
 #[serde(deny_unknown_fields)]
@@ -57,6 +76,9 @@ pub struct Fact {
     /// Optional finite string enumeration; an empty vector permits any matching string.
     #[serde(default)]
     pub allowed_values: Vec<String>,
+    /// Optional syntax restriction on strings and string-set members.
+    #[serde(default)]
+    pub string_format: Option<FactStringFormat>,
 }
 
 /// Finite policy expression compiled into static runtime predicates.

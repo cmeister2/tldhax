@@ -4,12 +4,8 @@ from __future__ import annotations
 
 
 def test_tld_info_known_suffix(registry) -> None:
-    """Known suffixes should return their compiled metadata."""
-    info = registry.tld_info("co.uk")
-    assert info is not None
-    assert info.tld == "co.uk"
-    assert info.registerable == "yes"
-    assert info.min_length == 3
+    """Discovery alone cannot supply a complete legacy policy summary."""
+    assert registry.tld_info("co.uk") is None
 
 
 def test_tld_info_unknown_suffix(registry) -> None:

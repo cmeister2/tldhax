@@ -9,7 +9,9 @@ fn value_matches(value: &Value, fact: &Fact) -> bool {
     match (value, fact.kind) {
         (Value::Boolean(_), FactKind::Boolean) => true,
         (Value::String(s), FactKind::String | FactKind::StringSet) => {
-            s.len() <= 512 && (fact.allowed_values.is_empty() || fact.allowed_values.contains(s))
+            s.len() <= 512
+                && !fact.string_format.is_some_and(|format| !format.matches(s))
+                && (fact.allowed_values.is_empty() || fact.allowed_values.contains(s))
         }
         _ => false,
     }

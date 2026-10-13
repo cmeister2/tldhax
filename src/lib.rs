@@ -7,6 +7,7 @@ mod compiled;
 mod idn_eval;
 pub mod inventory_types;
 pub mod normalization;
+pub mod namespace_info;
 pub mod policy_types;
 pub mod predicate_eval;
 pub mod predicate_types;
@@ -22,15 +23,14 @@ pub mod types;
 #[path = "../build_support/mod.rs"]
 mod compiler_stages;
 
-/// Compiled legacy TLD rules and known suffixes emitted by the build script.
-mod generated {
-    include!(concat!(env!("OUT_DIR"), "/generated_rules.rs"));
-}
-
-pub use generated::{KNOWN_SUFFIXES, TLD_RULES, TOTAL_KNOWN_SUFFIXES};
+pub use compiled::{KNOWN_SUFFIXES, TLD_RULES, TOTAL_KNOWN_SUFFIXES};
 
 pub use registry::Registry;
 pub use types::{
     Charset, CheckResult, CheckStatus, LengthBasis, Reason, Registerable, RegistryStats, TldRule,
     TldRuleSummary,
 };
+
+// Shared private policy assessment helpers.
+mod assessment_support;
+pub mod evaluator;

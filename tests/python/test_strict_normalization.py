@@ -21,7 +21,9 @@ def test_equivalent_input_forms_have_identical_results(registry) -> None:
 
 def test_root_dot_mapping_and_input_budget(registry) -> None:
     """One mapped root dot is permitted; preprocessing limits remain explicit."""
-    assert registry.check("example。com。").status == registry.check("example.com").status
+    assert (
+        registry.check("example。com。").status == registry.check("example.com").status
+    )
     result = registry.check(" " * 4097)
-    assert result.status == "no"
+    assert result.status == "unknown"
     assert result.reasons[0].startswith("Input limit:")

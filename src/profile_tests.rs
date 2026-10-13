@@ -8,16 +8,19 @@ const SCHEMAS: &[FactSchema] = &[
         field: "applicant_kind",
         kind: FactKind::String,
         allowed_values: &["individual", "organisation"],
+        string_format: None,
     },
     FactSchema {
         field: "citizenships",
         kind: FactKind::StringSet,
         allowed_values: &["US", "DE"],
+        string_format: None,
     },
     FactSchema {
         field: "us.presence",
         kind: FactKind::Boolean,
         allowed_values: &[],
+        string_format: None,
     },
 ];
 
@@ -91,6 +94,7 @@ fn enforces_input_budgets_and_omits_values_from_debug() {
         field: "rights",
         kind: FactKind::String,
         allowed_values: &[],
+        string_format: None,
     }];
     let value = "x".repeat(MAX_FACT_BYTES + 1);
     assert_eq!(
@@ -105,9 +109,119 @@ fn enforces_input_budgets_and_omits_values_from_debug() {
         field: "rights",
         kind: FactKind::StringSet,
         allowed_values: &[],
+        string_format: None,
     }];
     let profile =
         RegistrantProfile::from_json(r#"{"rights":["private-trademark-claim"]}"#, &set_schema)
             .unwrap();
     assert!(!format!("{:?}", profile.get("rights")).contains("private-trademark-claim"));
+}
+
+/// Scalar and set country fields accept structural codes without an exhaustive list.
+const COUNTRY_SCHEMAS: &[FactSchema] = &[
+    FactSchema {
+        field: "residence",
+        kind: FactKind::String,
+        allowed_values: &[],
+        string_format: Some(FactStringFormat::UppercaseAlpha2),
+    },
+    FactSchema {
+        field: "citizenships",
+        kind: FactKind::StringSet,
+        allowed_values: &[],
+        string_format: Some(FactStringFormat::UppercaseAlpha2),
+    },
+];
+
+/// Structural country-code validation accepts uppercase scalar and set facts and preserves set identity.
+#[test]
+fn country_formats_accept_uppercase_scalars_and_set_entries() {
+    let profile = RegistrantProfile::from_json(
+        r#"{"residence":"PR","citizenships":["GB","PR","GB"]}"#,
+        COUNTRY_SCHEMAS,
+    )
+    .unwrap();
+    assert_eq!(
+        profile.get("residence"),
+        Some(&ProfileFact::String("PR".into()))
+    );
+    assert_eq!(
+        profile.get("citizenships"),
+        Some(&ProfileFact::StringSet(vec!["GB".into(), "PR".into()]))
+    );
+}
+
+/// Every country-code value must contain exactly two uppercase ASCII letters, including each set member.
+#[test]
+fn country_formats_reject_malformed_scalars_and_each_set_entry() {
+    for invalid in [
+        "pr",
+        "gB",
+        "United Kingdom",
+        " PR",
+        "PR ",
+        "P",
+        "PRI",
+        "P1",
+        "",
+        "PR\n",
+        "GB\0",
+        "Å",
+        "ＰＲ",
+        "ΡR",
+        "PＲ",
+    ] {
+        for input in [
+            serde_json::json!({"residence": invalid}),
+            serde_json::json!({"citizenships": ["GB", invalid, "PR"]}),
+        ] {
+            let error =
+                RegistrantProfile::from_json(&input.to_string(), COUNTRY_SCHEMAS).unwrap_err();
+            assert_eq!(error, ProfileError::InvalidValue);
+            assert_eq!(error.code(), "invalid_profile_value");
+            assert_eq!(format!("{error:?}"), "InvalidValue");
+        }
+    }
+}
+
+/// Country-code formatting leaves missing declarations and explicitly empty sets distinguishable.
+#[test]
+fn country_formats_preserve_missing_facts_and_explicit_empty_sets() {
+    let absent = RegistrantProfile::from_json("{}", COUNTRY_SCHEMAS).unwrap();
+    assert_eq!(absent.get("residence"), None);
+    assert_eq!(absent.get("citizenships"), None);
+    let empty = RegistrantProfile::from_json(r#"{"citizenships":[]}"#, COUNTRY_SCHEMAS).unwrap();
+    assert_eq!(empty.get("residence"), None);
+    assert_eq!(
+        empty.get("citizenships"),
+        Some(&ProfileFact::StringSet(vec![]))
+    );
+}
+
+/// Unformatted strings remain unrestricted, while formatted enumerations enforce both constraints.
+#[test]
+fn string_format_is_optional_and_composes_with_explicit_enumerations() {
+    let plain = [FactSchema {
+        field: "description",
+        kind: FactKind::String,
+        allowed_values: &[],
+        string_format: None,
+    }];
+    let unrestricted =
+        RegistrantProfile::from_json(r#"{"description":"United Kingdom "}"#, &plain).unwrap();
+    assert_eq!(
+        unrestricted.get("description"),
+        Some(&ProfileFact::String("United Kingdom ".into()))
+    );
+    let enumerated = [FactSchema {
+        field: "residence",
+        kind: FactKind::String,
+        allowed_values: &["GB"],
+        string_format: Some(FactStringFormat::UppercaseAlpha2),
+    }];
+    assert!(RegistrantProfile::from_json(r#"{"residence":"GB"}"#, &enumerated).is_ok());
+    assert_eq!(
+        RegistrantProfile::from_json(r#"{"residence":"PR"}"#, &enumerated),
+        Err(ProfileError::InvalidValue)
+    );
 }

@@ -72,12 +72,28 @@ fn unsupported_interpretation_cannot_be_presented_as_reviewed() {
     assert!(compilation.rust.contains("Knowledge::Conflicting"));
 }
 
+/// Verify that legacy de research without reviewed evidence has no rules or registration forms.
+#[test]
+fn legacy_de_research_without_reviewed_evidence_has_no_rules_or_registration_forms() {
+    let document = schema::Document {
+        legacy: vec![schema::LegacyResearch {
+            selector: "de".into(),
+            source_links: vec!["https://example.invalid/synthetic-legacy-policy".into()],
+            provenance: "synthetic/legacy-de.toml".into(),
+        }],
+        ..schema::Document::default()
+    };
+    let compilation = run(document).unwrap();
+    assert!(compilation.rust.contains("LegacyResearch{selector:\"de\""));
+    assert!(!compilation.rust.contains("CompiledRule{id:"));
+    assert!(compilation.supplements.is_empty());
+}
+
 /// Verify that repository compilation retains legacy claims as unapproved research.
 #[test]
 fn repository_compilation_retains_legacy_claims_as_unapproved_research() {
     let compilation = compile(&PathBuf::from(env!("CARGO_MANIFEST_DIR"))).unwrap();
     assert!(compilation.rust.contains("pub static LEGACY_RESEARCH"));
-    assert!(!compilation.rust.contains("CompiledRule{id:\"de."));
     assert!(compilation.fingerprint.starts_with("2026-10-12+"));
     assert!(compilation
         .input_paths

@@ -6,7 +6,7 @@ use serde::de::{self, MapAccess, Visitor};
 use serde::{Deserialize, Deserializer};
 use serde_json::Value;
 
-use crate::policy_types::{FactKind, FactSchema};
+use crate::policy_types::{FactKind, FactSchema, FactStringFormat};
 
 /// Maximum UTF-8 bytes in a serialized registrant profile.
 pub const MAX_PROFILE_BYTES: usize = 65_536;
@@ -49,7 +49,7 @@ pub enum ProfileError {
     UnknownField,
     /// A value has the wrong declared type.
     WrongType,
-    /// A string is outside the field's documented enumeration.
+    /// A string violates the field's declared format or enumeration.
     InvalidValue,
 }
 
@@ -87,8 +87,8 @@ impl RegistrantProfile {
     ///
     /// # Errors
     /// Returns a stable error for excess budgets, duplicate/unknown fields,
-    /// nested objects, incorrect types or disallowed enumeration values.
-    pub fn from_json(input: &str, schemas: &[FactSchema]) -> Result<Self, ProfileError> {
+    /// nested objects, incorrect types or disallowed string values.
+    pub(crate) fn from_json(input: &str, schemas: &[FactSchema]) -> Result<Self, ProfileError> {
         if input.len() > MAX_PROFILE_BYTES {
             return Err(ProfileError::InputLimit);
         }
@@ -143,10 +143,17 @@ impl RegistrantProfile {
     }
 }
 
-/// Check budgets and explicitly declared enumeration values.
+/// Check budgets, explicitly declared string formats and enumeration values.
 fn validate_string(value: &str, schema: &FactSchema) -> Result<(), ProfileError> {
     if value.len() > MAX_FACT_BYTES {
         return Err(ProfileError::InputLimit);
+    }
+    if matches!(
+        schema.string_format,
+        Some(FactStringFormat::UppercaseAlpha2)
+    ) && (value.len() != 2 || !value.bytes().all(|byte| byte.is_ascii_uppercase()))
+    {
+        return Err(ProfileError::InvalidValue);
     }
     if !schema.allowed_values.is_empty() && !schema.allowed_values.contains(&value) {
         return Err(ProfileError::InvalidValue);

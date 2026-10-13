@@ -1,5 +1,4 @@
 //! Immutable outputs of offline evidence, inventory and routing compilation.
-// These tables are connected to the assessment API in the following slices.
 #![allow(dead_code, unused_imports)]
 
 /// Evidence records, predicate rules and coverage for the pinned release.
@@ -20,7 +19,7 @@ mod compatibility {
     include!(concat!(env!("OUT_DIR"), "/generated_compatibility.rs"));
 }
 
-pub(crate) use compatibility::*;
+pub use compatibility::*;
 pub(crate) use inventory::*;
 pub(crate) use policy::*;
 pub(crate) use routing::*;
