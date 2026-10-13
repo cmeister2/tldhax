@@ -4,10 +4,23 @@ from __future__ import annotations
 
 
 def test_known_domains(registry) -> None:
-    """Unreviewed legacy claims cannot approve or prohibit valid candidates."""
-    for name in ("vanity.xyz", "vanity.ai", "vanity.com.ai", "za.sk"):
-        assert registry.check(name).status == "unknown"
+    """Legacy shapes retain proven denial and explicit incomplete research."""
+    for domain in [
+        "foo.co.uk",
+        "ab.co.uk",
+        "za.sk",
+        "example.google",
+        "vanity.com",
+        "something.mo.us",
+        "max.de",
+    ]:
+        result = registry.check(domain)
+        assert result.status == "unknown"
+        assert isinstance(result.reasons, list)
+        assert all(isinstance(reason, str) for reason in result.reasons)
     assert registry.check("example.test").status == "no"
+    assert registry.check("example.com").status == "no"
+    assert registry.check("uk.co.uk").status == "no"
 
 
 def test_unknown_tld(registry) -> None:

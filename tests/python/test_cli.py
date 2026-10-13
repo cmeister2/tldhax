@@ -22,18 +22,21 @@ def test_check_json_output() -> None:
     result = run_cli("check", "za.sk", "--json")
     payload = json.loads(result.stdout)
     assert result.returncode == 2
-    assert payload["status"] == "unknown"
+    assert payload["status"] == payload["name_validity"] == "unknown"
+    assert payload["canonical_ascii"] == "za.sk"
 
 
 def test_info_output() -> None:
-    """The old info command cannot invent a complete legacy policy summary."""
+    """The info command should print a human-readable summary."""
     result = run_cli("info", "co.uk")
-    assert result.returncode == 2
-    assert "No data available" in result.stdout
+    assert result.returncode == 0
+    assert "Namespace: co.uk" in result.stdout
+    assert "length: ASCII conflicting" in result.stdout
 
 
 def test_stats_output() -> None:
     """The stats command should print aggregate registry statistics."""
     result = run_cli("stats")
     assert result.returncode == 0
-    assert "Coverage: 0.0%" in result.stdout
+    assert "Active delegated roots:" in result.stdout
+    assert "Evidence assertions:" in result.stdout

@@ -3,8 +3,11 @@
 use std::collections::BTreeMap;
 
 use pyo3::prelude::*;
-use pyo3::types::PyDict;
+use pyo3::types::{PyDict, PyList, PyString};
 
+use crate::python_assessment::{self, NativePreparedProfile, PyAssessment};
+use crate::python_namespace::{self, PyNamespaceInfo};
+use crate::python_records;
 use crate::registry::Registry as RustRegistry;
 use crate::types::{CheckResult, RegistryStats, TldRuleSummary};
 
@@ -121,15 +124,109 @@ impl PyRegistry {
         }
     }
 
-    fn check(&self, domain: &str) -> PyCheckResult {
-        self.inner.check(domain).into()
+    fn check(&self, domain: &Bound<'_, PyString>) -> PyResult<PyCheckResult> {
+        if python_assessment::character_count(domain) > crate::normalization::MAX_INPUT_BYTES {
+            let witness = "a".repeat(crate::normalization::MAX_INPUT_BYTES + 1);
+            return Ok(self.inner.check(&witness).into());
+        }
+        Ok(self
+            .inner
+            .check(domain.to_str().unwrap_or("\u{fffd}"))
+            .into())
     }
 
-    fn tld_info(&self, tld: &str) -> Option<PyTldInfo> {
+    fn prepare_registrant(
+        &self,
+        profile_json: &Bound<'_, PyString>,
+    ) -> PyResult<NativePreparedProfile> {
+        python_assessment::prepare(&self.inner, profile_json)
+    }
+
+    #[pyo3(signature = (domain, registrant=None, *, detailed=false, include_private=false))]
+    fn assess(
+        &self,
+        py: Python<'_>,
+        domain: &Bound<'_, PyString>,
+        registrant: Option<&NativePreparedProfile>,
+        detailed: bool,
+        include_private: bool,
+    ) -> PyResult<PyAssessment> {
+        python_assessment::assess(
+            py,
+            &self.inner,
+            domain,
+            registrant,
+            detailed,
+            include_private,
+        )
+    }
+
+    #[pyo3(signature = (domains, registrant=None, *, detailed=false, include_private=false))]
+    fn assess_many(
+        &self,
+        py: Python<'_>,
+        domains: &Bound<'_, PyList>,
+        registrant: Option<&NativePreparedProfile>,
+        detailed: bool,
+        include_private: bool,
+    ) -> PyResult<Vec<PyAssessment>> {
+        python_assessment::assess_many(
+            py,
+            &self.inner,
+            domains,
+            registrant,
+            detailed,
+            include_private,
+        )
+    }
+
+    fn namespace_info(&self, namespace: &Bound<'_, PyString>) -> PyResult<Option<PyNamespaceInfo>> {
+        if python_assessment::character_count(namespace) > crate::normalization::MAX_INPUT_BYTES {
+            return Ok(None);
+        }
+        Ok(namespace
+            .to_str()
+            .ok()
+            .and_then(|value| self.inner.namespace_info(value))
+            .map(Into::into))
+    }
+
+    fn dataset_info(&self, py: Python<'_>) -> PyResult<Py<PyAny>> {
+        python_namespace::dataset(&self.inner, py)
+    }
+
+    fn dataset_stats(&self, py: Python<'_>) -> PyResult<Py<PyAny>> {
+        python_namespace::statistics(&self.inner, py)
+    }
+
+    fn profile_schema(&self, py: Python<'_>) -> PyResult<Py<PyAny>> {
+        python_namespace::profile_schema(&self.inner, py)
+    }
+
+    fn source(&self, py: Python<'_>, id: &str) -> PyResult<Option<Py<PyAny>>> {
         self.inner
-            .tld_info(tld)
+            .source(id)
+            .map(|value| python_records::object(py, &python_records::source(value)))
+            .transpose()
+    }
+
+    fn assertion(&self, py: Python<'_>, id: &str) -> PyResult<Option<Py<PyAny>>> {
+        self.inner
+            .assertion(id)
+            .map(|value| python_records::object(py, &python_records::assertion(value)))
+            .transpose()
+    }
+
+    fn tld_info(&self, tld: &Bound<'_, PyString>) -> PyResult<Option<PyTldInfo>> {
+        if python_assessment::character_count(tld) > crate::normalization::MAX_INPUT_BYTES {
+            return Ok(None);
+        }
+        Ok(tld
+            .to_str()
+            .ok()
+            .and_then(|value| self.inner.tld_info(value))
             .map(TldRuleSummary::from)
-            .map(Into::into)
+            .map(Into::into))
     }
 
     fn rule_count(&self) -> usize {
@@ -163,5 +260,8 @@ pub fn _native(_py: Python<'_>, module: &Bound<'_, PyModule>) -> PyResult<()> {
     module.add_class::<PyRegistry>()?;
     module.add_class::<PyCheckResult>()?;
     module.add_class::<PyTldInfo>()?;
+    module.add_class::<PyAssessment>()?;
+    module.add_class::<NativePreparedProfile>()?;
+    module.add_class::<PyNamespaceInfo>()?;
     Ok(())
 }
