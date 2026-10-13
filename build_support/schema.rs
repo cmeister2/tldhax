@@ -5,9 +5,9 @@ use serde::Deserialize;
 use super::idn_schema::IdnProfile;
 use super::predicates::{Fact, Predicate};
 
-/// Reviewed knowledge state for one assertion or rule-family coverage claim.
 #[derive(Debug, Clone, Copy, Deserialize, PartialEq, Eq, PartialOrd, Ord)]
 #[serde(rename_all = "snake_case")]
+/// Reviewed knowledge state for one assertion or rule-family coverage claim.
 pub enum Knowledge {
     /// Current reviewed evidence supports the stated claim.
     Reviewed,
@@ -21,9 +21,9 @@ pub enum Knowledge {
     NotApplicable,
 }
 
-/// Independent policy dimensions whose coverage is reviewed separately.
 #[derive(Debug, Clone, Copy, Deserialize, PartialEq, Eq, PartialOrd, Ord)]
 #[serde(rename_all = "snake_case")]
+/// Independent policy dimensions whose coverage is reviewed separately.
 pub enum Family {
     /// Permitted namespace and registration-form structure.
     Namespace,
@@ -55,9 +55,9 @@ pub const FAMILIES: [Family; 8] = [
     Family::Eligibility,
 ];
 
-/// Input representation class covered by an evidence assertion.
 #[derive(Debug, Clone, Copy, Deserialize, PartialEq, Eq)]
 #[serde(rename_all = "snake_case")]
+/// Input representation class covered by an evidence assertion.
 pub enum Class {
     /// ASCII registration names only.
     Ascii,
@@ -67,9 +67,9 @@ pub enum Class {
     Any,
 }
 
-/// How a predicate participates in registration assessment.
 #[derive(Debug, Clone, Copy, Deserialize, PartialEq, Eq)]
 #[serde(rename_all = "snake_case")]
+/// How a predicate participates in registration assessment.
 pub enum Effect {
     /// The predicate must hold for registration.
     Require,
@@ -79,9 +79,9 @@ pub enum Effect {
     Context,
 }
 
-/// Versioned publisher evidence with a stable identity and verifiable snapshot hash.
 #[derive(Debug, Clone, Deserialize)]
 #[serde(deny_unknown_fields)]
+/// Versioned publisher evidence with a stable identity and verifiable snapshot hash.
 pub struct Source {
     /// Stable machine-readable identity used by references in authoring records.
     pub id: String,
@@ -95,8 +95,8 @@ pub struct Source {
     pub fetched_url: String,
     /// Hexadecimal SHA-256 digest of the declared hash representation.
     pub sha256: String,
-    /// Snapshot representation hashed, such as original bytes or extracted text.
     #[serde(default = "original_bytes")]
+    /// Snapshot representation hashed, such as original bytes or extracted text.
     pub hash_representation: String,
     /// Publisher version or other identifier distinguishing this evidence edition.
     pub version: String,
@@ -115,11 +115,11 @@ fn original_bytes() -> String {
     "original_bytes".into()
 }
 
+#[derive(Debug, Clone, Deserialize)]
+#[serde(deny_unknown_fields)]
 /// Reviewed interpretation of a source clause, with explicit scope and applicability.
 ///
 /// An enforceable predicate does not imply complete coverage of its rule family.
-#[derive(Debug, Clone, Deserialize)]
-#[serde(deny_unknown_fields)]
 pub struct Assertion {
     /// Stable machine-readable identity used by references in authoring records.
     pub id: String,
@@ -141,8 +141,8 @@ pub struct Assertion {
     pub effect: Effect,
     /// Authored evidence state, subject to applicability and review expiry.
     pub knowledge: Knowledge,
-    /// Explicit whole-family completeness attestation, independent of predicate truth.
     #[serde(default)]
+    /// Explicit whole-family completeness attestation, independent of predicate truth.
     pub attests_completeness: bool,
     /// Reviewer explanation connecting the cited clause to the authored rule.
     pub interpretation: String,
@@ -164,9 +164,9 @@ pub struct Assertion {
     pub code: Option<String>,
 }
 
-/// Authored completeness claim for one family, tracked separately for ASCII and IDN.
 #[derive(Debug, Clone, Deserialize)]
 #[serde(deny_unknown_fields)]
+/// Authored completeness claim for one family, tracked separately for ASCII and IDN.
 pub struct Coverage {
     /// Rule family whose policy or completeness is described.
     pub family: Family,
@@ -174,16 +174,16 @@ pub struct Coverage {
     pub ascii: Knowledge,
     /// Completeness knowledge for internationalized registration names.
     pub idn: Knowledge,
-    /// Assertions attesting completeness or non-applicability for this rule family.
     #[serde(default)]
+    /// Assertions attesting completeness or non-applicability for this rule family.
     pub assertion_ids: Vec<String>,
     /// Optional explanation of missing or unresolved family coverage.
     pub gap: Option<String>,
 }
 
-/// Explicit replacement of an inherited rule backed by a rationale and evidence.
 #[derive(Debug, Clone, Deserialize)]
 #[serde(deny_unknown_fields)]
+/// Explicit replacement of an inherited rule backed by a rationale and evidence.
 pub struct Override {
     /// Identity of the inherited rule removed by this override.
     pub replaces: String,
@@ -195,38 +195,38 @@ pub struct Override {
     pub assertion_ids: Vec<String>,
 }
 
-/// Authored namespace policy before inheritance and evidence activation are resolved.
 #[derive(Debug, Clone, Deserialize)]
 #[serde(deny_unknown_fields)]
+/// Authored namespace policy before inheritance and evidence activation are resolved.
 pub struct Namespace {
     /// Exact or single-wildcard namespace key, canonicalized before compilation.
     pub selector: String,
+    #[serde(default)]
     /// Registration shapes, listing each applicant-controlled label role in order.
-    #[serde(default)]
     pub forms: Vec<Vec<String>>,
+    #[serde(default)]
     /// Assertions explicitly approving the authored registration shapes.
-    #[serde(default)]
     pub form_assertion_ids: Vec<String>,
+    #[serde(default)]
     /// Identities of reusable profiles inherited by this namespace.
-    #[serde(default)]
     pub profiles: Vec<String>,
+    #[serde(default)]
     /// Assertion identities selected for predicate enforcement.
-    #[serde(default)]
     pub rules: Vec<String>,
+    #[serde(default)]
     /// Evidence-backed replacements applied after inherited rules are collected.
-    #[serde(default)]
     pub overrides: Vec<Override>,
+    #[serde(default)]
     /// Explicit per-family completeness claims resolved against active evidence.
-    #[serde(default)]
     pub coverage: Vec<Coverage>,
-    /// Non-enforcing contextual explanations retained in the compiled policy.
     #[serde(default)]
+    /// Non-enforcing contextual explanations retained in the compiled policy.
     pub context: Vec<String>,
 }
 
-/// Reusable policy fragment that needs namespace-specific applicability evidence.
 #[derive(Debug, Clone, Deserialize)]
 #[serde(deny_unknown_fields)]
+/// Reusable policy fragment that needs namespace-specific applicability evidence.
 pub struct Profile {
     /// Stable machine-readable identity used by references in authoring records.
     pub id: String,
@@ -234,23 +234,23 @@ pub struct Profile {
     pub applicability: Vec<String>,
     /// Assertions proving the profile applies to the relevant registration forms.
     pub applicability_assertions: Vec<String>,
+    #[serde(default)]
     /// Parent profile identities, expanded before the profile with cycle checks.
-    #[serde(default)]
     pub extends: Vec<String>,
+    #[serde(default)]
     /// Assertion identities selected for predicate enforcement.
-    #[serde(default)]
     pub rules: Vec<String>,
+    #[serde(default)]
     /// Explicit per-family completeness claims resolved against active evidence.
-    #[serde(default)]
     pub coverage: Vec<Coverage>,
-    /// Non-enforcing contextual explanations retained in the compiled policy.
     #[serde(default)]
+    /// Non-enforcing contextual explanations retained in the compiled policy.
     pub context: Vec<String>,
 }
 
-/// Finite named labels backed by assertions defining their namespace and form scope.
 #[derive(Debug, Clone, Deserialize)]
 #[serde(deny_unknown_fields)]
+/// Finite named labels backed by assertions defining their namespace and form scope.
 pub struct LabelSet {
     /// Stable machine-readable identity used by references in authoring records.
     pub id: String,
@@ -260,8 +260,8 @@ pub struct LabelSet {
     pub assertion_ids: Vec<String>,
 }
 
-/// Collected authoring inputs; validation canonicalizes keys before resolution.
 #[derive(Debug, Default)]
+/// Collected authoring inputs; validation canonicalizes keys before resolution.
 pub struct Document {
     /// Publisher evidence records used by the collected assertions.
     pub sources: Vec<Source>,
@@ -281,8 +281,8 @@ pub struct Document {
     pub legacy: Vec<LegacyResearch>,
 }
 
-/// Unreviewed legacy source leads retained without supplying enforceable policy.
 #[derive(Debug, Clone)]
+/// Unreviewed legacy source leads retained without supplying enforceable policy.
 pub struct LegacyResearch {
     /// Legacy suffix identity, canonicalized when normalization of the authored key succeeds.
     pub selector: String,
@@ -292,9 +292,9 @@ pub struct LegacyResearch {
     pub provenance: String,
 }
 
-/// Versioned TOML container for publisher evidence records.
 #[derive(Debug, Deserialize)]
 #[serde(deny_unknown_fields)]
+/// Versioned TOML container for publisher evidence records.
 pub struct SourceFile {
     /// Authoring schema version; loading accepts the supported version only.
     pub schema_version: u16,
@@ -302,9 +302,9 @@ pub struct SourceFile {
     pub sources: Vec<Source>,
 }
 
-/// Versioned TOML container for interpreted source assertions.
 #[derive(Debug, Deserialize)]
 #[serde(deny_unknown_fields)]
+/// Versioned TOML container for interpreted source assertions.
 pub struct AssertionFile {
     /// Authoring schema version; loading accepts the supported version only.
     pub schema_version: u16,
@@ -312,25 +312,25 @@ pub struct AssertionFile {
     pub assertions: Vec<Assertion>,
 }
 
-/// Versioned TOML container for namespace policies and their reusable assets.
 #[derive(Debug, Deserialize)]
 #[serde(deny_unknown_fields)]
+/// Versioned TOML container for namespace policies and their reusable assets.
 pub struct AuthoringFile {
     /// Authoring schema version; loading accepts the supported version only.
     pub schema_version: u16,
+    #[serde(default)]
     /// Namespace policy definitions contained in this authoring file.
-    #[serde(default)]
     pub namespaces: Vec<Namespace>,
+    #[serde(default)]
     /// Reusable policy profile definitions contained in this authoring file.
-    #[serde(default)]
     pub profiles: Vec<Profile>,
+    #[serde(default)]
     /// Evidence-backed finite label sets used by membership predicates.
-    #[serde(default)]
     pub label_sets: Vec<LabelSet>,
+    #[serde(default)]
     /// Adopted finite IDN repertoires and explicit unsupported features.
-    #[serde(default)]
     pub idn_profiles: Vec<IdnProfile>,
-    /// Typed applicant-profile fields referenced by predicates.
     #[serde(default)]
+    /// Typed applicant-profile fields referenced by predicates.
     pub facts: Vec<Fact>,
 }

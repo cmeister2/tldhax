@@ -5,8 +5,8 @@ use super::*;
 use predicates::{FactKind, Predicate, Value};
 use schema::{Class, Family, Knowledge};
 
-/// Verify that unicode literals and fixed positions survive emission without dns sanitisation.
 #[test]
+/// Verify that unicode literals and fixed positions survive emission without dns sanitisation.
 fn unicode_literals_and_fixed_positions_survive_emission_without_dns_sanitisation() {
     let mut document = fixture();
     document.assertions[1].predicate = Some(Predicate::LabelPattern {
@@ -29,8 +29,8 @@ fn unicode_literals_and_fixed_positions_survive_emission_without_dns_sanitisatio
     assert!(run(document).unwrap().rust.contains("positions:&[2, 3]"));
 }
 
-/// Verify that string set membership and name relationships are typed.
 #[test]
+/// Verify that string set membership and name relationships are typed.
 fn string_set_membership_and_name_relationships_are_typed() {
     let mut document = fixture();
     document.facts.push(predicates::Fact {
@@ -61,8 +61,8 @@ fn string_set_membership_and_name_relationships_are_typed() {
     assert!(run(document).unwrap_err().contains("String or StringSet"));
 }
 
-/// Verify that scoped reserved sets cannot spill to other namespaces.
 #[test]
+/// Verify that scoped reserved sets cannot spill to other namespaces.
 fn scoped_reserved_sets_cannot_spill_to_other_namespaces() {
     let mut document = fixture();
     let mut list = assertion("fixture.list", Family::Reserved, None);
@@ -82,8 +82,8 @@ fn scoped_reserved_sets_cannot_spill_to_other_namespaces() {
         .contains("outside assertion scope"));
 }
 
-/// Verify that empty sets do not come from absence of a published list.
 #[test]
+/// Verify that empty sets do not come from absence of a published list.
 fn empty_sets_do_not_come_from_absence_of_a_published_list() {
     let mut document = fixture();
     document
@@ -130,8 +130,8 @@ fn idn_fixture() -> schema::Document {
     document
 }
 
-/// Verify that unsupported idn features and variants are gaps not implicit denials.
 #[test]
+/// Verify that unsupported idn features and variants are gaps not implicit denials.
 fn unsupported_idn_features_and_variants_are_gaps_not_implicit_denials() {
     let mut document = idn_fixture();
     document.idn_profiles[0].unsupported_features = vec!["ordering_rule".into()];
@@ -152,8 +152,8 @@ fn unsupported_idn_features_and_variants_are_gaps_not_implicit_denials() {
         .contains("variant_allocation_relationship"));
 }
 
-/// Verify that complete repertoire requires reviewed active adopted table evidence.
 #[test]
+/// Verify that complete repertoire requires reviewed active adopted table evidence.
 fn complete_repertoire_requires_reviewed_active_adopted_table_evidence() {
     let mut document = idn_fixture();
     document.idn_profiles[0].repertoire_complete = false;
@@ -173,8 +173,8 @@ fn complete_repertoire_requires_reviewed_active_adopted_table_evidence() {
     assert!(output.rust.contains("knowledge:Knowledge::Unknown"));
 }
 
-/// Verify that incomplete repertoire syntax cannot claim independently complete ranges.
 #[test]
+/// Verify that incomplete repertoire syntax cannot claim independently complete ranges.
 fn incomplete_repertoire_syntax_cannot_claim_independently_complete_ranges() {
     for feature in [
         "repertoire_element:property",
@@ -196,8 +196,8 @@ fn incomplete_repertoire_syntax_cannot_claim_independently_complete_ranges() {
     assert!(output.rust.contains("knowledge:Knowledge::Partial"));
 }
 
-/// Verify that invalid idn ranges and unadopted scope cannot compile.
 #[test]
+/// Verify that invalid idn ranges and unadopted scope cannot compile.
 fn invalid_idn_ranges_and_unadopted_scope_cannot_compile() {
     let mut document = idn_fixture();
     document.idn_profiles[0].ranges = vec![[0xd700, 0xe000]];
@@ -207,8 +207,8 @@ fn invalid_idn_ranges_and_unadopted_scope_cannot_compile() {
     assert!(run(document).unwrap_err().contains("scope"));
 }
 
-/// Verify that overriding requires explicit rationale and compatible evidence.
 #[test]
+/// Verify that overriding requires explicit rationale and compatible evidence.
 fn overriding_requires_explicit_rationale_and_compatible_evidence() {
     let mut document = fixture();
     let mut replacement = document.assertions[1].clone();
@@ -235,8 +235,8 @@ fn overriding_requires_explicit_rationale_and_compatible_evidence() {
     assert!(run(document).unwrap_err().contains("override"));
 }
 
-/// Verify that whole rule overrides cannot silently narrow input or form scope.
 #[test]
+/// Verify that whole rule overrides cannot silently narrow input or form scope.
 fn whole_rule_overrides_cannot_silently_narrow_input_or_form_scope() {
     let scoped_override = || {
         let mut document = fixture();
@@ -276,8 +276,8 @@ fn whole_rule_overrides_cannot_silently_narrow_input_or_form_scope() {
     assert!(run(document).unwrap_err().contains("incompatible override"));
 }
 
-/// Verify that nested boolean contradictions cannot hide behind different shapes.
 #[test]
+/// Verify that nested boolean contradictions cannot hide behind different shapes.
 fn nested_boolean_contradictions_cannot_hide_behind_different_shapes() {
     let mut document = fixture();
     let original = document.assertions[1].predicate.clone().unwrap();
@@ -295,8 +295,8 @@ fn nested_boolean_contradictions_cannot_hide_behind_different_shapes() {
         .contains("propositional conflict"));
 }
 
-/// Verify that not applicable metadata cannot enforce or approve registration forms.
 #[test]
+/// Verify that not applicable metadata cannot enforce or approve registration forms.
 fn not_applicable_metadata_cannot_enforce_or_approve_registration_forms() {
     let mut document = fixture();
     document.assertions[1].knowledge = Knowledge::NotApplicable;
@@ -310,8 +310,8 @@ fn not_applicable_metadata_cannot_enforce_or_approve_registration_forms() {
     assert!(run(document).unwrap().supplements.is_empty());
 }
 
-/// Verify that inactive successors do not erase complete current coverage.
 #[test]
+/// Verify that inactive successors do not erase complete current coverage.
 fn inactive_successors_do_not_erase_complete_current_coverage() {
     let mut document = fixture();
     let mut successor = document.assertions[1].clone();
@@ -332,8 +332,8 @@ fn inactive_successors_do_not_erase_complete_current_coverage() {
         .contains("ascii:Knowledge::Unknown"));
 }
 
-/// Verify that minimum only policy has no fabricated registry maximum.
 #[test]
+/// Verify that minimum only policy has no fabricated registry maximum.
 fn minimum_only_policy_has_no_fabricated_registry_maximum() {
     let mut document = fixture();
     document.assertions[1].predicate = Some(Predicate::LabelMinimum {
@@ -347,8 +347,8 @@ fn minimum_only_policy_has_no_fabricated_registry_maximum() {
         .contains("Predicate::LabelMinimum{component:0,min:2,basis:LengthMeasure::Ascii}"));
 }
 
-/// Verify that contradictory minimum and maximum rules are rejected.
 #[test]
+/// Verify that contradictory minimum and maximum rules are rejected.
 fn contradictory_minimum_and_maximum_rules_are_rejected() {
     let mut document = fixture();
     document.assertions[1].predicate = Some(Predicate::LabelMinimum {
@@ -368,8 +368,8 @@ fn contradictory_minimum_and_maximum_rules_are_rejected() {
     assert!(run(document).unwrap_err().contains("conflict"));
 }
 
-/// Verify that separately scoped form and completeness evidence combine without invented scope.
 #[test]
+/// Verify that separately scoped form and completeness evidence combine without invented scope.
 fn separately_scoped_form_and_completeness_evidence_combine_without_invented_scope() {
     let mut document = fixture();
     document.namespaces[0]
@@ -396,8 +396,8 @@ fn separately_scoped_form_and_completeness_evidence_combine_without_invented_sco
         .contains("ascii:Knowledge::Reviewed,idn:Knowledge::Unknown"));
 }
 
-/// Verify that a future form does not erase current form completeness.
 #[test]
+/// Verify that a future form does not erase current form completeness.
 fn a_future_form_does_not_erase_current_form_completeness() {
     let mut document = fixture();
     document.namespaces[0]
@@ -418,8 +418,8 @@ fn a_future_form_does_not_erase_current_form_completeness() {
         .contains("ascii:Knowledge::Reviewed,idn:Knowledge::Unknown"));
 }
 
-/// Verify that another active form needs its own complete family scope.
 #[test]
+/// Verify that another active form needs its own complete family scope.
 fn another_active_form_needs_its_own_complete_family_scope() {
     let mut document = fixture();
     document.namespaces[0]
@@ -429,8 +429,8 @@ fn another_active_form_needs_its_own_complete_family_scope() {
     assert!(run(document).unwrap_err().contains("scoped completeness"));
 }
 
-/// Verify that missing or expired form approval cannot infer a closed namespace.
 #[test]
+/// Verify that missing or expired form approval cannot infer a closed namespace.
 fn missing_or_expired_form_approval_cannot_infer_a_closed_namespace() {
     for approval in ["missing", "expired", "empty"] {
         let mut document = fixture();
@@ -464,8 +464,8 @@ fn missing_or_expired_form_approval_cannot_infer_a_closed_namespace() {
     }
 }
 
-/// Verify that single class form evidence cannot approve universal registration forms.
 #[test]
+/// Verify that single class form evidence cannot approve universal registration forms.
 fn single_class_form_evidence_cannot_approve_universal_registration_forms() {
     let mut document = fixture();
     document.assertions[0].input_class = Class::Ascii;
@@ -474,8 +474,8 @@ fn single_class_form_evidence_cannot_approve_universal_registration_forms() {
         .contains("form assertion scope mismatch"));
 }
 
-/// Verify that idn only table adoption cannot supply an any class predicate.
 #[test]
+/// Verify that idn only table adoption cannot supply an any class predicate.
 fn idn_only_table_adoption_cannot_supply_an_any_class_predicate() {
     let mut document = idn_fixture();
     document.assertions[1].input_class = Class::Any;
@@ -500,8 +500,8 @@ fn shared_profile(document: &mut schema::Document, evidence: Vec<String>) {
         .push("fixture.shared".into());
 }
 
-/// Verify that future form and profile references do not block current inheritance.
 #[test]
+/// Verify that future form and profile references do not block current inheritance.
 fn future_form_and_profile_references_do_not_block_current_inheritance() {
     let mut document = fixture();
     document.namespaces[0]
@@ -524,8 +524,8 @@ fn future_form_and_profile_references_do_not_block_current_inheritance() {
     assert!(output.rust.contains("CompiledRule{id:\"fixture.length\""));
 }
 
-/// Verify that distinct profile applicability proofs combine and each current form needs one.
 #[test]
+/// Verify that distinct profile applicability proofs combine and each current form needs one.
 fn distinct_profile_applicability_proofs_combine_and_each_current_form_needs_one() {
     let mut document = fixture();
     document.namespaces[0]
@@ -555,8 +555,8 @@ fn distinct_profile_applicability_proofs_combine_and_each_current_form_needs_one
         .contains("applicability evidence"));
 }
 
-/// Verify that necessary inherited rules need scope evidence without approving forms.
 #[test]
+/// Verify that necessary inherited rules need scope evidence without approving forms.
 fn necessary_inherited_rules_need_scope_evidence_without_approving_forms() {
     let mut document = fixture();
     document.namespaces[0].form_assertion_ids.clear();
@@ -583,8 +583,8 @@ fn necessary_inherited_rules_need_scope_evidence_without_approving_forms() {
         .contains("applicability evidence"));
 }
 
-/// Verify that shared profiles cannot gain universal scope from ascii or empty evidence.
 #[test]
+/// Verify that shared profiles cannot gain universal scope from ascii or empty evidence.
 fn shared_profiles_cannot_gain_universal_scope_from_ascii_or_empty_evidence() {
     let mut document = fixture();
     let mut applicability = document.assertions[0].clone();

@@ -2,8 +2,8 @@
 
 use super::*;
 
-/// Verify that synthetic multiform authoring round trips through typed schema.
 #[test]
+/// Verify that synthetic multiform authoring round trips through typed schema.
 fn synthetic_multiform_authoring_round_trips_through_typed_schema() {
     let parsed: schema::AuthoringFile =
         toml::from_str(include_str!("../tests/compiler/authoring.toml")).unwrap();
@@ -19,8 +19,8 @@ fn synthetic_multiform_authoring_round_trips_through_typed_schema() {
     assert_eq!(parsed.facts[0].kind, predicates::FactKind::StringSet);
 }
 
-/// Verify that unknown predicate or namespace fields are rejected.
 #[test]
+/// Verify that unknown predicate or namespace fields are rejected.
 fn unknown_predicate_or_namespace_fields_are_rejected() {
     let unknown =
         "schema_version=2\n[[namespaces]]\nselector='fixture'\ninferred_registerable=true\n";

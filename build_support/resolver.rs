@@ -8,7 +8,7 @@ use serde::Deserialize;
 
 /// Active reviewed registration forms; the policy compiler approves these records.
 pub struct Supplement<'a> {
-    /// Exact or single-wildcard namespace selector.
+    /// Exact or single-wildcard namespace selector approved by the policy compiler.
     pub selector: &'a str,
     /// Assertions approving these registration shapes.
     pub evidence_ids: &'a [&'a str],
@@ -16,16 +16,16 @@ pub struct Supplement<'a> {
     pub applicant_label_counts: &'a [u8],
 }
 
-/// Minimal versioned root inventory shape needed to build registration routes.
 #[derive(Deserialize)]
+/// Minimal versioned root inventory shape needed to build registration routes.
 struct Roots {
     /// Inventory format version checked before routing generation.
     schema_version: u8,
     /// Root records checked for canonical uniqueness and active delegation.
     roots: Vec<Root>,
 }
-/// Delegation status for one canonical root routing key.
 #[derive(Deserialize)]
+/// Delegation status for one canonical root routing key.
 struct Root {
     /// Root label canonicalized with the runtime registration normalizer.
     tld: String,
@@ -34,16 +34,16 @@ struct Root {
     /// Published state; an active root must be marked delegated.
     inventory_state: String,
 }
-/// Versioned parsed public suffix inventory used for routing only.
 #[derive(Deserialize)]
+/// Versioned parsed public suffix inventory used for routing only.
 struct Psl {
     /// Inventory format version checked before routing generation.
     schema_version: u8,
     /// Complete parsed ICANN and private public-suffix-list rule rows.
     rules: Vec<PslRule>,
 }
-/// One authored public suffix rule and its parsed kind and section.
 #[derive(Deserialize)]
+/// One authored public suffix rule and its parsed kind and section.
 struct PslRule {
     /// Original PSL selector, including any wildcard or exception prefix.
     rule: String,
@@ -55,8 +55,8 @@ struct PslRule {
     section: String,
 }
 
-/// Canonical validated routing row with deterministic ordering and reviewed metadata.
 #[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord)]
+/// Canonical validated routing row with deterministic ordering and reviewed metadata.
 struct Rule {
     /// Inventory, ICANN, private or reviewed routing provenance.
     section: &'static str,
@@ -74,8 +74,8 @@ struct Rule {
     counts: Vec<u8>,
 }
 
-/// Mutable reverse-label trie node before breadth-first flattening.
 #[derive(Default)]
+/// Mutable reverse-label trie node before breadth-first flattening.
 struct Node {
     /// One reversed suffix label; the root node has an empty label.
     label: String,

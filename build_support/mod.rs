@@ -1,6 +1,4 @@
 //! Build-only evidence validation and static policy compilation.
-// Serde authoring records and helper functions are private build implementation;
-// they are not exposed through the library API. Runtime types are documented.
 
 mod check_predicates;
 pub mod compatibility;
@@ -22,8 +20,8 @@ pub mod validate;
 use schema::{Document, Effect, Knowledge};
 use std::path::{Path, PathBuf};
 
-/// Owned reviewed routing supplement produced from approved registration forms.
 #[derive(Debug)]
+/// Owned reviewed routing supplement produced from approved registration forms.
 pub struct Supplement {
     /// Exact or wildcard namespace key whose registration forms were approved.
     pub selector: String,
@@ -33,8 +31,8 @@ pub struct Supplement {
     pub applicant_label_counts: Vec<u8>,
 }
 
-/// Validated static policy source and inputs needed for reproducible Cargo builds.
 #[derive(Debug)]
+/// Validated static policy source and inputs needed for reproducible Cargo builds.
 pub struct Compilation {
     /// Generated Rust policy tables ready to write into the Cargo output directory.
     pub rust: String,
@@ -161,6 +159,6 @@ mod tests_resolution;
 mod tests_schema;
 
 #[cfg(test)]
-mod tests_compile;
-#[cfg(test)]
 mod tests_assets;
+#[cfg(test)]
+mod tests_compile;

@@ -24,8 +24,8 @@ pub(crate) fn character_count(value: &Bound<'_, PyString>) -> usize {
     unsafe { pyo3::ffi::PyUnicode_GetLength(value.as_ptr()) as usize }
 }
 
-/// Validated registrant facts reusable across assessments without exposing values.
 #[pyclass(name = "PreparedRegistrant", frozen, skip_from_py_object)]
+/// Validated registrant facts reusable across assessments without exposing values.
 pub struct NativePreparedProfile {
     /// Rust profile retained for predicate evaluation only.
     pub(crate) inner: RegistrantProfile,
@@ -246,7 +246,7 @@ pub fn prepare(
 /// Evaluate one Python string and own its bounded result outside the GIL.
 ///
 /// # Errors
-/// Returns a Python allocation error while constructing the bound result.
+/// This function currently returns no Python errors; invalid names are assessments.
 pub fn assess(
     py: Python<'_>,
     registry: &Registry,

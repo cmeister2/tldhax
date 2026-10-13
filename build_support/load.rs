@@ -249,13 +249,13 @@ pub fn fingerprint(evaluation_date: &str, inputs: &BTreeMap<String, Vec<u8>>) ->
     format!("{evaluation_date}+{:x}", hash.finalize())
 }
 
-/// Portable release identity paths reject unsafe or platform-specific framing.
 #[cfg(test)]
+/// Portable release identity paths reject unsafe or platform-specific framing.
 mod tests {
     use super::*;
 
-    /// Verify that discovered input keys use portable separators and reject escapes.
     #[test]
+    /// Verify that discovered input keys use portable separators and reject escapes.
     fn discovered_input_keys_use_portable_separators_and_reject_escapes() {
         let root = std::env::temp_dir().join("portable-release-key");
         for components in [

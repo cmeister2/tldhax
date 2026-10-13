@@ -24,13 +24,13 @@ pub(crate) use inventory::*;
 pub(crate) use policy::*;
 pub(crate) use routing::*;
 
-/// Checks that generated tables agree with the pinned discovery snapshots.
 #[cfg(test)]
+/// Checks that generated tables agree with the pinned discovery snapshots.
 mod tests {
     use super::*;
 
-    /// Verify each knowledge dimension counts the entire discovered inventory.
     #[test]
+    /// Verify each knowledge dimension counts the entire discovered inventory.
     fn knowledge_statistics_include_every_discovered_namespace() {
         use crate::registry_stats::KnowledgeCounts;
         let total = |c: KnowledgeCounts| {
@@ -49,8 +49,8 @@ mod tests {
         assert_eq!(LEGACY_COVERAGE_PERCENT, 0.0);
     }
 
-    /// Verify inventory sizes, wildcard routes and the published dataset identity.
     #[test]
+    /// Verify inventory sizes, wildcard routes and the published dataset identity.
     fn complete_pinned_tables_compile_and_preserve_discovery_scope() {
         assert_eq!(ROOT_INVENTORY.len(), 1_437);
         assert_eq!(INVENTORY_COUNTS.active_roots, ROOT_INVENTORY.len());

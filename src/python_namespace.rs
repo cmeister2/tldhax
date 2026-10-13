@@ -8,8 +8,8 @@ use crate::policy_types::RuleEffect;
 use crate::python_records::{self as records, family, input_class, knowledge};
 use crate::registry::Registry;
 
-/// Inventory, routing and evidence metadata for one normalized namespace.
 #[pyclass(name = "NamespaceInfo", frozen, skip_from_py_object)]
+/// Inventory, routing and evidence metadata for one normalized namespace.
 pub struct PyNamespaceInfo {
     /// Owned namespace identity and references to immutable compiled records.
     inner: NamespaceInfo,

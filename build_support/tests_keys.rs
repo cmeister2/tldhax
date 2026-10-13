@@ -2,8 +2,8 @@
 
 use super::{keys, schema};
 
-/// Verify that calendar validation checks leap years and exact spelling.
 #[test]
+/// Verify that calendar validation checks leap years and exact spelling.
 fn calendar_validation_checks_leap_years_and_exact_spelling() {
     for valid in ["2024-02-29", "2000-02-29", "2026-10-12", "0001-01-01"] {
         assert!(keys::date(valid).is_ok(), "{valid}");
@@ -23,8 +23,8 @@ fn calendar_validation_checks_leap_years_and_exact_spelling() {
     }
 }
 
-/// Verify that authored keys share registration normalization.
 #[test]
+/// Verify that authored keys share registration normalization.
 fn authored_keys_share_registration_normalization() {
     assert_eq!(keys::selector("É.FIXTURE.").unwrap(), "xn--9ca.fixture");
     assert_eq!(keys::selector("*.É.fixture").unwrap(), "*.xn--9ca.fixture");
@@ -40,8 +40,8 @@ fn authored_keys_share_registration_normalization() {
     }
 }
 
-/// Verify that stable record ids are unique and machine safe.
 #[test]
+/// Verify that stable record ids are unique and machine safe.
 fn stable_record_ids_are_unique_and_machine_safe() {
     assert!(keys::unique(&["rule.one", "rule-two"], |id| id, "rule").is_ok());
     for invalid in [vec![""], vec!["é"], vec!["one", "one"], vec!["two words"]] {
@@ -49,8 +49,8 @@ fn stable_record_ids_are_unique_and_machine_safe() {
     }
 }
 
-/// Verify that explicit current attestation and exclusive end control activation.
 #[test]
+/// Verify that explicit current attestation and exclusive end control activation.
 fn explicit_current_attestation_and_exclusive_end_control_activation() {
     let today = "2026-10-12";
     assert_eq!(
@@ -73,8 +73,8 @@ fn explicit_current_attestation_and_exclusive_end_control_activation() {
     assert!(keys::temporal(Some(today), Some("2026-10-11"), None, today).is_err());
 }
 
-/// Verify that future and expired reviews cannot approve current policy.
 #[test]
+/// Verify that future and expired reviews cannot approve current policy.
 fn future_and_expired_reviews_cannot_approve_current_policy() {
     let mut assertion: schema::Assertion = serde_json::from_str(
         r#"{

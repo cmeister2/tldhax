@@ -35,3 +35,18 @@ jobs:
           pytest -q tests/python/test_assessment_properties.py
       - name: Offline sdist rebuild and installed wheel smoke
         run: python scripts/package_check.py --work-directory "$RUNNER_TEMP/tldhax-package-check"
+      - name: Offline release performance measurement
+        env:
+          CARGO_NET_OFFLINE: "true"
+        run: |
+          maturin build --release --locked --offline --interpreter python --out "$RUNNER_TEMP/tldhax-perf-wheel"
+          python -m pip install --no-index --no-deps --force-reinstall "$RUNNER_TEMP/tldhax-perf-wheel"/*.whl
+          python tools/release_benchmark.py --native > performance-report.json
+      - name: Retain performance observations
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-performance-report
+          path: performance-report.json
+          if-no-files-found: warn
+          retention-days: 90

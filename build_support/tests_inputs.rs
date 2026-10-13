@@ -7,7 +7,8 @@ use std::sync::atomic::{AtomicUsize, Ordering};
 /// Own an isolated temporary test tree and remove it when the fixture is dropped.
 struct Tree(
     /// Owned temporary root removed when the fixture guard is dropped.
-    PathBuf);
+    PathBuf,
+);
 impl Drop for Tree {
     /// Remove the temporary fixture directory when its owner goes out of scope.
     fn drop(&mut self) {
@@ -50,8 +51,8 @@ fn make_tree() -> Tree {
     Tree(path)
 }
 
-/// Verify that legacy registerability is retained as research only.
 #[test]
+/// Verify that legacy registerability is retained as research only.
 fn legacy_registerability_is_retained_as_research_only() {
     let tree = make_tree();
     std::fs::create_dir(tree.0.join("rules")).unwrap();
@@ -78,8 +79,8 @@ fn legacy_registerability_is_retained_as_research_only() {
     );
 }
 
-/// Verify that ordinary build rejects changed or omitted packaged inputs.
 #[test]
+/// Verify that ordinary build rejects changed or omitted packaged inputs.
 fn ordinary_build_rejects_changed_or_omitted_packaged_inputs() {
     let tree = make_tree();
     std::fs::write(tree.0.join("data/psl/rules.json"), "{}").unwrap();
@@ -99,8 +100,8 @@ fn ordinary_build_rejects_changed_or_omitted_packaged_inputs() {
         .contains("omits compiled authoritative input"));
 }
 
-/// Verify that release identity changes with policy and normalization inputs.
 #[test]
+/// Verify that release identity changes with policy and normalization inputs.
 fn release_identity_changes_with_policy_and_normalization_inputs() {
     let mut inputs = std::collections::BTreeMap::new();
     inputs.insert("rules/fixture.toml".into(), b"first policy".to_vec());

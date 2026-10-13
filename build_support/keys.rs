@@ -3,8 +3,8 @@
 use super::schema::{Assertion, Knowledge};
 use std::collections::BTreeSet;
 
-/// Assertion activation and effective knowledge at the pinned evaluation date.
 #[derive(Debug, Clone)]
+/// Assertion activation and effective knowledge at the pinned evaluation date.
 pub struct Status {
     /// Whether the assertion is current, reviewed and applicable for enforcement.
     pub active: bool,

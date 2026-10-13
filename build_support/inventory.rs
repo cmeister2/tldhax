@@ -8,15 +8,15 @@ use std::path::Path;
 #[path = "inventory_checks.rs"]
 mod checks;
 
-/// Derived factual metadata for one active IANA root; access policy is not inferred.
 #[derive(Debug, Deserialize)]
+/// Derived factual metadata for one active IANA root; access policy is not inferred.
 struct Root {
     /// Canonical ASCII root label.
     tld: String,
     /// Whether the root is delegated in the derived inventory.
     active: bool,
-    /// Published IANA root classification, independent of registration access.
     #[serde(rename = "type")]
+    /// Published IANA root classification, independent of registration access.
     kind: String,
     /// Registry operator named in the IANA delegation record.
     operator: String,
@@ -38,8 +38,8 @@ struct Root {
     source_ids: Vec<String>,
 }
 
-/// Special-use name designation and its published reference provenance.
 #[derive(Debug, Deserialize)]
+/// Special-use name designation and its published reference provenance.
 struct Designation {
     /// Canonical ASCII name covered by the special-use designation.
     name: String,
@@ -213,8 +213,8 @@ pub fn generate(root: &Path, out_dir: &Path) -> Result<(), String> {
     std::fs::write(out_dir.join("generated_inventory.rs"), output).map_err(|e| e.to_string())
 }
 
-/// Factual inventory provenance, authoritative denominators and calendar validation.
 #[cfg(test)]
+/// Factual inventory provenance, authoritative denominators and calendar validation.
 mod tests {
     use super::*;
     use std::collections::BTreeMap;
@@ -223,7 +223,8 @@ mod tests {
     /// Own an isolated temporary test tree and remove it when the fixture is dropped.
     struct Tree(
         /// Owned temporary root removed when the fixture guard is dropped.
-        PathBuf);
+        PathBuf,
+    );
     impl Drop for Tree {
         /// Remove the temporary fixture directory when its owner goes out of scope.
         fn drop(&mut self) {
@@ -285,8 +286,8 @@ mod tests {
         .unwrap();
         Tree(root)
     }
-    /// Verify that metadata types do not infer registration access.
     #[test]
+    /// Verify that metadata types do not infer registration access.
     fn metadata_types_do_not_infer_registration_access() {
         let source = r#"{"tld":"fixture","active":true,"type":"generic","operator":"fixture operator","delegation_url":"https://www.iana.org/domains/root/db/fixture.html","specification13":true,"source_ids":["iana.active-roots"]}"#;
         let parsed: Root = serde_json::from_str(source).unwrap();
@@ -295,8 +296,8 @@ mod tests {
         assert!(!source.contains("registerable"));
     }
 
-    /// Verify that generated inventory retains purpose provenance and precomputed counts.
     #[test]
+    /// Verify that generated inventory retains purpose provenance and precomputed counts.
     fn generated_inventory_retains_purpose_provenance_and_precomputed_counts() {
         let tree = tree(false);
         generate(&tree.0, &tree.0).unwrap();
@@ -309,8 +310,8 @@ mod tests {
         assert!(!text.contains("registerable"));
     }
 
-    /// Verify that edited rehashed omission cannot shrink active root inventory.
     #[test]
+    /// Verify that edited rehashed omission cannot shrink active root inventory.
     fn edited_rehashed_omission_cannot_shrink_active_root_inventory() {
         let tree = tree(true);
         assert!(generate(&tree.0, &tree.0)
@@ -318,8 +319,8 @@ mod tests {
             .contains("disagrees with pinned IANA"));
     }
 
-    /// Verify that discovery denominators preserve wildcards exceptions and private scope.
     #[test]
+    /// Verify that discovery denominators preserve wildcards exceptions and private scope.
     fn discovery_denominators_preserve_wildcards_exceptions_and_private_scope() {
         let active = BTreeSet::from(["fixture".into()]);
         let psl = serde_json::json!({"rules":[
@@ -339,8 +340,8 @@ mod tests {
             .contains("duplicate"));
     }
 
-    /// Verify that original unicode psl rules match canonical ascii discovery.
     #[test]
+    /// Verify that original unicode psl rules match canonical ascii discovery.
     fn original_unicode_psl_rules_match_canonical_ascii_discovery() {
         let active = BTreeSet::from(["fixture".into()]);
         let psl = serde_json::json!({"rules":[{"section":"ICANN","kind":"exact","suffix":"xn--bcher-kva.fixture","rule":"bücher.fixture"}]});
@@ -351,8 +352,8 @@ mod tests {
         assert!(checks::counts(&active, &invalid, &queue).is_err());
     }
 
-    /// Verify that inventory dates require real calendar dates.
     #[test]
+    /// Verify that inventory dates require real calendar dates.
     fn inventory_dates_require_real_calendar_dates() {
         assert!(checks::date("2024-02-29").is_ok());
         for value in [

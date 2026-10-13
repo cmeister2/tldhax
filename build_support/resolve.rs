@@ -6,8 +6,8 @@ use super::schema::{Class, Coverage, Document, Effect, Family, Knowledge, FAMILI
 use super::validate::Status;
 use std::collections::{BTreeMap, BTreeSet};
 
-/// Namespace policy after inheritance, override and current-evidence resolution.
 #[derive(Debug, Clone)]
+/// Namespace policy after inheritance, override and current-evidence resolution.
 pub struct ResolvedNamespace {
     /// Canonical exact or wildcard namespace key.
     pub selector: String,

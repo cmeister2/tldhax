@@ -12,7 +12,8 @@ static NEXT: AtomicUsize = AtomicUsize::new(0);
 /// Own an isolated temporary test tree and remove it when the fixture is dropped.
 struct Fixture(
     /// Owned temporary root removed when the fixture guard is dropped.
-    PathBuf);
+    PathBuf,
+);
 impl Fixture {
     /// Create minimal pinned root and PSL inputs in an isolated temporary directory.
     ///
@@ -41,8 +42,8 @@ impl Drop for Fixture {
     }
 }
 
-/// Verify that supplements require active roots evidence and real form counts.
 #[test]
+/// Verify that supplements require active roots evidence and real form counts.
 fn supplements_require_active_roots_evidence_and_real_form_counts() {
     let fixture = Fixture::new();
     let approved = Supplement {
@@ -86,8 +87,8 @@ fn supplements_require_active_roots_evidence_and_real_form_counts() {
     }
 }
 
-/// Verify that canonical collisions selector mismatches and root exceptions fail.
 #[test]
+/// Verify that canonical collisions selector mismatches and root exceptions fail.
 fn canonical_collisions_selector_mismatches_and_root_exceptions_fail() {
     let fixture = Fixture::new();
     let path = fixture.0.join("data/psl/rules.json");
@@ -102,8 +103,8 @@ fn canonical_collisions_selector_mismatches_and_root_exceptions_fail() {
     }
 }
 
-/// Verify that generation is independent of semantic input order.
 #[test]
+/// Verify that generation is independent of semantic input order.
 fn generation_is_independent_of_semantic_input_order() {
     let fixture = Fixture::new();
     let path = fixture.0.join("data/psl/rules.json");
@@ -124,8 +125,8 @@ fn generation_is_independent_of_semantic_input_order() {
     assert!(generated.contains("psl:Icann:!www.ck"));
 }
 
-/// Verify that nontransitional keys share runtime normalisation.
 #[test]
+/// Verify that nontransitional keys share runtime normalisation.
 fn nontransitional_keys_share_runtime_normalisation() {
     assert_eq!(super::canonical("faß.name").unwrap(), "xn--fa-hia.name");
     assert!(super::canonical("_invalid.name").is_err());

@@ -4,8 +4,8 @@ use super::{check_predicates, conflicts, fixtures, predicates, schema};
 use predicates::{Basis, FactKind, Predicate, Value};
 use schema::{Effect, Family};
 
-/// Verify that profile predicates require declared matching types and values.
 #[test]
+/// Verify that profile predicates require declared matching types and values.
 fn profile_predicates_require_declared_matching_types_and_values() {
     let mut document = fixtures::fixture();
     let mut rule = fixtures::assertion("fixture.applicant", Family::Eligibility, None);
@@ -33,8 +33,8 @@ fn profile_predicates_require_declared_matching_types_and_values() {
     assert!(check_predicates::validate(&rule, &document).is_err());
 }
 
-/// Verify that formatted country literals enforce the declared code shape.
 #[test]
+/// Verify that formatted country literals enforce the declared code shape.
 fn formatted_country_literals_enforce_the_declared_code_shape() {
     for kind in [FactKind::String, FactKind::StringSet] {
         let mut document = fixtures::fixture();
@@ -67,8 +67,8 @@ fn formatted_country_literals_enforce_the_declared_code_shape() {
     }
 }
 
-/// Verify that country format is string only and validates enumerations and emission.
 #[test]
+/// Verify that country format is string only and validates enumerations and emission.
 fn country_format_is_string_only_and_validates_enumerations_and_emission() {
     for (kind, allowed, valid) in [
         (FactKind::String, "US", true),
@@ -128,8 +128,8 @@ fn country_format_is_string_only_and_validates_enumerations_and_emission() {
     .is_err());
 }
 
-/// Verify that finite components patterns and boolean work have explicit budgets.
 #[test]
+/// Verify that finite components patterns and boolean work have explicit budgets.
 fn finite_components_patterns_and_boolean_work_have_explicit_budgets() {
     let document = fixtures::fixture();
     let mut rule = fixtures::assertion("fixture.rule", Family::Characters, None);
@@ -174,8 +174,8 @@ fn finite_components_patterns_and_boolean_work_have_explicit_budgets() {
         .contains("budget"));
 }
 
-/// Verify that canonical unicode literals and one sided lengths are supported.
 #[test]
+/// Verify that canonical unicode literals and one sided lengths are supported.
 fn canonical_unicode_literals_and_one_sided_lengths_are_supported() {
     let document = fixtures::fixture();
     for predicate in [
@@ -207,8 +207,8 @@ fn canonical_unicode_literals_and_one_sided_lengths_are_supported() {
     }
 }
 
-/// Verify that nested contradictions reject but consistent alternatives compile.
 #[test]
+/// Verify that nested contradictions reject but consistent alternatives compile.
 fn nested_contradictions_reject_but_consistent_alternatives_compile() {
     let atom = Predicate::AsciiOnly { component: 0 };
     let require = fixtures::assertion("fixture.require", Family::Characters, Some(atom.clone()));

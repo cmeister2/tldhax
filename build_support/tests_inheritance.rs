@@ -4,8 +4,8 @@ use super::{fixtures, inheritance, predicates, schema, validate};
 use schema::{Class, Family, Knowledge, Profile};
 use std::collections::{BTreeMap, BTreeSet};
 
-/// Verify that family completeness requires whole family scoped attestation.
 #[test]
+/// Verify that family completeness requires whole family scoped attestation.
 fn family_completeness_requires_whole_family_scoped_attestation() {
     let mut document = fixtures::fixture();
     let statuses = validate::document(&mut document, "2026-10-12", None).unwrap();
@@ -26,11 +26,13 @@ fn family_completeness_requires_whole_family_scoped_attestation() {
     );
     let mut wrong_family = namespace.coverage[0].clone();
     wrong_family.family = Family::Reserved;
-    assert!(inheritance::coverage(&mut wrong_family, namespace, &[1], &assertions, &statuses).is_err());
+    assert!(
+        inheritance::coverage(&mut wrong_family, namespace, &[1], &assertions, &statuses).is_err()
+    );
 }
 
-/// Verify that expired completeness becomes unknown without erasing supported rules.
 #[test]
+/// Verify that expired completeness becomes unknown without erasing supported rules.
 fn expired_completeness_becomes_unknown_without_erasing_supported_rules() {
     let mut document = fixtures::fixture();
     document.assertions[2].reviewed_on = "2026-01-01".into();
@@ -50,8 +52,8 @@ fn expired_completeness_becomes_unknown_without_erasing_supported_rules() {
     assert!(!statuses["fixture.length.complete"].active);
 }
 
-/// Verify that inherited profiles are deduplicated and cycles rejected.
 #[test]
+/// Verify that inherited profiles are deduplicated and cycles rejected.
 fn inherited_profiles_are_deduplicated_and_cycles_rejected() {
     let base = Profile {
         id: "fixture.base".into(),
@@ -90,8 +92,8 @@ fn inherited_profiles_are_deduplicated_and_cycles_rejected() {
     .contains("cycle"));
 }
 
-/// Verify that scope and one sided conflicts are precise.
 #[test]
+/// Verify that scope and one sided conflicts are precise.
 fn scope_and_one_sided_conflicts_are_precise() {
     let mut rule = fixtures::assertion(
         "fixture.min",

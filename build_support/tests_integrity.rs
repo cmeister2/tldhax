@@ -2,8 +2,8 @@
 
 use super::{fixtures, schema, validate};
 
-/// Verify that complete source and assertion metadata validate.
 #[test]
+/// Verify that complete source and assertion metadata validate.
 fn complete_source_and_assertion_metadata_validate() {
     let mut document = fixtures::fixture();
     let statuses = validate::document(&mut document, "2026-10-12", None).unwrap();
@@ -11,8 +11,8 @@ fn complete_source_and_assertion_metadata_validate() {
     assert_eq!(document.namespaces[0].selector, "fixture");
 }
 
-/// Verify that missing evidence locators hashes dates and operation are rejected.
 #[test]
+/// Verify that missing evidence locators hashes dates and operation are rejected.
 fn missing_evidence_locators_hashes_dates_and_operation_are_rejected() {
     for mutation in 0..8 {
         let mut document = fixtures::fixture();
@@ -33,8 +33,8 @@ fn missing_evidence_locators_hashes_dates_and_operation_are_rejected() {
     }
 }
 
-/// Verify that unicode and alabel namespace collisions are rejected.
 #[test]
+/// Verify that unicode and alabel namespace collisions are rejected.
 fn unicode_and_alabel_namespace_collisions_are_rejected() {
     let mut document = fixtures::fixture();
     document.namespaces[0].selector = "é.fixture".into();
@@ -55,8 +55,8 @@ fn unicode_and_alabel_namespace_collisions_are_rejected() {
         .contains("canonical label collision"));
 }
 
-/// Verify that translation relationships require existing acyclic sources.
 #[test]
+/// Verify that translation relationships require existing acyclic sources.
 fn translation_relationships_require_existing_acyclic_sources() {
     for cycle in [false, true] {
         let mut document = fixtures::fixture();

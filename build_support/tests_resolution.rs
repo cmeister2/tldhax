@@ -12,8 +12,8 @@ fn run(mut document: Document) -> Result<Vec<resolve::ResolvedNamespace>, String
     resolve::resolve(&document, &statuses)
 }
 
-/// Verify that forms require effective reviewed namespace evidence.
 #[test]
+/// Verify that forms require effective reviewed namespace evidence.
 fn forms_require_effective_reviewed_namespace_evidence() {
     assert_eq!(run(fixtures::fixture()).unwrap()[0].forms.len(), 1);
     let mut missing = fixtures::fixture();
@@ -27,8 +27,8 @@ fn forms_require_effective_reviewed_namespace_evidence() {
     assert!(run(not_applicable).unwrap()[0].forms.is_empty());
 }
 
-/// Verify that inactive successor does not erase current complete policy.
 #[test]
+/// Verify that inactive successor does not erase current complete policy.
 fn inactive_successor_does_not_erase_current_complete_policy() {
     let mut document = fixtures::fixture();
     let mut successor = document.assertions[1].clone();
@@ -49,8 +49,8 @@ fn inactive_successor_does_not_erase_current_complete_policy() {
     );
 }
 
-/// Verify that shared policy requires namespace specific applicability.
 #[test]
+/// Verify that shared policy requires namespace specific applicability.
 fn shared_policy_requires_namespace_specific_applicability() {
     let mut document = fixtures::fixture();
     document.profiles.push(schema::Profile {
@@ -68,8 +68,8 @@ fn shared_policy_requires_namespace_specific_applicability() {
     assert!(run(document).unwrap_err().contains("applicability"));
 }
 
-/// Verify that overrides cannot silently drop input classes forms or enforcement.
 #[test]
+/// Verify that overrides cannot silently drop input classes forms or enforcement.
 fn overrides_cannot_silently_drop_input_classes_forms_or_enforcement() {
     for mutation in 0..4 {
         let mut document = fixtures::fixture();

@@ -8,8 +8,8 @@ fn run(document: schema::Document) -> Result<super::Compilation, String> {
     compile_document(document, "2026-10-12", None, "synthetic-compiler-release")
 }
 
-/// Verify that emitted policy is valid rust against documented runtime contract.
 #[test]
+/// Verify that emitted policy is valid rust against documented runtime contract.
 fn emitted_policy_is_valid_rust_against_documented_runtime_contract() {
     let compilation = run(fixtures::fixture()).unwrap();
     assert_eq!(compilation.supplements[0].selector, "fixture");
@@ -47,16 +47,16 @@ fn emitted_policy_is_valid_rust_against_documented_runtime_contract() {
     );
 }
 
-/// Verify that not applicable metadata cannot enforce a name restriction.
 #[test]
+/// Verify that not applicable metadata cannot enforce a name restriction.
 fn not_applicable_metadata_cannot_enforce_a_name_restriction() {
     let mut document = fixtures::fixture();
     document.assertions[1].knowledge = schema::Knowledge::NotApplicable;
     assert!(run(document).unwrap_err().contains("not-applicable"));
 }
 
-/// Verify that unsupported interpretation cannot be presented as reviewed.
 #[test]
+/// Verify that unsupported interpretation cannot be presented as reviewed.
 fn unsupported_interpretation_cannot_be_presented_as_reviewed() {
     let mut document = fixtures::fixture();
     document.assertions[1].predicate = Some(super::predicates::Predicate::Unsupported {
@@ -72,8 +72,8 @@ fn unsupported_interpretation_cannot_be_presented_as_reviewed() {
     assert!(compilation.rust.contains("Knowledge::Conflicting"));
 }
 
-/// Verify that legacy de research without reviewed evidence has no rules or registration forms.
 #[test]
+/// Verify that legacy de research without reviewed evidence has no rules or registration forms.
 fn legacy_de_research_without_reviewed_evidence_has_no_rules_or_registration_forms() {
     let document = schema::Document {
         legacy: vec![schema::LegacyResearch {
@@ -89,8 +89,8 @@ fn legacy_de_research_without_reviewed_evidence_has_no_rules_or_registration_for
     assert!(compilation.supplements.is_empty());
 }
 
-/// Verify that repository compilation retains legacy claims as unapproved research.
 #[test]
+/// Verify that repository compilation retains legacy claims as unapproved research.
 fn repository_compilation_retains_legacy_claims_as_unapproved_research() {
     let compilation = compile(&PathBuf::from(env!("CARGO_MANIFEST_DIR"))).unwrap();
     assert!(compilation.rust.contains("pub static LEGACY_RESEARCH"));

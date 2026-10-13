@@ -97,13 +97,13 @@ pub fn generate(root: &Path, out_dir: &Path, fingerprint: &str) -> Result<(), St
     std::fs::write(out_dir.join("generated_compatibility.rs"), rust).map_err(|e| e.to_string())
 }
 
-/// Conservative suffix discovery and immutable generated-artifact contract checks.
 #[cfg(test)]
+/// Conservative suffix discovery and immutable generated-artifact contract checks.
 mod tests {
     use super::*;
 
-    /// Verify that canonical discovery keeps wildcards and reviewed routes without legacy claims.
     #[test]
+    /// Verify that canonical discovery keeps wildcards and reviewed routes without legacy claims.
     fn canonical_discovery_keeps_wildcards_and_reviewed_routes_without_legacy_claims() {
         let queue = serde_json::json!({"groups":[{"namespaces":[{"selector":"fixture"},{"selector":"*.fixture"}]}]});
         let namespace = resolve::ResolvedNamespace {
@@ -124,26 +124,25 @@ mod tests {
     }
 }
 
-/// Conservative suffix discovery and immutable generated-artifact contract checks.
 #[cfg(test)]
+/// Conservative suffix discovery and immutable generated-artifact contract checks.
 mod artifact_tests {
     use super::*;
 
-    /// Verify that artifact requires matching release and writes precomputed statistics.
     #[test]
+    /// Verify that artifact requires matching release and writes precomputed statistics.
     fn artifact_requires_matching_release_and_writes_precomputed_statistics() {
         let root = Path::new(env!("CARGO_MANIFEST_DIR"));
         let compilation = super::super::compile(root).unwrap();
-        let output = std::env::temp_dir()
-            .join(format!("tldhax-compatibility-test-{}", std::process::id()));
+        let output =
+            std::env::temp_dir().join(format!("tldhax-compatibility-test-{}", std::process::id()));
         std::fs::create_dir_all(&output).unwrap();
         assert!(generate(root, &output, "different-release")
             .unwrap_err()
             .contains("fingerprint mismatch"));
         assert!(!output.join("generated_compatibility.rs").exists());
         generate(root, &output, &compilation.fingerprint).unwrap();
-        let generated =
-            std::fs::read_to_string(output.join("generated_compatibility.rs")).unwrap();
+        let generated = std::fs::read_to_string(output.join("generated_compatibility.rs")).unwrap();
         std::fs::remove_dir_all(output).unwrap();
         assert!(generated.contains(&compilation.fingerprint));
         assert!(generated.contains("pub static DATASET_STATS"));

@@ -66,7 +66,8 @@ pub fn emit(
     table(
         &mut output,
         "LABEL_SETS",
-        "Finite literal label sets with evidence identities defining their scope.", "LabelSet",
+        "Finite literal label sets with evidence identities defining their scope.",
+        "LabelSet",
         document
             .label_sets
             .iter()
@@ -115,7 +116,8 @@ pub fn emit(
     table(
         &mut output,
         "LEGACY_RESEARCH",
-        "Unapproved historical source leads retained without enforcement.", "LegacyResearch",
+        "Unapproved historical source leads retained without enforcement.",
+        "LegacyResearch",
         document
             .legacy
             .iter()

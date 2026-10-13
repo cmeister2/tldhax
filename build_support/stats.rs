@@ -4,11 +4,12 @@ use super::super::resolve::ResolvedNamespace;
 use super::super::schema::{Class, Document, Family, Knowledge, FAMILIES};
 use std::collections::BTreeSet;
 
-/// Knowledge totals ordered as reviewed, partial, unknown, conflicting and not applicable.
 #[derive(Default)]
+/// Knowledge totals ordered as reviewed, partial, unknown, conflicting and not applicable.
 struct Counts(
     /// Totals in the stable knowledge-state order used by `add` and `rust`.
-    [usize; 5]);
+    [usize; 5],
+);
 impl Counts {
     /// Increment the counter corresponding to the resolved knowledge state.
     fn add(&mut self, value: Knowledge) {
@@ -116,14 +117,14 @@ pub(super) fn render(
     format!("use crate::registry_stats::*;\n/// Precomputed evidence and coverage totals with explicit namespace denominators.\npub static DATASET_STATS:DatasetStats=DatasetStats{{active_roots:{active_roots},known_namespaces:{},published_namespaces:{},compiled_rules:{rules},compiled_assertions:{},sources:{},idn_profiles:{},reviewed_idn_profiles:{reviewed_idn},partial_idn_profiles:{partial_idn},unresolved_legacy_entries:{},ascii_namespaces:{},idn_namespaces:{},families:&[{}],dataset_version:{fingerprint:?},evaluation_date:{evaluation_date:?},inventory_date:{inventory_date:?},normalization_profile:crate::normalization::NORMALIZATION_PROFILE}};\n",selectors.len(),namespaces.len(),document.assertions.len(),document.sources.len(),document.idn_profiles.len(),document.legacy.len(),ascii.rust(),idn.rust(),families.join(","))
 }
 
-/// Coverage denominators preserve unknown, class-specific and applicant-policy gaps.
 #[cfg(test)]
+/// Coverage denominators preserve unknown, class-specific and applicant-policy gaps.
 mod tests {
     use super::super::super::schema::Coverage;
     use super::*;
 
-    /// Verify that unresearched namespaces contribute unknown to every denominator.
     #[test]
+    /// Verify that unresearched namespaces contribute unknown to every denominator.
     fn unresearched_namespaces_contribute_unknown_to_every_denominator() {
         assert_eq!(name_coverage(None, Class::Ascii), Knowledge::Unknown);
         assert_eq!(name_coverage(None, Class::Idn), Knowledge::Unknown);
@@ -132,8 +133,8 @@ mod tests {
         }
     }
 
-    /// Verify that complete ascii does not invent idn or applicant completeness.
     #[test]
+    /// Verify that complete ascii does not invent idn or applicant completeness.
     fn complete_ascii_does_not_invent_idn_or_applicant_completeness() {
         let mut namespace = ResolvedNamespace {
             selector: "fixture".into(),

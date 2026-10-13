@@ -2,9 +2,9 @@
 
 use serde::{Deserialize, Serialize};
 
-/// Representation used to measure a label or match a literal.
 #[derive(Debug, Clone, Copy, Deserialize, Serialize, PartialEq, Eq)]
 #[serde(rename_all = "snake_case")]
+/// Representation used to measure a label or match a literal.
 pub enum Basis {
     /// Measure or match the canonical ASCII label, including A-label encoding.
     Ascii,
@@ -12,9 +12,9 @@ pub enum Basis {
     Unicode,
 }
 
-/// Finite literal-matching operations supported by authored predicates.
 #[derive(Debug, Clone, Copy, Deserialize, Serialize, PartialEq, Eq)]
 #[serde(rename_all = "snake_case")]
+/// Finite literal-matching operations supported by authored predicates.
 pub enum Pattern {
     /// Match a literal at the start of the selected label.
     Prefix,
@@ -24,9 +24,9 @@ pub enum Pattern {
     Contains,
 }
 
-/// Typed scalar literal used in applicant-fact comparisons.
 #[derive(Debug, Clone, Deserialize, Serialize, PartialEq, Eq)]
 #[serde(untagged)]
+/// Typed scalar literal used in applicant-fact comparisons.
 pub enum Value {
     /// Boolean applicant fact literal.
     Boolean(bool),
@@ -34,9 +34,9 @@ pub enum Value {
     String(String),
 }
 
-/// Declared applicant-profile value shape.
 #[derive(Debug, Clone, Copy, Deserialize, Serialize, PartialEq, Eq)]
 #[serde(rename_all = "snake_case")]
+/// Declared applicant-profile value shape.
 pub enum FactKind {
     /// One string value.
     String,
@@ -46,9 +46,9 @@ pub enum FactKind {
     StringSet,
 }
 
-/// Optional string syntax checked independently of finite allowed values.
 #[derive(Debug, Clone, Copy, Deserialize, Serialize, PartialEq, Eq)]
 #[serde(rename_all = "snake_case")]
+/// Optional string syntax checked independently of finite allowed values.
 pub enum FactStringFormat {
     /// Exactly two uppercase ASCII letters, as used by country-code facts.
     UppercaseAlpha2,
@@ -65,27 +65,27 @@ impl FactStringFormat {
     }
 }
 
-/// Typed applicant-profile field declaration shared by its referencing predicates.
 #[derive(Debug, Clone, Deserialize)]
 #[serde(deny_unknown_fields)]
+/// Typed applicant-profile field declaration shared by its referencing predicates.
 pub struct Fact {
     /// Name of the declared applicant-profile field.
     pub field: String,
     /// Value shape accepted for this applicant-profile field.
     pub kind: FactKind,
+    #[serde(default)]
     /// Optional finite string enumeration; an empty vector permits any matching string.
-    #[serde(default)]
     pub allowed_values: Vec<String>,
-    /// Optional syntax restriction on strings and string-set members.
     #[serde(default)]
+    /// Optional syntax restriction on strings and string-set members.
     pub string_format: Option<FactStringFormat>,
 }
 
+#[derive(Debug, Clone, Deserialize, Serialize, PartialEq, Eq)]
+#[serde(tag = "kind", rename_all = "snake_case", deny_unknown_fields)]
 /// Finite policy expression compiled into static runtime predicates.
 ///
 /// Validation bounds nesting, components and literal sizes before emission.
-#[derive(Debug, Clone, Deserialize, Serialize, PartialEq, Eq)]
-#[serde(tag = "kind", rename_all = "snake_case", deny_unknown_fields)]
 pub enum Predicate {
     /// An explicit unconditional truth value.
     Constant {

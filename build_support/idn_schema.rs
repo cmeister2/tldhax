@@ -3,11 +3,11 @@
 use super::schema::Knowledge;
 use serde::Deserialize;
 
+#[derive(Debug, Clone, Deserialize)]
+#[serde(deny_unknown_fields)]
 /// Finite IDN table with explicit namespace adoption, applicability and review state.
 ///
 /// Unsupported features remain gaps even when the known repertoire is complete.
-#[derive(Debug, Clone, Deserialize)]
-#[serde(deny_unknown_fields)]
 pub struct IdnProfile {
     /// Stable table identity referenced by IDN predicates.
     pub id: String,
@@ -15,8 +15,8 @@ pub struct IdnProfile {
     pub version: String,
     /// Review state, downgraded to partial when unsupported features remain.
     pub knowledge: Knowledge,
-    /// Explicit attestation that the finite ranges cover the adopted repertoire.
     #[serde(default)]
+    /// Explicit attestation that the finite ranges cover the adopted repertoire.
     pub repertoire_complete: bool,
     /// Namespace selectors in which this table is explicitly adopted.
     pub namespaces: Vec<String>,
@@ -32,20 +32,20 @@ pub struct IdnProfile {
     pub effective_until: Option<String>,
     /// Inclusive Unicode scalar intervals, sorted and checked for overlap.
     pub ranges: Vec<[u32; 2]>,
+    #[serde(default)]
     /// Additional conditions on included code points.
-    #[serde(default)]
     pub contexts: Vec<Context>,
+    #[serde(default)]
     /// Published finite variant relationships retained as allocation gaps.
-    #[serde(default)]
     pub variants: Vec<Variant>,
-    /// Unsupported table semantics that prevent fully reviewed enforcement.
     #[serde(default)]
+    /// Unsupported table semantics that prevent fully reviewed enforcement.
     pub unsupported_features: Vec<String>,
 }
 
-/// Additional positioning or adjacency condition for one repertoire code point.
 #[derive(Debug, Clone, Deserialize)]
 #[serde(deny_unknown_fields)]
+/// Additional positioning or adjacency condition for one repertoire code point.
 pub struct Context {
     /// Repertoire scalar to which the context condition applies.
     pub codepoint: u32,
@@ -53,33 +53,36 @@ pub struct Context {
     pub condition: Condition,
 }
 
-/// Finite positioning and neighboring-code-point conditions.
 #[derive(Debug, Clone, Deserialize)]
 #[serde(tag = "kind", rename_all = "snake_case", deny_unknown_fields)]
+/// Finite positioning and neighboring-code-point conditions.
 pub enum Condition {
     /// The code point cannot begin the label.
     NotStart,
     /// The code point cannot end the label.
     NotEnd,
     /// The previous scalar must belong to the finite values set.
-    PrecededBy { 
+    PrecededBy {
         /// Allowed immediate predecessor Unicode scalars.
-        values: Vec<u32> },
+        values: Vec<u32>,
+    },
     /// The next scalar must belong to the finite values set.
-    FollowedBy { 
+    FollowedBy {
         /// Allowed immediate successor Unicode scalars.
-        values: Vec<u32> },
+        values: Vec<u32>,
+    },
     /// Both immediate neighbors must belong to their respective sets.
-    Between { 
+    Between {
         /// Allowed immediate predecessor Unicode scalars.
-        left: Vec<u32>, 
+        left: Vec<u32>,
         /// Allowed immediate successor Unicode scalars.
-        right: Vec<u32> },
+        right: Vec<u32>,
+    },
 }
 
-/// Published treatment of a variant relationship; allocation remains unresolved.
 #[derive(Debug, Clone, Copy, Deserialize, PartialEq, Eq)]
 #[serde(rename_all = "snake_case")]
+/// Published treatment of a variant relationship; allocation remains unresolved.
 pub enum Disposition {
     /// The published variant is blocked.
     Blocked,
@@ -89,9 +92,9 @@ pub enum Disposition {
     Unresolved,
 }
 
-/// Finite sequence replacement retained without inferring registration availability.
 #[derive(Debug, Clone, Deserialize)]
 #[serde(deny_unknown_fields)]
+/// Finite sequence replacement retained without inferring registration availability.
 pub struct Variant {
     /// Source scalar sequence whose variant relationship is described.
     pub sequence: String,
