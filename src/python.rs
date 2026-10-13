@@ -3,8 +3,11 @@
 use std::collections::BTreeMap;
 
 use pyo3::prelude::*;
-use pyo3::types::PyDict;
+use pyo3::types::{PyDict, PyList, PyString};
 
+use crate::python_assessment::{self, NativePreparedProfile, PyAssessment};
+use crate::python_namespace::{self, PyNamespaceInfo};
+use crate::python_records;
 use crate::registry::Registry as RustRegistry;
 use crate::types::{CheckResult, RegistryStats, TldRuleSummary};
 
@@ -150,16 +153,154 @@ impl PyRegistry {
     }
 
     /// Check one candidate and return compatibility status and explanations.
-    fn check(&self, domain: &str) -> PyCheckResult {
-        self.inner.check(domain).into()
+    /// Oversized strings and lone surrogates produce structured invalid outcomes.
+    ///
+    /// # Errors
+    /// This method currently returns no Python errors; failures are check results.
+    fn check(&self, domain: &Bound<'_, PyString>) -> PyResult<PyCheckResult> {
+        if python_assessment::character_count(domain) > crate::normalization::MAX_INPUT_BYTES {
+            let witness = "a".repeat(crate::normalization::MAX_INPUT_BYTES + 1);
+            return Ok(self.inner.check(&witness).into());
+        }
+        Ok(self
+            .inner
+            .check(domain.to_str().unwrap_or("\u{fffd}"))
+            .into())
+    }
+
+    /// Validate a bounded JSON profile for reuse across policy assessments.
+    ///
+    /// # Errors
+    /// Returns a value-free validation code for malformed, unsupported or oversized input.
+    fn prepare_registrant(
+        &self,
+        profile_json: &Bound<'_, PyString>,
+    ) -> PyResult<NativePreparedProfile> {
+        python_assessment::prepare(&self.inner, profile_json)
+    }
+
+    /// Assess one candidate with optional registrant facts and expanded evidence.
+    /// Private suffix routing is enabled only when `include_private` is true.
+    ///
+    /// # Errors
+    /// This method currently returns no Python errors; invalid names are assessments.
+    #[pyo3(signature = (domain, registrant=None, *, detailed=false, include_private=false))]
+    fn assess(
+        &self,
+        py: Python<'_>,
+        domain: &Bound<'_, PyString>,
+        registrant: Option<&NativePreparedProfile>,
+        detailed: bool,
+        include_private: bool,
+    ) -> PyResult<PyAssessment> {
+        python_assessment::assess(
+            py,
+            &self.inner,
+            domain,
+            registrant,
+            detailed,
+            include_private,
+        )
+    }
+
+    /// Assess a bounded list in input order using one optional prepared profile.
+    ///
+    /// # Errors
+    /// Returns `ValueError` for an oversized batch and a type error for non-string items.
+    #[pyo3(signature = (domains, registrant=None, *, detailed=false, include_private=false))]
+    fn assess_many(
+        &self,
+        py: Python<'_>,
+        domains: &Bound<'_, PyList>,
+        registrant: Option<&NativePreparedProfile>,
+        detailed: bool,
+        include_private: bool,
+    ) -> PyResult<Vec<PyAssessment>> {
+        python_assessment::assess_many(
+            py,
+            &self.inner,
+            domains,
+            registrant,
+            detailed,
+            include_private,
+        )
+    }
+
+    /// Return optional inventory, routing and policy metadata for a namespace.
+    ///
+    /// # Errors
+    /// This method currently returns no Python errors; invalid or absent names return `None`.
+    fn namespace_info(&self, namespace: &Bound<'_, PyString>) -> PyResult<Option<PyNamespaceInfo>> {
+        if python_assessment::character_count(namespace) > crate::normalization::MAX_INPUT_BYTES {
+            return Ok(None);
+        }
+        Ok(namespace
+            .to_str()
+            .ok()
+            .and_then(|value| self.inner.namespace_info(value))
+            .map(Into::into))
+    }
+
+    /// Return release identity and corpus counts as ordinary Python objects.
+    ///
+    /// # Errors
+    /// Returns a Python allocation or conversion error while constructing output.
+    fn dataset_info(&self, py: Python<'_>) -> PyResult<Py<PyAny>> {
+        python_namespace::dataset(&self.inner, py)
+    }
+
+    /// Return precomputed inventory and per-family knowledge counts.
+    ///
+    /// # Errors
+    /// Returns a Python allocation or conversion error while constructing output.
+    fn dataset_stats(&self, py: Python<'_>) -> PyResult<Py<PyAny>> {
+        python_namespace::statistics(&self.inner, py)
+    }
+
+    /// Return accepted registrant fields, types and constrained string values.
+    ///
+    /// # Errors
+    /// Returns a Python allocation or conversion error while constructing output.
+    fn profile_schema(&self, py: Python<'_>) -> PyResult<Py<PyAny>> {
+        python_namespace::profile_schema(&self.inner, py)
+    }
+
+    /// Look up one source's identity and retrieval provenance by its stable ID.
+    ///
+    /// # Errors
+    /// Returns a Python allocation or conversion error while constructing output.
+    fn source(&self, py: Python<'_>, id: &str) -> PyResult<Option<Py<PyAny>>> {
+        self.inner
+            .source(id)
+            .map(|value| python_records::object(py, &python_records::source(value)))
+            .transpose()
+    }
+
+    /// Look up one evidence assertion's scope and review state by its stable ID.
+    ///
+    /// # Errors
+    /// Returns a Python allocation or conversion error while constructing output.
+    fn assertion(&self, py: Python<'_>, id: &str) -> PyResult<Option<Py<PyAny>>> {
+        self.inner
+            .assertion(id)
+            .map(|value| python_records::object(py, &python_records::assertion(value)))
+            .transpose()
     }
 
     /// Return a legacy summary only when complete policy fits the original API.
-    fn tld_info(&self, tld: &str) -> Option<PyTldInfo> {
-        self.inner
-            .tld_info(tld)
+    ///
+    /// # Errors
+    /// This method currently returns no Python errors; invalid or absent names return `None`.
+    fn tld_info(&self, tld: &Bound<'_, PyString>) -> PyResult<Option<PyTldInfo>> {
+        if python_assessment::character_count(tld) > crate::normalization::MAX_INPUT_BYTES {
+            return Ok(None);
+        }
+        Ok(tld
+            .to_str()
+            .ok()
+            .and_then(|value| self.inner.tld_info(value))
             .map(TldRuleSummary::from)
-            .map(Into::into)
+            .map(Into::into))
     }
 
     /// Return the number of legacy summaries representable by the original API.
@@ -206,5 +347,8 @@ pub fn _native(_py: Python<'_>, module: &Bound<'_, PyModule>) -> PyResult<()> {
     module.add_class::<PyRegistry>()?;
     module.add_class::<PyCheckResult>()?;
     module.add_class::<PyTldInfo>()?;
+    module.add_class::<PyAssessment>()?;
+    module.add_class::<NativePreparedProfile>()?;
+    module.add_class::<PyNamespaceInfo>()?;
     Ok(())
 }
