@@ -1,5 +1,0 @@
-[[domains]]
-tld = "is"
-registerable = "yes"
-[domains.sources]
-registerable = "http://www.isnic.is/domain/rules.php"

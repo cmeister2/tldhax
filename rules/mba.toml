@@ -1,5 +1,0 @@
-[[domains]]
-tld = "mba"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.iana.org/domains/root/db/mba.html"

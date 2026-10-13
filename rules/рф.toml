@@ -1,5 +1,0 @@
-[[domains]]
-tld = "рф"
-registerable = "yes"
-[domains.sources]
-registerable = "https://cctld.ru/files/pdf/docs/en/rules_ru-rf.pdf"

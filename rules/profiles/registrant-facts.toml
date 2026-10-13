@@ -1,0 +1,175 @@
+schema_version = 1
+
+[[facts]]
+field = "com_icann_authorized_labels"
+kind = "string_set"
+allowed_values = []
+
+[[facts]]
+field = "com_registry_operational_labels"
+kind = "string_set"
+allowed_values = []
+
+[[facts]]
+field = "net_icann_authorized_labels"
+kind = "string_set"
+allowed_values = []
+
+[[facts]]
+field = "net_registry_operational_labels"
+kind = "string_set"
+allowed_values = []
+
+[[facts]]
+field = "google_registry_operator"
+kind = "boolean"
+allowed_values = []
+
+[[facts]]
+field = "google_qualifying_affiliate"
+kind = "boolean"
+allowed_values = []
+
+[[facts]]
+field = "google_qualifying_trademark_licensee"
+kind = "boolean"
+allowed_values = []
+
+[[facts]]
+field = "entity_kind"
+kind = "string"
+allowed_values = ["individual", "organization"]
+
+[[facts]]
+field = "citizenships"
+kind = "string_set"
+allowed_values = []
+string_format = "uppercase_alpha2"
+
+[[facts]]
+field = "domicile_country"
+kind = "string"
+allowed_values = []
+string_format = "uppercase_alpha2"
+
+[[facts]]
+field = "incorporation_country"
+kind = "string"
+allowed_values = []
+string_format = "uppercase_alpha2"
+
+[[facts]]
+field = "proxy_registration"
+kind = "boolean"
+allowed_values = []
+
+[[facts]]
+field = "organizational_proxy"
+kind = "boolean"
+allowed_values = []
+
+[[facts]]
+field = "de_contract_capacity"
+kind = "boolean"
+allowed_values = []
+
+[[facts]]
+field = "de_effectively_represented"
+kind = "boolean"
+allowed_values = []
+
+[[facts]]
+field = "au_permanent_resident"
+kind = "boolean"
+allowed_values = []
+
+[[facts]]
+field = "au_presence_basis"
+kind = "string"
+allowed_values = ["australian_company", "registrable_australian_body", "registered_foreign_company", "incorporated_association", "abn_entity", "indigenous_corporation", "registered_organization", "registered_cooperative", "registered_charity", "registered_political_party", "qualifying_partnership", "qualifying_association", "qualifying_trust", "regulated_education", "australian_government", "commonwealth_entity", "accredited_embassy", "australian_trademark", "none"]
+
+[[facts]]
+field = "au_commercial_basis"
+kind = "string"
+allowed_values = ["corporations_act_company", "commonwealth_entity", "registrable_body", "incorporated_association", "abn_entity", "statutory_trade_commerce", "abn_noncharitable_trust", "incorporated_limited_partnership", "trading_cooperative", "australian_government", "australian_trademark", "none"]
+
+[[facts]]
+field = "au_trademark_exact_labels"
+kind = "string_set"
+allowed_values = []
+
+[[facts]]
+field = "us_permanent_resident"
+kind = "boolean"
+allowed_values = []
+
+[[facts]]
+field = "us_primary_domicile_in_possession"
+kind = "boolean"
+allowed_values = []
+
+[[facts]]
+field = "us_incorporated_in_territory"
+kind = "boolean"
+allowed_values = []
+
+[[facts]]
+field = "us_constituted_entity"
+kind = "boolean"
+allowed_values = []
+
+[[facts]]
+field = "us_foreign_entity"
+kind = "boolean"
+allowed_values = []
+
+[[facts]]
+field = "us_bona_fide_presence"
+kind = "boolean"
+allowed_values = []
+
+[[facts]]
+field = "uk_incorporated_active"
+kind = "boolean"
+allowed_values = []
+
+[[facts]]
+field = "uk_is_isp"
+kind = "boolean"
+allowed_values = []
+
+[[facts]]
+field = "bank_chartered"
+kind = "boolean"
+allowed_values = []
+
+[[facts]]
+field = "bank_supervised"
+kind = "boolean"
+allowed_values = []
+
+[[facts]]
+field = "bank_members_qualify"
+kind = "boolean"
+allowed_values = []
+
+[[facts]]
+field = "bank_board_approved"
+kind = "boolean"
+allowed_values = []
+
+[[facts]]
+field = "bank_board_exception_approved"
+kind = "boolean"
+allowed_values = []
+
+[[facts]]
+field = "uk_school_class"
+kind = "string"
+allowed_values = ["uk_school", "school_consortium", "none"]
+
+[[facts]]
+field = "bank_class"
+kind = "string"
+allowed_values = ["retail_bank", "savings_association", "bank_association", "association_group", "bank_regulator", "other_regulated_entity", "holding_or_parent", "other"]
+

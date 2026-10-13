@@ -1,5 +1,0 @@
-[[domains]]
-tld = "uno"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.iana.org/domains/root/db/uno.html"

@@ -1,5 +1,0 @@
-[[domains]]
-tld = "onion"
-registerable = "yes"
-[domains.sources]
-registerable = "https://tools.ietf.org/html/rfc7686"

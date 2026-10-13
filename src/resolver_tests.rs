@@ -6,37 +6,78 @@ use crate::policy_types::Support;
 /// Synthetic direct forms for testing routing independently of registry policy.
 static POLICIES: &[NamespacePolicy] = &[
     NamespacePolicy {
-        id: "fixture.one", selector: "fixture", kind: SelectorKind::Exact,
-        form: &["label"], ascii: Support::Supported, idn: Support::Unsupported,
-        requirements: &[], gaps: &[],
+        id: "fixture.one",
+        selector: "fixture",
+        kind: SelectorKind::Exact,
+        form: &["label"],
+        ascii: Support::Supported,
+        idn: Support::Unsupported,
+        requirements: &[],
+        gaps: &[],
     },
     NamespacePolicy {
-        id: "fixture.two", selector: "fixture", kind: SelectorKind::Exact,
-        form: &["given", "family"], ascii: Support::Supported, idn: Support::Unsupported,
-        requirements: &[], gaps: &[],
+        id: "fixture.two",
+        selector: "fixture",
+        kind: SelectorKind::Exact,
+        form: &["given", "family"],
+        ascii: Support::Supported,
+        idn: Support::Unsupported,
+        requirements: &[],
+        gaps: &[],
     },
     NamespacePolicy {
-        id: "co.uk.one", selector: "co.uk", kind: SelectorKind::Exact,
-        form: &["label"], ascii: Support::Supported, idn: Support::Unsupported,
-        requirements: &[], gaps: &[],
+        id: "co.uk.one",
+        selector: "co.uk",
+        kind: SelectorKind::Exact,
+        form: &["label"],
+        ascii: Support::Supported,
+        idn: Support::Unsupported,
+        requirements: &[],
+        gaps: &[],
     },
     NamespacePolicy {
-        id: "ck.wildcard", selector: "*.ck", kind: SelectorKind::Wildcard,
-        form: &["label"], ascii: Support::Supported, idn: Support::Unsupported,
-        requirements: &[], gaps: &[],
+        id: "ck.wildcard",
+        selector: "*.ck",
+        kind: SelectorKind::Wildcard,
+        form: &["label"],
+        ascii: Support::Supported,
+        idn: Support::Unsupported,
+        requirements: &[],
+        gaps: &[],
     },
 ];
 /// Sorted synthetic root identities.
 static ROOTS: &[&str] = &["ck", "fixture", "uk"];
 /// Sorted suffix routes, including the standard wildcard/exception example.
 static ROUTES: &[Route] = &[
-    Route {selector: "!www.ck", kind: RouteKind::Exception},
-    Route {selector: "*.ck", kind: RouteKind::Wildcard},
-    Route {selector: "ck", kind: RouteKind::Exact},
-    Route {selector: "co.uk", kind: RouteKind::Exact},
-    Route {selector: "family.fixture", kind: RouteKind::Exact},
-    Route {selector: "fixture", kind: RouteKind::Exact},
-    Route {selector: "uk", kind: RouteKind::Exact},
+    Route {
+        selector: "!www.ck",
+        kind: RouteKind::Exception,
+    },
+    Route {
+        selector: "*.ck",
+        kind: RouteKind::Wildcard,
+    },
+    Route {
+        selector: "ck",
+        kind: RouteKind::Exact,
+    },
+    Route {
+        selector: "co.uk",
+        kind: RouteKind::Exact,
+    },
+    Route {
+        selector: "family.fixture",
+        kind: RouteKind::Exact,
+    },
+    Route {
+        selector: "fixture",
+        kind: RouteKind::Exact,
+    },
+    Route {
+        selector: "uk",
+        kind: RouteKind::Exact,
+    },
 ];
 
 #[test]

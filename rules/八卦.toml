@@ -1,5 +1,0 @@
-[[domains]]
-tld = "八卦"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.iana.org/domains/root/db/xn--45q11c.html"

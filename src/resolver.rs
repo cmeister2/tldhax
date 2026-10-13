@@ -54,7 +54,11 @@ impl Resolver {
         roots: &'static [&'static str],
         routes: &'static [Route],
     ) -> Self {
-        Self { policies, roots, routes }
+        Self {
+            policies,
+            roots,
+            routes,
+        }
     }
 
     /// Resolve a canonical name to an explicit policy or a discovery boundary.
@@ -94,7 +98,9 @@ impl Resolver {
                     }
                 }
             }
-            let Some((_, parent)) = suffix.split_once('.') else { break };
+            let Some((_, parent)) = suffix.split_once('.') else {
+                break;
+            };
             suffix = parent;
         }
         // A prevailing exception overrides exact and wildcard discovery rules.
@@ -104,7 +110,9 @@ impl Resolver {
         for policy in self.policies {
             let namespace = match policy.kind {
                 SelectorKind::Exact => matches_suffix(name, policy.selector),
-                SelectorKind::Wildcard => policy.selector.strip_prefix("*.")
+                SelectorKind::Wildcard => policy
+                    .selector
+                    .strip_prefix("*.")
                     .and_then(|base| matches_suffix(name, base))
                     .and_then(|base| preceding_label(name, base)),
             };
@@ -114,7 +122,9 @@ impl Resolver {
                 continue;
             }
             let applicant = before_namespace(name, namespace);
-            let count = if applicant.is_empty() { 0 } else {
+            let count = if applicant.is_empty() {
+                0
+            } else {
                 applicant.bytes().filter(|byte| *byte == b'.').count() + 1
             };
             if count != policy.form.len() {
@@ -123,9 +133,10 @@ impl Resolver {
             let preferred = result.policy.is_none_or(|previous| {
                 let previous_depth = previous.selector.split('.').count();
                 let depth = policy.selector.split('.').count();
-                depth > previous_depth || (depth == previous_depth
-                    && policy.kind == SelectorKind::Exact
-                    && previous.kind == SelectorKind::Wildcard)
+                depth > previous_depth
+                    || (depth == previous_depth
+                        && policy.kind == SelectorKind::Exact
+                        && previous.kind == SelectorKind::Wildcard)
             });
             if preferred {
                 result.namespace = Some(namespace);
@@ -134,8 +145,15 @@ impl Resolver {
         }
         if let Some(namespace) = result.namespace {
             result.applicant = before_namespace(name, namespace);
-            result.applicant_labels = if result.applicant.is_empty() { 0 } else {
-                result.applicant.bytes().filter(|byte| *byte == b'.').count() + 1
+            result.applicant_labels = if result.applicant.is_empty() {
+                0
+            } else {
+                result
+                    .applicant
+                    .bytes()
+                    .filter(|byte| *byte == b'.')
+                    .count()
+                    + 1
             };
         }
         result
@@ -143,9 +161,14 @@ impl Resolver {
 
     /// Look up a virtual prefixed selector without allocating a query string.
     fn has_route(&self, prefix: &str, suffix: &str, kind: RouteKind) -> bool {
-        self.routes.binary_search_by(|route| {
-            route.selector.bytes().cmp(prefix.bytes().chain(suffix.bytes()))
-        }).is_ok_and(|index| self.routes[index].kind == kind)
+        self.routes
+            .binary_search_by(|route| {
+                route
+                    .selector
+                    .bytes()
+                    .cmp(prefix.bytes().chain(suffix.bytes()))
+            })
+            .is_ok_and(|index| self.routes[index].kind == kind)
     }
 }
 

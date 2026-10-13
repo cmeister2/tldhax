@@ -1,5 +1,0 @@
-[[domains]]
-tld = "中国"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.cnnic.cn/11/192/index.html"

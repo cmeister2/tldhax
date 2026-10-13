@@ -7,7 +7,14 @@
 /.ruff_cache
 /__pycache__
 *.pyc
-/scripts
+/scripts/*
+!/scripts/data/
+!/scripts/maintenance/
+!/scripts/package_check.py
+!/scripts/wheel_probe.py
 /node_modules
 *.so
 venv*/
+.env
+.env.*
+!.env.example

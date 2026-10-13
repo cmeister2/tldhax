@@ -1,5 +1,0 @@
-[[domains]]
-tld = "한국"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.hkirc.hk/content.jsp?id=30#!/34"

@@ -1,5 +1,0 @@
-[[domains]]
-tld = "nl"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.sidn.nl/"

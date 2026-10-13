@@ -1,5 +1,0 @@
-[[domains]]
-tld = "mp"
-registerable = "yes"
-[domains.sources]
-registerable = "http://www.dot.mp/"

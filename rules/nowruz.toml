@@ -1,5 +1,0 @@
-[[domains]]
-tld = "nowruz"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.iana.org/domains/root/db/nowruz.html"

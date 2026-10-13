@@ -1,5 +1,0 @@
-[[domains]]
-tld = "亚马逊"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.iana.org/domains/root/db/xn--jlq480n2rg.html"

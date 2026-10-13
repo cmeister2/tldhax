@@ -1,5 +1,0 @@
-[[domains]]
-tld = "المغرب"
-registerable = "yes"
-[domains.sources]
-registerable = "https://nic.lk"
