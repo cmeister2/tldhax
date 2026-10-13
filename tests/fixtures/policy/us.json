@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "us.citizen",
+      "domain": "vanity.us",
+      "profile": {
+        "entity_kind": "individual",
+        "citizenships": [
+          "US"
+        ],
+        "proxy_registration": false
+      },
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "reserved_names"
+        ],
+        "missing_profile_fields": []
+      },
+      "rationale": "Nexus category 1 permits US citizens; documentary certification remains outside the declared-fact check."
+    },
+    {
+      "id": "us.primary-domicile",
+      "domain": "vanity.us",
+      "profile": {
+        "entity_kind": "individual",
+        "citizenships": [
+          "GB"
+        ],
+        "us_permanent_resident": false,
+        "domicile_country": "US",
+        "proxy_registration": false
+      },
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "reserved_names"
+        ],
+        "missing_profile_fields": []
+      },
+      "rationale": "Nexus category 1 also permits primary US domicile, independent of citizenship."
+    },
+    {
+      "id": "us.possession-domicile",
+      "domain": "vanity.us",
+      "profile": {
+        "entity_kind": "individual",
+        "citizenships": [
+          "GB"
+        ],
+        "us_permanent_resident": false,
+        "domicile_country": "PR",
+        "us_primary_domicile_in_possession": true,
+        "proxy_registration": false
+      },
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "reserved_names"
+        ],
+        "missing_profile_fields": []
+      },
+      "rationale": "Nexus category 1 explicitly includes primary domicile in US possessions; it does not require the country string US."
+    },
+    {
+      "id": "us.territorial-incorporation",
+      "domain": "vanity.us",
+      "profile": {
+        "entity_kind": "organization",
+        "incorporation_country": "PR",
+        "us_incorporated_in_territory": true,
+        "proxy_registration": false
+      },
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "reserved_names"
+        ],
+        "missing_profile_fields": []
+      },
+      "rationale": "Nexus category 2 explicitly includes incorporation in US possessions or territories."
+    },
+    {
+      "id": "us.foreign-individual",
+      "domain": "vanity.us",
+      "profile": {
+        "entity_kind": "individual",
+        "citizenships": [
+          "GB"
+        ],
+        "us_permanent_resident": false,
+        "domicile_country": "GB",
+        "us_primary_domicile_in_possession": false,
+        "proxy_registration": false
+      },
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "us_nexus"
+        ]
+      },
+      "rationale": "The foreign individual explicitly declares none of the category 1 Nexus alternatives."
+    },
+    {
+      "id": "us.foreign-bona-fide-entity",
+      "domain": "vanity.us",
+      "profile": {
+        "entity_kind": "organization",
+        "incorporation_country": "GB",
+        "us_constituted_entity": false,
+        "us_foreign_entity": true,
+        "us_bona_fide_presence": true,
+        "proxy_registration": false
+      },
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "reserved_names"
+        ],
+        "missing_profile_fields": []
+      },
+      "rationale": "Nexus category 3 concerns a foreign organization with bona fide US presence, rather than foreign individuals generally."
+    },
+    {
+      "id": "us.missing-nexus",
+      "domain": "vanity.us",
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "reserved_names"
+        ]
+      },
+      "rationale": "Missing declarations do not establish a Nexus category; documentary requirements remain a separate coverage gap."
+    },
+    {
+      "id": "us.proxy-forbidden",
+      "domain": "vanity.us",
+      "profile": {
+        "proxy_registration": true
+      },
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "no_proxy"
+        ]
+      },
+      "rationale": "The current FAQ expressly prohibits proxy/private registration services."
+    },
+    {
+      "id": "us.idn-ulabel",
+      "domain": "bücher.us",
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "ascii_only"
+        ]
+      },
+      "rationale": "The current .US FAQ expressly says IDNs are not offered."
+    },
+    {
+      "id": "us.idn-alabel",
+      "domain": "xn--bcher-kva.us",
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "ascii_only"
+        ]
+      },
+      "rationale": "The current .US FAQ expressly says IDNs are not offered."
+    },
+    {
+      "id": "us.tagged-reservation",
+      "domain": "ab--vanity.us",
+      "expected": {
+        "decision": "no"
+      },
+      "rationale": "The current FAQ reserves tagged labels with hyphens in positions 3 and 4; strict IDNA normalization may reject the label before this registry rule is reached."
+    },
+    {
+      "id": "us.uncompiled-reservations",
+      "domain": "vanity.us",
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "reserved_names"
+        ]
+      },
+      "rationale": "Numeric, telephone and provider-held reservations are not settled by absence from the initial literal set."
+    }
+  ]
+}

@@ -1,191 +1,184 @@
-[[domains]]
-tld = "act.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+# Namespace inventory retained from this file; executable decisions are the direct policies below.
+# Inventory membership alone does not establish registration permission.
+# Namespace: act.au
+# Namespace: act.edu.au
+# Namespace: asn.au
+# Namespace: au
+# Namespace: catholic.edu.au
+# Namespace: com.au
+# Namespace: conf.au
+# Namespace: edu.au
+# Namespace: gov.au
+# Namespace: id.au
+# Namespace: net.au
+# Namespace: nsw.au
+# Namespace: nsw.edu.au
+# Namespace: nt.au
+# Namespace: nt.edu.au
+# Namespace: org.au
+# Namespace: oz.au
+# Namespace: qld.au
+# Namespace: qld.edu.au
+# Namespace: qld.gov.au
+# Namespace: sa.au
+# Namespace: sa.edu.au
+# Namespace: sa.gov.au
+# Namespace: tas.au
+# Namespace: tas.edu.au
+# Namespace: tas.gov.au
+# Namespace: vic.au
+# Namespace: vic.edu.au
+# Namespace: vic.gov.au
+# Namespace: wa.au
+# Namespace: wa.edu.au
+# Namespace: wa.gov.au
+# Original namespace reference: https://www.auda.org.au/
+# Original namespace reference: https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/
 
-[[domains]]
-tld = "act.edu.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+schema_version = 1
 
-[[domains]]
-tld = "asn.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/"
+[[policies]]
+id = "au.form-1"
+selector = "au"
+form = ["label"]
+ascii = "partial"
+idn = "unsupported"
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 1.4 Designated Namespace; 2.4.3–2.4.4; 2.7.1", "The Australian trademark route retains its candidate-specific exact match; broad allocation correspondence is not replaced with exact equality. Proposed IDN changes are inactive until commencement."]
 
-[[domains]]
-tld = "au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/"
+[[policies.requirements]]
+code = "label_minimum"
+message = "The applicant label does not meet the required minimum length."
+effect = "require"
+input_class = "any"
+predicate = { kind = "label_minimum", component = 0, min = 2, basis = "ascii" }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 2.7.1(1)"]
 
-[[domains]]
-tld = "catholic.edu.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+[[policies.requirements]]
+code = "ascii_only"
+message = "This namespace currently permits only ASCII registration labels."
+effect = "require"
+input_class = "any"
+predicate = { kind = "ascii_only", component = 0 }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 1.2.4; 2.7.1(2)"]
 
-[[domains]]
-tld = "com.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/"
+[[policies.requirements]]
+code = "leading_hyphen"
+message = "The applicant label must not begin with a hyphen."
+effect = "deny"
+input_class = "any"
+predicate = { kind = "label_pattern", component = 0, pattern = "prefix", value = "-", basis = "unicode" }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 2.7.1(2)–(4)"]
 
-[[domains]]
-tld = "conf.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/"
+[[policies.requirements]]
+code = "trailing_hyphen"
+message = "The applicant label must not end with a hyphen."
+effect = "deny"
+input_class = "any"
+predicate = { kind = "label_pattern", component = 0, pattern = "suffix", value = "-", basis = "unicode" }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 2.7.1(2)–(4)"]
 
-[[domains]]
-tld = "edu.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/"
+[[policies.requirements]]
+code = "tagged_label"
+message = "Hyphens in the third and fourth positions are not permitted in this applicant label."
+effect = "deny"
+input_class = "any"
+predicate = { kind = "label_positions", component = 0, positions = [2, 3], value = "--", basis = "unicode" }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 2.7.1(2)–(4)"]
 
-[[domains]]
-tld = "gov.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/"
+[[policies.requirements]]
+code = "australian_presence"
+message = "The applicant must qualify under an Australian Presence category; trademark reliance must match this candidate label."
+effect = "require"
+input_class = "any"
+predicate = { kind = "any", predicates = [{ kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "individual" }, { kind = "field_in", field = "citizenships", values = ["AU"] }] }, { kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "individual" }, { kind = "field_equals", field = "au_permanent_resident", value = true }] }, { kind = "field_in", field = "au_presence_basis", values = ["australian_company", "registrable_australian_body", "registered_foreign_company", "incorporated_association", "abn_entity", "indigenous_corporation", "registered_organization", "registered_cooperative", "registered_charity", "registered_political_party", "qualifying_partnership", "qualifying_association", "qualifying_trust", "regulated_education", "australian_government", "commonwealth_entity", "accredited_embassy"] }, { kind = "all", predicates = [{ kind = "field_equals", field = "au_presence_basis", value = "australian_trademark" }, { kind = "name_equals_field", component = 0, field = "au_trademark_exact_labels" }] }] }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 1.4 Australian Presence; 2.4.1–2.4.5"]
 
-[[domains]]
-tld = "id.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/"
+[[policies.gaps]]
+code = "reserved_names"
+message = "Reservation categories and statutory exceptions are not fully implemented."
+input_class = "any"
 
-[[domains]]
-tld = "net.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/"
+[[policies.gaps]]
+code = "name_relationship"
+message = "Permitted priority, related-body, acronym and synonym name relationships are not fully implemented."
+input_class = "any"
 
-[[domains]]
-tld = "nsw.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+[[policies]]
+id = "com.au.form-1"
+selector = "com.au"
+form = ["label"]
+ascii = "partial"
+idn = "unsupported"
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 1.4 Designated Namespace; 2.4.3–2.4.4; 2.7.1", "The Australian trademark route retains its candidate-specific exact match; broad allocation correspondence is not replaced with exact equality. Proposed IDN changes are inactive until commencement."]
 
-[[domains]]
-tld = "nsw.edu.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+[[policies.requirements]]
+code = "label_minimum"
+message = "The applicant label does not meet the required minimum length."
+effect = "require"
+input_class = "any"
+predicate = { kind = "label_minimum", component = 0, min = 2, basis = "ascii" }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 2.7.1(1)"]
 
-[[domains]]
-tld = "nt.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+[[policies.requirements]]
+code = "ascii_only"
+message = "This namespace currently permits only ASCII registration labels."
+effect = "require"
+input_class = "any"
+predicate = { kind = "ascii_only", component = 0 }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 1.2.4; 2.7.1(2)"]
 
-[[domains]]
-tld = "nt.edu.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+[[policies.requirements]]
+code = "leading_hyphen"
+message = "The applicant label must not begin with a hyphen."
+effect = "deny"
+input_class = "any"
+predicate = { kind = "label_pattern", component = 0, pattern = "prefix", value = "-", basis = "unicode" }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 2.7.1(2)–(4)"]
 
-[[domains]]
-tld = "org.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/"
+[[policies.requirements]]
+code = "trailing_hyphen"
+message = "The applicant label must not end with a hyphen."
+effect = "deny"
+input_class = "any"
+predicate = { kind = "label_pattern", component = 0, pattern = "suffix", value = "-", basis = "unicode" }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 2.7.1(2)–(4)"]
 
-[[domains]]
-tld = "oz.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/"
+[[policies.requirements]]
+code = "tagged_label"
+message = "Hyphens in the third and fourth positions are not permitted in this applicant label."
+effect = "deny"
+input_class = "any"
+predicate = { kind = "label_positions", component = 0, positions = [2, 3], value = "--", basis = "unicode" }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 2.7.1(2)–(4)"]
 
-[[domains]]
-tld = "qld.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+[[policies.requirements]]
+code = "australian_presence"
+message = "The applicant must qualify under an Australian Presence category; trademark reliance must match this candidate label."
+effect = "require"
+input_class = "any"
+predicate = { kind = "any", predicates = [{ kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "individual" }, { kind = "field_in", field = "citizenships", values = ["AU"] }] }, { kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "individual" }, { kind = "field_equals", field = "au_permanent_resident", value = true }] }, { kind = "field_in", field = "au_presence_basis", values = ["australian_company", "registrable_australian_body", "registered_foreign_company", "incorporated_association", "abn_entity", "indigenous_corporation", "registered_organization", "registered_cooperative", "registered_charity", "registered_political_party", "qualifying_partnership", "qualifying_association", "qualifying_trust", "regulated_education", "australian_government", "commonwealth_entity", "accredited_embassy"] }, { kind = "all", predicates = [{ kind = "field_equals", field = "au_presence_basis", value = "australian_trademark" }, { kind = "name_equals_field", component = 0, field = "au_trademark_exact_labels" }] }] }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 1.4 Australian Presence; 2.4.1–2.4.5"]
 
-[[domains]]
-tld = "qld.edu.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+[[policies.requirements]]
+code = "commercial_entity"
+message = "The applicant must qualify under an enumerated com.au Commercial Entity category."
+effect = "require"
+input_class = "any"
+predicate = { kind = "field_in", field = "au_commercial_basis", values = ["corporations_act_company", "commonwealth_entity", "registrable_body", "incorporated_association", "abn_entity", "statutory_trade_commerce", "abn_noncharitable_trust", "incorporated_limited_partnership", "trading_cooperative", "australian_government", "australian_trademark"] }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 1.4 Commercial Entity; 2.4.4(1)"]
 
-[[domains]]
-tld = "qld.gov.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+[[policies.gaps]]
+code = "reserved_names"
+message = "Reservation categories and statutory exceptions are not fully implemented."
+input_class = "any"
 
-[[domains]]
-tld = "sa.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+[[policies.gaps]]
+code = "name_relationship"
+message = "Permitted priority, related-body, acronym and synonym name relationships are not fully implemented."
+input_class = "any"
 
-[[domains]]
-tld = "sa.edu.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
+[[policies.gaps]]
+code = "entity_exceptions"
+message = "Applicable related-body and entity-status exceptions are not fully implemented."
+input_class = "any"
 
-[[domains]]
-tld = "sa.gov.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
-
-[[domains]]
-tld = "tas.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
-
-[[domains]]
-tld = "tas.edu.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
-
-[[domains]]
-tld = "tas.gov.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
-
-[[domains]]
-tld = "vic.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
-
-[[domains]]
-tld = "vic.edu.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
-
-[[domains]]
-tld = "vic.gov.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
-
-[[domains]]
-tld = "wa.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
-
-[[domains]]
-tld = "wa.edu.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"
-
-[[domains]]
-tld = "wa.gov.au"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.auda.org.au/au-domain-names/the-different-au-domain-names/state-and-territory-domain-names/"

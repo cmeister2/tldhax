@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "name.one-label",
+      "domain": "firstname.name",
+      "expected": {
+        "decision": "unknown"
+      },
+      "rationale": "Appendix11 §1(a)(2) permits the second-level form; other policy families and operator exceptions remain incompletely researched."
+    },
+    {
+      "id": "name.two-label-withdrawal-date-gap",
+      "domain": "firstname.lastname.name",
+      "expected": {
+        "decision": "unknown"
+      },
+      "rationale": "Appendix11 §1(a)(1) describes the historical third-level form. RSEP2026013 withdrawal was approved, but reviewed primary sources give no implementation date; no current allowance or denial is invented."
+    },
+    {
+      "id": "name.three-applicant-labels",
+      "domain": "a.firstname.lastname.name",
+      "expected": {
+        "decision": "unknown"
+      },
+      "rationale": "Public contract formats do not establish a universal closed set because Registry Operator registration is expressly excepted, and current third-level implementation remains unresolved."
+    },
+    {
+      "id": "name.bare",
+      "domain": "name",
+      "expected": {
+        "decision": "no"
+      },
+      "rationale": "The prospective-candidate API contract requires an applicant label beneath a known delegated root. The pinned IANA inventory identifies name as the root; this input-contract failure is not a .name policy prohibition or a claim that bare-root DNS syntax is invalid."
+    },
+    {
+      "id": "name.underscore-protocol",
+      "domain": "first_name.lastname.name",
+      "expected": {
+        "decision": "no"
+      },
+      "rationale": "Underscores fail the selected hostname normalization contract regardless of unresolved registry form policy."
+    },
+    {
+      "id": "name.u-label",
+      "domain": "bücher.name",
+      "expected": {
+        "decision": "unknown"
+      },
+      "rationale": "Normalization can produce an A-label, but Appendix11 alone does not establish an adopted IDN table or complete name policy."
+    },
+    {
+      "id": "name.a-label",
+      "domain": "xn--bcher-kva.name",
+      "expected": {
+        "decision": "unknown"
+      },
+      "rationale": "The A-label has the same canonical identity as its Unicode spelling; no IDN registration permission is inferred."
+    }
+  ]
+}

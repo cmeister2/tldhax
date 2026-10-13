@@ -1,5 +1,31 @@
-[[domains]]
-tld = "org"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.iana.org/domains/root/db/org.html"
+# Namespace inventory retained from this file; executable decisions are the direct policies below.
+# Inventory membership alone does not establish registration permission.
+# Namespace: org
+# Original namespace reference: https://www.iana.org/domains/root/db/org.html
+
+schema_version = 1
+
+[[policies]]
+id = "org.form-1"
+selector = "org"
+form = ["label"]
+ascii = "partial"
+idn = "partial"
+source_notes = ["https://itp.cdn.icann.org/en/files/registry-agreements/org/org-agmt-html-30jun19-en.htm — Specification 5, second-level reservations", "https://pir.org/for-orgs/faq/ — .org is open to individuals and organizations, including for-profit applicants; openness does not bypass reservations."]
+
+[[policies.gaps]]
+code = "reserved_names"
+message = "The applicable .org reservation and exception mechanisms are not fully implemented."
+input_class = "any"
+
+[[policies.gaps]]
+code = "short_label_release"
+message = "Current selections released from short-label reservations are not known."
+input_class = "ascii"
+predicate = { kind = "label_maximum", component = 0, max = 2, basis = "ascii" }
+
+[[policies.gaps]]
+code = "idn_policy"
+message = "The adopted .org language tables are not implemented."
+input_class = "idn"
+

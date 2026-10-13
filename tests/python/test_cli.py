@@ -28,8 +28,8 @@ def test_check_json_output() -> None:
 def test_info_output() -> None:
     """The info command should print a human-readable summary."""
     result = run_cli("info", "co.uk")
-    assert result.returncode == 2
-    assert "No data available" in result.stdout
+    assert result.returncode == 0
+    assert "TLD: co.uk" in result.stdout
 
 
 def test_stats_output() -> None:

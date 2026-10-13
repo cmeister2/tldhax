@@ -1,0 +1,387 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "com.sharp-s",
+      "domain": "faß.com",
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "idn_sharp_s"
+        ]
+      },
+      "rationale": "Verisign IDN Registration Rules §5 specifically rejects this code point, despite generic IDNA acceptance."
+    },
+    {
+      "id": "com.final-sigma",
+      "domain": "τελικός.com",
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "idn_final_sigma"
+        ]
+      },
+      "rationale": "Verisign IDN Registration Rules §5 specifically rejects this code point, despite generic IDNA acceptance."
+    },
+    {
+      "id": "com.ace-sharp-s",
+      "domain": "xn--fa-hia.com",
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "idn_sharp_s"
+        ]
+      },
+      "rationale": "The decoded A-label has the same forbidden sharp-s as the U-label."
+    },
+    {
+      "id": "com.ordinary-umlaut",
+      "domain": "bücher.com",
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "idn_policy"
+        ]
+      },
+      "rationale": "This name contains neither specifically banned code point; language tables and variants remain unresolved."
+    },
+    {
+      "id": "com.named-reservation-no-grant",
+      "domain": "nic.com",
+      "profile": {
+        "com_icann_authorized_labels": [],
+        "com_registry_operational_labels": []
+      },
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "operational_reservation"
+        ]
+      },
+      "rationale": "Appendix 6 D reserves nic; the profile explicitly declares neither ICANN authorization nor qualifying Registry Operator operational use."
+    },
+    {
+      "id": "com.named-reservation-grant",
+      "domain": "nic.com",
+      "profile": {
+        "com_icann_authorized_labels": [
+          "nic"
+        ],
+        "com_registry_operational_labels": []
+      },
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "The candidate-specific ICANN authorization or registry-operator alternative satisfies the applicable operational reservation exception."
+    },
+    {
+      "id": "com.unrelated-grant",
+      "domain": "nic.com",
+      "profile": {
+        "com_icann_authorized_labels": [
+          "example"
+        ],
+        "com_registry_operational_labels": []
+      },
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "operational_reservation"
+        ]
+      },
+      "rationale": "An authorization declaration for another label cannot exempt nic."
+    },
+    {
+      "id": "com.registry-operator-use",
+      "domain": "nic.com",
+      "profile": {
+        "com_icann_authorized_labels": [],
+        "com_registry_operational_labels": [
+          "nic"
+        ]
+      },
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "The candidate-specific ICANN authorization or registry-operator alternative satisfies the applicable operational reservation exception."
+    },
+    {
+      "id": "com.icann-name-no-operator-exception",
+      "domain": "iana.com",
+      "profile": {
+        "com_icann_authorized_labels": [],
+        "com_registry_operational_labels": [
+          "iana"
+        ]
+      },
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "reserved_label"
+        ]
+      },
+      "rationale": "The Registry Operator operational-use exception applies to D names and cannot authorize the distinct Appendix 6 A names."
+    },
+    {
+      "id": "com.two-character-release-gap",
+      "domain": "ab.com",
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "short_label_release"
+        ]
+      },
+      "rationale": "Appendix 6 permits later two-character releases; historical reservation does not prove a current blanket minimum."
+    },
+    {
+      "id": "net.sharp-s",
+      "domain": "faß.net",
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "idn_sharp_s"
+        ]
+      },
+      "rationale": "Verisign IDN Registration Rules §5 specifically rejects this code point, despite generic IDNA acceptance."
+    },
+    {
+      "id": "net.final-sigma",
+      "domain": "τελικός.net",
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "idn_final_sigma"
+        ]
+      },
+      "rationale": "Verisign IDN Registration Rules §5 specifically rejects this code point, despite generic IDNA acceptance."
+    },
+    {
+      "id": "net.ace-sharp-s",
+      "domain": "xn--fa-hia.net",
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "idn_sharp_s"
+        ]
+      },
+      "rationale": "The decoded A-label has the same forbidden sharp-s as the U-label."
+    },
+    {
+      "id": "net.ordinary-umlaut",
+      "domain": "bücher.net",
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "idn_policy"
+        ]
+      },
+      "rationale": "This name contains neither specifically banned code point; language tables and variants remain unresolved."
+    },
+    {
+      "id": "net.named-reservation-no-grant",
+      "domain": "nic.net",
+      "profile": {
+        "net_icann_authorized_labels": [],
+        "net_registry_operational_labels": []
+      },
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "operational_reservation"
+        ]
+      },
+      "rationale": "Appendix 6 D reserves nic; the profile explicitly declares neither ICANN authorization nor qualifying Registry Operator operational use."
+    },
+    {
+      "id": "net.named-reservation-grant",
+      "domain": "nic.net",
+      "profile": {
+        "net_icann_authorized_labels": [
+          "nic"
+        ],
+        "net_registry_operational_labels": []
+      },
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "The candidate-specific ICANN authorization or registry-operator alternative satisfies the applicable operational reservation exception."
+    },
+    {
+      "id": "net.unrelated-grant",
+      "domain": "nic.net",
+      "profile": {
+        "net_icann_authorized_labels": [
+          "example"
+        ],
+        "net_registry_operational_labels": []
+      },
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "operational_reservation"
+        ]
+      },
+      "rationale": "An authorization declaration for another label cannot exempt nic."
+    },
+    {
+      "id": "net.registry-operator-use",
+      "domain": "nic.net",
+      "profile": {
+        "net_icann_authorized_labels": [],
+        "net_registry_operational_labels": [
+          "nic"
+        ]
+      },
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "The candidate-specific ICANN authorization or registry-operator alternative satisfies the applicable operational reservation exception."
+    },
+    {
+      "id": "net.icann-name-no-operator-exception",
+      "domain": "iana.net",
+      "profile": {
+        "net_icann_authorized_labels": [],
+        "net_registry_operational_labels": [
+          "iana"
+        ]
+      },
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "reserved_label"
+        ]
+      },
+      "rationale": "The Registry Operator operational-use exception applies to D names and cannot authorize the distinct Appendix 6 A names."
+    },
+    {
+      "id": "net.two-character-release-gap",
+      "domain": "ab.net",
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "short_label_release"
+        ]
+      },
+      "rationale": "Appendix 6 permits later two-character releases; historical reservation does not prove a current blanket minimum."
+    },
+    {
+      "id": "com.ordinary-ascii",
+      "domain": "sunflower.com",
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "An ordinary ASCII second-level name passes the maintained name and reservation rules; no applicant class is required."
+    },
+    {
+      "id": "com.reserved-authorization-missing",
+      "domain": "iana.com",
+      "expected": {
+        "decision": "unknown",
+        "missing_profile_fields": [
+          "com_icann_authorized_labels"
+        ]
+      },
+      "rationale": "A reserved label needs its applicable authorization declaration; omission is distinct from an explicitly empty set."
+    },
+    {
+      "id": "com.reserved-authorization-match",
+      "domain": "iana.com",
+      "profile": {
+        "com_icann_authorized_labels": [
+          "iana"
+        ]
+      },
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "The explicit ICANN authorization exception is candidate-specific."
+    },
+    {
+      "id": "com.operational-decisive-alternative",
+      "domain": "nic.com",
+      "profile": {
+        "com_registry_operational_labels": [
+          "nic"
+        ]
+      },
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "A satisfied registry-operator alternative does not demand the omitted ICANN authorization branch."
+    },
+    {
+      "id": "com.short-release-even-with-empty-grants",
+      "domain": "ab.com",
+      "profile": {
+        "com_icann_authorized_labels": []
+      },
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "short_label_release"
+        ]
+      },
+      "rationale": "A negative authorization declaration does not establish the current ordinary short-label release state."
+    },
+    {
+      "id": "net.ordinary-ascii",
+      "domain": "sunflower.net",
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "An ordinary ASCII second-level name passes the maintained name and reservation rules; no applicant class is required."
+    },
+    {
+      "id": "net.reserved-authorization-missing",
+      "domain": "iana.net",
+      "expected": {
+        "decision": "unknown",
+        "missing_profile_fields": [
+          "net_icann_authorized_labels"
+        ]
+      },
+      "rationale": "A reserved label needs its applicable authorization declaration; omission is distinct from an explicitly empty set."
+    },
+    {
+      "id": "net.reserved-authorization-match",
+      "domain": "iana.net",
+      "profile": {
+        "net_icann_authorized_labels": [
+          "iana"
+        ]
+      },
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "The explicit ICANN authorization exception is candidate-specific."
+    },
+    {
+      "id": "net.operational-decisive-alternative",
+      "domain": "nic.net",
+      "profile": {
+        "net_registry_operational_labels": [
+          "nic"
+        ]
+      },
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "A satisfied registry-operator alternative does not demand the omitted ICANN authorization branch."
+    },
+    {
+      "id": "net.short-release-even-with-empty-grants",
+      "domain": "ab.net",
+      "profile": {
+        "net_icann_authorized_labels": []
+      },
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "short_label_release"
+        ]
+      },
+      "rationale": "A negative authorization declaration does not establish the current ordinary short-label release state."
+    }
+  ]
+}

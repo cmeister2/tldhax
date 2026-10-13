@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "org.for-profit-applicant",
+      "domain": "vanity.org",
+      "profile": {
+        "entity_kind": "organization"
+      },
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "reserved_names"
+        ],
+        "missing_profile_fields": []
+      },
+      "rationale": "The FAQ expressly permits anyone, including organizations without nonprofit status."
+    },
+    {
+      "id": "org.individual-applicant",
+      "domain": "vanity.org",
+      "profile": {
+        "entity_kind": "individual"
+      },
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "reserved_names"
+        ],
+        "missing_profile_fields": []
+      },
+      "rationale": "The same FAQ expressly permits individuals."
+    },
+    {
+      "id": "org.short-name-gap",
+      "domain": "ab.org",
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "reserved_names"
+        ]
+      },
+      "rationale": "Exhibit A §5 permits phased release of short names; a blanket three-character minimum is unsupported."
+    }
+  ]
+}

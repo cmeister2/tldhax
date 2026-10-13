@@ -1,5 +1,66 @@
-[[domains]]
-tld = "com"
-registerable = "yes"
-[domains.sources]
-registerable = "https://www.iana.org/domains/root/db/com.html"
+# Namespace inventory retained from this file; executable decisions are the direct policies below.
+# Inventory membership alone does not establish registration permission.
+# Namespace: com
+# Original namespace reference: https://www.iana.org/domains/root/db/com.html
+
+schema_version = 1
+
+[[policies]]
+id = "com.form-1"
+selector = "com"
+form = ["label"]
+ascii = "supported"
+idn = "partial"
+source_notes = ["https://itp.cdn.icann.org/en/files/registry-agreements/com/com-agreement-html-01-12-2024-en.htm — Appendix 6 A–D; second-level labels", "Ordinary one-label ASCII registration is covered by the current registry agreement; short-label release and IDN service conditions remain scoped limitations. Availability and registrar transaction checks remain outside the static contract."]
+
+[[policies.requirements]]
+code = "reserved_label"
+message = "This label is reserved; an applicable explicit authorization is required where the policy permits an exception."
+effect = "deny"
+input_class = "any"
+predicate = { kind = "all", predicates = [{ kind = "label_in_set", component = 0, set_id = "com.published-reserved" }, { kind = "not", predicate = { kind = "name_equals_field", component = 0, field = "com_icann_authorized_labels" } }] }
+source_notes = ["https://itp.cdn.icann.org/en/files/registry-agreements/com/com-agreement-html-01-12-2024-en.htm — Appendix 6 A, subject to its introductory authorization exception"]
+
+[[policies.requirements]]
+code = "operational_reservation"
+message = "This label is reserved for registry operations; the applicant needs the applicable operator-use or ICANN authorization exception."
+effect = "deny"
+input_class = "any"
+predicate = { kind = "all", predicates = [{ kind = "label_in_set", component = 0, set_id = "com.operational-reserved" }, { kind = "not", predicate = { kind = "any", predicates = [{ kind = "name_equals_field", component = 0, field = "com_icann_authorized_labels" }, { kind = "name_equals_field", component = 0, field = "com_registry_operational_labels" }] } }] }
+source_notes = ["https://itp.cdn.icann.org/en/files/registry-agreements/com/com-agreement-html-01-12-2024-en.htm — Appendix 6 D and introductory authorization exception"]
+
+[[policies.requirements]]
+code = "idn_sharp_s"
+message = "This registry does not permit the character ß in IDN registrations."
+effect = "deny"
+input_class = "idn"
+predicate = { kind = "label_pattern", component = 0, pattern = "contains", value = "ß", basis = "unicode" }
+source_notes = ["https://www.verisign.com/resources/internationalized-domain-names/idn-registration-rules/ — 5. Special Characters"]
+
+[[policies.requirements]]
+code = "idn_final_sigma"
+message = "This registry does not permit the Greek final sigma ς in IDN registrations."
+effect = "deny"
+input_class = "idn"
+predicate = { kind = "label_pattern", component = 0, pattern = "contains", value = "ς", basis = "unicode" }
+source_notes = ["https://www.verisign.com/resources/internationalized-domain-names/idn-registration-rules/ — 5. Special Characters"]
+
+[[policies.requirements]]
+code = "tagged_label"
+message = "This tagged ASCII label is reserved without explicit ICANN authorization."
+effect = "deny"
+input_class = "ascii"
+predicate = { kind = "all", predicates = [{ kind = "label_positions", component = 0, positions = [2, 3], value = "--", basis = "ascii" }, { kind = "not", predicate = { kind = "name_equals_field", component = 0, field = "com_icann_authorized_labels" } }] }
+source_notes = ["https://itp.cdn.icann.org/en/files/registry-agreements/com/com-agreement-html-01-12-2024-en.htm — Appendix 6, C; ordinary DNS and EPP syntax enforced by CanonicalName."]
+
+[[policies.gaps]]
+code = "short_label_release"
+message = "A one- or two-character label needs a release or authorization that this dataset does not establish."
+input_class = "ascii"
+predicate = { kind = "all", predicates = [{ kind = "label_maximum", component = 0, max = 2, basis = "ascii" }, { kind = "not", predicate = { kind = "name_equals_field", component = 0, field = "com_icann_authorized_labels" } }] }
+
+[[policies.gaps]]
+code = "idn_policy"
+message = "Language-specific IDN repertoires, language tags, script mixing and variant allocation are not implemented."
+input_class = "idn"
+

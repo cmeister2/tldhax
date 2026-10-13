@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "de.one-character",
+      "domain": "a.de",
+      "profile": {
+        "de_contract_capacity": true,
+        "de_effectively_represented": false
+      },
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "The maintained DENIC name requirements and declared contractual-capacity alternative pass; contact verification and transaction processing are outside this static decision."
+    },
+    {
+      "id": "de.sharp-s",
+      "domain": "faß.de",
+      "profile": {
+        "de_contract_capacity": true,
+        "de_effectively_represented": false
+      },
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "The maintained DENIC name requirements and declared contractual-capacity alternative pass; contact verification and transaction processing are outside this static decision."
+    },
+    {
+      "id": "de.umlaut",
+      "domain": "bücher.de",
+      "profile": {
+        "de_contract_capacity": true,
+        "de_effectively_represented": false
+      },
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "The maintained DENIC name requirements and declared contractual-capacity alternative pass; contact verification and transaction processing are outside this static decision."
+    },
+    {
+      "id": "de.ace-umlaut",
+      "domain": "xn--bcher-kva.de",
+      "profile": {
+        "de_contract_capacity": true,
+        "de_effectively_represented": false
+      },
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "The maintained DENIC name requirements and declared contractual-capacity alternative pass; contact verification and transaction processing are outside this static decision."
+    },
+    {
+      "id": "de.ace-sharp-s",
+      "domain": "xn--fa-hia.de",
+      "profile": {
+        "de_contract_capacity": true,
+        "de_effectively_represented": false
+      },
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "The maintained DENIC name requirements and declared contractual-capacity alternative pass; contact verification and transaction processing are outside this static decision."
+    },
+    {
+      "id": "de.unsupported-script",
+      "domain": "日本.de",
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "idn_repertoire"
+        ]
+      },
+      "rationale": "The DENIC Annex does not include these Japanese code points."
+    },
+    {
+      "id": "de.maximum-ascii",
+      "domain": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.de",
+      "expected": {
+        "decision": "unknown"
+      },
+      "rationale": "V(2) permits a 63-character ASCII label; this is an exact boundary test."
+    },
+    {
+      "id": "de.maximum-ace",
+      "domain": "üüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüü.de",
+      "expected": {
+        "decision": "unknown"
+      },
+      "rationale": "This applicant label has 57 Unicode characters but a 63-character ACE label, exercising the measurement expressly required by V(2)."
+    },
+    {
+      "id": "de.exceeds-ace",
+      "domain": "üüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüü.de",
+      "expected": {
+        "decision": "no"
+      },
+      "rationale": "One additional Unicode character exceeds the 63-character ACE bound even though the applicant Unicode length is below 63."
+    },
+    {
+      "id": "de.exceeds-dns-label",
+      "domain": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.de",
+      "expected": {
+        "decision": "no"
+      },
+      "rationale": "The ACE maximum in V(2) also agrees with the independent DNS label bound."
+    },
+    {
+      "id": "de.capacity-nonresident",
+      "domain": "vanity.de",
+      "profile": {
+        "de_contract_capacity": true,
+        "de_effectively_represented": false,
+        "domicile_country": "GB"
+      },
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "The maintained DENIC name requirements and declared contractual-capacity alternative pass; contact verification and transaction processing are outside this static decision."
+    },
+    {
+      "id": "de.effective-representation",
+      "domain": "vanity.de",
+      "profile": {
+        "de_contract_capacity": false,
+        "de_effectively_represented": true
+      },
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "The maintained DENIC name requirements and declared contractual-capacity alternative pass; contact verification and transaction processing are outside this static decision."
+    },
+    {
+      "id": "de.no-capacity-or-representation",
+      "domain": "vanity.de",
+      "profile": {
+        "de_contract_capacity": false,
+        "de_effectively_represented": false
+      },
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "applicant_capacity"
+        ]
+      },
+      "rationale": "Both expressly declared alternatives to conclude a registration contract fail."
+    },
+    {
+      "id": "de.missing-capacity",
+      "domain": "sunflower.de",
+      "expected": {
+        "decision": "unknown",
+        "missing_profile_fields": [
+          "de_contract_capacity",
+          "de_effectively_represented"
+        ]
+      },
+      "rationale": "Both eligibility alternatives are omitted, so their declarations are needed."
+    },
+    {
+      "id": "de.decisive-capacity",
+      "domain": "sunflower.de",
+      "profile": {
+        "de_contract_capacity": true
+      },
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "Contractual capacity satisfies the alternative without requiring representation facts."
+    },
+    {
+      "id": "de.decisive-representation",
+      "domain": "sunflower.de",
+      "profile": {
+        "de_effectively_represented": true
+      },
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "Effective representation satisfies the alternative without requiring capacity facts."
+    },
+    {
+      "id": "de.maximum-qualified",
+      "domain": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.de",
+      "profile": {
+        "de_contract_capacity": true
+      },
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "The 63-octet ASCII boundary passes for a qualifying declared applicant."
+    }
+  ]
+}

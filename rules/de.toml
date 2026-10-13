@@ -1,10 +1,71 @@
-[[domains]]
-tld = "de"
-registerable = "restricted"
-note = ".de requires eligibility (resident)"
-restrictions = ["resident"]
+# Namespace inventory retained from this file; executable decisions are the direct policies below.
+# Inventory membership alone does not establish registration permission.
+# Namespace: de
+# Original namespace reference: https://www.icann.org/resources/pages/registry-agreements-specification-13-2013-11-07-en
 
-[domains.sources]
-registerable = "https://www.icann.org/resources/pages/registry-agreements-specification-13-2013-11-07-en"
-restrictions = "https://www.icann.org/resources/pages/registry-agreements-specification-13-2013-11-07-en"
-note = "https://www.icann.org/resources/pages/registry-agreements-specification-13-2013-11-07-en"
+schema_version = 1
+
+[[policies]]
+id = "de.form-1"
+selector = "de"
+form = ["label"]
+ascii = "supported"
+idn = "supported"
+source_notes = ["https://www.denic.de/domainrichtlinien/ — V(1), excluding the .de suffix", "https://www.denic.de/domainrichtlinien/ — V(1–2), adopted Annex; German wording controls.", "https://www.denic.de/en/products/de-domains/registration/ — prospective static name rules and applicant capacity; open to applicants in Germany or abroad.", "Contact-data verification, availability, third-party disputes and a recipient appointment on later request are transaction or legal-review responsibilities, not additional country-presence declarations."]
+
+[[policies.requirements]]
+code = "label_minimum"
+message = "The applicant label does not meet the required minimum length."
+effect = "require"
+input_class = "any"
+predicate = { kind = "label_minimum", component = 0, min = 1, basis = "unicode" }
+source_notes = ["https://www.denic.de/domainrichtlinien/ — V(2)"]
+
+[[policies.requirements]]
+code = "label_maximum"
+message = "The applicant label exceeds the permitted maximum length."
+effect = "require"
+input_class = "any"
+predicate = { kind = "label_maximum", component = 0, max = 63, basis = "ascii" }
+source_notes = ["https://www.denic.de/domainrichtlinien/ — V(2)"]
+
+[[policies.requirements]]
+code = "leading_hyphen"
+message = "The applicant label must not begin with a hyphen."
+effect = "deny"
+input_class = "any"
+predicate = { kind = "label_pattern", component = 0, pattern = "prefix", value = "-", basis = "unicode" }
+source_notes = ["https://www.denic.de/domainrichtlinien/ — V(1)"]
+
+[[policies.requirements]]
+code = "trailing_hyphen"
+message = "The applicant label must not end with a hyphen."
+effect = "deny"
+input_class = "any"
+predicate = { kind = "label_pattern", component = 0, pattern = "suffix", value = "-", basis = "unicode" }
+source_notes = ["https://www.denic.de/domainrichtlinien/ — V(1)"]
+
+[[policies.requirements]]
+code = "tagged_label"
+message = "Hyphens in the third and fourth positions are not permitted in this applicant label."
+effect = "deny"
+input_class = "any"
+predicate = { kind = "label_positions", component = 0, positions = [2, 3], value = "--", basis = "unicode" }
+source_notes = ["https://www.denic.de/domainrichtlinien/ — V(1)"]
+
+[[policies.requirements]]
+code = "idn_repertoire"
+message = "The name must use characters from the adopted DENIC IDN repertoire."
+effect = "require"
+input_class = "idn"
+predicate = { kind = "idn", component = 0, profile_id = "denic.annex.current" }
+source_notes = ["https://www.denic.de/domainrichtlinien/ — V(1), V(2), Annex"]
+
+[[policies.requirements]]
+code = "applicant_capacity"
+message = "The applicant needs contractual capacity or effective representation."
+effect = "require"
+input_class = "any"
+predicate = { kind = "any", predicates = [{ kind = "field_equals", field = "de_contract_capacity", value = true }, { kind = "field_equals", field = "de_effectively_represented", value = true }] }
+source_notes = ["https://www.denic-services.de/en/denic-direct/frequently-asked-questions — What requirements must I fulfill in order to register a .de domain?"]
+

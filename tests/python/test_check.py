@@ -7,9 +7,9 @@ from tldhax import CheckResult, Registry
 
 def test_known_domains(registry: Registry) -> None:
     """Keep original examples while correcting unsupported historical guesses."""
-    assert registry.check("foo.co.uk").status == "unknown"
+    assert registry.check("foo.co.uk").status == "yes"
     assert (
-        registry.check("ab.co.uk").status == "unknown"
+        registry.check("ab.co.uk").status == "yes"
     )  # No invented three-character minimum.
     assert (
         registry.check("za.sk").status == "unknown"

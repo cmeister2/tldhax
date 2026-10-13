@@ -1,1 +1,122 @@
-{"schema_version":1,"label_sets":[]}
+{
+  "schema_version": 1,
+  "label_sets": [
+    {
+      "id": "nominet.third-reserved",
+      "labels": [
+        "ac",
+        "co",
+        "com",
+        "gov",
+        "ltd",
+        "me",
+        "mil",
+        "mod",
+        "net",
+        "nhs",
+        "nic",
+        "org",
+        "plc",
+        "police",
+        "sch",
+        "uk"
+      ]
+    },
+    {
+      "id": "nominet.root-reserved",
+      "labels": [
+        "com",
+        "uk"
+      ]
+    },
+    {
+      "id": "com.published-reserved",
+      "labels": [
+        "afrinic",
+        "apnic",
+        "arin",
+        "aso",
+        "ccnso",
+        "example",
+        "gnso",
+        "gtld-servers",
+        "iab",
+        "iana",
+        "iana-servers",
+        "icann",
+        "iesg",
+        "ietf",
+        "internic",
+        "irtf",
+        "istf",
+        "lacnic",
+        "latnic",
+        "rfc-editor",
+        "ripe",
+        "root-servers"
+      ]
+    },
+    {
+      "id": "com.operational-reserved",
+      "labels": [
+        "nic",
+        "whois",
+        "www"
+      ]
+    },
+    {
+      "id": "net.published-reserved",
+      "labels": [
+        "afrinic",
+        "apnic",
+        "arin",
+        "aso",
+        "ccnso",
+        "example",
+        "gnso",
+        "gtld-servers",
+        "iab",
+        "iana",
+        "iana-servers",
+        "icann",
+        "iesg",
+        "ietf",
+        "internic",
+        "irtf",
+        "istf",
+        "lacnic",
+        "latnic",
+        "rfc-editor",
+        "ripe",
+        "root-servers"
+      ]
+    },
+    {
+      "id": "net.operational-reserved",
+      "labels": [
+        "nic",
+        "whois",
+        "www"
+      ]
+    },
+    {
+      "id": "nominet.namespace-labels",
+      "labels": [
+        "ac",
+        "co",
+        "gov",
+        "ltd",
+        "me",
+        "mil",
+        "mod",
+        "net",
+        "nhs",
+        "nic",
+        "org",
+        "plc",
+        "police",
+        "sch"
+      ]
+    }
+  ]
+}

@@ -1,5 +1,48 @@
-[[domains]]
-tld = "name"
-registerable = "yes"
-[domains.sources]
-registerable = "https://github.com/publicsuffix/list/issues/2306"
+# Namespace inventory retained from this file; executable decisions are the direct policies below.
+# Inventory membership alone does not establish registration permission.
+# Namespace: name
+# Original namespace reference: https://github.com/publicsuffix/list/issues/2306
+
+schema_version = 1
+
+[[policies]]
+id = "name.form-1"
+selector = "name"
+form = ["label"]
+ascii = "partial"
+idn = "partial"
+source_notes = ["https://www.icann.org/en/registry-agreements/name/name-registry-agreement-appendix-11-1-12-2012-en — 1(a)(2)", "One-label registrations remain a published form; no exact-name-only or natural-person-only gate replaces the broader contract. Approval of third-level service withdrawal alone does not establish its activation date."]
+
+[[policies.gaps]]
+code = "personal_name_relationship"
+message = "Personal identifiers, fictional-character rights and numeric differentiation are not fully implemented."
+input_class = "any"
+
+[[policies.gaps]]
+code = "idn_policy"
+message = "The adopted .name IDN policy is not implemented."
+input_class = "idn"
+
+[[policies]]
+id = "name.form-2"
+selector = "name"
+form = ["given", "family"]
+ascii = "partial"
+idn = "partial"
+source_notes = ["https://www.icann.org/en/registry-agreements/name/name-registry-agreement-appendix-11-1-12-2012-en — 1(a)(2)", "One-label registrations remain a published form; no exact-name-only or natural-person-only gate replaces the broader contract. Approval of third-level service withdrawal alone does not establish its activation date."]
+
+[[policies.gaps]]
+code = "personal_name_relationship"
+message = "Personal identifiers, fictional-character rights and numeric differentiation are not fully implemented."
+input_class = "any"
+
+[[policies.gaps]]
+code = "registration_form_transition"
+message = "Third-level service withdrawal is approved, but the current acceptance implementation date is unresolved."
+input_class = "any"
+
+[[policies.gaps]]
+code = "idn_policy"
+message = "The adopted .name IDN policy is not implemented."
+input_class = "idn"
+
