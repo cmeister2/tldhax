@@ -1,0 +1,37 @@
+schema_version = 2
+
+[[namespaces]]
+selector = "google"
+forms = [["label"]]
+form_assertion_ids = []
+rules = ["google.brand-access"]
+context = ["The original Word agreement is retained by hash as controlling contract provenance; the operative section 9 is restated by the 2017 Global Amendment.", "Inventory Brand metadata alone never approves or denies an applicant."]
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "unknown"
+idn = "unknown"
+assertion_ids = []
+gap = "The applicant-component count scopes the access check; no complete or accepted form is inferred from Specification 13."
+
+[[namespaces.coverage]]
+family = "access"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["google.brand-access", "google.current-spec13", "google.current-contract-index", "google.affiliate-definition", "google.dns-control-context"]
+gap = "Necessary qualifying registrant classes are checked; documentary qualification and operational DNS control remain outside this filter."
+
+[[namespaces.coverage]]
+family = "allocation"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["google.licensee-use-context"]
+gap = "Future use must relate to trademark goods or services; name allocation and purpose are incompletely modeled."
+
+[[namespaces.coverage]]
+family = "eligibility"
+ascii = "unknown"
+idn = "unknown"
+assertion_ids = []
+gap = "No separate exhaustive applicant verification policy is asserted."
+

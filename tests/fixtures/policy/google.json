@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "operation": "new_registration",
+  "evaluation_date": "2026-10-12",
+  "cases": [
+    {
+      "id": "google.outsider",
+      "domain": "vanity.google",
+      "source_ids": [
+        "global-amendment-2017",
+        "spec13-amendment-2023",
+        "google-contract-index",
+        "google-contract-word"
+      ],
+      "expected": {
+        "failed_rule_ids": [
+          "google.brand-access"
+        ],
+        "status": "no",
+        "name_validity": "unknown"
+      },
+      "rationale": "Operative Specification 13 §9.3(ii) requires a qualifying registrant relationship; absence is explicitly declared rather than inferred from a Brand inventory flag.",
+      "registrant": {
+        "entity_kind": "organization",
+        "google_registry_operator": false,
+        "google_qualifying_affiliate": false,
+        "google_qualifying_trademark_licensee": false
+      }
+    },
+    {
+      "id": "google.operator",
+      "domain": "vanity.google",
+      "source_ids": [
+        "global-amendment-2017",
+        "spec13-amendment-2023",
+        "google-contract-index",
+        "google-contract-word"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "google.brand-access"
+        ],
+        "gap_families": [
+          "namespace"
+        ]
+      },
+      "rationale": "The Registry Operator is an expressly allowed registrant alternative; current DNS setup is not required.",
+      "registrant": {
+        "google_registry_operator": true
+      }
+    },
+    {
+      "id": "google.affiliate",
+      "domain": "vanity.google",
+      "source_ids": [
+        "global-amendment-2017",
+        "spec13-amendment-2023",
+        "google-contract-index",
+        "google-contract-word"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "google.brand-access"
+        ],
+        "gap_families": [
+          "namespace"
+        ]
+      },
+      "rationale": "A qualifying Affiliate under the controlling agreement is an independent permitted class.",
+      "registrant": {
+        "google_qualifying_affiliate": true
+      }
+    },
+    {
+      "id": "google.licensee",
+      "domain": "vanity.google",
+      "source_ids": [
+        "global-amendment-2017",
+        "spec13-amendment-2023",
+        "google-contract-index",
+        "google-contract-word"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "google.brand-access"
+        ],
+        "gap_families": [
+          "namespace"
+        ]
+      },
+      "rationale": "Specification13 §9.5 defines a qualifying legal-entity license for the google Brand trademark, with continuing substantive business use; no applicant-label-specific grant is required.",
+      "registrant": {
+        "entity_kind": "organization",
+        "google_registry_operator": false,
+        "google_qualifying_affiliate": false,
+        "google_qualifying_trademark_licensee": true
+      }
+    },
+    {
+      "id": "google.license-role-different-candidate",
+      "domain": "unrelated.google",
+      "source_ids": [
+        "global-amendment-2017",
+        "spec13-amendment-2023",
+        "google-contract-index",
+        "google-contract-word"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "google.brand-access"
+        ],
+        "gap_families": [
+          "namespace",
+          "allocation"
+        ]
+      },
+      "rationale": "Specification13 §9.5 licenses the trademark corresponding to the Brand TLD string, not a literal candidate label; the same qualifying entity role applies while future-use policy remains a gap.",
+      "registrant": {
+        "entity_kind": "organization",
+        "google_registry_operator": false,
+        "google_qualifying_affiliate": false,
+        "google_qualifying_trademark_licensee": true
+      }
+    },
+    {
+      "id": "google.natural-person-licensee",
+      "domain": "vanity.google",
+      "source_ids": [
+        "global-amendment-2017",
+        "spec13-amendment-2023",
+        "google-contract-index",
+        "google-contract-word"
+      ],
+      "expected": {
+        "failed_rule_ids": [
+          "google.brand-access"
+        ],
+        "status": "no",
+        "name_validity": "unknown"
+      },
+      "rationale": "Specification13 §9.5 expressly requires a legal entity and excludes a person from the Trademark Licensee alternative.",
+      "registrant": {
+        "entity_kind": "individual",
+        "google_registry_operator": false,
+        "google_qualifying_affiliate": false,
+        "google_qualifying_trademark_licensee": true
+      }
+    },
+    {
+      "id": "google.prospective-operator-without-dns",
+      "domain": "vanity.google",
+      "source_ids": [
+        "global-amendment-2017",
+        "spec13-amendment-2023",
+        "google-contract-index",
+        "google-contract-word"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "google.brand-access"
+        ],
+        "absent_rule_ids": [
+          "google.dns-control-context"
+        ],
+        "gap_families": [
+          "namespace",
+          "allocation"
+        ]
+      },
+      "rationale": "A prospective domain need not already have DNS setup. §9.3(ii) restricts operational controllers to qualifying classes but does not make existing records a static eligibility prerequisite.",
+      "registrant": {
+        "google_registry_operator": true
+      }
+    },
+    {
+      "id": "google.missing-profile",
+      "domain": "vanity.google",
+      "source_ids": [
+        "global-amendment-2017",
+        "spec13-amendment-2023",
+        "google-contract-index",
+        "google-contract-word"
+      ],
+      "expected": {
+        "gap_families": [
+          "namespace",
+          "access"
+        ]
+      },
+      "rationale": "Missing facts cannot establish or disprove the allowed relationships; accepted name forms and other policy families remain unresearched."
+    },
+    {
+      "id": "google.other-brand-isolation",
+      "domain": "vanity.youtube",
+      "source_ids": [
+        "global-amendment-2017",
+        "spec13-amendment-2023",
+        "google-contract-index",
+        "google-contract-word"
+      ],
+      "expected": {
+        "absent_rule_ids": [
+          "google.brand-access"
+        ],
+        "gap_families": [
+          "namespace"
+        ]
+      },
+      "rationale": "A reviewed Google contract and Google-scoped declarations cannot supply a policy for another Brand namespace.",
+      "registrant": {
+        "google_registry_operator": true
+      }
+    }
+  ]
+}

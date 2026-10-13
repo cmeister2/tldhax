@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "operation": "new_registration",
+  "evaluation_date": "2026-10-12",
+  "cases": [
+    {
+      "id": "de.one-character",
+      "domain": "a.de",
+      "source_ids": [
+        "denic-guidelines-de"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "de.label-minimum",
+          "de.label-maximum"
+        ],
+        "gap_families": [
+          "reserved",
+          "allocation",
+          "access",
+          "eligibility"
+        ]
+      },
+      "rationale": "V(1), V(2) and the Annex permit the specified characters; this does not settle reservations or access obligations.",
+      "registrant": {
+        "de_contract_capacity": true,
+        "de_effectively_represented": false
+      }
+    },
+    {
+      "id": "de.sharp-s",
+      "domain": "faß.de",
+      "source_ids": [
+        "denic-guidelines-de"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "de.label-minimum",
+          "de.label-maximum",
+          "de.idn-repertoire"
+        ],
+        "gap_families": [
+          "reserved",
+          "allocation",
+          "access",
+          "eligibility"
+        ]
+      },
+      "rationale": "V(1), V(2) and the Annex permit the specified characters; this does not settle reservations or access obligations.",
+      "registrant": {
+        "de_contract_capacity": true,
+        "de_effectively_represented": false
+      }
+    },
+    {
+      "id": "de.umlaut",
+      "domain": "bücher.de",
+      "source_ids": [
+        "denic-guidelines-de"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "de.label-minimum",
+          "de.label-maximum",
+          "de.idn-repertoire"
+        ],
+        "gap_families": [
+          "reserved",
+          "allocation",
+          "access",
+          "eligibility"
+        ]
+      },
+      "rationale": "V(1), V(2) and the Annex permit the specified characters; this does not settle reservations or access obligations.",
+      "registrant": {
+        "de_contract_capacity": true,
+        "de_effectively_represented": false
+      }
+    },
+    {
+      "id": "de.ace-umlaut",
+      "domain": "xn--bcher-kva.de",
+      "source_ids": [
+        "denic-guidelines-de"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "de.label-minimum",
+          "de.label-maximum",
+          "de.idn-repertoire"
+        ],
+        "gap_families": [
+          "reserved",
+          "allocation",
+          "access",
+          "eligibility"
+        ]
+      },
+      "rationale": "V(1), V(2) and the Annex permit the specified characters; this does not settle reservations or access obligations.",
+      "registrant": {
+        "de_contract_capacity": true,
+        "de_effectively_represented": false
+      }
+    },
+    {
+      "id": "de.ace-sharp-s",
+      "domain": "xn--fa-hia.de",
+      "source_ids": [
+        "denic-guidelines-de"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "de.label-minimum",
+          "de.label-maximum",
+          "de.idn-repertoire"
+        ],
+        "gap_families": [
+          "reserved",
+          "allocation",
+          "access",
+          "eligibility"
+        ]
+      },
+      "rationale": "V(1), V(2) and the Annex permit the specified characters; this does not settle reservations or access obligations.",
+      "registrant": {
+        "de_contract_capacity": true,
+        "de_effectively_represented": false
+      }
+    },
+    {
+      "id": "de.unsupported-script",
+      "domain": "日本.de",
+      "source_ids": [
+        "denic-guidelines-de"
+      ],
+      "expected": {
+        "name_validity": "invalid",
+        "failed_rule_ids": [
+          "de.idn-repertoire"
+        ]
+      },
+      "rationale": "The DENIC Annex does not include these Japanese code points."
+    },
+    {
+      "id": "de.maximum-ascii",
+      "domain": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.de",
+      "source_ids": [
+        "denic-guidelines-de"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "de.label-maximum"
+        ]
+      },
+      "rationale": "V(2) permits a 63-character ASCII label; this is an exact boundary test."
+    },
+    {
+      "id": "de.maximum-ace",
+      "domain": "üüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüü.de",
+      "source_ids": [
+        "denic-guidelines-de"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "de.label-maximum",
+          "de.idn-repertoire"
+        ]
+      },
+      "rationale": "This applicant label has 57 Unicode characters but a 63-character ACE label, exercising the measurement expressly required by V(2)."
+    },
+    {
+      "id": "de.exceeds-ace",
+      "domain": "üüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüüü.de",
+      "source_ids": [
+        "denic-guidelines-de"
+      ],
+      "expected": {
+        "name_validity": "invalid"
+      },
+      "rationale": "One additional Unicode character exceeds the 63-character ACE bound even though the applicant Unicode length is below 63."
+    },
+    {
+      "id": "de.exceeds-dns-label",
+      "domain": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.de",
+      "source_ids": [
+        "denic-guidelines-de"
+      ],
+      "expected": {
+        "name_validity": "invalid"
+      },
+      "rationale": "The ACE maximum in V(2) also agrees with the independent DNS label bound."
+    },
+    {
+      "id": "de.capacity-nonresident",
+      "domain": "vanity.de",
+      "source_ids": [
+        "denic-nonresident-faq",
+        "denic-terms-de"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "de.contract-capacity"
+        ],
+        "gap_families": [
+          "access",
+          "eligibility"
+        ]
+      },
+      "rationale": "The nonresident FAQ permits foreign holders; §3(4) requires a recipient only after a DENIC request.",
+      "registrant": {
+        "de_contract_capacity": true,
+        "de_effectively_represented": false,
+        "domicile_country": "GB"
+      }
+    },
+    {
+      "id": "de.effective-representation",
+      "domain": "vanity.de",
+      "source_ids": [
+        "denic-nonresident-faq"
+      ],
+      "expected": {
+        "passed_rule_ids": [
+          "de.contract-capacity"
+        ]
+      },
+      "rationale": "The contract FAQ expressly permits effective representation as an alternative.",
+      "registrant": {
+        "de_contract_capacity": false,
+        "de_effectively_represented": true
+      }
+    },
+    {
+      "id": "de.no-capacity-or-representation",
+      "domain": "vanity.de",
+      "source_ids": [
+        "denic-nonresident-faq"
+      ],
+      "expected": {
+        "failed_rule_ids": [
+          "de.contract-capacity"
+        ]
+      },
+      "rationale": "Both expressly declared alternatives to conclude a registration contract fail.",
+      "registrant": {
+        "de_contract_capacity": false,
+        "de_effectively_represented": false
+      }
+    }
+  ]
+}

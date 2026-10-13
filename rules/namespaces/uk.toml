@@ -1,0 +1,491 @@
+schema_version = 2
+
+[[namespaces]]
+selector = "uk"
+forms = [["label"]]
+form_assertion_ids = ["uk.form"]
+rules = ["uk.ascii-only", "uk.root-reserved"]
+context = ["The 2027 revised policy remains inactive; current rules are dated 20.03.2024."]
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["uk.form", "uk.current-policy-selection"]
+
+[[namespaces.coverage]]
+family = "idn"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["uk.ascii-only"]
+
+[[namespaces.coverage]]
+family = "length"
+ascii = "conflicting"
+idn = "conflicting"
+assertion_ids = ["uk.length-rules-conflict", "uk.length-fields-conflict"]
+gap = "Contract/technical wording discrepancy remains unresolved; no min3 assumption is made."
+
+[[namespaces.coverage]]
+family = "reserved"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["uk.root-reserved"]
+gap = "Existing administered/delegated suffixes and historical exceptions are not a complete literal set."
+
+[[namespaces.coverage]]
+family = "eligibility"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["uk.open-applicants"]
+
+[[namespaces.coverage]]
+family = "allocation"
+ascii = "partial"
+idn = "partial"
+assertion_ids = []
+gap = "Name relationship, specific-use and company derivation rules are not fully compiled."
+
+[[namespaces]]
+selector = "co.uk"
+forms = [["label"]]
+form_assertion_ids = ["uk.form"]
+rules = ["uk.ascii-only", "uk.no-edge-hyphen", "uk.third-reserved"]
+context = ["The 2027 revised policy remains inactive; current rules are dated 20.03.2024."]
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["uk.form", "uk.current-policy-selection"]
+
+[[namespaces.coverage]]
+family = "idn"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["uk.ascii-only"]
+
+[[namespaces.coverage]]
+family = "length"
+ascii = "conflicting"
+idn = "conflicting"
+assertion_ids = ["uk.length-rules-conflict", "uk.length-fields-conflict"]
+gap = "Contract/technical wording discrepancy remains unresolved; no min3 assumption is made."
+
+[[namespaces.coverage]]
+family = "characters"
+ascii = "reviewed"
+idn = "unknown"
+assertion_ids = ["uk.characters-complete"]
+
+[[namespaces.coverage]]
+family = "reserved"
+ascii = "reviewed"
+idn = "unknown"
+assertion_ids = ["uk.third-reserved"]
+
+[[namespaces.coverage]]
+family = "eligibility"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["uk.open-applicants"]
+
+[[namespaces.coverage]]
+family = "allocation"
+ascii = "not_applicable"
+idn = "not_applicable"
+assertion_ids = ["uk.unenforced-charter"]
+
+[[namespaces]]
+selector = "org.uk"
+forms = [["label"]]
+form_assertion_ids = ["uk.form"]
+rules = ["uk.ascii-only", "uk.no-edge-hyphen", "uk.third-reserved"]
+context = ["The 2027 revised policy remains inactive; current rules are dated 20.03.2024."]
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["uk.form", "uk.current-policy-selection"]
+
+[[namespaces.coverage]]
+family = "idn"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["uk.ascii-only"]
+
+[[namespaces.coverage]]
+family = "length"
+ascii = "conflicting"
+idn = "conflicting"
+assertion_ids = ["uk.length-rules-conflict", "uk.length-fields-conflict"]
+gap = "Contract/technical wording discrepancy remains unresolved; no min3 assumption is made."
+
+[[namespaces.coverage]]
+family = "characters"
+ascii = "reviewed"
+idn = "unknown"
+assertion_ids = ["uk.characters-complete"]
+
+[[namespaces.coverage]]
+family = "reserved"
+ascii = "reviewed"
+idn = "unknown"
+assertion_ids = ["uk.third-reserved"]
+
+[[namespaces.coverage]]
+family = "eligibility"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["uk.open-applicants"]
+
+[[namespaces.coverage]]
+family = "allocation"
+ascii = "not_applicable"
+idn = "not_applicable"
+assertion_ids = ["uk.unenforced-charter"]
+
+[[namespaces]]
+selector = "me.uk"
+forms = [["label"]]
+form_assertion_ids = ["uk.form"]
+rules = ["uk.ascii-only", "uk.no-edge-hyphen", "uk.third-reserved", "uk.me-natural-person"]
+context = ["The 2027 revised policy remains inactive; current rules are dated 20.03.2024."]
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["uk.form", "uk.current-policy-selection"]
+
+[[namespaces.coverage]]
+family = "idn"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["uk.ascii-only"]
+
+[[namespaces.coverage]]
+family = "length"
+ascii = "conflicting"
+idn = "conflicting"
+assertion_ids = ["uk.length-rules-conflict", "uk.length-fields-conflict"]
+gap = "Contract/technical wording discrepancy remains unresolved; no min3 assumption is made."
+
+[[namespaces.coverage]]
+family = "characters"
+ascii = "reviewed"
+idn = "unknown"
+assertion_ids = ["uk.characters-complete"]
+
+[[namespaces.coverage]]
+family = "reserved"
+ascii = "reviewed"
+idn = "unknown"
+assertion_ids = ["uk.third-reserved"]
+
+[[namespaces.coverage]]
+family = "eligibility"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["uk.me-natural-person"]
+
+[[namespaces.coverage]]
+family = "allocation"
+ascii = "partial"
+idn = "partial"
+assertion_ids = []
+gap = "Name relationship, specific-use and company derivation rules are not fully compiled."
+
+[[namespaces]]
+selector = "ltd.uk"
+forms = [["label"]]
+form_assertion_ids = ["uk.form"]
+rules = ["uk.ascii-only", "uk.no-edge-hyphen", "uk.company-eligibility"]
+context = ["The 2027 revised policy remains inactive; current rules are dated 20.03.2024."]
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["uk.form", "uk.current-policy-selection"]
+
+[[namespaces.coverage]]
+family = "idn"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["uk.ascii-only"]
+
+[[namespaces.coverage]]
+family = "length"
+ascii = "conflicting"
+idn = "conflicting"
+assertion_ids = ["uk.length-rules-conflict", "uk.length-fields-conflict"]
+gap = "Contract/technical wording discrepancy remains unresolved; no min3 assumption is made."
+
+[[namespaces.coverage]]
+family = "characters"
+ascii = "reviewed"
+idn = "unknown"
+assertion_ids = ["uk.characters-complete"]
+
+[[namespaces.coverage]]
+family = "eligibility"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["uk.company-eligibility"]
+gap = "Further status and documentary criteria remain unmodeled."
+
+[[namespaces.coverage]]
+family = "allocation"
+ascii = "partial"
+idn = "partial"
+assertion_ids = []
+gap = "Name relationship, specific-use and company derivation rules are not fully compiled."
+
+[[namespaces]]
+selector = "plc.uk"
+forms = [["label"]]
+form_assertion_ids = ["uk.form"]
+rules = ["uk.ascii-only", "uk.no-edge-hyphen", "uk.company-eligibility"]
+context = ["The 2027 revised policy remains inactive; current rules are dated 20.03.2024."]
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["uk.form", "uk.current-policy-selection"]
+
+[[namespaces.coverage]]
+family = "idn"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["uk.ascii-only"]
+
+[[namespaces.coverage]]
+family = "length"
+ascii = "conflicting"
+idn = "conflicting"
+assertion_ids = ["uk.length-rules-conflict", "uk.length-fields-conflict"]
+gap = "Contract/technical wording discrepancy remains unresolved; no min3 assumption is made."
+
+[[namespaces.coverage]]
+family = "characters"
+ascii = "reviewed"
+idn = "unknown"
+assertion_ids = ["uk.characters-complete"]
+
+[[namespaces.coverage]]
+family = "eligibility"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["uk.company-eligibility"]
+gap = "Further status and documentary criteria remain unmodeled."
+
+[[namespaces.coverage]]
+family = "allocation"
+ascii = "partial"
+idn = "partial"
+assertion_ids = []
+gap = "Name relationship, specific-use and company derivation rules are not fully compiled."
+
+[[namespaces]]
+selector = "net.uk"
+forms = [["label"]]
+form_assertion_ids = ["uk.form"]
+rules = ["uk.ascii-only", "uk.no-edge-hyphen", "uk.third-reserved", "uk.net-isp"]
+context = ["The 2027 revised policy remains inactive; current rules are dated 20.03.2024."]
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["uk.form", "uk.current-policy-selection"]
+
+[[namespaces.coverage]]
+family = "idn"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["uk.ascii-only"]
+
+[[namespaces.coverage]]
+family = "length"
+ascii = "conflicting"
+idn = "conflicting"
+assertion_ids = ["uk.length-rules-conflict", "uk.length-fields-conflict"]
+gap = "Contract/technical wording discrepancy remains unresolved; no min3 assumption is made."
+
+[[namespaces.coverage]]
+family = "characters"
+ascii = "reviewed"
+idn = "unknown"
+assertion_ids = ["uk.characters-complete"]
+
+[[namespaces.coverage]]
+family = "reserved"
+ascii = "reviewed"
+idn = "unknown"
+assertion_ids = ["uk.third-reserved"]
+
+[[namespaces.coverage]]
+family = "eligibility"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["uk.net-isp"]
+gap = "Further status and documentary criteria remain unmodeled."
+
+[[namespaces.coverage]]
+family = "allocation"
+ascii = "partial"
+idn = "partial"
+assertion_ids = []
+gap = "Name relationship, specific-use and company derivation rules are not fully compiled."
+
+[[namespaces]]
+selector = "ac.uk"
+forms = []
+form_assertion_ids = []
+rules = []
+context = []
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "unknown"
+idn = "unknown"
+assertion_ids = ["uk.delegated-ac"]
+gap = "Delegation is not proof of name or applicant eligibility."
+
+[[namespaces]]
+selector = "gov.uk"
+forms = []
+form_assertion_ids = []
+rules = []
+context = []
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "unknown"
+idn = "unknown"
+assertion_ids = ["uk.delegated-gov"]
+gap = "Delegation is not proof of name or applicant eligibility."
+
+[[namespaces]]
+selector = "mod.uk"
+forms = []
+form_assertion_ids = []
+rules = []
+context = []
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "unknown"
+idn = "unknown"
+assertion_ids = ["uk.delegated-mod"]
+gap = "Delegation is not proof of name or applicant eligibility."
+
+[[namespaces]]
+selector = "mil.uk"
+forms = []
+form_assertion_ids = []
+rules = []
+context = []
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "unknown"
+idn = "unknown"
+assertion_ids = ["uk.delegated-mil"]
+gap = "Delegation is not proof of name or applicant eligibility."
+
+[[namespaces]]
+selector = "nhs.uk"
+forms = []
+form_assertion_ids = []
+rules = []
+context = []
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "unknown"
+idn = "unknown"
+assertion_ids = ["uk.delegated-nhs"]
+gap = "Delegation is not proof of name or applicant eligibility."
+
+[[namespaces]]
+selector = "police.uk"
+forms = []
+form_assertion_ids = []
+rules = []
+context = []
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "unknown"
+idn = "unknown"
+assertion_ids = ["uk.delegated-police"]
+gap = "Delegation is not proof of name or applicant eligibility."
+
+[[namespaces]]
+selector = "sch.uk"
+forms = [["school", "area"]]
+form_assertion_ids = ["uk.school-form"]
+rules = ["uk.sch-base.eligibility"]
+context = []
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["uk.school-form"]
+
+[[namespaces.coverage]]
+family = "eligibility"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["uk.sch-base.eligibility"]
+gap = "Existing holdings, geographical allocation and documented application conditions remain unmodeled."
+
+[[namespaces.coverage]]
+family = "allocation"
+ascii = "partial"
+idn = "partial"
+assertion_ids = []
+gap = "Area identifiers and name choices need separately curated authority data."
+
+[[namespaces]]
+selector = "*.sch.uk"
+forms = [["school"]]
+form_assertion_ids = ["uk.school-wildcard-form"]
+rules = ["uk.sch-wildcard.eligibility"]
+context = []
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["uk.school-wildcard-form"]
+
+[[namespaces.coverage]]
+family = "eligibility"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["uk.sch-wildcard.eligibility"]
+gap = "Existing holdings, geographical allocation and documented application conditions remain unmodeled."
+
+[[namespaces.coverage]]
+family = "allocation"
+ascii = "partial"
+idn = "partial"
+assertion_ids = []
+gap = "Area identifiers and name choices need separately curated authority data."
+
+[[label_sets]]
+id = "nominet.third-reserved"
+labels = ["ac", "co", "gov", "ltd", "me", "mil", "mod", "net", "nhs", "nic", "org", "plc", "police", "sch", "com", "uk"]
+assertion_ids = ["uk.third-reserved"]
+
+[[label_sets]]
+id = "nominet.root-reserved"
+labels = ["com", "uk"]
+assertion_ids = ["uk.root-reserved"]
+

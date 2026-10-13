@@ -1,0 +1,110 @@
+schema_version = 2
+
+[[namespaces]]
+selector = "au"
+forms = [["label"]]
+form_assertion_ids = ["au.form"]
+rules = ["au.minimum-two", "au.ascii-only-current", "au.no-leading-hyphen", "au.no-trailing-hyphen", "au.no-tagged-label", "au.australian-presence"]
+context = []
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["au.form"]
+
+[[namespaces.coverage]]
+family = "length"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["au.minimum-two"]
+gap = "The minimum is explicit; the 63-octet maximum is independently enforced by DNS syntax."
+
+[[namespaces.coverage]]
+family = "characters"
+ascii = "reviewed"
+idn = "unknown"
+assertion_ids = ["au.ascii-characters-complete"]
+gap = "No uncommenced IDN syntax is activated."
+
+[[namespaces.coverage]]
+family = "idn"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["au.ascii-only-current"]
+
+[[namespaces.coverage]]
+family = "reserved"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["au.reservation-context"]
+gap = "Reservations and exceptions require further research."
+
+[[namespaces.coverage]]
+family = "allocation"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["au.allocation-context"]
+gap = "No exact equality requirement replaces broader permitted correspondence."
+
+[[namespaces.coverage]]
+family = "eligibility"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["au.australian-presence"]
+gap = "Declared categories are checked; related-body and entity-status exceptions remain scoped gaps."
+
+[[namespaces]]
+selector = "com.au"
+forms = [["label"]]
+form_assertion_ids = ["com-au.form"]
+rules = ["com-au.minimum-two", "com-au.ascii-only-current", "com-au.no-leading-hyphen", "com-au.no-trailing-hyphen", "com-au.no-tagged-label", "com-au.australian-presence", "com-au.commercial-class"]
+context = []
+
+[[namespaces.coverage]]
+family = "namespace"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["com-au.form"]
+
+[[namespaces.coverage]]
+family = "length"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["com-au.minimum-two"]
+gap = "The minimum is explicit; the 63-octet maximum is independently enforced by DNS syntax."
+
+[[namespaces.coverage]]
+family = "characters"
+ascii = "reviewed"
+idn = "unknown"
+assertion_ids = ["com-au.ascii-characters-complete"]
+gap = "No uncommenced IDN syntax is activated."
+
+[[namespaces.coverage]]
+family = "idn"
+ascii = "reviewed"
+idn = "reviewed"
+assertion_ids = ["com-au.ascii-only-current"]
+
+[[namespaces.coverage]]
+family = "reserved"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["com-au.reservation-context"]
+gap = "Reservations and exceptions require further research."
+
+[[namespaces.coverage]]
+family = "allocation"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["com-au.allocation-context"]
+gap = "No exact equality requirement replaces broader permitted correspondence."
+
+[[namespaces.coverage]]
+family = "eligibility"
+ascii = "partial"
+idn = "partial"
+assertion_ids = ["com-au.australian-presence", "com-au.commercial-class"]
+gap = "Declared categories are checked; related-body and entity-status exceptions remain scoped gaps."
+

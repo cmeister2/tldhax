@@ -69,3 +69,25 @@ fn the_public_profile_factory_rejects_unknown_fields_and_input_budgets_privately
         ProfileError::InvalidJson
     );
 }
+
+/// Declared fields enforce value types and size budgets without exposing sensitive fact values.
+#[test]
+fn the_public_profile_factory_rejects_wrong_types_and_oversized_facts_privately() {
+    let registry = Registry::new();
+    let field = registry
+        .dataset()
+        .facts
+        .iter()
+        .find(|fact| fact.kind == crate::policy_types::FactKind::String)
+        .expect("declared-profile-facts curation includes a String field")
+        .field;
+    let wrong_type = serde_json::json!({field:true}).to_string();
+    assert_eq!(
+        registry.prepare_registrant(&wrong_type).unwrap_err(),
+        ProfileError::WrongType
+    );
+    let oversized = serde_json::json!({field:"sensitive-profile-token".repeat(100)}).to_string();
+    let error = registry.prepare_registrant(&oversized).unwrap_err();
+    assert_eq!(error, ProfileError::InputLimit);
+    assert!(!format!("{error:?}").contains("sensitive-profile-token"));
+}

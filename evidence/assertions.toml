@@ -1,0 +1,1902 @@
+schema_version = 2
+
+[[assertions]]
+id = "name.current-contract"
+source_id = "name-contract-index"
+locator = "Agreement Date, Agreement, Appendices"
+operation = "new_registration"
+namespaces = ["name"]
+forms = [1, 2]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The current index continues to publish the 2012 agreement and Appendix 11; approval of service removal is reviewed separately."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "name.form-one"
+source_id = "name-appendix11"
+locator = "1(a)(2)"
+operation = "new_registration"
+namespaces = ["name"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The public second-level domain form has one applicant label. The approved third-level service removal does not withdraw this form."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "name.form-two-historical"
+source_id = "name-appendix11"
+locator = "1(a)(1), subject to the subsequent RSEP2026013 removal authorization"
+operation = "new_registration"
+namespaces = ["name"]
+forms = [2]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "unknown"
+interpretation = "The agreement describes two applicant labels for third-level registrations, but current acceptance cannot be attested after approved withdrawal without an official implementation date."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "name.third-level-removal-approved"
+source_id = "name-withdrawal-approval"
+locator = "Page 1 approval paragraph; page 2 registrar notification list"
+operation = "new_registration"
+namespaces = ["name"]
+forms = [2]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "partial"
+interpretation = "ICANN approved removal on 2026-05-07 and publicly authorized it on 2026-07-28 after at least 90 days registrar notice. The reviewed primary sources do not specify the implementation date, so approval is not treated as an active name denial."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "name.third-level-removal-timeline"
+source_id = "name-withdrawal-request"
+locator = "1.2–1.3, 1.6, 5.1"
+operation = "new_registration"
+namespaces = ["name"]
+forms = [2]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "partial"
+interpretation = "Upon implementation the registry will cease new third-level registrations; references remain until termination. Current implementation timing remains unknown."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "name.personal-relationship-context"
+source_id = "name-appendix11"
+locator = "2(a)–(b)"
+operation = "new_registration"
+namespaces = ["name"]
+forms = [1, 2]
+input_class = "any"
+family = "allocation"
+effect = "context"
+knowledge = "partial"
+interpretation = "Personal identifiers include legal names, nicknames, pseudonyms, numbers and handles; fictional-character rights and additional numeric characters are permitted. No narrow exact-name equality or natural-person-only gate is substituted."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "de.form"
+source_id = "denic-guidelines-de"
+locator = "V(1), excluding the .de suffix"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "One applicant label under .de; the defined alphabet excludes an additional dot."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "de.label-minimum"
+source_id = "denic-guidelines-de"
+locator = "V(2)"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "any"
+family = "length"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "An applicant label contains at least one Unicode character."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "label_minimum", component = 0, min = 1, basis = "unicode" }
+
+[[assertions]]
+id = "de.label-maximum"
+source_id = "denic-guidelines-de"
+locator = "V(2)"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "any"
+family = "length"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "The maximum of 63 characters is measured in the ACE form for IDNs."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "label_maximum", component = 0, max = 63, basis = "ascii" }
+
+[[assertions]]
+id = "de.length-complete"
+source_id = "denic-guidelines-de"
+locator = "V(2)"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "any"
+family = "length"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "V(2) supplies the complete stated label-length bounds."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "de.no-leading-hyphen"
+source_id = "denic-guidelines-de"
+locator = "V(1)"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "any"
+family = "characters"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Hyphen placement is checked on the applicant Unicode label, not the ACE prefix."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "label_pattern", component = 0, pattern = "prefix", value = "-", basis = "unicode" }
+
+[[assertions]]
+id = "de.no-trailing-hyphen"
+source_id = "denic-guidelines-de"
+locator = "V(1)"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "any"
+family = "characters"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Hyphen placement is checked on the applicant Unicode label, not the ACE prefix."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "label_pattern", component = 0, pattern = "suffix", value = "-", basis = "unicode" }
+
+[[assertions]]
+id = "de.no-tagged-ulabel"
+source_id = "denic-guidelines-de"
+locator = "V(1)"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "any"
+family = "characters"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Hyphen placement is checked on the applicant Unicode label, not the ACE prefix."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "label_positions", component = 0, positions = [2, 3], value = "--", basis = "unicode" }
+
+[[assertions]]
+id = "de.characters-complete"
+source_id = "denic-guidelines-de"
+locator = "V(1) and Annex"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "any"
+family = "characters"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "V(1) and its Annex define the permitted alphabet and hyphen placements."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "de.idn-adoption"
+source_id = "denic-guidelines-de"
+locator = "V(1)–(2)"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "DENIC adopts the Annex repertoire and ACE measurement for internationalised labels."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "de.idn-annex"
+source_id = "denic-guidelines-de"
+locator = "Annex: decimal and hexadecimal Unicode columns"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The finite Annex code points supplement lowercase ASCII letters, digits and hyphen."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "de.idn-repertoire"
+source_id = "denic-guidelines-de"
+locator = "V(1), V(2), Annex"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "An IDN must use the adopted Annex repertoire."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "idn", component = 0, profile_id = "denic.annex.current" }
+
+[[assertions]]
+id = "de.nonresident-accepted"
+source_id = "denic-nonresident-faq"
+locator = "Can persons or institutions not resident in Germany also register a .de domain?"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "Persons or institutions with legal capacity may register despite having no registered office in Germany."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "de.contract-capacity"
+source_id = "denic-nonresident-faq"
+locator = "What requirements must I fulfill in order to register a .de domain?"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "The prospective applicant needs capacity to conclude the registration contract or effective representation."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "any", predicates = [{ kind = "field_equals", field = "de_contract_capacity", value = true }, { kind = "field_equals", field = "de_effectively_represented", value = true }] }
+
+[[assertions]]
+id = "de.requested-recipient"
+source_id = "denic-terms-de"
+locator = "§3(4)"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "any"
+family = "access"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "A nonresident recipient appointment follows a DENIC request; it is not an initial residence gate."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "de.ascii-idn-not-applicable"
+source_id = "denic-guidelines-de"
+locator = "V(1)"
+operation = "new_registration"
+namespaces = ["de"]
+forms = [1]
+input_class = "ascii"
+family = "idn"
+effect = "context"
+knowledge = "not_applicable"
+interpretation = "ASCII labels do not require the Annex extension repertoire."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "com.form"
+source_id = "com-2024-contract"
+locator = "Appendix 6 A–D; second-level labels"
+operation = "new_registration"
+namespaces = ["com"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The agreement explicitly governs second-level applicant labels."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2024-12-01"
+
+[[assertions]]
+id = "com.named-reservations"
+source_id = "com-2024-contract"
+locator = "Appendix 6 A, subject to its introductory authorization exception"
+operation = "new_registration"
+namespaces = ["com"]
+forms = [1]
+input_class = "any"
+family = "reserved"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Named ICANN/IANA labels require applicable written authorization."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2024-12-01"
+predicate = { kind = "all", predicates = [{ kind = "label_in_set", component = 0, set_id = "com.published-reserved" }, { kind = "not", predicate = { kind = "name_equals_field", component = 0, field = "com_icann_authorized_labels" } }] }
+
+[[assertions]]
+id = "com.operational-reservations"
+source_id = "com-2024-contract"
+locator = "Appendix 6 D and introductory authorization exception"
+operation = "new_registration"
+namespaces = ["com"]
+forms = [1]
+input_class = "any"
+family = "reserved"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "nic, whois and www are reserved for registry operations; qualifying Registry Operator use and express ICANN authorization are distinct exceptions."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2024-12-01"
+predicate = { kind = "all", predicates = [{ kind = "label_in_set", component = 0, set_id = "com.operational-reserved" }, { kind = "not", predicate = { kind = "any", predicates = [{ kind = "name_equals_field", component = 0, field = "com_icann_authorized_labels" }, { kind = "name_equals_field", component = 0, field = "com_registry_operational_labels" }] } }] }
+
+[[assertions]]
+id = "com.short-release-gap"
+source_id = "com-2024-contract"
+locator = "Appendix 6 B; release and authorization exceptions"
+operation = "new_registration"
+namespaces = ["com"]
+forms = [1]
+input_class = "any"
+family = "reserved"
+effect = "context"
+knowledge = "partial"
+interpretation = "Short-label releases and exceptional authorizations require separate evidence."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2024-12-01"
+
+[[assertions]]
+id = "com.idn-no-sharp-s"
+source_id = "verisign-idn-rules"
+locator = "5. Special Characters"
+operation = "new_registration"
+namespaces = ["com"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Verisign still rejects this code point under its stated registration policy."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "label_pattern", component = 0, pattern = "contains", value = "ß", basis = "unicode" }
+
+[[assertions]]
+id = "com.idn-no-final-sigma"
+source_id = "verisign-idn-rules"
+locator = "5. Special Characters"
+operation = "new_registration"
+namespaces = ["com"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Verisign still rejects this code point under its stated registration policy."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "label_pattern", component = 0, pattern = "contains", value = "ς", basis = "unicode" }
+
+[[assertions]]
+id = "com.idn-language-context"
+source_id = "verisign-idn-rules"
+locator = "2. Language inclusion tables; 3. Script commingling"
+operation = "new_registration"
+namespaces = ["com"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "context"
+knowledge = "partial"
+interpretation = "Language tags, inclusion tables and script mixing remain uncompiled."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "com.idn-registry-offering"
+source_id = "verisign-idn-offering"
+locator = "Partially Localized IDNs"
+operation = "new_registration"
+namespaces = ["com"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "Verisign explicitly offers second-level IDN registration in this namespace."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "com.idn-variant-context"
+source_id = "verisign-idn-adoption"
+locator = "Policy for IDN Registrations; Additional Logic; Language Tables"
+operation = "new_registration"
+namespaces = ["com"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "context"
+knowledge = "partial"
+interpretation = "Current IDN processing applies language-tag tables and conditional Chinese variant allocation."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "net.form"
+source_id = "net-2023-contract"
+locator = "Appendix 6 A–D; second-level labels"
+operation = "new_registration"
+namespaces = ["net"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The agreement explicitly governs second-level applicant labels."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2023-07-01"
+
+[[assertions]]
+id = "net.named-reservations"
+source_id = "net-2023-contract"
+locator = "Appendix 6 A, subject to its introductory authorization exception"
+operation = "new_registration"
+namespaces = ["net"]
+forms = [1]
+input_class = "any"
+family = "reserved"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Named ICANN/IANA labels require applicable written authorization."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2023-07-01"
+predicate = { kind = "all", predicates = [{ kind = "label_in_set", component = 0, set_id = "net.published-reserved" }, { kind = "not", predicate = { kind = "name_equals_field", component = 0, field = "net_icann_authorized_labels" } }] }
+
+[[assertions]]
+id = "net.operational-reservations"
+source_id = "net-2023-contract"
+locator = "Appendix 6 D and introductory authorization exception"
+operation = "new_registration"
+namespaces = ["net"]
+forms = [1]
+input_class = "any"
+family = "reserved"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "nic, whois and www are reserved for registry operations; qualifying Registry Operator use and express ICANN authorization are distinct exceptions."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2023-07-01"
+predicate = { kind = "all", predicates = [{ kind = "label_in_set", component = 0, set_id = "net.operational-reserved" }, { kind = "not", predicate = { kind = "any", predicates = [{ kind = "name_equals_field", component = 0, field = "net_icann_authorized_labels" }, { kind = "name_equals_field", component = 0, field = "net_registry_operational_labels" }] } }] }
+
+[[assertions]]
+id = "net.short-release-gap"
+source_id = "net-2023-contract"
+locator = "Appendix 6 B; release and authorization exceptions"
+operation = "new_registration"
+namespaces = ["net"]
+forms = [1]
+input_class = "any"
+family = "reserved"
+effect = "context"
+knowledge = "partial"
+interpretation = "Short-label releases and exceptional authorizations require separate evidence."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2023-07-01"
+
+[[assertions]]
+id = "net.idn-no-sharp-s"
+source_id = "verisign-idn-rules"
+locator = "5. Special Characters"
+operation = "new_registration"
+namespaces = ["net"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Verisign still rejects this code point under its stated registration policy."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "label_pattern", component = 0, pattern = "contains", value = "ß", basis = "unicode" }
+
+[[assertions]]
+id = "net.idn-no-final-sigma"
+source_id = "verisign-idn-rules"
+locator = "5. Special Characters"
+operation = "new_registration"
+namespaces = ["net"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Verisign still rejects this code point under its stated registration policy."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "label_pattern", component = 0, pattern = "contains", value = "ς", basis = "unicode" }
+
+[[assertions]]
+id = "net.idn-language-context"
+source_id = "verisign-idn-rules"
+locator = "2. Language inclusion tables; 3. Script commingling"
+operation = "new_registration"
+namespaces = ["net"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "context"
+knowledge = "partial"
+interpretation = "Language tags, inclusion tables and script mixing remain uncompiled."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "net.idn-registry-offering"
+source_id = "verisign-idn-offering"
+locator = "Partially Localized IDNs"
+operation = "new_registration"
+namespaces = ["net"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "Verisign explicitly offers second-level IDN registration in this namespace."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "net.idn-variant-context"
+source_id = "verisign-idn-adoption"
+locator = "Policy for IDN Registrations; Additional Logic; Language Tables"
+operation = "new_registration"
+namespaces = ["net"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "context"
+knowledge = "partial"
+interpretation = "Current IDN processing applies language-tag tables and conditional Chinese variant allocation."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "org.form"
+source_id = "org-2019-contract"
+locator = "Specification 5, second-level reservations"
+operation = "new_registration"
+namespaces = ["org"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "Second-level labels are explicitly within the registration scheme."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2019-06-30"
+
+[[assertions]]
+id = "org.applicants-open"
+source_id = "pir-faq"
+locator = "Can I register a .ORG domain name if I am not a 501(c)?"
+operation = "new_registration"
+namespaces = ["org"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "PIR explicitly permits individuals and organizations without nonprofit status."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "org.short-label-gap"
+source_id = "org-2019-contract"
+locator = "Exhibit A §5; single/two-character phased allocation"
+operation = "new_registration"
+namespaces = ["org"]
+forms = [1]
+input_class = "any"
+family = "reserved"
+effect = "context"
+knowledge = "partial"
+interpretation = "The phased program can release fewer than all short labels; current selections are unresolved."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2019-06-30"
+
+[[assertions]]
+id = "au.form"
+source_id = "auda-licensing"
+locator = "1.4 Designated Namespace; 2.4.3–2.4.4; 2.7.1"
+operation = "new_registration"
+namespaces = ["au"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "One applicant label is licensed within the specified namespace."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+effective_from = "2022-03-24"
+
+[[assertions]]
+id = "au.minimum-two"
+source_id = "auda-licensing"
+locator = "2.7.1(1)"
+operation = "new_registration"
+namespaces = ["au"]
+forms = [1]
+input_class = "any"
+family = "length"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "Current labels require at least two characters."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2022-03-24"
+predicate = { kind = "label_minimum", component = 0, min = 2, basis = "ascii" }
+
+[[assertions]]
+id = "au.ascii-only-current"
+source_id = "auda-licensing"
+locator = "1.2.4; 2.7.1(2)"
+operation = "new_registration"
+namespaces = ["au"]
+forms = [1]
+input_class = "any"
+family = "idn"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "Current syntax is ASCII-only; the proposed IDN exception has no commencement."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+effective_from = "2022-03-24"
+predicate = { kind = "ascii_only", component = 0 }
+
+[[assertions]]
+id = "au.no-leading-hyphen"
+source_id = "auda-licensing"
+locator = "2.7.1(2)–(4)"
+operation = "new_registration"
+namespaces = ["au"]
+forms = [1]
+input_class = "any"
+family = "characters"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Current syntax excludes edge hyphens and tagged applicant labels."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2022-03-24"
+predicate = { kind = "label_pattern", component = 0, pattern = "prefix", value = "-", basis = "unicode" }
+
+[[assertions]]
+id = "au.no-trailing-hyphen"
+source_id = "auda-licensing"
+locator = "2.7.1(2)–(4)"
+operation = "new_registration"
+namespaces = ["au"]
+forms = [1]
+input_class = "any"
+family = "characters"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Current syntax excludes edge hyphens and tagged applicant labels."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2022-03-24"
+predicate = { kind = "label_pattern", component = 0, pattern = "suffix", value = "-", basis = "unicode" }
+
+[[assertions]]
+id = "au.no-tagged-label"
+source_id = "auda-licensing"
+locator = "2.7.1(2)–(4)"
+operation = "new_registration"
+namespaces = ["au"]
+forms = [1]
+input_class = "any"
+family = "characters"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Current syntax excludes edge hyphens and tagged applicant labels."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2022-03-24"
+predicate = { kind = "label_positions", component = 0, positions = [2, 3], value = "--", basis = "unicode" }
+
+[[assertions]]
+id = "au.ascii-characters-complete"
+source_id = "auda-licensing"
+locator = "2.7.1(2)–(4)"
+operation = "new_registration"
+namespaces = ["au"]
+forms = [1]
+input_class = "ascii"
+family = "characters"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The active clause enumerates the ASCII alphabet and placement requirements."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+effective_from = "2022-03-24"
+
+[[assertions]]
+id = "au.future-idn-uncommenced"
+source_id = "auda-licensing"
+locator = "1.2.4; 2.8"
+operation = "new_registration"
+namespaces = ["au"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "context"
+knowledge = "unknown"
+interpretation = "Proposed IDN scripts do not establish current permission without a commencement date."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+
+[[assertions]]
+id = "au.australian-presence"
+source_id = "auda-licensing"
+locator = "1.4 Australian Presence; 2.4.1–2.4.5"
+operation = "new_registration"
+namespaces = ["au"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "The relevant applicant must satisfy Australian Presence; trademark reliance is candidate-bound."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2022-03-24"
+predicate = { kind = "any", predicates = [{ kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "individual" }, { kind = "field_in", field = "citizenships", values = ["AU"] }] }, { kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "individual" }, { kind = "field_equals", field = "au_permanent_resident", value = true }] }, { kind = "field_in", field = "au_presence_basis", values = ["australian_company", "registrable_australian_body", "registered_foreign_company", "incorporated_association", "abn_entity", "indigenous_corporation", "registered_organization", "registered_cooperative", "registered_charity", "registered_political_party", "qualifying_partnership", "qualifying_association", "qualifying_trust", "regulated_education", "australian_government", "commonwealth_entity", "accredited_embassy"] }, { kind = "all", predicates = [{ kind = "field_equals", field = "au_presence_basis", value = "australian_trademark" }, { kind = "name_equals_field", component = 0, field = "au_trademark_exact_labels" }] }] }
+
+[[assertions]]
+id = "au.allocation-context"
+source_id = "auda-licensing"
+locator = "2.4.3–2.4.5; 1.4 Exact Match"
+operation = "new_registration"
+namespaces = ["au"]
+forms = [1]
+input_class = "any"
+family = "allocation"
+effect = "context"
+knowledge = "partial"
+interpretation = "Priority, related-body, acronym and synonym relationships need additional modeling."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2022-03-24"
+
+[[assertions]]
+id = "au.reservation-context"
+source_id = "auda-licensing"
+locator = "2.5.2–2.6.7"
+operation = "new_registration"
+namespaces = ["au"]
+forms = [1]
+input_class = "any"
+family = "reserved"
+effect = "context"
+knowledge = "partial"
+interpretation = "Statutory exceptions, deceptive names and reservation categories are not exhaustive literal sets."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2022-03-24"
+
+[[assertions]]
+id = "com-au.form"
+source_id = "auda-licensing"
+locator = "1.4 Designated Namespace; 2.4.3–2.4.4; 2.7.1"
+operation = "new_registration"
+namespaces = ["com.au"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "One applicant label is licensed within the specified namespace."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+effective_from = "2021-04-12"
+
+[[assertions]]
+id = "com-au.minimum-two"
+source_id = "auda-licensing"
+locator = "2.7.1(1)"
+operation = "new_registration"
+namespaces = ["com.au"]
+forms = [1]
+input_class = "any"
+family = "length"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "Current labels require at least two characters."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2021-04-12"
+predicate = { kind = "label_minimum", component = 0, min = 2, basis = "ascii" }
+
+[[assertions]]
+id = "com-au.ascii-only-current"
+source_id = "auda-licensing"
+locator = "1.2.4; 2.7.1(2)"
+operation = "new_registration"
+namespaces = ["com.au"]
+forms = [1]
+input_class = "any"
+family = "idn"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "Current syntax is ASCII-only; the proposed IDN exception has no commencement."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+effective_from = "2021-04-12"
+predicate = { kind = "ascii_only", component = 0 }
+
+[[assertions]]
+id = "com-au.no-leading-hyphen"
+source_id = "auda-licensing"
+locator = "2.7.1(2)–(4)"
+operation = "new_registration"
+namespaces = ["com.au"]
+forms = [1]
+input_class = "any"
+family = "characters"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Current syntax excludes edge hyphens and tagged applicant labels."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2021-04-12"
+predicate = { kind = "label_pattern", component = 0, pattern = "prefix", value = "-", basis = "unicode" }
+
+[[assertions]]
+id = "com-au.no-trailing-hyphen"
+source_id = "auda-licensing"
+locator = "2.7.1(2)–(4)"
+operation = "new_registration"
+namespaces = ["com.au"]
+forms = [1]
+input_class = "any"
+family = "characters"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Current syntax excludes edge hyphens and tagged applicant labels."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2021-04-12"
+predicate = { kind = "label_pattern", component = 0, pattern = "suffix", value = "-", basis = "unicode" }
+
+[[assertions]]
+id = "com-au.no-tagged-label"
+source_id = "auda-licensing"
+locator = "2.7.1(2)–(4)"
+operation = "new_registration"
+namespaces = ["com.au"]
+forms = [1]
+input_class = "any"
+family = "characters"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Current syntax excludes edge hyphens and tagged applicant labels."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2021-04-12"
+predicate = { kind = "label_positions", component = 0, positions = [2, 3], value = "--", basis = "unicode" }
+
+[[assertions]]
+id = "com-au.ascii-characters-complete"
+source_id = "auda-licensing"
+locator = "2.7.1(2)–(4)"
+operation = "new_registration"
+namespaces = ["com.au"]
+forms = [1]
+input_class = "ascii"
+family = "characters"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The active clause enumerates the ASCII alphabet and placement requirements."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+effective_from = "2021-04-12"
+
+[[assertions]]
+id = "com-au.future-idn-uncommenced"
+source_id = "auda-licensing"
+locator = "1.2.4; 2.8"
+operation = "new_registration"
+namespaces = ["com.au"]
+forms = [1]
+input_class = "idn"
+family = "idn"
+effect = "context"
+knowledge = "unknown"
+interpretation = "Proposed IDN scripts do not establish current permission without a commencement date."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+
+[[assertions]]
+id = "com-au.australian-presence"
+source_id = "auda-licensing"
+locator = "1.4 Australian Presence; 2.4.1–2.4.5"
+operation = "new_registration"
+namespaces = ["com.au"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "The relevant applicant must satisfy Australian Presence; trademark reliance is candidate-bound."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2021-04-12"
+predicate = { kind = "any", predicates = [{ kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "individual" }, { kind = "field_in", field = "citizenships", values = ["AU"] }] }, { kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "individual" }, { kind = "field_equals", field = "au_permanent_resident", value = true }] }, { kind = "field_in", field = "au_presence_basis", values = ["australian_company", "registrable_australian_body", "registered_foreign_company", "incorporated_association", "abn_entity", "indigenous_corporation", "registered_organization", "registered_cooperative", "registered_charity", "registered_political_party", "qualifying_partnership", "qualifying_association", "qualifying_trust", "regulated_education", "australian_government", "commonwealth_entity", "accredited_embassy"] }, { kind = "all", predicates = [{ kind = "field_equals", field = "au_presence_basis", value = "australian_trademark" }, { kind = "name_equals_field", component = 0, field = "au_trademark_exact_labels" }] }] }
+
+[[assertions]]
+id = "com-au.commercial-class"
+source_id = "auda-licensing"
+locator = "1.4 Commercial Entity; 2.4.4(1)"
+operation = "new_registration"
+namespaces = ["com.au"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "A com.au applicant must fit an enumerated Commercial Entity class."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2021-04-12"
+predicate = { kind = "field_in", field = "au_commercial_basis", values = ["corporations_act_company", "commonwealth_entity", "registrable_body", "incorporated_association", "abn_entity", "statutory_trade_commerce", "abn_noncharitable_trust", "incorporated_limited_partnership", "trading_cooperative", "australian_government", "australian_trademark"] }
+
+[[assertions]]
+id = "com-au.allocation-context"
+source_id = "auda-licensing"
+locator = "2.4.3–2.4.5; 1.4 Exact Match"
+operation = "new_registration"
+namespaces = ["com.au"]
+forms = [1]
+input_class = "any"
+family = "allocation"
+effect = "context"
+knowledge = "partial"
+interpretation = "Priority, related-body, acronym and synonym relationships need additional modeling."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2021-04-12"
+
+[[assertions]]
+id = "com-au.reservation-context"
+source_id = "auda-licensing"
+locator = "2.5.2–2.6.7"
+operation = "new_registration"
+namespaces = ["com.au"]
+forms = [1]
+input_class = "any"
+family = "reserved"
+effect = "context"
+knowledge = "partial"
+interpretation = "Statutory exceptions, deceptive names and reservation categories are not exhaustive literal sets."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2021-04-12"
+
+[[assertions]]
+id = "us.form"
+source_id = "us-faq"
+locator = "General Information and Domain Management; ordinary .US registrations"
+operation = "new_registration"
+namespaces = ["us"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "Ordinary .US names and the separate locality management scheme are distinguished."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "us.nexus"
+source_id = "us-nexus"
+locator = "Page 1, categories 1–3; pages 2–3, certification details"
+operation = "new_registration"
+namespaces = ["us"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "Individuals need citizen/resident/primary-domicile status; entities need US formation or bona fide presence, including the applicable possessions and territories."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "any", predicates = [{ kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "individual" }, { kind = "any", predicates = [{ kind = "field_in", field = "citizenships", values = ["US"] }, { kind = "field_equals", field = "us_permanent_resident", value = true }, { kind = "field_equals", field = "domicile_country", value = "US" }, { kind = "field_equals", field = "us_primary_domicile_in_possession", value = true }] }] }, { kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "organization" }, { kind = "any", predicates = [{ kind = "field_equals", field = "incorporation_country", value = "US" }, { kind = "field_equals", field = "us_incorporated_in_territory", value = true }, { kind = "field_equals", field = "us_constituted_entity", value = true }, { kind = "all", predicates = [{ kind = "field_equals", field = "us_foreign_entity", value = true }, { kind = "field_equals", field = "us_bona_fide_presence", value = true }] }] }] }] }
+
+[[assertions]]
+id = "us.nexus-categories"
+source_id = "us-nexus"
+locator = "Page 1, categories 1–3"
+operation = "new_registration"
+namespaces = ["us"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "context"
+knowledge = "partial"
+interpretation = "The stated Nexus categories are evaluated on declared facts; this does not attest complete eligibility or verification coverage."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "us.no-proxy"
+source_id = "us-faq"
+locator = "Will proxy registrations, sometimes called \"domain privacy” be allowed on my .US domain name?"
+operation = "new_registration"
+namespaces = ["us"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "Current .US policy prohibits proxy/private registration services."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "field_equals", field = "proxy_registration", value = false }
+
+[[assertions]]
+id = "us.no-idn"
+source_id = "us-faq"
+locator = "Are Internationalized Domain Names (IDNs) offered in .US?"
+operation = "new_registration"
+namespaces = ["us"]
+forms = [1]
+input_class = "any"
+family = "idn"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "The current registry explicitly does not offer IDN registrations."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+predicate = { kind = "ascii_only", component = 0 }
+
+[[assertions]]
+id = "us.no-tagged-label"
+source_id = "us-faq"
+locator = "Reserved-name categories: tagged domain names"
+operation = "new_registration"
+namespaces = ["us"]
+forms = [1]
+input_class = "any"
+family = "reserved"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Tagged labels with hyphens in positions three and four are reserved."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "label_positions", component = 0, positions = [2, 3], value = "--", basis = "unicode" }
+
+[[assertions]]
+id = "uk.current-policy-selection"
+source_id = "nominet-index"
+locator = "Our current Policies: Contracts & Rules; future .uk agreements and policies"
+operation = "new_registration"
+namespaces = ["uk", "co.uk", "org.uk", "me.uk", "ltd.uk", "plc.uk", "net.uk"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The current index identifies Rules of Registration separately from the revised policy commencing in February 2027."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.form"
+source_id = "nominet-current-rules"
+locator = "1.3; 2.3; Appendix A; section 7"
+operation = "new_registration"
+namespaces = ["uk", "co.uk", "org.uk", "me.uk", "ltd.uk", "plc.uk", "net.uk"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "Nominet accepts one second-level or one label within its listed managed namespace."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.ascii-only"
+source_id = "nominet-current-rules"
+locator = "5.2; 5.4"
+operation = "new_registration"
+namespaces = ["uk", "co.uk", "org.uk", "me.uk", "ltd.uk", "plc.uk", "net.uk"]
+forms = [1]
+input_class = "any"
+family = "idn"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "Current Nominet names use ASCII and cannot register an xn-- IDN."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+predicate = { kind = "ascii_only", component = 0 }
+
+[[assertions]]
+id = "uk.no-edge-hyphen"
+source_id = "nominet-current-rules"
+locator = "5.2–5.3"
+operation = "new_registration"
+namespaces = ["co.uk", "org.uk", "me.uk", "net.uk", "ltd.uk", "plc.uk"]
+forms = [1]
+input_class = "ascii"
+family = "characters"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "Applicant third-level labels cannot start or end with a hyphen."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "any", predicates = [{ kind = "label_pattern", component = 0, pattern = "prefix", value = "-", basis = "unicode" }, { kind = "label_pattern", component = 0, pattern = "suffix", value = "-", basis = "unicode" }] }
+
+[[assertions]]
+id = "uk.characters-complete"
+source_id = "nominet-current-rules"
+locator = "5.2–5.4"
+operation = "new_registration"
+namespaces = ["co.uk", "org.uk", "me.uk", "net.uk", "ltd.uk", "plc.uk"]
+forms = [1]
+input_class = "ascii"
+family = "characters"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The current rules enumerate allowed ASCII characters and edge placements."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.third-reserved"
+source_id = "nominet-current-rules"
+locator = "5.5–5.6"
+operation = "new_registration"
+namespaces = ["co.uk", "org.uk", "me.uk", "net.uk"]
+forms = [1]
+input_class = "ascii"
+family = "reserved"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "The enumerated SLD labels, com and uk are barred in these four third-level namespaces."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+predicate = { kind = "label_in_set", component = 0, set_id = "nominet.third-reserved" }
+
+[[assertions]]
+id = "uk.root-reserved"
+source_id = "nominet-current-rules"
+locator = "5.6"
+operation = "new_registration"
+namespaces = ["uk"]
+forms = [1]
+input_class = "ascii"
+family = "reserved"
+effect = "deny"
+knowledge = "reviewed"
+interpretation = "com and uk cannot be newly registered directly under .uk."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "label_in_set", component = 0, set_id = "nominet.root-reserved" }
+
+[[assertions]]
+id = "uk.open-applicants"
+source_id = "nominet-current-rules"
+locator = "4.4; 7"
+operation = "new_registration"
+namespaces = ["uk", "co.uk", "org.uk"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The stated open namespaces impose no applicant-status gate."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.unenforced-charter"
+source_id = "nominet-current-rules"
+locator = "4.4; 8.2; 9.2"
+operation = "new_registration"
+namespaces = ["co.uk", "org.uk"]
+forms = [1]
+input_class = "any"
+family = "allocation"
+effect = "context"
+knowledge = "not_applicable"
+interpretation = "The commercial/nonprofit charter is expressly unenforced; it is not a name-allocation gate."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.me-natural-person"
+source_id = "nominet-current-rules"
+locator = "10.2–10.5"
+operation = "new_registration"
+namespaces = ["me.uk"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "New me.uk applicants must be natural persons rather than organizational proxies."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+predicate = { kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "individual" }, { kind = "field_equals", field = "organizational_proxy", value = false }] }
+
+[[assertions]]
+id = "uk.company-eligibility"
+source_id = "nominet-current-rules"
+locator = "11.2"
+operation = "new_registration"
+namespaces = ["ltd.uk", "plc.uk"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "Applicants must have the relevant UK incorporated company status."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "organization" }, { kind = "field_equals", field = "uk_incorporated_active", value = true }] }
+
+[[assertions]]
+id = "uk.net-isp"
+source_id = "nominet-current-rules"
+locator = "12.2.1–12.2.3"
+operation = "new_registration"
+namespaces = ["net.uk"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "net.uk is limited to qualifying ISP infrastructure; further required status remains uncompiled."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "field_equals", field = "uk_is_isp", value = true }
+
+[[assertions]]
+id = "uk.length-rules-conflict"
+source_id = "nominet-current-rules"
+locator = "5.7"
+operation = "new_registration"
+namespaces = ["uk", "co.uk", "org.uk", "me.uk", "ltd.uk", "plc.uk", "net.uk"]
+forms = [1]
+input_class = "any"
+family = "length"
+effect = "context"
+knowledge = "conflicting"
+interpretation = "The 64-character total description differs from current registry field documentation."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.length-fields-conflict"
+source_id = "nominet-fields"
+locator = "Registry field table: key"
+operation = "new_registration"
+namespaces = ["uk", "co.uk", "org.uk", "me.uk", "ltd.uk", "plc.uk", "net.uk"]
+forms = [1]
+input_class = "any"
+family = "length"
+effect = "context"
+knowledge = "conflicting"
+interpretation = "The key field states a 63-character applicant label; no dated policy-change notice has been resolved."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.future-2027-policy"
+source_id = "nominet-future-rules"
+locator = "Cover and clauses 1–3"
+operation = "new_registration"
+namespaces = ["uk", "co.uk", "org.uk", "me.uk", "ltd.uk", "plc.uk", "net.uk"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "This revised policy is not current before its stated February 2027 commencement."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2027-02-09"
+
+[[assertions]]
+id = "uk.delegated-ac"
+source_id = "nominet-current-rules"
+locator = "3.1–3.2; Appendix B"
+operation = "new_registration"
+namespaces = ["ac.uk"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "partial"
+interpretation = "A separate operator administers this suffix; its applicant policy requires independent review."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.delegated-gov"
+source_id = "nominet-current-rules"
+locator = "3.1–3.2; Appendix B"
+operation = "new_registration"
+namespaces = ["gov.uk"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "partial"
+interpretation = "A separate operator administers this suffix; its applicant policy requires independent review."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.delegated-mod"
+source_id = "nominet-current-rules"
+locator = "3.1–3.2; Appendix B"
+operation = "new_registration"
+namespaces = ["mod.uk"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "partial"
+interpretation = "A separate operator administers this suffix; its applicant policy requires independent review."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.delegated-mil"
+source_id = "nominet-current-rules"
+locator = "3.1–3.2; Appendix B"
+operation = "new_registration"
+namespaces = ["mil.uk"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "partial"
+interpretation = "A separate operator administers this suffix; its applicant policy requires independent review."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.delegated-nhs"
+source_id = "nominet-current-rules"
+locator = "3.1–3.2; Appendix B"
+operation = "new_registration"
+namespaces = ["nhs.uk"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "partial"
+interpretation = "A separate operator administers this suffix; its applicant policy requires independent review."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.delegated-police"
+source_id = "nominet-current-rules"
+locator = "3.1–3.2; Appendix B"
+operation = "new_registration"
+namespaces = ["police.uk"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "partial"
+interpretation = "A separate operator administers this suffix; its applicant policy requires independent review."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.school-form"
+source_id = "nominet-schools"
+locator = "Page 1: SCHOOLS"
+operation = "new_registration"
+namespaces = ["sch.uk"]
+forms = [2]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "School registrations use school-name.area.sch.uk."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.school-wildcard-form"
+source_id = "nominet-schools"
+locator = "Page 1: format; geographical domain-ending table"
+operation = "new_registration"
+namespaces = ["*.sch.uk"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "One school-name label occurs above an area.sch.uk suffix."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+attests_completeness = true
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "uk.sch-base.eligibility"
+source_id = "nominet-schools"
+locator = "Page 1: Schools; school consortium provision"
+operation = "new_registration"
+namespaces = ["sch.uk"]
+forms = [2]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "UK schools and qualifying school consortia are the stated applicant classes."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "field_in", field = "uk_school_class", values = ["uk_school", "school_consortium"] }
+
+[[assertions]]
+id = "uk.sch-wildcard.eligibility"
+source_id = "nominet-schools"
+locator = "Page 1: Schools; school consortium provision"
+operation = "new_registration"
+namespaces = ["*.sch.uk"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "UK schools and qualifying school consortia are the stated applicant classes."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "field_in", field = "uk_school_class", values = ["uk_school", "school_consortium"] }
+
+[[assertions]]
+id = "bank.form"
+source_id = "bank-name-selection"
+locator = "3.1; implementation examples, pages 3–4"
+operation = "new_registration"
+namespaces = ["bank"]
+forms = [1]
+input_class = "any"
+family = "namespace"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The published ordinary-name examples identify second-level applicant labels."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2015-09-12"
+
+[[assertions]]
+id = "bank.qualified-classes"
+source_id = "bank-eligibility"
+locator = "3.1–3.8; 2024-02-28 implementation guidelines, final paragraph"
+operation = "new_registration"
+namespaces = ["bank"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "Declared organizational classes need their charter, supervision, membership or board qualifications; explicit exceptional board approval remains an alternative."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "any", predicates = [{ kind = "all", predicates = [{ kind = "field_in", field = "bank_class", values = ["retail_bank", "savings_association"] }, { kind = "field_equals", field = "bank_chartered", value = true }, { kind = "field_equals", field = "bank_supervised", value = true }] }, { kind = "all", predicates = [{ kind = "field_in", field = "bank_class", values = ["bank_association", "association_group"] }, { kind = "field_equals", field = "bank_members_qualify", value = true }] }, { kind = "all", predicates = [{ kind = "field_equals", field = "bank_class", value = "bank_regulator" }, { kind = "field_equals", field = "bank_board_approved", value = true }] }, { kind = "all", predicates = [{ kind = "field_equals", field = "bank_class", value = "other_regulated_entity" }, { kind = "field_equals", field = "bank_supervised", value = true }, { kind = "field_equals", field = "bank_board_approved", value = true }] }, { kind = "all", predicates = [{ kind = "field_equals", field = "bank_class", value = "holding_or_parent" }, { kind = "field_equals", field = "bank_supervised", value = true }] }, { kind = "field_equals", field = "bank_board_exception_approved", value = true }] }
+
+[[assertions]]
+id = "bank.no-proxy"
+source_id = "bank-eligibility"
+locator = "6.0; pages 2–3"
+operation = "new_registration"
+namespaces = ["bank"]
+forms = [1]
+input_class = "any"
+family = "eligibility"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "Proxy/private registration cannot replace the true registrant."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2020-01-03"
+predicate = { kind = "field_equals", field = "proxy_registration", value = false }
+
+[[assertions]]
+id = "bank.correspondence-context"
+source_id = "bank-name-selection"
+locator = "3.1(a); 2022-04-01 implementation guidelines"
+operation = "new_registration"
+namespaces = ["bank"]
+forms = [1]
+input_class = "any"
+family = "allocation"
+effect = "context"
+knowledge = "partial"
+interpretation = "Correspondence includes broad listed transformations; exact equality is not the universal rule."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2015-09-12"
+
+[[assertions]]
+id = "bank.unpublished-reservations"
+source_id = "bank-name-selection"
+locator = "3.2–3.3"
+operation = "new_registration"
+namespaces = ["bank"]
+forms = [1]
+input_class = "any"
+family = "reserved"
+effect = "context"
+knowledge = "partial"
+interpretation = "Mutable reservation lists are distributed to providers, not exhaustively published here."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2015-09-12"
+
+[[assertions]]
+id = "bank.common-name-release-context"
+source_id = "bank-allocation"
+locator = "6.1–6.2"
+operation = "new_registration"
+namespaces = ["bank"]
+forms = [1]
+input_class = "any"
+family = "reserved"
+effect = "context"
+knowledge = "partial"
+interpretation = "Specified common-name allocations may use approved release processes; a generic word is not automatically forbidden."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+effective_from = "2015-06-06"
+
+[[assertions]]
+id = "google.current-spec13"
+source_id = "spec13-amendment-2023"
+locator = "Opening applicability paragraph; Schedule A: google"
+operation = "new_registration"
+namespaces = ["google"]
+forms = [1]
+input_class = "any"
+family = "access"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The effective global amendment expressly identifies google among agreements containing Specification 13."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "google.current-contract-index"
+source_id = "google-contract-index"
+locator = "Agreement Type; Agreement Date; Operator"
+operation = "new_registration"
+namespaces = ["google"]
+forms = [1]
+input_class = "any"
+family = "access"
+effect = "context"
+knowledge = "reviewed"
+interpretation = "The current contract index identifies the continuing Charleston Road Registry agreement as Brand (Spec 13)."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "google.brand-access"
+source_id = "global-amendment-2017"
+locator = "§32: Specification 13 §9.3(ii), §9.5"
+operation = "new_registration"
+namespaces = ["google"]
+forms = [1]
+input_class = "any"
+family = "access"
+effect = "require"
+knowledge = "reviewed"
+interpretation = "Only the Registry Operator, qualifying Affiliates or qualifying organizational Trademark Licensees may be registrants. The license concerns the google Brand trademark, not authorization of an individual applicant label."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+predicate = { kind = "any", predicates = [{ kind = "field_equals", field = "google_registry_operator", value = true }, { kind = "field_equals", field = "google_qualifying_affiliate", value = true }, { kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "organization" }, { kind = "field_equals", field = "google_qualifying_trademark_licensee", value = true }] }] }
+
+[[assertions]]
+id = "google.affiliate-definition"
+source_id = "google-contract-word"
+locator = "§2.9(c), definition of Affiliate"
+operation = "new_registration"
+namespaces = ["google"]
+forms = [1]
+input_class = "any"
+family = "access"
+effect = "context"
+knowledge = "partial"
+interpretation = "Affiliate declarations refer to the controlling agreement definition of control, including direct or indirect common control."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "google.dns-control-context"
+source_id = "global-amendment-2017"
+locator = "§32: Specification 13 §9.3(ii)"
+operation = "new_registration"
+namespaces = ["google"]
+forms = [1]
+input_class = "any"
+family = "access"
+effect = "context"
+knowledge = "partial"
+interpretation = "DNS control must remain within the stated qualifying classes during operation; present DNS setup is not a prerequisite for this prospective-name filter."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
+[[assertions]]
+id = "google.licensee-use-context"
+source_id = "global-amendment-2017"
+locator = "§32: Specification 13 §9.5(iv)"
+operation = "new_registration"
+namespaces = ["google"]
+forms = [1]
+input_class = "any"
+family = "allocation"
+effect = "context"
+knowledge = "partial"
+interpretation = "Registered licensee domains must serve purposes reasonably related to the trademark goods or services. No literal applicant-label grant or present operating use is substituted."
+reviewer = "codex-primary-source-review"
+reviewed_on = "2026-10-12"
+review_due = "2027-01-10"
+applicable_on = "2026-10-12"
+
