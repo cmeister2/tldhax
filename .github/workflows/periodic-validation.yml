@@ -1,0 +1,37 @@
+name: Periodic parser and package validation
+
+on:
+  schedule:
+    - cron: "41 8 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: Swatinem/rust-cache@v2
+      - name: Prepare tooling and dependencies
+        run: |
+          python -m pip install "maturin>=1.9.3,<2" pytest hypothesis idna tomli
+          cargo fetch --locked
+      - name: Offline source integrity and parser campaign
+        env:
+          TLDHAX_FUZZ_EXAMPLES: "1000"
+          CARGO_NET_OFFLINE: "true"
+        run: |
+          python -m scripts.data --verify
+          pytest -q tests/data
+          cargo test --locked --offline --all-targets
+          python -m pip install --no-index --no-deps --no-build-isolation .
+          pytest -q tests/python/test_assessment_properties.py
+      - name: Offline sdist rebuild and installed wheel smoke
+        run: python scripts/package_check.py --work-directory "$RUNNER_TEMP/tldhax-package-check"

@@ -1,0 +1,43 @@
+name: Source review reports
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+    - cron: "17 7 1 * *"
+  workflow_dispatch:
+    inputs:
+      check_policies:
+        description: Check original-byte policy sources as well as inventory
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  observe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Install source parsers
+        run: python -m pip install idna tomli
+      - name: Collect inventory drift and review boundaries
+        if: github.event_name != 'schedule' || github.event.schedule == '17 6 * * 1'
+        run: |
+          python -m scripts.maintenance --as-of "$(date -u +%F)" --report maintenance-report.json --refresh-inventory "$RUNNER_TEMP/tldhax-candidate"
+      - name: Check policy source content
+        if: github.event.schedule == '17 7 1 * *' || inputs.check_policies
+        run: |
+          python -m scripts.maintenance --as-of "$(date -u +%F)" --report policy-report.json --check-policies
+      - name: Retain review reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: source-review-reports
+          path: "*-report.json"
+          if-no-files-found: error
+          retention-days: 90
