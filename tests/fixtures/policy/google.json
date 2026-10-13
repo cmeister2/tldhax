@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "google.outsider",
+      "domain": "vanity.google",
+      "profile": {
+        "entity_kind": "organization",
+        "google_registry_operator": false,
+        "google_qualifying_affiliate": false,
+        "google_qualifying_trademark_licensee": false
+      },
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "brand_registrant"
+        ]
+      },
+      "rationale": "Operative Specification 13 §9.3(ii) requires a qualifying registrant relationship; absence is explicitly declared rather than inferred from a Brand inventory flag."
+    },
+    {
+      "id": "google.operator",
+      "domain": "vanity.google",
+      "profile": {
+        "google_registry_operator": true
+      },
+      "expected": {
+        "decision": "unknown",
+        "missing_profile_fields": []
+      },
+      "rationale": "The Registry Operator is an expressly allowed registrant alternative; current DNS setup is not required."
+    },
+    {
+      "id": "google.affiliate",
+      "domain": "vanity.google",
+      "profile": {
+        "google_qualifying_affiliate": true
+      },
+      "expected": {
+        "decision": "unknown",
+        "missing_profile_fields": []
+      },
+      "rationale": "A qualifying Affiliate under the controlling agreement is an independent permitted class."
+    },
+    {
+      "id": "google.licensee",
+      "domain": "vanity.google",
+      "profile": {
+        "entity_kind": "organization",
+        "google_registry_operator": false,
+        "google_qualifying_affiliate": false,
+        "google_qualifying_trademark_licensee": true
+      },
+      "expected": {
+        "decision": "unknown",
+        "missing_profile_fields": []
+      },
+      "rationale": "Specification13 §9.5 defines a qualifying legal-entity license for the google Brand trademark, with continuing substantive business use; no applicant-label-specific grant is required."
+    },
+    {
+      "id": "google.license-role-different-candidate",
+      "domain": "unrelated.google",
+      "profile": {
+        "entity_kind": "organization",
+        "google_registry_operator": false,
+        "google_qualifying_affiliate": false,
+        "google_qualifying_trademark_licensee": true
+      },
+      "expected": {
+        "decision": "unknown",
+        "missing_profile_fields": []
+      },
+      "rationale": "Specification13 §9.5 licenses the trademark corresponding to the Brand TLD string, not a literal candidate label; the same qualifying entity role applies while future-use policy remains a gap."
+    },
+    {
+      "id": "google.natural-person-licensee",
+      "domain": "vanity.google",
+      "profile": {
+        "entity_kind": "individual",
+        "google_registry_operator": false,
+        "google_qualifying_affiliate": false,
+        "google_qualifying_trademark_licensee": true
+      },
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "brand_registrant"
+        ]
+      },
+      "rationale": "Specification13 §9.5 expressly requires a legal entity and excludes a person from the Trademark Licensee alternative."
+    },
+    {
+      "id": "google.prospective-operator-without-dns",
+      "domain": "vanity.google",
+      "profile": {
+        "google_registry_operator": true
+      },
+      "expected": {
+        "decision": "unknown",
+        "missing_profile_fields": []
+      },
+      "rationale": "A prospective domain need not already have DNS setup. §9.3(ii) restricts operational controllers to qualifying classes but does not make existing records a static eligibility prerequisite."
+    },
+    {
+      "id": "google.missing-profile",
+      "domain": "vanity.google",
+      "expected": {
+        "decision": "unknown"
+      },
+      "rationale": "Missing facts cannot establish or disprove the allowed relationships; accepted name forms and other policy families remain unresearched."
+    },
+    {
+      "id": "google.other-brand-isolation",
+      "domain": "vanity.youtube",
+      "profile": {
+        "google_registry_operator": true
+      },
+      "expected": {
+        "decision": "unknown"
+      },
+      "rationale": "A reviewed Google contract and Google-scoped declarations cannot supply a policy for another Brand namespace."
+    }
+  ]
+}

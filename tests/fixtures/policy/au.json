@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "au.one-character",
+      "domain": "a.au",
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "label_minimum"
+        ]
+      },
+      "rationale": "Current §2.7.1(1) requires at least two characters."
+    },
+    {
+      "id": "au.minimum-two",
+      "domain": "ab.au",
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "name_relationship",
+          "reserved_names"
+        ]
+      },
+      "rationale": "Two ASCII characters satisfy the stated minimum; maximum coverage is not fabricated from this clause."
+    },
+    {
+      "id": "au.idn-ulabel",
+      "domain": "bücher.au",
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "ascii_only"
+        ]
+      },
+      "rationale": "§1.2.4 leaves IDN commencement to be advised; current §2.7.1(2) is ASCII-only."
+    },
+    {
+      "id": "au.idn-alabel",
+      "domain": "xn--bcher-kva.au",
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "ascii_only"
+        ]
+      },
+      "rationale": "§1.2.4 leaves IDN commencement to be advised; current §2.7.1(2) is ASCII-only."
+    },
+    {
+      "id": "com-au.one-character",
+      "domain": "a.com.au",
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "label_minimum"
+        ]
+      },
+      "rationale": "Current §2.7.1(1) requires at least two characters."
+    },
+    {
+      "id": "com-au.minimum-two",
+      "domain": "ab.com.au",
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "name_relationship",
+          "reserved_names"
+        ]
+      },
+      "rationale": "Two ASCII characters satisfy the stated minimum; maximum coverage is not fabricated from this clause."
+    },
+    {
+      "id": "com-au.idn-ulabel",
+      "domain": "bücher.com.au",
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "ascii_only"
+        ]
+      },
+      "rationale": "§1.2.4 leaves IDN commencement to be advised; current §2.7.1(2) is ASCII-only."
+    },
+    {
+      "id": "com-au.idn-alabel",
+      "domain": "xn--bcher-kva.com.au",
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "ascii_only"
+        ]
+      },
+      "rationale": "§1.2.4 leaves IDN commencement to be advised; current §2.7.1(2) is ASCII-only."
+    },
+    {
+      "id": "au.citizen",
+      "domain": "vanity.au",
+      "profile": {
+        "entity_kind": "individual",
+        "citizenships": [
+          "AU"
+        ],
+        "au_permanent_resident": false,
+        "au_presence_basis": "none"
+      },
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "name_relationship",
+          "reserved_names"
+        ],
+        "missing_profile_fields": []
+      },
+      "rationale": "Australian citizenship is an enumerated Australian Presence basis; all other policy families remain independent."
+    },
+    {
+      "id": "au.incorporated-association",
+      "domain": "vanity.au",
+      "profile": {
+        "entity_kind": "organization",
+        "au_presence_basis": "incorporated_association"
+      },
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "name_relationship",
+          "reserved_names"
+        ],
+        "missing_profile_fields": []
+      },
+      "rationale": "§1.4 expressly includes an association incorporated under State or Territory legislation, without requiring a separate ABN."
+    },
+    {
+      "id": "au.registrable-australian-body",
+      "domain": "vanity.au",
+      "profile": {
+        "entity_kind": "organization",
+        "au_presence_basis": "registrable_australian_body"
+      },
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "name_relationship",
+          "reserved_names"
+        ],
+        "missing_profile_fields": []
+      },
+      "rationale": "§1.4 Registrable Body includes an Australian registrable body with ARBN, as well as qualifying foreign companies."
+    },
+    {
+      "id": "au.nonqualifying-association",
+      "domain": "vanity.au",
+      "profile": {
+        "entity_kind": "organization",
+        "citizenships": [],
+        "au_permanent_resident": false,
+        "au_presence_basis": "none"
+      },
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "australian_presence"
+        ]
+      },
+      "rationale": "An association outside all qualified statutory/presence alternatives cannot gain presence merely by calling itself an association."
+    },
+    {
+      "id": "au.foreign-no-presence",
+      "domain": "vanity.au",
+      "profile": {
+        "entity_kind": "individual",
+        "citizenships": [
+          "GB"
+        ],
+        "au_permanent_resident": false,
+        "au_presence_basis": "none"
+      },
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "australian_presence"
+        ]
+      },
+      "rationale": "The profile explicitly declares no listed Australian Presence basis."
+    },
+    {
+      "id": "au.trademark-exact-label",
+      "domain": "vanity.au",
+      "profile": {
+        "entity_kind": "individual",
+        "citizenships": [
+          "GB"
+        ],
+        "au_permanent_resident": false,
+        "au_presence_basis": "australian_trademark",
+        "au_trademark_exact_labels": [
+          "vanity"
+        ]
+      },
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "name_relationship",
+          "reserved_names"
+        ],
+        "missing_profile_fields": []
+      },
+      "rationale": "§2.4.5 requires the candidate exact match when Australian Presence relies solely on an Australian trademark."
+    },
+    {
+      "id": "au.trademark-other-label",
+      "domain": "unrelated.au",
+      "profile": {
+        "entity_kind": "individual",
+        "citizenships": [
+          "GB"
+        ],
+        "au_permanent_resident": false,
+        "au_presence_basis": "australian_trademark",
+        "au_trademark_exact_labels": [
+          "vanity"
+        ]
+      },
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "australian_presence"
+        ]
+      },
+      "rationale": "A qualifying exact trademark label cannot establish presence for a different candidate."
+    },
+    {
+      "id": "com-au.no-commercial-class",
+      "domain": "vanity.com.au",
+      "profile": {
+        "entity_kind": "individual",
+        "citizenships": [
+          "AU"
+        ],
+        "au_permanent_resident": false,
+        "au_presence_basis": "none",
+        "au_commercial_basis": "none"
+      },
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "commercial_entity"
+        ]
+      },
+      "rationale": "§2.4.4(1) independently requires a Commercial Entity class."
+    },
+    {
+      "id": "com-au.commercial-company",
+      "domain": "vanity.com.au",
+      "profile": {
+        "entity_kind": "organization",
+        "au_presence_basis": "australian_company",
+        "au_commercial_basis": "corporations_act_company"
+      },
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "name_relationship",
+          "reserved_names"
+        ],
+        "missing_profile_fields": []
+      },
+      "rationale": "The company and Commercial Entity categories are enumerated; correspondence to goods/services need not equal the company name exactly."
+    },
+    {
+      "id": "com-au.incorporated-association",
+      "domain": "vanity.com.au",
+      "profile": {
+        "entity_kind": "organization",
+        "au_presence_basis": "incorporated_association",
+        "au_commercial_basis": "incorporated_association"
+      },
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "name_relationship",
+          "reserved_names"
+        ],
+        "missing_profile_fields": []
+      },
+      "rationale": "§1.4 independently includes State/Territory incorporated associations in Australian Presence and Commercial Entity."
+    },
+    {
+      "id": "com-au.registrable-australian-body",
+      "domain": "vanity.com.au",
+      "profile": {
+        "entity_kind": "organization",
+        "au_presence_basis": "registrable_australian_body",
+        "au_commercial_basis": "registrable_body"
+      },
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "name_relationship",
+          "reserved_names"
+        ],
+        "missing_profile_fields": []
+      },
+      "rationale": "A qualifying Australian registrable body with ARBN satisfies both §1.4 definitions, not only the Commercial Entity one."
+    }
+  ]
+}

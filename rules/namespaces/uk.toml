@@ -1,0 +1,356 @@
+schema_version = 1
+
+[[policies]]
+id = "uk.form-1"
+selector = "uk"
+form = ["label"]
+ascii = "supported"
+idn = "unsupported"
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 1.3; 2.3; Appendix A; section 7", "https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — current Rules dated 20.03.2024; the revised policy commencing February 2027 is inactive.", "https://registrars.nominet.uk/uk-namespace/registration-and-domain-management/field-definitions-and-registrant-types/ — key field, technical maximum of 63 applicant characters.", "Current Rules section 7 allows any applicant; administered/delegated namespace labels are separately reserved as namespace identities."]
+
+[[policies.requirements]]
+code = "ascii_only"
+message = "This namespace currently permits only ASCII registration labels."
+effect = "require"
+input_class = "any"
+predicate = { kind = "ascii_only", component = 0 }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 5.2; 5.4"]
+
+[[policies.requirements]]
+code = "reserved_label"
+message = "This applicant label is reserved in this UK registration namespace."
+effect = "deny"
+input_class = "ascii"
+predicate = { kind = "label_in_set", component = 0, set_id = "nominet.root-reserved" }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 5.6"]
+
+[[policies.requirements]]
+code = "reserved_namespace"
+message = "This label identifies an administered or delegated UK registration namespace."
+effect = "deny"
+input_class = "ascii"
+predicate = { kind = "label_in_set", component = 0, set_id = "nominet.namespace-labels" }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — Appendices A, B and C."]
+
+[[policies.gaps]]
+code = "length_policy_boundary"
+message = "The current 64-character total rule and 63-character applicant-label documentation disagree for this length."
+input_class = "ascii"
+predicate = { kind = "not", predicate = { kind = "label_maximum", component = 0, max = 61, basis = "ascii" } }
+
+[[policies]]
+id = "co.uk.form-1"
+selector = "co.uk"
+form = ["label"]
+ascii = "supported"
+idn = "unsupported"
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 1.3; 2.3; Appendix A; section 7", "https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — current Rules dated 20.03.2024; the revised policy commencing February 2027 is inactive.", "https://registrars.nominet.uk/uk-namespace/registration-and-domain-management/field-definitions-and-registrant-types/ — key field, technical maximum of 63 applicant characters."]
+
+[[policies.requirements]]
+code = "ascii_only"
+message = "This namespace currently permits only ASCII registration labels."
+effect = "require"
+input_class = "any"
+predicate = { kind = "ascii_only", component = 0 }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 5.2; 5.4"]
+
+[[policies.requirements]]
+code = "edge_hyphen"
+message = "The applicant label must not begin or end with a hyphen."
+effect = "deny"
+input_class = "ascii"
+predicate = { kind = "any", predicates = [{ kind = "label_pattern", component = 0, pattern = "prefix", value = "-", basis = "unicode" }, { kind = "label_pattern", component = 0, pattern = "suffix", value = "-", basis = "unicode" }] }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 5.2–5.3"]
+
+[[policies.requirements]]
+code = "reserved_label"
+message = "This applicant label is reserved in this UK registration namespace."
+effect = "deny"
+input_class = "ascii"
+predicate = { kind = "label_in_set", component = 0, set_id = "nominet.third-reserved" }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 5.5–5.6"]
+
+[[policies.gaps]]
+code = "length_policy_boundary"
+message = "The current 64-character total rule and 63-character applicant-label documentation disagree for this length."
+input_class = "ascii"
+predicate = { kind = "not", predicate = { kind = "label_maximum", component = 0, max = 58, basis = "ascii" } }
+
+[[policies]]
+id = "org.uk.form-1"
+selector = "org.uk"
+form = ["label"]
+ascii = "supported"
+idn = "unsupported"
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 1.3; 2.3; Appendix A; section 7", "https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — current Rules dated 20.03.2024; the revised policy commencing February 2027 is inactive.", "https://registrars.nominet.uk/uk-namespace/registration-and-domain-management/field-definitions-and-registrant-types/ — key field, technical maximum of 63 applicant characters."]
+
+[[policies.requirements]]
+code = "ascii_only"
+message = "This namespace currently permits only ASCII registration labels."
+effect = "require"
+input_class = "any"
+predicate = { kind = "ascii_only", component = 0 }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 5.2; 5.4"]
+
+[[policies.requirements]]
+code = "edge_hyphen"
+message = "The applicant label must not begin or end with a hyphen."
+effect = "deny"
+input_class = "ascii"
+predicate = { kind = "any", predicates = [{ kind = "label_pattern", component = 0, pattern = "prefix", value = "-", basis = "unicode" }, { kind = "label_pattern", component = 0, pattern = "suffix", value = "-", basis = "unicode" }] }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 5.2–5.3"]
+
+[[policies.requirements]]
+code = "reserved_label"
+message = "This applicant label is reserved in this UK registration namespace."
+effect = "deny"
+input_class = "ascii"
+predicate = { kind = "label_in_set", component = 0, set_id = "nominet.third-reserved" }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 5.5–5.6"]
+
+[[policies.gaps]]
+code = "length_policy_boundary"
+message = "The current 64-character total rule and 63-character applicant-label documentation disagree for this length."
+input_class = "ascii"
+predicate = { kind = "not", predicate = { kind = "label_maximum", component = 0, max = 57, basis = "ascii" } }
+
+[[policies]]
+id = "me.uk.form-1"
+selector = "me.uk"
+form = ["label"]
+ascii = "supported"
+idn = "unsupported"
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 1.3; 2.3; Appendix A; section 7", "https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — current Rules dated 20.03.2024; the revised policy commencing February 2027 is inactive.", "https://registrars.nominet.uk/uk-namespace/registration-and-domain-management/field-definitions-and-registrant-types/ — key field, technical maximum of 63 applicant characters."]
+
+[[policies.requirements]]
+code = "ascii_only"
+message = "This namespace currently permits only ASCII registration labels."
+effect = "require"
+input_class = "any"
+predicate = { kind = "ascii_only", component = 0 }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 5.2; 5.4"]
+
+[[policies.requirements]]
+code = "edge_hyphen"
+message = "The applicant label must not begin or end with a hyphen."
+effect = "deny"
+input_class = "ascii"
+predicate = { kind = "any", predicates = [{ kind = "label_pattern", component = 0, pattern = "prefix", value = "-", basis = "unicode" }, { kind = "label_pattern", component = 0, pattern = "suffix", value = "-", basis = "unicode" }] }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 5.2–5.3"]
+
+[[policies.requirements]]
+code = "reserved_label"
+message = "This applicant label is reserved in this UK registration namespace."
+effect = "deny"
+input_class = "ascii"
+predicate = { kind = "label_in_set", component = 0, set_id = "nominet.third-reserved" }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 5.5–5.6"]
+
+[[policies.requirements]]
+code = "natural_person"
+message = "A new me.uk registrant must be a natural person and cannot act as a proxy for an organization."
+effect = "require"
+input_class = "any"
+predicate = { kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "individual" }, { kind = "field_equals", field = "organizational_proxy", value = false }] }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 10.2–10.5"]
+
+[[policies.gaps]]
+code = "length_policy_boundary"
+message = "The current 64-character total rule and 63-character applicant-label documentation disagree for this length."
+input_class = "ascii"
+predicate = { kind = "not", predicate = { kind = "label_maximum", component = 0, max = 58, basis = "ascii" } }
+
+[[policies]]
+id = "ltd.uk.form-1"
+selector = "ltd.uk"
+form = ["label"]
+ascii = "partial"
+idn = "unsupported"
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 1.3; 2.3; Appendix A; section 7", "https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — current Rules dated 20.03.2024; the revised policy commencing February 2027 is inactive.", "https://registrars.nominet.uk/uk-namespace/registration-and-domain-management/field-definitions-and-registrant-types/ — key field, technical maximum of 63 applicant characters."]
+
+[[policies.requirements]]
+code = "ascii_only"
+message = "This namespace currently permits only ASCII registration labels."
+effect = "require"
+input_class = "any"
+predicate = { kind = "ascii_only", component = 0 }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 5.2; 5.4"]
+
+[[policies.requirements]]
+code = "edge_hyphen"
+message = "The applicant label must not begin or end with a hyphen."
+effect = "deny"
+input_class = "ascii"
+predicate = { kind = "any", predicates = [{ kind = "label_pattern", component = 0, pattern = "prefix", value = "-", basis = "unicode" }, { kind = "label_pattern", component = 0, pattern = "suffix", value = "-", basis = "unicode" }] }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 5.2–5.3"]
+
+[[policies.requirements]]
+code = "uk_company"
+message = "The applicant must be an active UK incorporated company of the applicable class."
+effect = "require"
+input_class = "any"
+predicate = { kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "organization" }, { kind = "field_equals", field = "uk_incorporated_active", value = true }] }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 11.2"]
+
+[[policies.gaps]]
+code = "length_policy_boundary"
+message = "The current 64-character total rule and 63-character applicant-label documentation disagree for this length."
+input_class = "ascii"
+predicate = { kind = "not", predicate = { kind = "label_maximum", component = 0, max = 57, basis = "ascii" } }
+
+[[policies.gaps]]
+code = "company_name_derivation"
+message = "The required official-company-name derivation algorithm is not implemented."
+input_class = "any"
+
+[[policies.gaps]]
+code = "company_status"
+message = "The applicable company subtype and one-domain-per-company conditions are not fully implemented."
+input_class = "any"
+
+[[policies]]
+id = "plc.uk.form-1"
+selector = "plc.uk"
+form = ["label"]
+ascii = "partial"
+idn = "unsupported"
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 1.3; 2.3; Appendix A; section 7", "https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — current Rules dated 20.03.2024; the revised policy commencing February 2027 is inactive.", "https://registrars.nominet.uk/uk-namespace/registration-and-domain-management/field-definitions-and-registrant-types/ — key field, technical maximum of 63 applicant characters."]
+
+[[policies.requirements]]
+code = "ascii_only"
+message = "This namespace currently permits only ASCII registration labels."
+effect = "require"
+input_class = "any"
+predicate = { kind = "ascii_only", component = 0 }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 5.2; 5.4"]
+
+[[policies.requirements]]
+code = "edge_hyphen"
+message = "The applicant label must not begin or end with a hyphen."
+effect = "deny"
+input_class = "ascii"
+predicate = { kind = "any", predicates = [{ kind = "label_pattern", component = 0, pattern = "prefix", value = "-", basis = "unicode" }, { kind = "label_pattern", component = 0, pattern = "suffix", value = "-", basis = "unicode" }] }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 5.2–5.3"]
+
+[[policies.requirements]]
+code = "uk_company"
+message = "The applicant must be an active UK incorporated company of the applicable class."
+effect = "require"
+input_class = "any"
+predicate = { kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "organization" }, { kind = "field_equals", field = "uk_incorporated_active", value = true }] }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 11.2"]
+
+[[policies.gaps]]
+code = "length_policy_boundary"
+message = "The current 64-character total rule and 63-character applicant-label documentation disagree for this length."
+input_class = "ascii"
+predicate = { kind = "not", predicate = { kind = "label_maximum", component = 0, max = 57, basis = "ascii" } }
+
+[[policies.gaps]]
+code = "company_name_derivation"
+message = "The required official-company-name derivation algorithm is not implemented."
+input_class = "any"
+
+[[policies.gaps]]
+code = "company_status"
+message = "The applicable company subtype and one-domain-per-company conditions are not fully implemented."
+input_class = "any"
+
+[[policies]]
+id = "net.uk.form-1"
+selector = "net.uk"
+form = ["label"]
+ascii = "partial"
+idn = "unsupported"
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 1.3; 2.3; Appendix A; section 7", "https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — current Rules dated 20.03.2024; the revised policy commencing February 2027 is inactive.", "https://registrars.nominet.uk/uk-namespace/registration-and-domain-management/field-definitions-and-registrant-types/ — key field, technical maximum of 63 applicant characters."]
+
+[[policies.requirements]]
+code = "ascii_only"
+message = "This namespace currently permits only ASCII registration labels."
+effect = "require"
+input_class = "any"
+predicate = { kind = "ascii_only", component = 0 }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 5.2; 5.4"]
+
+[[policies.requirements]]
+code = "edge_hyphen"
+message = "The applicant label must not begin or end with a hyphen."
+effect = "deny"
+input_class = "ascii"
+predicate = { kind = "any", predicates = [{ kind = "label_pattern", component = 0, pattern = "prefix", value = "-", basis = "unicode" }, { kind = "label_pattern", component = 0, pattern = "suffix", value = "-", basis = "unicode" }] }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 5.2–5.3"]
+
+[[policies.requirements]]
+code = "reserved_label"
+message = "This applicant label is reserved in this UK registration namespace."
+effect = "deny"
+input_class = "ascii"
+predicate = { kind = "label_in_set", component = 0, set_id = "nominet.third-reserved" }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 5.5–5.6"]
+
+[[policies.requirements]]
+code = "internet_service_provider"
+message = "A net.uk applicant must qualify as an Internet Service Provider."
+effect = "require"
+input_class = "any"
+predicate = { kind = "field_equals", field = "uk_is_isp", value = true }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — 12.2.1–12.2.3"]
+
+[[policies.gaps]]
+code = "length_policy_boundary"
+message = "The current 64-character total rule and 63-character applicant-label documentation disagree for this length."
+input_class = "ascii"
+predicate = { kind = "not", predicate = { kind = "label_maximum", component = 0, max = 57, basis = "ascii" } }
+
+[[policies.gaps]]
+code = "isp_qualification"
+message = "The required ISP entity status, network registration and UK infrastructure qualifications are not fully implemented."
+input_class = "any"
+
+[[policies.gaps]]
+code = "name_relationship"
+message = "The required same-or-similar applicant-name relationship is not implemented."
+input_class = "any"
+
+[[policies]]
+id = "sch.uk.form-2"
+selector = "sch.uk"
+form = ["school", "area"]
+ascii = "partial"
+idn = "unsupported"
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/School-domain-name-rules.pdf — Page 1: SCHOOLS", "https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — current Rules dated 20.03.2024; the revised policy commencing February 2027 is inactive.", "https://registrars.nominet.uk/uk-namespace/registration-and-domain-management/field-definitions-and-registrant-types/ — key field, technical maximum of 63 applicant characters."]
+
+[[policies.requirements]]
+code = "uk_school"
+message = "The applicant must be a qualifying UK school or school consortium."
+effect = "require"
+input_class = "any"
+predicate = { kind = "field_in", field = "uk_school_class", values = ["uk_school", "school_consortium"] }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/School-domain-name-rules.pdf — Page 1: Schools; school consortium provision"]
+
+[[policies.gaps]]
+code = "school_allocation"
+message = "Geographical area identifiers, name choices and existing school holdings are not fully implemented."
+input_class = "any"
+
+[[policies]]
+id = "wildcard.sch.uk.form-1"
+selector = "*.sch.uk"
+form = ["school"]
+ascii = "partial"
+idn = "unsupported"
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/School-domain-name-rules.pdf — Page 1: format; geographical domain-ending table", "https://nominet.uk/wp-content/uploads/2025/03/UK-rules-of-registration.pdf — current Rules dated 20.03.2024; the revised policy commencing February 2027 is inactive.", "https://registrars.nominet.uk/uk-namespace/registration-and-domain-management/field-definitions-and-registrant-types/ — key field, technical maximum of 63 applicant characters."]
+
+[[policies.requirements]]
+code = "uk_school"
+message = "The applicant must be a qualifying UK school or school consortium."
+effect = "require"
+input_class = "any"
+predicate = { kind = "field_in", field = "uk_school_class", values = ["uk_school", "school_consortium"] }
+source_notes = ["https://nominet.uk/wp-content/uploads/2025/03/School-domain-name-rules.pdf — Page 1: Schools; school consortium provision"]
+
+[[policies.gaps]]
+code = "school_allocation"
+message = "Geographical area identifiers, name choices and existing school holdings are not fully implemented."
+input_class = "any"
+

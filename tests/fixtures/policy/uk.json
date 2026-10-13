@@ -1,0 +1,265 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "uk.com-reserved-co-uk",
+      "domain": "com.co.uk",
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "reserved_label"
+        ]
+      },
+      "rationale": "§5.6 applies the com prohibition to this expressly named third-level namespace."
+    },
+    {
+      "id": "uk.com-reserved-org-uk",
+      "domain": "com.org.uk",
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "reserved_label"
+        ]
+      },
+      "rationale": "§5.6 applies the com prohibition to this expressly named third-level namespace."
+    },
+    {
+      "id": "uk.com-reserved-me-uk",
+      "domain": "com.me.uk",
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "reserved_label"
+        ]
+      },
+      "rationale": "§5.6 applies the com prohibition to this expressly named third-level namespace."
+    },
+    {
+      "id": "uk.com-reserved-net-uk",
+      "domain": "com.net.uk",
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "reserved_label"
+        ]
+      },
+      "rationale": "§5.6 applies the com prohibition to this expressly named third-level namespace."
+    },
+    {
+      "id": "uk.existing-sld-reserved",
+      "domain": "ac.co.uk",
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "reserved_label"
+        ]
+      },
+      "rationale": "§5.5 expressly reserves ac within co.uk."
+    },
+    {
+      "id": "uk.root-com-reserved",
+      "domain": "com.uk",
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "reserved_label"
+        ]
+      },
+      "rationale": "§5.6 also bars com as a new second-level label."
+    },
+    {
+      "id": "uk.com-ltd-scope",
+      "domain": "com.ltd.uk",
+      "profile": {
+        "entity_kind": "organization",
+        "uk_incorporated_active": true
+      },
+      "expected": {
+        "decision": "unknown"
+      },
+      "rationale": "The §5.5–5.6 third-level list names co/me/org/net, so it is not transplanted onto ltd.uk."
+    },
+    {
+      "id": "uk.two-character-co",
+      "domain": "ab.co.uk",
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "The current applicable ASCII rules pass in this registration form; this short candidate is below both published length boundaries."
+    },
+    {
+      "id": "uk.total-length-conflict",
+      "domain": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.co.uk",
+      "expected": {
+        "decision": "unknown",
+        "reason_codes": [
+          "length_policy_boundary"
+        ]
+      },
+      "rationale": "This 65-character full name exceeds the §5.7 total limit but fits the current technical field limit; the unresolved source conflict must remain explicit."
+    },
+    {
+      "id": "uk.current-not-future",
+      "domain": "vanity.co.uk",
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "The current applicable ASCII rules pass in this registration form; this short candidate is below both published length boundaries."
+    },
+    {
+      "id": "uk.organization-co-open",
+      "domain": "vanity.co.uk",
+      "profile": {
+        "entity_kind": "organization"
+      },
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "The current applicable ASCII rules pass in this registration form; this short candidate is below both published length boundaries."
+    },
+    {
+      "id": "uk.for-profit-org-open",
+      "domain": "vanity.org.uk",
+      "profile": {
+        "entity_kind": "organization"
+      },
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "The current applicable ASCII rules pass in this registration form; this short candidate is below both published length boundaries."
+    },
+    {
+      "id": "uk.me-person",
+      "domain": "vanity.me.uk",
+      "profile": {
+        "entity_kind": "individual",
+        "organizational_proxy": false
+      },
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "The current applicable ASCII rules pass in this registration form; this short candidate is below both published length boundaries."
+    },
+    {
+      "id": "uk.me-organization",
+      "domain": "vanity.me.uk",
+      "profile": {
+        "entity_kind": "organization",
+        "organizational_proxy": false
+      },
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "natural_person"
+        ]
+      },
+      "rationale": "A new organizational applicant fails §10.2."
+    },
+    {
+      "id": "uk.me-organizational-proxy",
+      "domain": "vanity.me.uk",
+      "profile": {
+        "entity_kind": "individual",
+        "organizational_proxy": true
+      },
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "natural_person"
+        ]
+      },
+      "rationale": "§10.2 also bars a natural person acting as an organizational proxy."
+    },
+    {
+      "id": "uk.me-needs-profile",
+      "domain": "vanity.me.uk",
+      "expected": {
+        "decision": "unknown"
+      },
+      "rationale": "An omitted profile cannot establish either required applicant fact."
+    },
+    {
+      "id": "uk.idn-ulabel",
+      "domain": "bücher.co.uk",
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "ascii_only"
+        ]
+      },
+      "rationale": "§5.2 and §5.4 bar IDNs; A-label and U-label representations are equivalent."
+    },
+    {
+      "id": "uk.idn-alabel",
+      "domain": "xn--bcher-kva.co.uk",
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "ascii_only"
+        ]
+      },
+      "rationale": "§5.2 and §5.4 bar IDNs; A-label and U-label representations are equivalent."
+    },
+    {
+      "id": "uk.delegated-gov",
+      "domain": "vanity.gov.uk",
+      "expected": {
+        "decision": "unknown"
+      },
+      "rationale": "Appendix B identifies a separate administrator; Nominet open-namespace assertions cannot substitute for its policy."
+    },
+    {
+      "id": "uk.school-geographic-form",
+      "domain": "st-marys.oxon.sch.uk",
+      "profile": {
+        "uk_school_class": "uk_school"
+      },
+      "expected": {
+        "decision": "unknown"
+      },
+      "rationale": "The current Schools rules explicitly use school-name.area.sch.uk; the area/name allocation is still partial."
+    },
+    {
+      "id": "uk.school-ineligible-class",
+      "domain": "vanity.oxon.sch.uk",
+      "profile": {
+        "uk_school_class": "none"
+      },
+      "expected": {
+        "decision": "no",
+        "reason_codes": [
+          "uk_school"
+        ]
+      },
+      "rationale": "A profile explicitly outside the UK school/consortium classes fails the published necessary class requirement."
+    },
+    {
+      "id": "uk.root-ordinary",
+      "domain": "sunflower.uk",
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "An ordinary current ASCII second-level registration passes; any applicant may register this form."
+    },
+    {
+      "id": "uk.short-form-below-both-bounds",
+      "domain": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.co.uk",
+      "expected": {
+        "decision": "yes"
+      },
+      "rationale": "The complete domain has 64 characters and the label has fewer than 63, satisfying both current statements."
+    },
+    {
+      "id": "uk.me-missing-profile",
+      "domain": "sunflower.me.uk",
+      "expected": {
+        "decision": "unknown",
+        "missing_profile_fields": [
+          "entity_kind",
+          "organizational_proxy"
+        ]
+      },
+      "rationale": "A new me.uk application needs the natural-person and organizational-proxy declarations."
+    }
+  ]
+}

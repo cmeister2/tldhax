@@ -1,0 +1,36 @@
+schema_version = 1
+
+[[policies]]
+id = "bank.form-1"
+selector = "bank"
+form = ["label"]
+ascii = "partial"
+idn = "partial"
+source_notes = ["https://register.bank/wp-content/uploads/2024/07/fTLD-Name-Selection-Policy-Bank-FINAL-20150912.docx.pdf — 3.1; implementation examples, pages 3–4", "Charter, supervision, membership and explicit board exception alternatives remain declarations. Documentary verification does not create a separate static gap; unpublished reservations and broad name correspondence do."]
+
+[[policies.requirements]]
+code = "qualified_bank"
+message = "The applicant must satisfy a qualified banking class or an explicit board-approved exception."
+effect = "require"
+input_class = "any"
+predicate = { kind = "any", predicates = [{ kind = "all", predicates = [{ kind = "field_in", field = "bank_class", values = ["retail_bank", "savings_association"] }, { kind = "field_equals", field = "bank_chartered", value = true }, { kind = "field_equals", field = "bank_supervised", value = true }] }, { kind = "all", predicates = [{ kind = "field_in", field = "bank_class", values = ["bank_association", "association_group"] }, { kind = "field_equals", field = "bank_members_qualify", value = true }] }, { kind = "all", predicates = [{ kind = "field_equals", field = "bank_class", value = "bank_regulator" }, { kind = "field_equals", field = "bank_board_approved", value = true }] }, { kind = "all", predicates = [{ kind = "field_equals", field = "bank_class", value = "other_regulated_entity" }, { kind = "field_equals", field = "bank_supervised", value = true }, { kind = "field_equals", field = "bank_board_approved", value = true }] }, { kind = "all", predicates = [{ kind = "field_equals", field = "bank_class", value = "holding_or_parent" }, { kind = "field_equals", field = "bank_supervised", value = true }] }, { kind = "field_equals", field = "bank_board_exception_approved", value = true }] }
+source_notes = ["https://register.bank/wp-content/uploads/2024/07/fTLD-Registrant-Eligibility-Policy-Bank-FINAL-20240228.docx.pdf — 3.1–3.8; 2024-02-28 implementation guidelines, final paragraph"]
+
+[[policies.requirements]]
+code = "no_proxy"
+message = "Proxy or private registration cannot replace the true registrant in this namespace."
+effect = "require"
+input_class = "any"
+predicate = { kind = "field_equals", field = "proxy_registration", value = false }
+source_notes = ["https://register.bank/wp-content/uploads/2024/07/fTLD-Registrant-Eligibility-Policy-Bank-FINAL-20240228.docx.pdf — 6.0; pages 2–3"]
+
+[[policies.gaps]]
+code = "name_relationship"
+message = "The permitted banking-name correspondence transformations are not fully implemented."
+input_class = "any"
+
+[[policies.gaps]]
+code = "reserved_names"
+message = "The complete current registry reservation list is not published in the maintained policy."
+input_class = "any"
+

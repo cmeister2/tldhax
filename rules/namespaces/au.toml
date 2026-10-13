@@ -1,0 +1,147 @@
+schema_version = 1
+
+[[policies]]
+id = "au.form-1"
+selector = "au"
+form = ["label"]
+ascii = "partial"
+idn = "unsupported"
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 1.4 Designated Namespace; 2.4.3–2.4.4; 2.7.1", "The Australian trademark route retains its candidate-specific exact match; broad allocation correspondence is not replaced with exact equality. Proposed IDN changes are inactive until commencement."]
+
+[[policies.requirements]]
+code = "label_minimum"
+message = "The applicant label does not meet the required minimum length."
+effect = "require"
+input_class = "any"
+predicate = { kind = "label_minimum", component = 0, min = 2, basis = "ascii" }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 2.7.1(1)"]
+
+[[policies.requirements]]
+code = "ascii_only"
+message = "This namespace currently permits only ASCII registration labels."
+effect = "require"
+input_class = "any"
+predicate = { kind = "ascii_only", component = 0 }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 1.2.4; 2.7.1(2)"]
+
+[[policies.requirements]]
+code = "leading_hyphen"
+message = "The applicant label must not begin with a hyphen."
+effect = "deny"
+input_class = "any"
+predicate = { kind = "label_pattern", component = 0, pattern = "prefix", value = "-", basis = "unicode" }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 2.7.1(2)–(4)"]
+
+[[policies.requirements]]
+code = "trailing_hyphen"
+message = "The applicant label must not end with a hyphen."
+effect = "deny"
+input_class = "any"
+predicate = { kind = "label_pattern", component = 0, pattern = "suffix", value = "-", basis = "unicode" }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 2.7.1(2)–(4)"]
+
+[[policies.requirements]]
+code = "tagged_label"
+message = "Hyphens in the third and fourth positions are not permitted in this applicant label."
+effect = "deny"
+input_class = "any"
+predicate = { kind = "label_positions", component = 0, positions = [2, 3], value = "--", basis = "unicode" }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 2.7.1(2)–(4)"]
+
+[[policies.requirements]]
+code = "australian_presence"
+message = "The applicant must qualify under an Australian Presence category; trademark reliance must match this candidate label."
+effect = "require"
+input_class = "any"
+predicate = { kind = "any", predicates = [{ kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "individual" }, { kind = "field_in", field = "citizenships", values = ["AU"] }] }, { kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "individual" }, { kind = "field_equals", field = "au_permanent_resident", value = true }] }, { kind = "field_in", field = "au_presence_basis", values = ["australian_company", "registrable_australian_body", "registered_foreign_company", "incorporated_association", "abn_entity", "indigenous_corporation", "registered_organization", "registered_cooperative", "registered_charity", "registered_political_party", "qualifying_partnership", "qualifying_association", "qualifying_trust", "regulated_education", "australian_government", "commonwealth_entity", "accredited_embassy"] }, { kind = "all", predicates = [{ kind = "field_equals", field = "au_presence_basis", value = "australian_trademark" }, { kind = "name_equals_field", component = 0, field = "au_trademark_exact_labels" }] }] }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 1.4 Australian Presence; 2.4.1–2.4.5"]
+
+[[policies.gaps]]
+code = "reserved_names"
+message = "Reservation categories and statutory exceptions are not fully implemented."
+input_class = "any"
+
+[[policies.gaps]]
+code = "name_relationship"
+message = "Permitted priority, related-body, acronym and synonym name relationships are not fully implemented."
+input_class = "any"
+
+[[policies]]
+id = "com.au.form-1"
+selector = "com.au"
+form = ["label"]
+ascii = "partial"
+idn = "unsupported"
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 1.4 Designated Namespace; 2.4.3–2.4.4; 2.7.1", "The Australian trademark route retains its candidate-specific exact match; broad allocation correspondence is not replaced with exact equality. Proposed IDN changes are inactive until commencement."]
+
+[[policies.requirements]]
+code = "label_minimum"
+message = "The applicant label does not meet the required minimum length."
+effect = "require"
+input_class = "any"
+predicate = { kind = "label_minimum", component = 0, min = 2, basis = "ascii" }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 2.7.1(1)"]
+
+[[policies.requirements]]
+code = "ascii_only"
+message = "This namespace currently permits only ASCII registration labels."
+effect = "require"
+input_class = "any"
+predicate = { kind = "ascii_only", component = 0 }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 1.2.4; 2.7.1(2)"]
+
+[[policies.requirements]]
+code = "leading_hyphen"
+message = "The applicant label must not begin with a hyphen."
+effect = "deny"
+input_class = "any"
+predicate = { kind = "label_pattern", component = 0, pattern = "prefix", value = "-", basis = "unicode" }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 2.7.1(2)–(4)"]
+
+[[policies.requirements]]
+code = "trailing_hyphen"
+message = "The applicant label must not end with a hyphen."
+effect = "deny"
+input_class = "any"
+predicate = { kind = "label_pattern", component = 0, pattern = "suffix", value = "-", basis = "unicode" }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 2.7.1(2)–(4)"]
+
+[[policies.requirements]]
+code = "tagged_label"
+message = "Hyphens in the third and fourth positions are not permitted in this applicant label."
+effect = "deny"
+input_class = "any"
+predicate = { kind = "label_positions", component = 0, positions = [2, 3], value = "--", basis = "unicode" }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 2.7.1(2)–(4)"]
+
+[[policies.requirements]]
+code = "australian_presence"
+message = "The applicant must qualify under an Australian Presence category; trademark reliance must match this candidate label."
+effect = "require"
+input_class = "any"
+predicate = { kind = "any", predicates = [{ kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "individual" }, { kind = "field_in", field = "citizenships", values = ["AU"] }] }, { kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "individual" }, { kind = "field_equals", field = "au_permanent_resident", value = true }] }, { kind = "field_in", field = "au_presence_basis", values = ["australian_company", "registrable_australian_body", "registered_foreign_company", "incorporated_association", "abn_entity", "indigenous_corporation", "registered_organization", "registered_cooperative", "registered_charity", "registered_political_party", "qualifying_partnership", "qualifying_association", "qualifying_trust", "regulated_education", "australian_government", "commonwealth_entity", "accredited_embassy"] }, { kind = "all", predicates = [{ kind = "field_equals", field = "au_presence_basis", value = "australian_trademark" }, { kind = "name_equals_field", component = 0, field = "au_trademark_exact_labels" }] }] }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 1.4 Australian Presence; 2.4.1–2.4.5"]
+
+[[policies.requirements]]
+code = "commercial_entity"
+message = "The applicant must qualify under an enumerated com.au Commercial Entity category."
+effect = "require"
+input_class = "any"
+predicate = { kind = "field_in", field = "au_commercial_basis", values = ["corporations_act_company", "commonwealth_entity", "registrable_body", "incorporated_association", "abn_entity", "statutory_trade_commerce", "abn_noncharitable_trust", "incorporated_limited_partnership", "trading_cooperative", "australian_government", "australian_trademark"] }
+source_notes = ["https://www.auda.org.au/au-domain-names/au-rules-and-policies/au-domain-administration-rules-licensing-2/ — 1.4 Commercial Entity; 2.4.4(1)"]
+
+[[policies.gaps]]
+code = "reserved_names"
+message = "Reservation categories and statutory exceptions are not fully implemented."
+input_class = "any"
+
+[[policies.gaps]]
+code = "name_relationship"
+message = "Permitted priority, related-body, acronym and synonym name relationships are not fully implemented."
+input_class = "any"
+
+[[policies.gaps]]
+code = "entity_exceptions"
+message = "Applicable related-body and entity-status exceptions are not fully implemented."
+input_class = "any"
+

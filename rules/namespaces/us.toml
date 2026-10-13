@@ -1,0 +1,47 @@
+schema_version = 1
+
+[[policies]]
+id = "us.form-1"
+selector = "us"
+form = ["label"]
+ascii = "partial"
+idn = "unsupported"
+source_notes = ["https://www.about.us/faqs — General Information and Domain Management; ordinary .US registrations", "Declared Nexus alternatives and the no-proxy rule are checked. Proof submission and nameserver setup are transaction responsibilities; the separate locality namespace is not assigned an invented form."]
+
+[[policies.requirements]]
+code = "us_nexus"
+message = "The applicant must satisfy a .US citizenship, residence, formation or bona fide presence route."
+effect = "require"
+input_class = "any"
+predicate = { kind = "any", predicates = [{ kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "individual" }, { kind = "any", predicates = [{ kind = "field_in", field = "citizenships", values = ["US"] }, { kind = "field_equals", field = "us_permanent_resident", value = true }, { kind = "field_equals", field = "domicile_country", value = "US" }, { kind = "field_equals", field = "us_primary_domicile_in_possession", value = true }] }] }, { kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "organization" }, { kind = "any", predicates = [{ kind = "field_equals", field = "incorporation_country", value = "US" }, { kind = "field_equals", field = "us_incorporated_in_territory", value = true }, { kind = "field_equals", field = "us_constituted_entity", value = true }, { kind = "all", predicates = [{ kind = "field_equals", field = "us_foreign_entity", value = true }, { kind = "field_equals", field = "us_bona_fide_presence", value = true }] }] }] }] }
+source_notes = ["https://www.about.us/documents/policies/usTLD_Nexus_Requirements_Policy.pdf — Page 1, categories 1–3; pages 2–3, certification details"]
+
+[[policies.requirements]]
+code = "no_proxy"
+message = "Proxy or private registration cannot replace the true registrant in this namespace."
+effect = "require"
+input_class = "any"
+predicate = { kind = "field_equals", field = "proxy_registration", value = false }
+source_notes = ["https://www.about.us/faqs — Will proxy registrations, sometimes called \"domain privacy” be allowed on my .US domain name?"]
+
+[[policies.requirements]]
+code = "ascii_only"
+message = "This namespace currently permits only ASCII registration labels."
+effect = "require"
+input_class = "any"
+predicate = { kind = "ascii_only", component = 0 }
+source_notes = ["https://www.about.us/faqs — Are Internationalized Domain Names (IDNs) offered in .US?"]
+
+[[policies.requirements]]
+code = "tagged_label"
+message = "Hyphens in the third and fourth positions are not permitted in this applicant label."
+effect = "deny"
+input_class = "any"
+predicate = { kind = "label_positions", component = 0, positions = [2, 3], value = "--", basis = "unicode" }
+source_notes = ["https://www.about.us/faqs — Reserved-name categories: tagged domain names"]
+
+[[policies.gaps]]
+code = "reserved_names"
+message = "Numeric, telephone and named .US reservation categories are not fully implemented."
+input_class = "ascii"
+

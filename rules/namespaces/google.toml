@@ -1,0 +1,29 @@
+schema_version = 1
+
+[[policies]]
+id = "google.form-1"
+selector = "google"
+form = ["label"]
+ascii = "partial"
+idn = "partial"
+source_notes = ["Specification 13 qualification refers to the google Brand trademark and the contractual affiliate definition, not a literal grant for each candidate label. Future DNS operation is outside this prospective filter."]
+
+[[policies.requirements]]
+code = "brand_registrant"
+message = "The registrant must be the registry operator, a qualifying affiliate or a qualifying organizational trademark licensee."
+effect = "require"
+input_class = "any"
+predicate = { kind = "any", predicates = [{ kind = "field_equals", field = "google_registry_operator", value = true }, { kind = "field_equals", field = "google_qualifying_affiliate", value = true }, { kind = "all", predicates = [{ kind = "field_equals", field = "entity_kind", value = "organization" }, { kind = "field_equals", field = "google_qualifying_trademark_licensee", value = true }] }] }
+source_notes = ["https://newgtlds.icann.org/sites/default/files/agreements/agreement-approved-global-amendment-31jul17-en.html — §32: Specification 13 §9.3(ii), §9.5"]
+
+[[policies.gaps]]
+code = "brand_name_policy"
+message = "The registry-specific name allocation policy is not fully implemented."
+input_class = "any"
+
+[[policies.gaps]]
+code = "licensee_use"
+message = "The trademark-licensee purpose relationship is not implemented."
+input_class = "any"
+predicate = { kind = "all", predicates = [{ kind = "field_equals", field = "google_qualifying_trademark_licensee", value = true }, { kind = "not", predicate = { kind = "any", predicates = [{ kind = "field_equals", field = "google_registry_operator", value = true }, { kind = "field_equals", field = "google_qualifying_affiliate", value = true }] } }] }
+
