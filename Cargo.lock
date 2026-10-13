@@ -445,6 +445,7 @@ dependencies = [
 name = "tldhax"
 version = "0.0.0"
 dependencies = [
+ "icu_properties",
  "idna",
  "phf",
  "phf_codegen",

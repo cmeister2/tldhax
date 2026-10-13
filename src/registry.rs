@@ -1,10 +1,10 @@
 //! Registry lookup and registerability checks.
 
-use crate::checker::validate_ascii_domain;
+use crate::normalization::CanonicalName;
 use crate::types::{
     Charset, CheckResult, CheckStatus, Reason, Registerable, RegistryStats, TldRule,
 };
-use crate::{TOTAL_KNOWN_SUFFIXES, TLD_RULES};
+use crate::{TLD_RULES, TOTAL_KNOWN_SUFFIXES};
 
 /// Checks domains against the compiled TLD rule set.
 pub struct Registry;
@@ -27,38 +27,20 @@ impl Registry {
     /// rule, or an unknown result when the suffix is known but has no curated
     /// policy entry.
     pub fn check(&self, domain: &str) -> CheckResult {
-        // Normalize user input before any structural or policy checks.
-        let lowered = domain.trim().trim_end_matches('.').to_ascii_lowercase();
-        if lowered.is_empty() {
-            // Reject empty input before attempting IDNA or PSL parsing.
-            return CheckResult {
-                status: CheckStatus::No,
-                reasons: vec!["DNS syntax: empty domain".to_string()],
-            };
-        }
-
-        let ascii_domain = match idna::domain_to_ascii(&lowered) {
-            Ok(value) => value.to_ascii_lowercase(),
-            Err(_) => {
-                // Stop immediately when IDNA normalization itself is invalid.
+        let canonical = match CanonicalName::new(domain) {
+            Ok(value) => value,
+            Err(error) => {
                 return CheckResult {
                     status: CheckStatus::No,
-                    reasons: vec!["DNS syntax: invalid IDNA input".to_string()],
+                    reasons: vec![error.message().to_string()],
                 };
             }
         };
-
-        if let Err(error) = validate_ascii_domain(&ascii_domain) {
-            // Surface the first ASCII DNS syntax violation from the normalized form.
-            return CheckResult {
-                status: CheckStatus::No,
-                reasons: vec![error],
-            };
-        }
+        let ascii_domain = canonical.ascii();
 
         // Use the PSL to distinguish bare TLDs, registrable domains, and deeper subdomains.
-        let Some(suffix) = psl::suffix_str(&ascii_domain) else {
-            let candidate = ascii_domain.rsplit('.').next().unwrap_or(&ascii_domain);
+        let Some(suffix) = psl::suffix_str(ascii_domain) else {
+            let candidate = ascii_domain.rsplit('.').next().unwrap_or(ascii_domain);
             // Unknown suffixes are syntactically valid but outside the compiled corpus.
             return CheckResult {
                 status: CheckStatus::Unknown,
@@ -66,7 +48,7 @@ impl Registry {
             };
         };
 
-        let Some(registrable_domain) = psl::domain_str(&ascii_domain) else {
+        let Some(registrable_domain) = psl::domain_str(ascii_domain) else {
             // Bare suffixes do not have a registrable label to validate.
             return CheckResult {
                 status: CheckStatus::No,
@@ -95,14 +77,28 @@ impl Registry {
         };
 
         // From this point onward, enforce the curated rule for the effective TLD.
-        let label_ascii = registrable_label(&ascii_domain, suffix);
-        let label_unicode = lowered.split('.').next().unwrap_or(&lowered);
+        let label_ascii = registrable_label(ascii_domain, suffix);
+        let canonical_unicode = match canonical.unicode() {
+            Ok(value) => value,
+            Err(error) => {
+                return CheckResult {
+                    status: CheckStatus::No,
+                    reasons: vec![error.message().to_string()],
+                };
+            }
+        };
+        let label_unicode = canonical_unicode
+            .split('.')
+            .next()
+            .unwrap_or(&canonical_unicode);
         let label_len_ascii = label_ascii.len();
         let label_len_unicode = label_unicode.chars().count();
 
         let mut reasons = vec!["DNS syntax: ok".to_string()];
 
-        if rule.charset == Charset::Ascii && (label_ascii.starts_with("xn--") || !label_unicode.is_ascii()) {
+        if rule.charset == Charset::Ascii
+            && (label_ascii.starts_with("xn--") || !label_unicode.is_ascii())
+        {
             // ASCII-only TLDs fail fast on punycode or non-ASCII user input.
             return CheckResult {
                 status: CheckStatus::No,
@@ -113,7 +109,9 @@ impl Registry {
             };
         }
 
-        if rule.charset == Charset::Idn && !rule.idn_chars.is_empty() && !idn_characters_allowed(label_unicode, rule)
+        if rule.charset == Charset::Idn
+            && !rule.idn_chars.is_empty()
+            && !idn_characters_allowed(label_unicode, rule)
         {
             if let Some(offending) = label_unicode
                 .chars()
@@ -147,9 +145,7 @@ impl Registry {
                 status: CheckStatus::No,
                 reasons: vec![format!(
                     "TLD rule: label too short (min {}, got {}) under .{}",
-                    rule.min_length,
-                    measured_length,
-                    rule.tld,
+                    rule.min_length, measured_length, rule.tld,
                 )],
             };
         }
@@ -159,9 +155,7 @@ impl Registry {
                 status: CheckStatus::No,
                 reasons: vec![format!(
                     "TLD rule: label too long (max {}, got {}) under .{}",
-                    rule.max_length,
-                    measured_length,
-                    rule.tld,
+                    rule.max_length, measured_length, rule.tld,
                 )],
             };
         }
@@ -180,8 +174,7 @@ impl Registry {
                 status: CheckStatus::No,
                 reasons: vec![format!(
                     "TLD rule: label '{}' is banned under .{}",
-                    label_ascii,
-                    rule.tld,
+                    label_ascii, rule.tld,
                 )],
             };
         }
@@ -257,9 +250,7 @@ fn registrable_label<'a>(domain: &'a str, suffix: &str) -> &'a str {
 /// Checks whether all non-ASCII characters in a label are allowed by the TLD rule.
 fn idn_characters_allowed(label_unicode: &str, rule: &TldRule) -> bool {
     label_unicode.chars().all(|character| {
-        character.is_ascii_alphanumeric()
-            || character == '-'
-            || rule.idn_chars.contains(character)
+        character.is_ascii_alphanumeric() || character == '-' || rule.idn_chars.contains(character)
     })
 }
 
@@ -292,13 +283,22 @@ fn closed_reason(rule: &TldRule) -> String {
             rule.tld
         ),
         Some(Reason::Infrastructure) => {
-            format!("TLD rule: .{} is an infrastructure TLD, not open for registration", rule.tld)
+            format!(
+                "TLD rule: .{} is an infrastructure TLD, not open for registration",
+                rule.tld
+            )
         }
         Some(Reason::Government) => {
-            format!("TLD rule: .{} is a government TLD, not open for public registration", rule.tld)
+            format!(
+                "TLD rule: .{} is a government TLD, not open for public registration",
+                rule.tld
+            )
         }
         Some(Reason::Retired) => {
-            format!("TLD rule: .{} is a retired TLD, not open for registration", rule.tld)
+            format!(
+                "TLD rule: .{} is a retired TLD, not open for registration",
+                rule.tld
+            )
         }
         None => format!("TLD rule: .{} is not open for registration", rule.tld),
     }

@@ -8,14 +8,15 @@ repository = "https://github.com/cmeister2/tldhax"
 readme = "README.md"
 keywords = ["tld", "domain", "dns", "idn", "registry"]
 categories = ["command-line-utilities", "web-programming"]
-include = ["src/**", "python/**", "build.rs", "rules/**", "LICENSE", "README.md"]
+include = ["src/**", "python/**", "build.rs", "rules/**", "benches/**", "/LICENSE", "/README.md"]
 
 [lib]
 name = "tldhax"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-idna = "1"
+idna = "1.1"
+icu_properties = "2.2"
 phf = "0.11"
 psl = "2"
 pyo3 = { version = "0.28", features = ["extension-module"] }
@@ -27,9 +28,9 @@ serde = { version = "1", features = ["derive"] }
 toml = "0.8"
 
 [lints.rust]
-missing_docs = "deny"
+missing_docs = "forbid"
 
 [lints.clippy]
-missing_docs_in_private_items = "deny"
-missing_errors_doc = "deny"
-missing_panics_doc = "deny"
+missing_docs_in_private_items = "forbid"
+missing_errors_doc = "forbid"
+missing_panics_doc = "forbid"
