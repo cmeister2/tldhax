@@ -1,4 +1,5 @@
-#![allow(missing_docs, clippy::missing_docs_in_private_items)]
+//! Compile legacy TOML rule summaries into immutable lookup tables.
+
 
 use std::collections::{BTreeMap, BTreeSet};
 use std::env;
@@ -8,76 +9,126 @@ use std::path::{Path, PathBuf};
 
 use serde::Deserialize;
 
+/// Legacy authored registration-access state deserialized from a rule record.
 #[derive(Debug, Deserialize, Clone)]
 #[serde(rename_all = "snake_case")]
 enum RegisterableToml {
+    /// Legacy evidence describes an openly registerable namespace.
     Yes,
+    /// Legacy evidence describes a non-registerable namespace.
     No,
+    /// Legacy evidence describes registration with additional restrictions.
     Restricted,
 }
 
+/// Legacy authored reason explaining a non-registerable namespace.
 #[derive(Debug, Deserialize, Clone)]
 #[serde(rename_all = "snake_case")]
 enum ReasonToml {
+    /// Registration is limited by a brand namespace policy.
     BrandTld,
+    /// The namespace serves Internet infrastructure.
     Infrastructure,
+    /// The namespace serves governmental use.
     Government,
+    /// The namespace is retired from registration.
     Retired,
 }
 
+/// Label representation used by the legacy authored length limits.
 #[derive(Debug, Deserialize, Clone)]
 #[serde(rename_all = "snake_case")]
 enum LengthBasisToml {
+    /// Measure the ASCII label representation.
     Ascii,
+    /// Measure the Unicode label representation.
     Unicode,
 }
 
+/// Legacy authored character-set category.
 #[derive(Debug, Deserialize, Clone)]
 #[serde(rename_all = "snake_case")]
 enum CharsetToml {
+    /// Legacy policy describes ASCII labels.
     Ascii,
+    /// Legacy policy describes internationalized labels.
     Idn,
 }
 
+/// Legacy TOML suffix entry with optional policy claims and per-field source links.
+///
+/// An entry without policy claims contributes discovery only.
 #[derive(Debug, Deserialize, Default)]
 #[serde(default, deny_unknown_fields)]
 struct DomainEntryToml {
+    /// Authored suffix identity checked against the root implied by the filename.
     tld: String,
+    /// Optional registration-access claim; absence permits discovery-only entries.
     registerable: Option<RegisterableToml>,
+    /// Optional explanation allowed only when registration is unavailable.
     reason: Option<ReasonToml>,
+    /// Optional descriptive context retained in the compiled rule.
     note: Option<String>,
+    /// Published conditions allowed only for restricted registration.
     restrictions: Vec<String>,
+    /// Optional minimum label length; the compiler defaults to one when omitted.
     min_length: Option<u8>,
+    /// Optional maximum label length; the compiler defaults to sixty-three when omitted.
     max_length: Option<u8>,
+    /// Optional length representation; the compiler defaults to ASCII when omitted.
     length_basis: Option<LengthBasisToml>,
+    /// Finite authored label patterns retained by the legacy runtime rule.
     banned: Vec<String>,
+    /// Optional character-set category; the compiler defaults to ASCII when omitted.
     charset: Option<CharsetToml>,
+    /// Optional authored IDN character repertoire; requires an IDN character-set category.
     idn_chars: Option<String>,
+    /// Source links keyed by each explicitly authored policy field.
     sources: BTreeMap<String, String>,
 }
 
+/// TOML container for one or more legacy suffix entries.
 #[derive(Debug, Deserialize, Default)]
 #[serde(default, deny_unknown_fields)]
 struct RuleFileToml {
+    /// Legacy suffix entries; empty files are rejected by the build.
     domains: Vec<DomainEntryToml>,
 }
 
+/// Validated legacy summary with explicit defaults and static runtime enum expressions.
 #[derive(Debug)]
 struct CompiledDomainEntry {
+    /// Authored suffix identity checked against the root implied by the filename.
     tld: String,
+    /// Static runtime registration-access enum expression selected during validation.
     registerable: &'static str,
+    /// Optional static runtime reason expression for unavailable registration.
     reason: Option<&'static str>,
+    /// Optional descriptive context retained in the compiled rule.
     note: Option<String>,
+    /// Published conditions allowed only for restricted registration.
     restrictions: Vec<String>,
+    /// Validated minimum label length, including the legacy default when omitted.
     min_length: u8,
+    /// Validated maximum label length, including the legacy default when omitted.
     max_length: u8,
+    /// Static runtime length-representation enum expression.
     length_basis: &'static str,
+    /// Finite authored label patterns retained by the legacy runtime rule.
     banned: Vec<String>,
+    /// Static runtime character-set enum expression.
     charset: &'static str,
+    /// Retained IDN character repertoire, empty when no repertoire was authored.
     idn_chars: String,
+    /// Source links keyed by each explicitly authored policy field.
     sources: BTreeMap<String, String>,
 }
 
+/// Compile every packaged artifact into Cargo’s output directory.
+///
+/// # Panics
+/// Panics when Cargo omits `OUT_DIR`, packaged evidence fails validation, or an
+/// output artifact cannot be written.
 fn main() {
     let rules_dir = Path::new("rules");
     println!("cargo:rerun-if-changed={}", rules_dir.display());
@@ -132,7 +183,7 @@ fn main() {
         rule_map.entry(&entry.tld, &render_tld_rule(entry));
     }
 
-    writeln!(output, "pub static TLD_RULES: phf::Map<&'static str, TldRule> = {};
+    writeln!(output, "/// Validated legacy rule summaries indexed by their authored suffix identities.\npub static TLD_RULES: phf::Map<&'static str, TldRule> = {};
 ", rule_map.build()).expect("failed to write TLD_RULES map");
 
     let mut suffix_set = phf_codegen::Set::new();
@@ -140,12 +191,16 @@ fn main() {
         suffix_set.entry(suffix);
     }
 
-    writeln!(output, "pub static KNOWN_SUFFIXES: phf::Set<&'static str> = {};
+    writeln!(output, "/// All authored suffix identities, including discovery-only entries without policy claims.\npub static KNOWN_SUFFIXES: phf::Set<&'static str> = {};
 ", suffix_set.build()).expect("failed to write KNOWN_SUFFIXES set");
-    writeln!(output, "pub const TOTAL_KNOWN_SUFFIXES: usize = {};", known_suffixes.len())
+    writeln!(output, "/// Number of unique suffix identities in the compiled discovery set.\npub const TOTAL_KNOWN_SUFFIXES: usize = {};", known_suffixes.len())
         .expect("failed to write suffix count");
 }
 
+/// Require each suffix root to match the rule filename unless its stem begins with an underscore.
+///
+/// # Panics
+/// Panics when a suffix root disagrees with the non-exempt rule filename.
 fn validate_root_alignment(path: &Path, stem: &str, suffix: &str) {
     if stem.starts_with('_') {
         return;
@@ -167,6 +222,12 @@ fn validate_root_alignment(path: &Path, stem: &str, suffix: &str) {
     }
 }
 
+/// Validate an authored legacy entry and apply legacy defaults to a complete summary.
+///
+/// # Panics
+/// Panics for mismatched root identity, policy fields without an access claim,
+/// missing per-field sources, invalid length bounds, or reason, restriction and
+/// IDN fields inconsistent with the selected access or character-set category.
 fn validate_domain_entry(path: &Path, stem: &str, entry: DomainEntryToml) -> Option<CompiledDomainEntry> {
     validate_root_alignment(path, stem, &entry.tld);
 
@@ -286,6 +347,10 @@ fn validate_domain_entry(path: &Path, stem: &str, entry: DomainEntryToml) -> Opt
     })
 }
 
+/// Require a matching source link for an explicitly authored policy field.
+///
+/// # Panics
+/// Panics if the field is present but its source key is absent.
 fn require_source_if_present(path: &Path, entry: &DomainEntryToml, condition: bool, source_key: &str) {
     if condition && !entry.sources.contains_key(source_key) {
         panic!(
@@ -297,6 +362,7 @@ fn require_source_if_present(path: &Path, entry: &DomainEntryToml, condition: bo
     }
 }
 
+/// Render one validated summary as a static runtime rule expression.
 fn render_tld_rule(entry: &CompiledDomainEntry) -> String {
     format!(
         "TldRule {{ tld: {tld}, registerable: {registerable}, reason: {reason}, note: {note}, restrictions: {restrictions}, min_length: {min_length}, max_length: {max_length}, length_basis: {length_basis}, banned: {banned}, charset: {charset}, idn_chars: {idn_chars}, sources: {sources} }}",
@@ -322,10 +388,12 @@ fn render_tld_rule(entry: &CompiledDomainEntry) -> String {
     )
 }
 
+/// Escape an exact string value as a Rust literal.
 fn render_string(value: &str) -> String {
     format!("{value:?}")
 }
 
+/// Render a static slice preserving the authored string order.
 fn render_string_slice(values: &[String]) -> String {
     let rendered = values
         .iter()
@@ -335,6 +403,7 @@ fn render_string_slice(values: &[String]) -> String {
     format!("&[{rendered}]")
 }
 
+/// Render source key/link pairs in deterministic map-key order.
 fn render_sources(values: &BTreeMap<String, String>) -> String {
     let rendered = values
         .iter()

@@ -1,12 +1,12 @@
 //! TLD registration rule checks backed by compiled rule data.
 
 pub mod checker;
-#[allow(missing_docs, clippy::missing_docs_in_private_items, clippy::missing_errors_doc)]
+pub mod normalization;
 pub mod python;
 pub mod registry;
 pub mod types;
 
-#[allow(missing_docs, clippy::missing_docs_in_private_items)]
+/// Compiled legacy TLD rules and known suffixes emitted by the build script.
 mod generated {
     include!(concat!(env!("OUT_DIR"), "/generated_rules.rs"));
 }
