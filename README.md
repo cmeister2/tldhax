@@ -179,7 +179,7 @@ CLI text streams use UTF-8 independently of the process locale.
 ## Development
 
 ```sh
-python -m pip install -e '.[dev]'
+python -m pip install -e '.[dev,oracle]' 'maturin>=1.9.3,<2'
 cargo test
 python -m pytest
 ```
@@ -190,7 +190,7 @@ and namespace isolation. Fake HTTP/clock tests exercise the optional registrar
 oracle without credentials or networking. Its API dependencies belong only to
 the [developer oracle](tools/README.md), not normal library operation.
 
-Release benchmarks measure compact lookup separately from getters, formatting,
-prepared profiles and true batches. Performance targets and development
-measurements are provisional until repeated against the final release artifact
-and its recorded dataset/backend identity.
+The [release performance report](benches/performance.md) records the measured
+dataset, backend, artifact hashes and reproduction commands. It separates
+compact lookup, detailed assessment, formatting, startup and true batches.
+Scheduled validation retains new measurements for review.
