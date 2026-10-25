@@ -127,9 +127,10 @@ fn main() {
     writeln!(output, "use crate::types::{{Charset, LengthBasis, Reason, Registerable, TldRule}};")
         .expect("failed to write generated prelude");
 
+    let rendered_rules: Vec<_> = compiled_entries.iter().map(render_tld_rule).collect();
     let mut rule_map = phf_codegen::Map::new();
-    for entry in &compiled_entries {
-        rule_map.entry(&entry.tld, &render_tld_rule(entry));
+    for (entry, rendered_rule) in compiled_entries.iter().zip(&rendered_rules) {
+        rule_map.entry(&entry.tld, rendered_rule);
     }
 
     writeln!(output, "pub static TLD_RULES: phf::Map<&'static str, TldRule> = {};
