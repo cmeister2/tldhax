@@ -19,6 +19,9 @@ maturin develop
 pytest
 ```
 
+Release tooling requires Node 24.15 or newer. Run `npm ci` followed by `npm test`
+to verify release-note rendering with the configured plugins.
+
 ## Bootstrap Data
 
 The repository already includes checked-in rule data under `rules/*.toml`.
