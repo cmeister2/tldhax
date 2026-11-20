@@ -106,6 +106,7 @@ jobs:
         with:
           name: wheels-linux-${{ matrix.platform.target }}
           path: dist
+          retention-days: 7
 
   musllinux:
     needs: [check-release]
@@ -140,6 +141,7 @@ jobs:
         with:
           name: wheels-musllinux-${{ matrix.platform.target }}
           path: dist
+          retention-days: 7
 
   windows:
     needs: [check-release]
@@ -170,6 +172,7 @@ jobs:
         with:
           name: wheels-windows-${{ matrix.platform.target }}
           path: dist
+          retention-days: 7
 
   macos:
     needs: [check-release]
@@ -199,6 +202,7 @@ jobs:
         with:
           name: wheels-macos-${{ matrix.platform.target }}
           path: dist
+          retention-days: 7
 
   sdist:
     needs: [check-release]
@@ -217,6 +221,7 @@ jobs:
         with:
           name: wheels-sdist
           path: dist
+          retention-days: 7
 
   release:
     name: Release
